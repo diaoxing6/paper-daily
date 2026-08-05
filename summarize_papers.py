@@ -68,7 +68,9 @@ def _summarize_batch(
     client: Any,
     papers: list[dict[str, Any]],
     model: str,
+    provider: str,
     reasoning_effort: str,
+    thinking_mode: str = "disabled",
 ) -> dict[str, dict[str, str]]:
     items = [
         {
@@ -81,18 +83,33 @@ def _summarize_batch(
     ]
     instructions = (
         "你是谨慎的生物医学论文编辑。根据标题和摘要生成简明中文解读，不得添加摘要中没有的结果、"
-        "数值或因果结论。仅返回合法 JSON，不要 Markdown。返回数组，每项必须包含 id、takeaway、"
+        "数值或因果结论。仅返回合法 JSON 对象，不要 Markdown。顶层格式必须为 {\"papers\": [...]}，"
+        "papers 数组中的每项必须包含 id、takeaway、"
         "methods、relevance、caveat 五个字符串字段。takeaway 用 1–2 句说明核心贡献；methods 概括"
         "方法和数据；relevance 说明它为什么与给定研究主题相关；caveat 指出从摘要可见的限制，"
         "若信息不足就明确说明。保留常用英文模型名和数据集名。"
     )
-    response = client.responses.create(
-        model=model,
-        reasoning={"effort": reasoning_effort},
-        instructions=instructions,
-        input=json.dumps(items, ensure_ascii=False),
-    )
-    parsed = _parse_json_response(response.output_text)
+    if provider == "deepseek":
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": instructions},
+                {"role": "user", "content": json.dumps(items, ensure_ascii=False)},
+            ],
+            response_format={"type": "json_object"},
+            stream=False,
+            extra_body={"thinking": {"type": thinking_mode}},
+        )
+        output_text = response.choices[0].message.content or ""
+    else:
+        response = client.responses.create(
+            model=model,
+            reasoning={"effort": reasoning_effort},
+            instructions=instructions,
+            input=json.dumps(items, ensure_ascii=False),
+        )
+        output_text = response.output_text
+    parsed = _parse_json_response(output_text)
     required = ("takeaway", "methods", "relevance", "caveat")
     summaries: dict[str, dict[str, str]] = {}
     for item in parsed:
@@ -106,11 +123,16 @@ def summarize_papers(
     papers: list[dict[str, Any]], config: dict[str, Any]
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     options = config["summary"]
-    api_key = os.getenv("OPENAI_API_KEY", "").strip()
-    model = os.getenv("OPENAI_MODEL", "").strip() or options["model"]
+    provider = (os.getenv("SUMMARY_PROVIDER", "").strip() or options.get("provider", "openai")).casefold()
+    if provider == "deepseek":
+        api_key = os.getenv("DEEPSEEK_API_KEY", "").strip()
+    else:
+        api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    model = os.getenv("SUMMARY_MODEL", "").strip() or options["model"]
     max_papers = min(len(papers), int(options["max_papers"]))
     report: dict[str, Any] = {
         "requested": max_papers,
+        "provider": provider if api_key and options.get("enabled", True) else None,
         "model": model if api_key and options.get("enabled", True) else None,
         "openai": 0,
         "fallback": 0,
@@ -122,7 +144,10 @@ def summarize_papers(
         try:
             from openai import OpenAI
 
-            client = OpenAI(api_key=api_key)
+            client_options: dict[str, Any] = {"api_key": api_key}
+            if provider == "deepseek":
+                client_options["base_url"] = options.get("base_url", "https://api.deepseek.com")
+            client = OpenAI(**client_options)
             batch_size = int(options.get("batch_size", 8))
             for offset in range(0, max_papers, batch_size):
                 batch = papers[offset : offset + batch_size]
@@ -132,7 +157,9 @@ def summarize_papers(
                             client,
                             batch,
                             model=model,
+                            provider=provider,
                             reasoning_effort=options.get("reasoning_effort", "low"),
+                            thinking_mode=options.get("thinking_mode", "disabled"),
                         )
                     )
                 except Exception as exc:
@@ -170,4 +197,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
