@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="每天自动聚合并筛选与你研究方向最相关的新论文。">
+  <meta name="color-scheme" content="light">
+  <title>Cell Paper Radar</title>
+  <style>
+    :root { --ink:#13233a; --ink-soft:#526074; --paper:#f4f1e9; --card:#fffdf8; --line:#d9d4c8; --accent:#ef5d3f; --teal:#167e79; --lime:#d7ee72; --shadow:0 18px 55px rgba(19,35,58,.09); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif; line-height:1.65; }
+    a { color:inherit; }
+    button,input,select { font:inherit; }
+    .page-shell { width:min(1180px,calc(100% - 40px)); margin:0 auto; }
+    .site-header { padding:24px 0 0; }
+    .nav { display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--ink); padding-bottom:18px; gap:20px; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:900; letter-spacing:-.04em; }
+    .brand-mark { width:34px; height:34px; border-radius:50%; background:var(--accent); position:relative; box-shadow:inset -8px -8px 0 rgba(19,35,58,.12); }
+    .brand-mark:after { content:""; position:absolute; width:9px; height:9px; border-radius:50%; background:var(--lime); top:5px; right:4px; }
+    .brand small { display:block; font-size:10px; letter-spacing:.18em; color:var(--ink-soft); line-height:1; }
+    .nav-meta { display:flex; align-items:center; gap:18px; font-size:12px; font-weight:700; letter-spacing:.06em; }
+    .live-dot { display:inline-flex; align-items:center; gap:8px; }
+    .live-dot:before { content:""; width:8px; height:8px; border-radius:50%; background:var(--teal); box-shadow:0 0 0 5px rgba(22,126,121,.12); }
+    .hero { padding:68px 0 44px; display:grid; grid-template-columns:minmax(0,1.5fr) minmax(260px,.5fr); gap:50px; align-items:end; }
+    .eyebrow { display:flex; gap:12px; align-items:center; color:var(--accent); font-weight:900; font-size:12px; letter-spacing:.2em; }
+    .eyebrow:before { content:""; width:44px; height:2px; background:var(--accent); }
+    h1 { margin:16px 0 18px; max-width:800px; font-family:Georgia,"Noto Serif SC",serif; font-size:clamp(48px,8vw,92px); letter-spacing:-.065em; line-height:.92; font-weight:500; }
+    h1 em { font-style:italic; color:var(--teal); }
+    .hero-copy { max-width:690px; color:var(--ink-soft); font-size:17px; }
+    .date-block { border-left:1px solid var(--ink); padding-left:28px; }
+    .date-block span { display:block; font-size:12px; letter-spacing:.18em; font-weight:800; color:var(--ink-soft); }
+    .date-block strong { display:block; font-family:Georgia,serif; font-size:34px; font-weight:400; margin:6px 0; }
+    .date-block small { color:var(--ink-soft); }
+    .signal-strip { display:grid; grid-template-columns:repeat(3,1fr) minmax(280px,2.3fr); border:1px solid var(--ink); background:var(--card); box-shadow:var(--shadow); }
+    .stat { padding:22px 24px; border-right:1px solid var(--line); }
+    .stat b { display:block; font-family:Georgia,serif; font-size:34px; line-height:1; font-weight:400; }
+    .stat span { color:var(--ink-soft); font-size:11px; text-transform:uppercase; letter-spacing:.13em; font-weight:800; }
+    .source-line { padding:18px 22px; display:flex; gap:12px 18px; flex-wrap:wrap; align-items:center; }
+    .source-status { display:inline-flex; align-items:center; gap:7px; font-size:11px; font-weight:800; }
+    .source-status i { width:7px; height:7px; border-radius:50%; background:#9ca3af; }
+    .source-status b { font-weight:600; color:var(--ink-soft); }
+    .status-ok i { background:var(--teal); } .status-error i { background:var(--accent); } .status-sample i { background:#d6a928; }
+    .controls { margin:38px 0 30px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+    .search-wrap { position:relative; flex:1 1 300px; }
+    .search-wrap:before { content:"⌕"; position:absolute; left:17px; top:7px; font-size:25px; color:var(--ink-soft); }
+    #search { width:100%; height:48px; border:1px solid var(--ink); background:transparent; padding:0 18px 0 48px; outline:none; }
+    #search:focus { background:var(--card); box-shadow:0 0 0 3px rgba(22,126,121,.13); }
+    .archive-select { height:48px; min-width:180px; border:1px solid var(--ink); background:var(--card); padding:0 14px; }
+    .filter-row { display:flex; flex-wrap:wrap; gap:9px; margin-bottom:50px; }
+    .filter-btn { border:1px solid var(--line); border-radius:999px; padding:7px 13px; background:transparent; cursor:pointer; color:var(--ink-soft); font-size:12px; font-weight:700; transition:.2s ease; }
+    .filter-btn:hover,.filter-btn.active { color:var(--card); background:var(--ink); border-color:var(--ink); transform:translateY(-1px); }
+    .filter-btn span { opacity:.65; margin-left:4px; }
+    .section-title { display:flex; align-items:end; justify-content:space-between; gap:20px; margin:0 0 22px; }
+    .section-title h2 { margin:0; font-family:Georgia,"Noto Serif SC",serif; font-size:clamp(30px,4vw,48px); font-weight:400; letter-spacing:-.04em; }
+    .section-title p { margin:0 0 8px; color:var(--ink-soft); font-size:13px; }
+    .papers { display:grid; gap:20px; }
+    .paper-card { display:grid; grid-template-columns:62px 1fr; border-top:1px solid var(--ink); background:rgba(255,253,248,.55); transition:.25s ease; }
+    .paper-card:hover { background:var(--card); box-shadow:var(--shadow); transform:translateY(-2px); }
+    .card-rail { border-right:1px solid var(--line); padding:26px 13px; font-family:Georgia,serif; font-size:18px; color:var(--accent); }
+    .card-body { padding:24px 28px 22px; min-width:0; }
+    .paper-kicker { display:flex; align-items:center; flex-wrap:wrap; gap:10px; font-size:11px; font-weight:800; letter-spacing:.06em; color:var(--ink-soft); }
+    .source-badge { background:var(--ink); color:var(--card); padding:3px 8px; letter-spacing:.1em; }
+    .source-biorxiv { background:var(--teal); } .source-pubmed { background:#355cb5; } .source-semantic-scholar { background:#704f90; }
+    .score { margin-left:auto; }
+    .priority-badge { color:var(--accent); border:1px solid var(--accent); padding:2px 7px; }
+    .paper-card h3 { margin:15px 0 8px; font-family:Georgia,"Noto Serif SC",serif; font-size:clamp(23px,3vw,34px); line-height:1.18; letter-spacing:-.025em; font-weight:500; }
+    .paper-card h3 a { text-decoration:none; background:linear-gradient(var(--accent),var(--accent)) left bottom/0 2px no-repeat; transition:background-size .25s; }
+    .paper-card h3 a:hover { background-size:100% 2px; }
+    .authors { margin:0; color:var(--ink-soft); font-size:13px; }
+    .topic-row { display:flex; flex-wrap:wrap; gap:7px; margin:17px 0; }
+    .topic-pill { background:#e7eee9; color:#245c58; border-radius:999px; padding:4px 10px; font-size:11px; font-weight:750; }
+    .summary-panel { border-left:3px solid var(--lime); background:#f5f7e8; padding:18px 20px; margin-top:18px; }
+    .summary-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; }
+    .summary-heading span { font-size:12px; font-weight:900; letter-spacing:.12em; }
+    .summary-heading em { font-style:normal; color:var(--ink-soft); font-size:10px; }
+    .takeaway { margin:0; font-weight:650; }
+    dl { margin:13px 0 0; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    dl div { border-top:1px solid rgba(19,35,58,.16); padding-top:9px; }
+    dt { color:var(--teal); font-size:10px; font-weight:900; letter-spacing:.08em; }
+    dd { margin:3px 0 0; color:var(--ink-soft); font-size:12px; line-height:1.55; }
+    .card-footer { display:flex; justify-content:space-between; align-items:center; margin-top:18px; gap:12px; }
+    .paper-link { display:inline-block; margin-right:10px; padding:7px 12px; background:var(--accent); color:white; text-decoration:none; font-size:11px; font-weight:850; }
+    .paper-link.secondary { background:transparent; color:var(--ink); border:1px solid var(--line); }
+    .anchor-link { color:var(--ink-soft); text-decoration:none; font-family:monospace; font-size:11px; }
+    .highlight-card:first-child { border-top:3px solid var(--accent); }
+    .remaining-section { margin-top:72px; }
+    .empty-state { border:1px dashed var(--ink-soft); padding:70px 30px; text-align:center; }
+    .empty-state span { letter-spacing:.2em; font-size:11px; color:var(--accent); } .empty-state h3 { font-family:Georgia,serif; font-size:32px; margin:10px 0; }
+    .no-results { display:none; text-align:center; padding:50px; color:var(--ink-soft); }
+    .site-footer { margin-top:90px; padding:34px 0 50px; border-top:1px solid var(--ink); display:flex; justify-content:space-between; gap:30px; color:var(--ink-soft); font-size:12px; }
+    .site-footer strong { color:var(--ink); }
+    [hidden] { display:none !important; }
+    @media (max-width:800px) {
+      .page-shell { width:min(100% - 24px,1180px); } .hero { grid-template-columns:1fr; padding-top:45px; } .date-block { border-left:0; border-top:1px solid var(--line); padding:18px 0 0; }
+      .signal-strip { grid-template-columns:repeat(3,1fr); } .source-line { grid-column:1/-1; border-top:1px solid var(--line); } .stat { padding:17px 12px; }
+      .paper-card { grid-template-columns:42px 1fr; } .card-rail { padding:22px 9px; font-size:14px; } .card-body { padding:21px 17px; } dl { grid-template-columns:1fr; }
+      .nav-meta .update-label { display:none; } .section-title { align-items:start; flex-direction:column; }
+    }
+    @media (max-width:480px) { .nav-meta { font-size:10px; } .brand small { display:none; } h1 { font-size:50px; } .paper-card h3 { font-size:23px; } .score { margin-left:0; } .card-footer { align-items:flex-start; } }
+  </style>
+</head>
+<body>
+  <header class="site-header page-shell">
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span>CELL PAPER RADAR<small>DAILY RESEARCH SIGNAL</small></span></a>
+      <div class="nav-meta"><span class="live-dot">自动更新</span><span class="update-label">Asia/Singapore</span></div>
+    </nav>
+  </header>
+  <main id="top" class="page-shell">
+    <section class="hero">
+      <div><div class="eyebrow">DAILY INTELLIGENCE</div><h1>把新论文变成<br><em>研究信号。</em></h1><p class="hero-copy">每天自动聚合并筛选与你研究方向最相关的新论文。 先看相关性，再看方法与局限，把检索时间留给真正值得精读的工作。</p></div>
+      <div class="date-block"><span>TODAY'S EDITION</span><strong>2026 · 08 · 05</strong><small>更新于 2026年08月05日 21:41</small></div>
+    </section>
+    <section class="signal-strip" aria-label="今日统计">
+      <div class="stat"><b>07</b><span>相关论文</span></div>
+      <div class="stat"><b>03</b><span>有效来源</span></div>
+      <div class="stat"><b>00</b><span>AI 解读</span></div>
+      <div class="source-line"><span class="source-status status-ok"><i></i>arXiv<b>2</b></span><span class="source-status status-ok"><i></i>bioRxiv<b>300</b></span><span class="source-status status-ok"><i></i>PubMed<b>2</b></span><span class="source-status status-error"><i></i>S2<b>0</b></span></div>
+    </section>
+    <section class="controls" aria-label="筛选论文">
+      <label class="search-wrap"><span hidden>搜索论文</span><input id="search" type="search" placeholder="搜索标题、作者、摘要或主题…" autocomplete="off"></label>
+      <select class="archive-select" id="archive" aria-label="历史归档"><option value="">最近归档</option><option value="2026-08-05">2026-08-05</option></select>
+    </section>
+    <div class="filter-row"><button class="filter-btn active" data-topic="">全部 <span>7</span></button><button class="filter-btn" data-topic="单细胞扰动">单细胞扰动 <span>3</span></button><button class="filter-btn" data-topic="Cell Foundation Model">Cell Foundation Model <span>2</span></button><button class="filter-btn" data-topic="GRN / Regulon">GRN / Regulon <span>1</span></button><button class="filter-btn" data-topic="多组学扰动">多组学扰动 <span>1</span></button><button class="filter-btn" data-topic="药物扰动机制">药物扰动机制 <span>1</span></button></div>
+    <section>
+      <div class="section-title"><h2>今日优先阅读</h2><p>按研究方向匹配、新鲜度与来源综合排序</p></div>
+      <div class="papers" id="highlight-papers">
+      <article class="paper-card highlight-card" id="paper-1" data-topics="单细胞扰动|多组学扰动" data-search="llm-guided retrieval for prediction of molecular perturbation responses predicting transcriptomic responses to small-molecule perturbations across cell lines is central to drug discovery, but exhaustive profiling of drug-cell combinations is infeasible. we frame molecular perturbation prediction as retrieve-and-aggregate: approximate an unmeasured drug&#x27;s response in a cell line by aggregating measured responses of a small set of biologically related compounds. we propose llm-guided retrieval (lgr), where a large language model (llm) ranks candidate neighbor drugs (restricted to those profiled in the target cell line); after which a fixed mean aggregator combines their observed expression deltas to form the prediction. we evaluate on the tahoe-100m single-cell perturbation atlas under unseen-drug, unseen-cell-line, and open-world regimes. lgr consistently improves over drug mean, chemcpa, and chemistry-based knn baselines, with the strongest gains for unseen cell-line generalization, where it achieves higher correlation and lower error than mean baselines. across settings, lgr improves directional (sign) accuracy of gene regulation, indicating better recovery of biologically meaningful perturbation effects even when magnitude-based metrics are similar. these results suggest that retrieval quality, rather than predictor complexity, is a key driver of zero-shot molecular perturbation prediction, and that llms can provide a useful biological prior when used as constrained retrieval modules. betty xiong, jan-christian huetter, gabriele scalia, tommaso biancalani 等 5 位作者 单细胞扰动 多组学扰动">
+        <div class="card-rail"><span>01</span></div>
+        <div class="card-body">
+          <div class="paper-kicker">
+            <span class="source-badge source-arxiv">ARXIV</span>
+            <time>2026-08-03</time>
+            <span class="score">相关度 11.2</span>
+            <span class="priority-badge">优先阅读</span>
+          </div>
+          <h3><a href="http://arxiv.org/abs/2608.01734v1" target="_blank" rel="noreferrer">LLM-Guided Retrieval for Prediction of Molecular Perturbation Responses</a></h3>
+          <p class="authors">Betty Xiong, Jan-Christian Huetter, Gabriele Scalia, Tommaso Biancalani 等 5 位作者 · arXiv</p>
+          <div class="topic-row"><span class="topic-pill">单细胞扰动</span><span class="topic-pill">多组学扰动</span></div>
+          <div class="summary-panel">
+            <div class="summary-heading"><span>中文速读</span><em>本地摘要</em></div>
+            <p class="takeaway">这项研究聚焦于单细胞扰动、多组学扰动。原文摘要要点：Predicting transcriptomic responses to small-molecule perturbations across cell lines is central to drug discovery, but exhaustive profiling of drug-cell combinations is infeasible. We frame molecular perturbation prediction as retrieve-and-aggregate: approximate an unmeasured drug&#x27;s response in a cell line by aggregating measured responses of a small set o…</p>
+            <dl>
+              <div><dt>方法</dt><dd>摘要中未识别出明确的方法标签</dd></div>
+              <div><dt>为什么值得看</dt><dd>命中当前论文雷达的主题：单细胞扰动、多组学扰动。</dd></div>
+              <div><dt>阅读提示</dt><dd>当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。</dd></div>
+            </dl>
+          </div>
+          <div class="card-footer"><div><a class="paper-link" href="http://arxiv.org/abs/2608.01734v1" target="_blank" rel="noreferrer">原文 ↗</a><a class="paper-link secondary" href="https://arxiv.org/pdf/2608.01734v1" target="_blank" rel="noreferrer">PDF</a></div><a class="anchor-link" href="#paper-1">#01</a></div>
+        </div>
+      </article>
+      <article class="paper-card highlight-card" id="paper-2" data-topics="Cell Foundation Model" data-search="do geometric outliers identify important genes in single-cell foundation models? single-cell foundation models (scfms) produce gene embeddings that are increasingly interpreted biologically, but it is unclear whether different models organise gene space consistently, or whether geometric extremes identify important genes. the same four-metric screen was applied to geneformer, scgpt and scfoundation, which differ in architecture, training objective and expression encoding. the models agreed weakly on individual outlier genes but showed structured class-level convergence: ribosomal enrichment occurred in all three, although weaker and caller-dependent in scfoundation, while strong mitochondrial enrichment was confined to geneformer and scgpt. gene-level agreement was itself uneven, with geneformer and scgpt overlapping above chance and scgpt and scfoundation not, and caller stability differed between models. most outliers were not extreme in esm-2 protein-sequence space, indicating principally model-specific rather than protein-sequence geometry. these patterns did not translate into the tested notions of gene importance: deleting the highest-anomaly geneformer genes did not impair cell-type annotation beyond matched controls, and covariate-adjusted outlier status was not associated with clinvar membership in any model. gene-embedding geometry therefore characterises model-specific structure, but does not provide standalone evidence of downstream leverage or disease relevance. whalley, j. p. cell foundation model">
+        <div class="card-rail"><span>02</span></div>
+        <div class="card-body">
+          <div class="paper-kicker">
+            <span class="source-badge source-biorxiv">BIORXIV</span>
+            <time>2026-08-03</time>
+            <span class="score">相关度 10.1</span>
+            <span class="priority-badge">优先阅读</span>
+          </div>
+          <h3><a href="https://www.biorxiv.org/content/10.64898/2026.06.22.733850" target="_blank" rel="noreferrer">Do Geometric Outliers Identify Important Genes in Single-Cell Foundation Models?</a></h3>
+          <p class="authors">Whalley, J. P. · bioinformatics</p>
+          <div class="topic-row"><span class="topic-pill">Cell Foundation Model</span></div>
+          <div class="summary-panel">
+            <div class="summary-heading"><span>中文速读</span><em>本地摘要</em></div>
+            <p class="takeaway">这项研究聚焦于Cell Foundation Model。原文摘要要点：Single-cell foundation models (scFMs) produce gene embeddings that are increasingly interpreted biologically, but it is unclear whether different models organise gene space consistently, or whether geometric extremes identify important genes. The same four-metric screen was applied to Geneformer, scGPT and scFoundation, which differ in architecture, trainin…</p>
+            <dl>
+              <div><dt>方法</dt><dd>基础模型</dd></div>
+              <div><dt>为什么值得看</dt><dd>命中当前论文雷达的主题：Cell Foundation Model。</dd></div>
+              <div><dt>阅读提示</dt><dd>当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。</dd></div>
+            </dl>
+          </div>
+          <div class="card-footer"><div><a class="paper-link" href="https://www.biorxiv.org/content/10.64898/2026.06.22.733850" target="_blank" rel="noreferrer">原文 ↗</a><a class="paper-link secondary" href="https://www.biorxiv.org/content/10.64898/2026.06.22.733850.full.pdf" target="_blank" rel="noreferrer">PDF</a><a class="paper-link secondary" href="https://doi.org/10.64898/2026.06.22.733850" target="_blank" rel="noreferrer">DOI</a></div><a class="anchor-link" href="#paper-2">#02</a></div>
+        </div>
+      </article>
+      <article class="paper-card highlight-card" id="paper-3" data-topics="单细胞扰动" data-search="a systematic comparison of single-cell perturbation response prediction models predicting single-cell transcriptional responses to perturbations is central to dissecting gene regulation and accelerating therapeutic design, yet the field lacks a rigorous, task-spanning assessment of model behavior. we present a large-scale benchmark of 13 representative methods and baselines across 25 datasets spanning diverse perturbation modalities and species, including two primary immune-cell drug-response resources. we evaluated three core tasks--generalization to unseen single-gene perturbations, prediction of combinatorial interactions, and transfer across cell types--using 24 metrics covering expression-level accuracy, relative changes, differential expression recovery, and distributional similarity. across tasks, performance depended strongly on perturbation effect size and evaluation perspective: expression-level agreement was highest for small-effect perturbations resembling controls, whereas delta- and de-based metrics improved with larger effects, providing clearer signals. models shared a conservative bias, with fine-tuned foundation models compressing variance and underestimating synergistic effects in combinations. perturbnet showed superior recovery of de signatures in tasks 1 and 2, while no method consistently generalized across cell types in task 3, where biological consistency dominated outcomes. this benchmark establishes current methodological limits, clarifies that different metrics probe distinct biological signals rather than redundant summaries of the same prediction problem, and provides a foundation for developing virtual-cell models that more faithfully capture heterogeneous perturbation responses. teaser: a large-scale benchmark reveals strengths and limits of models predicting single-cell perturbation responses. li, l., you, y., fu, y., liao, w. 等 14 位作者 单细胞扰动">
+        <div class="card-rail"><span>03</span></div>
+        <div class="card-body">
+          <div class="paper-kicker">
+            <span class="source-badge source-biorxiv">BIORXIV</span>
+            <time>2026-08-03</time>
+            <span class="score">相关度 10.1</span>
+            <span class="priority-badge">优先阅读</span>
+          </div>
+          <h3><a href="https://www.biorxiv.org/content/10.1101/2024.12.23.630036" target="_blank" rel="noreferrer">A Systematic Comparison of Single-Cell Perturbation Response Prediction Models</a></h3>
+          <p class="authors">Li, L., You, Y., Fu, Y., Liao, W. 等 14 位作者 · bioinformatics</p>
+          <div class="topic-row"><span class="topic-pill">单细胞扰动</span></div>
+          <div class="summary-panel">
+            <div class="summary-heading"><span>中文速读</span><em>本地摘要</em></div>
+            <p class="takeaway">这项研究聚焦于单细胞扰动。原文摘要要点：Predicting single-cell transcriptional responses to perturbations is central to dissecting gene regulation and accelerating therapeutic design, yet the field lacks a rigorous, task-spanning assessment of model behavior. We present a large-scale benchmark of 13 representative methods and baselines across 25 datasets spanning diverse perturbation modalities a…</p>
+            <dl>
+              <div><dt>方法</dt><dd>基础模型、基准评测</dd></div>
+              <div><dt>为什么值得看</dt><dd>命中当前论文雷达的主题：单细胞扰动。</dd></div>
+              <div><dt>阅读提示</dt><dd>当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。</dd></div>
+            </dl>
+          </div>
+          <div class="card-footer"><div><a class="paper-link" href="https://www.biorxiv.org/content/10.1101/2024.12.23.630036" target="_blank" rel="noreferrer">原文 ↗</a><a class="paper-link secondary" href="https://www.biorxiv.org/content/10.1101/2024.12.23.630036.full.pdf" target="_blank" rel="noreferrer">PDF</a><a class="paper-link secondary" href="https://doi.org/10.1101/2024.12.23.630036" target="_blank" rel="noreferrer">DOI</a></div><a class="anchor-link" href="#paper-3">#03</a></div>
+        </div>
+      </article>
+      <article class="paper-card highlight-card" id="paper-4" data-topics="药物扰动机制" data-search="multiscale higher-order molecular simplicial complex embedding for drug response prediction. motivation: accurately predicting anticancer drug response is a central challenge in precision oncology. existing computational methods, although valuable, often depend on pairwise molecular descriptors or limited graph-based encodings that cannot fully capture the complexity of molecular structures or their interactions with cellular states. these constraints hinder their robustness and generalization across diverse drugs and biological contexts, underscoring the need for more expressive frameworks. results: to address this gap, we propose moldr, a topological deep learning framework that represents molecules as multiscale simplicial complexes and propagates information across higher-order structures. by integrating these molecular representations with cellular profiles, moldr unifies chemical topology and biological context within a single predictive model. comprehensive experiments show that moldr consistently outperforms or matches state-of-the-art baselines across multiple benchmarks. it achieves stronger accuracy and robustness on continuous drug response tasks, while also generalizing effectively to discrete classification settings. moreover, sensitivity analysis confirms the benefit of incorporating multiple topological scales, further supporting the importance of higher-order representations. together, these results demonstrate that moldr delivers reliable performance across heterogeneous pharmacogenomic scenarios and highlight the promise of topological modeling for advancing drug response prediction. availability: source code freely available at https://github.com/cs-bio/moldr. cong shen, guancen lin, chuan-shen hu, jiawei luo 药物扰动机制">
+        <div class="card-rail"><span>04</span></div>
+        <div class="card-body">
+          <div class="paper-kicker">
+            <span class="source-badge source-pubmed">PUBMED</span>
+            <time>2026-08-04</time>
+            <span class="score">相关度 9.9</span>
+            <span class="priority-badge">优先阅读</span>
+          </div>
+          <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42485225/" target="_blank" rel="noreferrer">Multiscale higher-order molecular simplicial complex embedding for drug response prediction.</a></h3>
+          <p class="authors">Cong Shen, Guancen Lin, Chuan-Shen Hu, Jiawei Luo · Bioinformatics (Oxford, England)</p>
+          <div class="topic-row"><span class="topic-pill">药物扰动机制</span></div>
+          <div class="summary-panel">
+            <div class="summary-heading"><span>中文速读</span><em>本地摘要</em></div>
+            <p class="takeaway">这项研究聚焦于药物扰动机制。原文摘要要点：MOTIVATION: Accurately predicting anticancer drug response is a central challenge in precision oncology. Existing computational methods, although valuable, often depend on pairwise molecular descriptors or limited graph-based encodings that cannot fully capture the complexity of molecular structures or their interactions with cellular states.</p>
+            <dl>
+              <div><dt>方法</dt><dd>基准评测</dd></div>
+              <div><dt>为什么值得看</dt><dd>命中当前论文雷达的主题：药物扰动机制。</dd></div>
+              <div><dt>阅读提示</dt><dd>当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。</dd></div>
+            </dl>
+          </div>
+          <div class="card-footer"><div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/42485225/" target="_blank" rel="noreferrer">原文 ↗</a><a class="paper-link secondary" href="https://doi.org/10.1093/bioinformatics/btag539" target="_blank" rel="noreferrer">DOI</a></div><a class="anchor-link" href="#paper-4">#04</a></div>
+        </div>
+      </article>
+      <article class="paper-card highlight-card" id="paper-5" data-topics="GRN / Regulon" data-search="fgfr3-driven gene regulatory network analysis reveals a protumoral role for p63 in luminal bladder tumors. fibroblast growth factor receptor 3 (fgfr3) is one of the most frequently altered genes in bladder cancer, primarily through activating mutations that drive oncogenesis and are enriched in luminal tumors. however, the underlying gene regulatory network (grn) remains poorly characterized. here, we constructed an fgfr3-mutated grn using a bottom-up bioinformatics approach, integrating transcriptomic data from bladder cancer cell lines, fgfr3-mutated tumors, and fgfr3 perturbation experiments in human and mouse models. using publicly available crispr/cas9 screening data, we identified transcription factors from this grn that regulate the viability of fgfr3-mutated cells, with a focus on p63 (tp63). we showed that fgfr3 activation upregulates p63 in patient-derived xenografts and cell lines, while single-cell rna sequencing revealed heterogeneous p63 activation associated with basal differentiation. functional studies, including tp63 knockdown in fgfr3-dependent in vitro and in vivo models and rna-seq along with p63 chip-seq, demonstrated that p63 directly promotes cell proliferation and migration and uncovered a positive feedback loop between fgfr3 and p63. together, these findings support p63 as a protumorigenic regulator in fgfr3-mutated tumors despite their luminal differentiation and provide a detailed fgfr3-driven grn, offering insights into fgfr3-induced oncogenic dependency and potential strategies to circumvent resistance to fgfr inhibitors. aura moreno-vega, macarena zambrano, lilia estrada-virrueta, xiangyu meng 等 33 位作者 grn / regulon">
+        <div class="card-rail"><span>05</span></div>
+        <div class="card-body">
+          <div class="paper-kicker">
+            <span class="source-badge source-pubmed">PUBMED</span>
+            <time>2026-08-03</time>
+            <span class="score">相关度 9.7</span>
+            <span class="priority-badge">优先阅读</span>
+          </div>
+          <h3><a href="https://pubmed.ncbi.nlm.nih.gov/42544574/" target="_blank" rel="noreferrer">FGFR3-driven gene regulatory network analysis reveals a protumoral role for p63 in luminal bladder tumors.</a></h3>
+          <p class="authors">Aura Moreno-Vega, Macarena Zambrano, Lilia Estrada-Virrueta, Xiangyu Meng 等 33 位作者 · The Journal of clinical investigation</p>
+          <div class="topic-row"><span class="topic-pill">GRN / Regulon</span></div>
+          <div class="summary-panel">
+            <div class="summary-heading"><span>中文速读</span><em>本地摘要</em></div>
+            <p class="takeaway">这项研究聚焦于GRN / Regulon。原文摘要要点：Fibroblast growth factor receptor 3 (FGFR3) is one of the most frequently altered genes in bladder cancer, primarily through activating mutations that drive oncogenesis and are enriched in luminal tumors. However, the underlying gene regulatory network (GRN) remains poorly characterized.</p>
+            <dl>
+              <div><dt>方法</dt><dd>CRISPR 筛选、基因调控网络、单细胞转录组</dd></div>
+              <div><dt>为什么值得看</dt><dd>命中当前论文雷达的主题：GRN / Regulon。</dd></div>
+              <div><dt>阅读提示</dt><dd>当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。</dd></div>
+            </dl>
+          </div>
+          <div class="card-footer"><div><a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/42544574/" target="_blank" rel="noreferrer">原文 ↗</a><a class="paper-link secondary" href="https://doi.org/10.1172/JCI193280" target="_blank" rel="noreferrer">DOI</a></div><a class="anchor-link" href="#paper-5">#05</a></div>
+        </div>
+      </article>
+      <article class="paper-card highlight-card" id="paper-6" data-topics="Cell Foundation Model" data-search="scaling an autoregressive transformer for single-cell generation we study a self-supervised generation task for single-cell gene expression vectors: given a set of vectors from a cell type, we aim to generate additional gene expression vectors of that cell type. for this task we characterize both the biological fidelity of the generated gene expression vectors and the scaling behavior of the pretraining loss. the model is a causal transformer paired with a learned quantized vae tokenizer, trained with a cross-entropy loss. to evaluate the model, we condition it on held-out gene expression vectors of a cell type and generate vectors of gene expression, comparing the resulting distribution over gene expression vectors to the ground truth distribution of that cell type. we study the scaling properties of the proposed architecture by varying the number of trained parameters and the amount of training data. to our knowledge, we find the first jointly-fit two-exponent scaling law and compute-optimal frontier for a single-cell foundation model. finally, we discuss how this pretrained model could be finetuned for perturbation response prediction. aleksandr sharipov, yusif mukhtarov, igor molybog cell foundation model">
+        <div class="card-rail"><span>06</span></div>
+        <div class="card-body">
+          <div class="paper-kicker">
+            <span class="source-badge source-arxiv">ARXIV</span>
+            <time>2026-08-03</time>
+            <span class="score">相关度 8.5</span>
+            <span class="priority-badge">优先阅读</span>
+          </div>
+          <h3><a href="http://arxiv.org/abs/2608.02961v1" target="_blank" rel="noreferrer">Scaling an Autoregressive Transformer for Single-Cell Generation</a></h3>
+          <p class="authors">Aleksandr Sharipov, Yusif Mukhtarov, Igor Molybog · arXiv</p>
+          <div class="topic-row"><span class="topic-pill">Cell Foundation Model</span></div>
+          <div class="summary-panel">
+            <div class="summary-heading"><span>中文速读</span><em>本地摘要</em></div>
+            <p class="takeaway">这项研究聚焦于Cell Foundation Model。原文摘要要点：We study a self-supervised generation task for single-cell gene expression vectors: given a set of vectors from a cell type, we aim to generate additional gene expression vectors of that cell type. For this task we characterize both the biological fidelity of the generated gene expression vectors and the scaling behavior of the pretraining loss.</p>
+            <dl>
+              <div><dt>方法</dt><dd>Transformer、基础模型、因果建模</dd></div>
+              <div><dt>为什么值得看</dt><dd>命中当前论文雷达的主题：Cell Foundation Model。</dd></div>
+              <div><dt>阅读提示</dt><dd>当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。</dd></div>
+            </dl>
+          </div>
+          <div class="card-footer"><div><a class="paper-link" href="http://arxiv.org/abs/2608.02961v1" target="_blank" rel="noreferrer">原文 ↗</a><a class="paper-link secondary" href="https://arxiv.org/pdf/2608.02961v1" target="_blank" rel="noreferrer">PDF</a></div><a class="anchor-link" href="#paper-6">#06</a></div>
+        </div>
+      </article></div>
+    </section>
+    <section class="remaining-section" >
+      <div class="section-title"><h2>更多相关论文</h2><p>继续浏览今天的候选工作</p></div>
+      <div class="papers" id="remaining-papers">
+      <article class="paper-card" id="paper-7" data-topics="单细胞扰动" data-search="star suite: transcriptomics processing in a single binary through ai-assisted development single-cell transcriptomic assays--pooled crispr/perturb-seq screens, clonal lineage tracing, and 10x flex fixed rna profiling--are central to modern biology, yet their processing has depended on cell ranger, a proprietary tool restricted to 10x products, with no open end-to-end pipeline for perturb-seq or flex. we present star suite, which extends the star aligner into a single executable that processes bulk rna-seq, scrna-seq, perturb-seq, 10x flex, and slam-seq in one command, with no added dependencies. for single-cell assays it reproduces cell ranger 9.0.1 (gene-level pearson 0.99-1.0) while running 3.6- to 5.7-fold faster, via novel exact-matching and alignment-validated hashing algorithms. served to both ai agents and human operators through one validated interface, star suite is the production standard for the nih morphic consortium; its 132,226 lines of c/c++ were built under a human-directed, ai-implemented workflow. source code, workflow recipes, and per-run provenance are released under the mit license. hung, l.-h., baker, d., flynn, b., huangfu, d. 等 8 位作者 单细胞扰动">
+        <div class="card-rail"><span>07</span></div>
+        <div class="card-body">
+          <div class="paper-kicker">
+            <span class="source-badge source-biorxiv">BIORXIV</span>
+            <time>2026-08-02</time>
+            <span class="score">相关度 7.2</span>
+            
+          </div>
+          <h3><a href="https://www.biorxiv.org/content/10.64898/2026.03.09.710580" target="_blank" rel="noreferrer">STAR Suite: Transcriptomics processing in a single binary through AI-assisted development</a></h3>
+          <p class="authors">Hung, L.-H., Baker, D., Flynn, B., Huangfu, D. 等 8 位作者 · bioinformatics</p>
+          <div class="topic-row"><span class="topic-pill">单细胞扰动</span></div>
+          <div class="summary-panel">
+            <div class="summary-heading"><span>中文速读</span><em>本地摘要</em></div>
+            <p class="takeaway">这项研究聚焦于单细胞扰动。原文摘要要点：Single-cell transcriptomic assays--pooled CRISPR/Perturb-seq screens, clonal lineage tracing, and 10x Flex fixed RNA profiling--are central to modern biology, yet their processing has depended on Cell Ranger, a proprietary tool restricted to 10x products, with no open end-to-end pipeline for Perturb-seq or Flex. We present STAR Suite, which extends the STAR…</p>
+            <dl>
+              <div><dt>方法</dt><dd>Perturb-seq、CRISPR 筛选、scRNA-seq</dd></div>
+              <div><dt>为什么值得看</dt><dd>命中当前论文雷达的主题：单细胞扰动。</dd></div>
+              <div><dt>阅读提示</dt><dd>当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。</dd></div>
+            </dl>
+          </div>
+          <div class="card-footer"><div><a class="paper-link" href="https://www.biorxiv.org/content/10.64898/2026.03.09.710580" target="_blank" rel="noreferrer">原文 ↗</a><a class="paper-link secondary" href="https://www.biorxiv.org/content/10.64898/2026.03.09.710580.full.pdf" target="_blank" rel="noreferrer">PDF</a><a class="paper-link secondary" href="https://doi.org/10.64898/2026.03.09.710580" target="_blank" rel="noreferrer">DOI</a></div><a class="anchor-link" href="#paper-7">#07</a></div>
+        </div>
+      </article></div>
+    </section>
+    <div class="no-results" id="no-results">没有找到符合当前筛选条件的论文。</div>
+  </main>
+  <footer class="site-footer page-shell"><div><strong>CELL PAPER RADAR</strong><br>自动筛选仅用于文献发现，研究结论请以论文原文为准。</div><div>arXiv · bioRxiv · PubMed · Semantic Scholar<br>Generated by GitHub Actions</div></footer>
+  <script type="application/json" id="radar-data">{"generated_at": "2026-08-05T13:41:28+00:00", "paper_count": 7, "topics": {"单细胞扰动": 3, "多组学扰动": 1, "Cell Foundation Model": 2, "药物扰动机制": 1, "GRN / Regulon": 1}}</script>
+  <script>
+    (() => {
+      const search = document.querySelector('#search');
+      const buttons = [...document.querySelectorAll('.filter-btn')];
+      const cards = [...document.querySelectorAll('.paper-card')];
+      const empty = document.querySelector('#no-results');
+      let activeTopic = '';
+      function applyFilters() {
+        const query = search.value.trim().toLocaleLowerCase();
+        let visible = 0;
+        cards.forEach(card => {
+          const topicMatch = !activeTopic || card.dataset.topics.split('|').includes(activeTopic);
+          const textMatch = !query || card.dataset.search.includes(query);
+          card.hidden = !(topicMatch && textMatch);
+          if (!card.hidden) visible += 1;
+        });
+        empty.style.display = visible ? 'none' : 'block';
+        document.querySelectorAll('.remaining-section').forEach(section => {
+          section.hidden = ![...section.querySelectorAll('.paper-card')].some(card => !card.hidden);
+        });
+      }
+      buttons.forEach(button => button.addEventListener('click', () => {
+        buttons.forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        activeTopic = button.dataset.topic;
+        applyFilters();
+      }));
+      search.addEventListener('input', applyFilters);
+      document.querySelector('#archive').addEventListener('change', event => {
+        if (event.target.value) window.open(`data/archive/${event.target.value}.json`, '_blank');
+      });
+    })();
+  </script>
+</body>
+</html>

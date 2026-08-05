@@ -1,0 +1,122 @@
+site:
+  title: "Cell Paper Radar"
+  subtitle: "单细胞扰动 · 虚拟细胞 · 机制推理"
+  description: "每天自动聚合并筛选与你研究方向最相关的新论文。"
+  timezone: "Asia/Singapore"
+  max_papers: 30
+  highlight_count: 6
+
+fetch:
+  lookback_days: 3
+  request_timeout_seconds: 30
+  user_agent: "CellPaperRadar/1.0 (academic literature monitor)"
+  sources:
+    arxiv:
+      enabled: true
+      max_results: 200
+      categories: ["q-bio.GN", "q-bio.QM", "q-bio.CB", "cs.LG", "cs.AI"]
+    biorxiv:
+      enabled: true
+      max_results: 300
+    pubmed:
+      enabled: true
+      max_results: 200
+      email: ""
+    semantic_scholar:
+      enabled: true
+      max_results_per_query: 40
+      queries:
+        - "single cell perturbation prediction"
+        - "virtual cell foundation model"
+        - "gene regulatory network mechanism inference"
+
+ranking:
+  min_score: 5.5
+  source_weights:
+    arXiv: 0.5
+    bioRxiv: 1.0
+    PubMed: 1.2
+    Semantic Scholar: 0.4
+  topics:
+    - name: "单细胞扰动"
+      weight: 2.0
+      terms:
+        - "single-cell perturbation"
+        - "single cell perturbation"
+        - "perturb-seq"
+        - "crispr screen"
+        - "perturbation prediction"
+        - "cellular response prediction"
+    - name: "虚拟细胞"
+      weight: 2.0
+      terms:
+        - "virtual cell"
+        - "digital cell"
+        - "cell simulation"
+        - "in silico cell"
+        - "whole-cell model"
+    - name: "Cell Foundation Model"
+      weight: 1.8
+      terms:
+        - "cell foundation model"
+        - "single-cell foundation model"
+        - "single cell foundation model"
+        - "gene language model"
+        - "single-cell transformer"
+        - "single cell transformer"
+    - name: "多组学扰动"
+      weight: 1.7
+      terms:
+        - "multi-omics perturbation"
+        - "multiomics perturbation"
+        - "perturbation atlas"
+        - "multimodal single-cell"
+        - "multimodal single cell"
+        - "perturbation transcriptomics"
+    - name: "药物扰动机制"
+      weight: 1.7
+      terms:
+        - "drug perturbation"
+        - "drug response prediction"
+        - "mechanism of action"
+        - "compound perturbation"
+        - "pharmacogenomics"
+    - name: "GRN / Regulon"
+      weight: 1.6
+      terms:
+        - "gene regulatory network"
+        - "grn inference"
+        - "regulon"
+        - "transcriptional regulation"
+        - "causal gene network"
+    - name: "机制推理"
+      weight: 1.6
+      terms:
+        - "mechanistic inference"
+        - "mechanism inference"
+        - "causal inference"
+        - "causal representation"
+        - "counterfactual prediction"
+        - "causal mechanism"
+  context_terms:
+    - "single-cell"
+    - "single cell"
+    - "transcriptomics"
+    - "scRNA-seq"
+    - "gene expression"
+    - "cell state"
+    - "omics"
+  negative_terms:
+    - "wireless network"
+    - "power grid"
+    - "traffic prediction"
+    - "image segmentation"
+    - "large language model benchmark"
+
+summary:
+  enabled: true
+  model: "gpt-5.6-luna"
+  reasoning_effort: "low"
+  max_papers: 20
+  batch_size: 8
+  language: "zh-CN"

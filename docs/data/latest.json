@@ -1,0 +1,376 @@
+{
+  "generated_at": "2026-08-05T13:41:28+00:00",
+  "timezone": "Asia/Singapore",
+  "papers": [
+    {
+      "id": "arxiv:2608.01734v1",
+      "title": "LLM-Guided Retrieval for Prediction of Molecular Perturbation Responses",
+      "abstract": "Predicting transcriptomic responses to small-molecule perturbations across cell lines is central to drug discovery, but exhaustive profiling of drug-cell combinations is infeasible. We frame molecular perturbation prediction as retrieve-and-aggregate: approximate an unmeasured drug's response in a cell line by aggregating measured responses of a small set of biologically related compounds. We propose LLM-Guided Retrieval (LGR), where a large language model (LLM) ranks candidate neighbor drugs (restricted to those profiled in the target cell line); after which a fixed mean aggregator combines their observed expression deltas to form the prediction. We evaluate on the Tahoe-100M single-cell perturbation atlas under unseen-drug, unseen-cell-line, and open-world regimes. LGR consistently improves over drug mean, ChemCPA, and chemistry-based kNN baselines, with the strongest gains for unseen cell-line generalization, where it achieves higher correlation and lower error than mean baselines. Across settings, LGR improves directional (sign) accuracy of gene regulation, indicating better recovery of biologically meaningful perturbation effects even when magnitude-based metrics are similar. These results suggest that retrieval quality, rather than predictor complexity, is a key driver of zero-shot molecular perturbation prediction, and that LLMs can provide a useful biological prior when used as constrained retrieval modules.",
+      "authors": [
+        "Betty Xiong",
+        "Jan-Christian Huetter",
+        "Gabriele Scalia",
+        "Tommaso Biancalani",
+        "Sepideh Maleki"
+      ],
+      "published": "2026-08-03",
+      "updated": "2026-08-03",
+      "url": "http://arxiv.org/abs/2608.01734v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.01734v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.15,
+      "matched_topics": [
+        "单细胞扰动",
+        "多组学扰动"
+      ],
+      "matched_terms": [
+        "perturbation atlas",
+        "perturbation prediction",
+        "single-cell perturbation"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 6.0,
+        "多组学扰动": 2.55,
+        "领域上下文": 0.5,
+        "新鲜度": 1.6
+      },
+      "summary": {
+        "takeaway": "这项研究聚焦于单细胞扰动、多组学扰动。原文摘要要点：Predicting transcriptomic responses to small-molecule perturbations across cell lines is central to drug discovery, but exhaustive profiling of drug-cell combinations is infeasible. We frame molecular perturbation prediction as retrieve-and-aggregate: approximate an unmeasured drug's response in a cell line by aggregating measured responses of a small set o…",
+        "methods": "摘要中未识别出明确的方法标签",
+        "relevance": "命中当前论文雷达的主题：单细胞扰动、多组学扰动。",
+        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+      },
+      "summary_mode": "fallback"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.06.22.733850",
+      "title": "Do Geometric Outliers Identify Important Genes in Single-Cell Foundation Models?",
+      "abstract": "Single-cell foundation models (scFMs) produce gene embeddings that are increasingly interpreted biologically, but it is unclear whether different models organise gene space consistently, or whether geometric extremes identify important genes. The same four-metric screen was applied to Geneformer, scGPT and scFoundation, which differ in architecture, training objective and expression encoding. The models agreed weakly on individual outlier genes but showed structured class-level convergence: ribosomal enrichment occurred in all three, although weaker and caller-dependent in scFoundation, while strong mitochondrial enrichment was confined to Geneformer and scGPT. Gene-level agreement was itself uneven, with Geneformer and scGPT overlapping above chance and scGPT and scFoundation not, and caller stability differed between models. Most outliers were not extreme in ESM-2 protein-sequence space, indicating principally model-specific rather than protein-sequence geometry. These patterns did not translate into the tested notions of gene importance: deleting the highest-anomaly Geneformer genes did not impair cell-type annotation beyond matched controls, and covariate-adjusted outlier status was not associated with ClinVar membership in any model. Gene-embedding geometry therefore characterises model-specific structure, but does not provide standalone evidence of downstream leverage or disease relevance.",
+      "authors": [
+        "Whalley, J. P."
+      ],
+      "published": "2026-08-03",
+      "updated": "2026-08-03",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.06.22.733850",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.06.22.733850.full.pdf",
+      "doi": "10.64898/2026.06.22.733850",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 10.1,
+      "matched_topics": [
+        "Cell Foundation Model"
+      ],
+      "matched_terms": [
+        "cell foundation model",
+        "single-cell foundation model"
+      ],
+      "score_breakdown": {
+        "Cell Foundation Model": 7.0,
+        "领域上下文": 0.5,
+        "新鲜度": 1.6
+      },
+      "summary": {
+        "takeaway": "这项研究聚焦于Cell Foundation Model。原文摘要要点：Single-cell foundation models (scFMs) produce gene embeddings that are increasingly interpreted biologically, but it is unclear whether different models organise gene space consistently, or whether geometric extremes identify important genes. The same four-metric screen was applied to Geneformer, scGPT and scFoundation, which differ in architecture, trainin…",
+        "methods": "基础模型",
+        "relevance": "命中当前论文雷达的主题：Cell Foundation Model。",
+        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+      },
+      "summary_mode": "fallback"
+    },
+    {
+      "id": "biorxiv:10.1101/2024.12.23.630036",
+      "title": "A Systematic Comparison of Single-Cell Perturbation Response Prediction Models",
+      "abstract": "Predicting single-cell transcriptional responses to perturbations is central to dissecting gene regulation and accelerating therapeutic design, yet the field lacks a rigorous, task-spanning assessment of model behavior. We present a large-scale benchmark of 13 representative methods and baselines across 25 datasets spanning diverse perturbation modalities and species, including two primary immune-cell drug-response resources. We evaluated three core tasks--generalization to unseen single-gene perturbations, prediction of combinatorial interactions, and transfer across cell types--using 24 metrics covering expression-level accuracy, relative changes, differential expression recovery, and distributional similarity. Across tasks, performance depended strongly on perturbation effect size and evaluation perspective: expression-level agreement was highest for small-effect perturbations resembling controls, whereas delta- and DE-based metrics improved with larger effects, providing clearer signals. Models shared a conservative bias, with fine-tuned foundation models compressing variance and underestimating synergistic effects in combinations. PerturbNet showed superior recovery of DE signatures in Tasks 1 and 2, while no method consistently generalized across cell types in Task 3, where biological consistency dominated outcomes. This benchmark establishes current methodological limits, clarifies that different metrics probe distinct biological signals rather than redundant summaries of the same prediction problem, and provides a foundation for developing virtual-cell models that more faithfully capture heterogeneous perturbation responses. Teaser: A large-scale benchmark reveals strengths and limits of models predicting single-cell perturbation responses.",
+      "authors": [
+        "Li, L.",
+        "You, Y.",
+        "Fu, Y.",
+        "Liao, W.",
+        "Fan, X.",
+        "Lu, S.",
+        "Cao, Y.",
+        "Li, B.",
+        "Ren, W.",
+        "Kong, J.",
+        "Zheng, S.",
+        "Chen, J.",
+        "Liu, X.",
+        "Tian, L."
+      ],
+      "published": "2026-08-03",
+      "updated": "2026-08-03",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.12.23.630036",
+      "pdf_url": "https://www.biorxiv.org/content/10.1101/2024.12.23.630036.full.pdf",
+      "doi": "10.1101/2024.12.23.630036",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 10.1,
+      "matched_topics": [
+        "单细胞扰动"
+      ],
+      "matched_terms": [
+        "single-cell perturbation"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 7.0,
+        "领域上下文": 0.5,
+        "新鲜度": 1.6
+      },
+      "summary": {
+        "takeaway": "这项研究聚焦于单细胞扰动。原文摘要要点：Predicting single-cell transcriptional responses to perturbations is central to dissecting gene regulation and accelerating therapeutic design, yet the field lacks a rigorous, task-spanning assessment of model behavior. We present a large-scale benchmark of 13 representative methods and baselines across 25 datasets spanning diverse perturbation modalities a…",
+        "methods": "基础模型、基准评测",
+        "relevance": "命中当前论文雷达的主题：单细胞扰动。",
+        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+      },
+      "summary_mode": "fallback"
+    },
+    {
+      "id": "pubmed:42485225",
+      "title": "Multiscale higher-order molecular simplicial complex embedding for drug response prediction.",
+      "abstract": "MOTIVATION: Accurately predicting anticancer drug response is a central challenge in precision oncology. Existing computational methods, although valuable, often depend on pairwise molecular descriptors or limited graph-based encodings that cannot fully capture the complexity of molecular structures or their interactions with cellular states. These constraints hinder their robustness and generalization across diverse drugs and biological contexts, underscoring the need for more expressive frameworks. RESULTS: To address this gap, we propose MolDr, a topological deep learning framework that represents molecules as multiscale simplicial complexes and propagates information across higher-order structures. By integrating these molecular representations with cellular profiles, MolDr unifies chemical topology and biological context within a single predictive model. Comprehensive experiments show that MolDr consistently outperforms or matches state-of-the-art baselines across multiple benchmarks. It achieves stronger accuracy and robustness on continuous drug response tasks, while also generalizing effectively to discrete classification settings. Moreover, sensitivity analysis confirms the benefit of incorporating multiple topological scales, further supporting the importance of higher-order representations. Together, these results demonstrate that MolDr delivers reliable performance across heterogeneous pharmacogenomic scenarios and highlight the promise of topological modeling for advancing drug response prediction. AVAILABILITY: Source code freely available at https://github.com/CS-BIO/MolDr.",
+      "authors": [
+        "Cong Shen",
+        "Guancen Lin",
+        "Chuan-Shen Hu",
+        "Jiawei Luo"
+      ],
+      "published": "2026-08-04",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42485225/",
+      "pdf_url": "",
+      "doi": "10.1093/bioinformatics/btag539",
+      "venue": "Bioinformatics (Oxford, England)",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 9.95,
+      "matched_topics": [
+        "药物扰动机制"
+      ],
+      "matched_terms": [
+        "drug response prediction"
+      ],
+      "score_breakdown": {
+        "药物扰动机制": 6.8,
+        "新鲜度": 1.95
+      },
+      "summary": {
+        "takeaway": "这项研究聚焦于药物扰动机制。原文摘要要点：MOTIVATION: Accurately predicting anticancer drug response is a central challenge in precision oncology. Existing computational methods, although valuable, often depend on pairwise molecular descriptors or limited graph-based encodings that cannot fully capture the complexity of molecular structures or their interactions with cellular states.",
+        "methods": "基准评测",
+        "relevance": "命中当前论文雷达的主题：药物扰动机制。",
+        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+      },
+      "summary_mode": "fallback"
+    },
+    {
+      "id": "pubmed:42544574",
+      "title": "FGFR3-driven gene regulatory network analysis reveals a protumoral role for p63 in luminal bladder tumors.",
+      "abstract": "Fibroblast growth factor receptor 3 (FGFR3) is one of the most frequently altered genes in bladder cancer, primarily through activating mutations that drive oncogenesis and are enriched in luminal tumors. However, the underlying gene regulatory network (GRN) remains poorly characterized. Here, we constructed an FGFR3-mutated GRN using a bottom-up bioinformatics approach, integrating transcriptomic data from bladder cancer cell lines, FGFR3-mutated tumors, and FGFR3 perturbation experiments in human and mouse models. Using publicly available CRISPR/Cas9 screening data, we identified transcription factors from this GRN that regulate the viability of FGFR3-mutated cells, with a focus on p63 (TP63). We showed that FGFR3 activation upregulates p63 in patient-derived xenografts and cell lines, while single-cell RNA sequencing revealed heterogeneous p63 activation associated with basal differentiation. Functional studies, including TP63 knockdown in FGFR3-dependent in vitro and in vivo models and RNA-seq along with p63 ChIP-seq, demonstrated that p63 directly promotes cell proliferation and migration and uncovered a positive feedback loop between FGFR3 and p63. Together, these findings support p63 as a protumorigenic regulator in FGFR3-mutated tumors despite their luminal differentiation and provide a detailed FGFR3-driven GRN, offering insights into FGFR3-induced oncogenic dependency and potential strategies to circumvent resistance to FGFR inhibitors.",
+      "authors": [
+        "Aura Moreno-Vega",
+        "Macarena Zambrano",
+        "Lilia Estrada-Virrueta",
+        "Xiangyu Meng",
+        "Julia Puig",
+        "Helene Neyret-Kahn",
+        "Mingjun Shi",
+        "Florent Dufour",
+        "Guerric Gilbert",
+        "Ke Li",
+        "Clarice Groeneveld",
+        "Jacqueline Fontugne",
+        "Mercedes Pérez-Escavy",
+        "Wajdi Dhifli",
+        "Clément Hua",
+        "Luc Cabel",
+        "Clémentine Krucker",
+        "Laura Tanguy",
+        "Sia Viborg Lindskrog",
+        "Claire Beraud",
+        "Yanina V Langle",
+        "Tao Ye",
+        "Fariza Tahi",
+        "Irwin Davidson",
+        "Jesus M Paramio",
+        "Lars Dyrskjøt",
+        "Yves Allory",
+        "Philippe Lluel",
+        "Ana Maria Eiján",
+        "Mohamed Elati",
+        "François Radvanyi",
+        "Catalina Lodillinsky",
+        "Isabelle Bernard-Pierrot"
+      ],
+      "published": "2026-08-03",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42544574/",
+      "pdf_url": "",
+      "doi": "10.1172/JCI193280",
+      "venue": "The Journal of clinical investigation",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 9.7,
+      "matched_topics": [
+        "GRN / Regulon"
+      ],
+      "matched_terms": [
+        "gene regulatory network"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 6.4,
+        "领域上下文": 0.5,
+        "新鲜度": 1.6
+      },
+      "summary": {
+        "takeaway": "这项研究聚焦于GRN / Regulon。原文摘要要点：Fibroblast growth factor receptor 3 (FGFR3) is one of the most frequently altered genes in bladder cancer, primarily through activating mutations that drive oncogenesis and are enriched in luminal tumors. However, the underlying gene regulatory network (GRN) remains poorly characterized.",
+        "methods": "CRISPR 筛选、基因调控网络、单细胞转录组",
+        "relevance": "命中当前论文雷达的主题：GRN / Regulon。",
+        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+      },
+      "summary_mode": "fallback"
+    },
+    {
+      "id": "arxiv:2608.02961v1",
+      "title": "Scaling an Autoregressive Transformer for Single-Cell Generation",
+      "abstract": "We study a self-supervised generation task for single-cell gene expression vectors: given a set of vectors from a cell type, we aim to generate additional gene expression vectors of that cell type. For this task we characterize both the biological fidelity of the generated gene expression vectors and the scaling behavior of the pretraining loss. The model is a causal transformer paired with a learned quantized VAE tokenizer, trained with a cross-entropy loss. To evaluate the model, we condition it on held-out gene expression vectors of a cell type and generate vectors of gene expression, comparing the resulting distribution over gene expression vectors to the ground truth distribution of that cell type. We study the scaling properties of the proposed architecture by varying the number of trained parameters and the amount of training data. To our knowledge, we find the first jointly-fit two-exponent scaling law and compute-optimal frontier for a single-cell foundation model. Finally, we discuss how this pretrained model could be finetuned for perturbation response prediction.",
+      "authors": [
+        "Aleksandr Sharipov",
+        "Yusif Mukhtarov",
+        "Igor Molybog"
+      ],
+      "published": "2026-08-03",
+      "updated": "2026-08-03",
+      "url": "http://arxiv.org/abs/2608.02961v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.02961v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 8.5,
+      "matched_topics": [
+        "Cell Foundation Model"
+      ],
+      "matched_terms": [
+        "cell foundation model",
+        "single-cell foundation model"
+      ],
+      "score_breakdown": {
+        "Cell Foundation Model": 5.4,
+        "领域上下文": 1.0,
+        "新鲜度": 1.6
+      },
+      "summary": {
+        "takeaway": "这项研究聚焦于Cell Foundation Model。原文摘要要点：We study a self-supervised generation task for single-cell gene expression vectors: given a set of vectors from a cell type, we aim to generate additional gene expression vectors of that cell type. For this task we characterize both the biological fidelity of the generated gene expression vectors and the scaling behavior of the pretraining loss.",
+        "methods": "Transformer、基础模型、因果建模",
+        "relevance": "命中当前论文雷达的主题：Cell Foundation Model。",
+        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+      },
+      "summary_mode": "fallback"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.03.09.710580",
+      "title": "STAR Suite: Transcriptomics processing in a single binary through AI-assisted development",
+      "abstract": "Single-cell transcriptomic assays--pooled CRISPR/Perturb-seq screens, clonal lineage tracing, and 10x Flex fixed RNA profiling--are central to modern biology, yet their processing has depended on Cell Ranger, a proprietary tool restricted to 10x products, with no open end-to-end pipeline for Perturb-seq or Flex. We present STAR Suite, which extends the STAR aligner into a single executable that processes bulk RNA-seq, scRNA-seq, Perturb-seq, 10x Flex, and SLAM-seq in one command, with no added dependencies. For single-cell assays it reproduces Cell Ranger 9.0.1 (gene-level Pearson 0.99-1.0) while running 3.6- to 5.7-fold faster, via novel exact-matching and alignment-validated hashing algorithms. Served to both AI agents and human operators through one validated interface, STAR Suite is the production standard for the NIH MorPhiC consortium; its 132,226 lines of C/C++ were built under a human-directed, AI-implemented workflow. Source code, workflow recipes, and per-run provenance are released under the MIT license.",
+      "authors": [
+        "Hung, L.-H.",
+        "Baker, D.",
+        "Flynn, B.",
+        "Huangfu, D.",
+        "Luo, R.",
+        "Robson, P.",
+        "Zhou, T.",
+        "Yeung, K. Y."
+      ],
+      "published": "2026-08-02",
+      "updated": "2026-08-02",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.03.09.710580",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.03.09.710580.full.pdf",
+      "doi": "10.64898/2026.03.09.710580",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 7.25,
+      "matched_topics": [
+        "单细胞扰动"
+      ],
+      "matched_terms": [
+        "perturb-seq"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 3.0,
+        "领域上下文": 2.0,
+        "新鲜度": 1.25
+      },
+      "summary": {
+        "takeaway": "这项研究聚焦于单细胞扰动。原文摘要要点：Single-cell transcriptomic assays--pooled CRISPR/Perturb-seq screens, clonal lineage tracing, and 10x Flex fixed RNA profiling--are central to modern biology, yet their processing has depended on Cell Ranger, a proprietary tool restricted to 10x products, with no open end-to-end pipeline for Perturb-seq or Flex. We present STAR Suite, which extends the STAR…",
+        "methods": "Perturb-seq、CRISPR 筛选、scRNA-seq",
+        "relevance": "命中当前论文雷达的主题：单细胞扰动。",
+        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+      },
+      "summary_mode": "fallback"
+    }
+  ],
+  "fetch_report": {
+    "window_start": "2026-08-02",
+    "window_end": "2026-08-05",
+    "sources": {
+      "arxiv": {
+        "status": "ok",
+        "count": 2
+      },
+      "biorxiv": {
+        "status": "ok",
+        "count": 300
+      },
+      "pubmed": {
+        "status": "ok",
+        "count": 2
+      },
+      "semantic_scholar": {
+        "status": "error",
+        "count": 0,
+        "error": "HTTPError: 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=single+cell+perturbation+prediction&limit=40&fields=paperId%2Ctitle%2Cabstract%2Cauthors%2CpublicationDate%2Curl%2CopenAccessPdf%2CexternalIds%2Cvenue%2"
+      }
+    },
+    "total": 304
+  },
+  "summary_report": {
+    "requested": 7,
+    "model": null,
+    "openai": 0,
+    "fallback": 7,
+    "errors": []
+  }
+}
