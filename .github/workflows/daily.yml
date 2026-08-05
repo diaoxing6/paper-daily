@@ -1,6 +1,8 @@
 name: Daily paper radar
 
 on:
+  push:
+    branches: [main]
   schedule:
     # Avoid the start-of-hour peak, when scheduled runs are more likely to be delayed.
     - cron: "17 8 * * *"
