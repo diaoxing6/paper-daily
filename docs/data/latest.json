@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T14:06:08+00:00",
+  "generated_at": "2026-08-05T15:03:37+00:00",
   "timezone": "Asia/Singapore",
   "papers": [
     {
@@ -25,7 +25,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 11.14,
+      "score": 11.13,
       "matched_topics": [
         "单细胞扰动",
         "多组学扰动"
@@ -39,15 +39,15 @@
         "单细胞扰动": 6.0,
         "多组学扰动": 2.55,
         "领域上下文": 0.5,
-        "新鲜度": 1.59
+        "新鲜度": 1.58
       },
       "summary": {
-        "takeaway": "这项研究聚焦于单细胞扰动、多组学扰动。原文摘要要点：Predicting transcriptomic responses to small-molecule perturbations across cell lines is central to drug discovery, but exhaustive profiling of drug-cell combinations is infeasible. We frame molecular perturbation prediction as retrieve-and-aggregate: approximate an unmeasured drug's response in a cell line by aggregating measured responses of a small set o…",
-        "methods": "摘要中未识别出明确的方法标签",
-        "relevance": "命中当前论文雷达的主题：单细胞扰动、多组学扰动。",
-        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+        "takeaway": "提出LLM引导的检索方法用于分子扰动响应预测，通过检索相关化合物的测量响应来聚合预测未测量药物响应，在多个评估设置中优于基线，尤其在未见细胞系泛化上提升显著。",
+        "methods": "使用大语言模型排序候选邻居药物（限制为目标细胞系中已测药物），然后通过固定均值聚合器组合表达变化进行预测。在Tahoe-100M单细胞扰动图谱上评估，包括未见药物、未见细胞系和开放世界场景。",
+        "relevance": "直接关联单细胞扰动预测和药物响应，展示了LLM作为生物学先验在约束检索中的效用，为单细胞扰动响应预测提供了新思路。",
+        "caveat": "摘要未提及方法在除Tahoe-100M外的数据集上的表现，且未与其他非kNN或非检索方法全面比较。"
       },
-      "summary_mode": "fallback"
+      "summary_mode": "openai"
     },
     {
       "id": "biorxiv:10.64898/2026.06.22.733850",
@@ -68,7 +68,7 @@
       "also_seen_in": [
         "bioRxiv"
       ],
-      "score": 10.09,
+      "score": 10.08,
       "matched_topics": [
         "Cell Foundation Model"
       ],
@@ -79,15 +79,15 @@
       "score_breakdown": {
         "Cell Foundation Model": 7.0,
         "领域上下文": 0.5,
-        "新鲜度": 1.59
+        "新鲜度": 1.58
       },
       "summary": {
-        "takeaway": "这项研究聚焦于Cell Foundation Model。原文摘要要点：Single-cell foundation models (scFMs) produce gene embeddings that are increasingly interpreted biologically, but it is unclear whether different models organise gene space consistently, or whether geometric extremes identify important genes. The same four-metric screen was applied to Geneformer, scGPT and scFoundation, which differ in architecture, trainin…",
-        "methods": "基础模型",
-        "relevance": "命中当前论文雷达的主题：Cell Foundation Model。",
-        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+        "takeaway": "不同单细胞基础模型在基因嵌入空间中的几何异常基因的一致性较差，且这些异常基因与基因重要性或疾病相关性无关，提示基因嵌入几何主要反映模型特有结构。",
+        "methods": "对Geneformer、scGPT和scFoundation应用相同的四指标筛选，比较异常基因的重叠，并测试与蛋白序列空间、细胞类型注释和ClinVar成员的关系。",
+        "relevance": "探究单细胞基础模型的基因嵌入表示，与Cell Foundation Model主题直接相关，为模型解释和下游应用提供警示。",
+        "caveat": "摘要仅基于四个指标和三个模型，可能未涵盖所有可能的几何异常定义，且未在更多模型或任务上验证。"
       },
-      "summary_mode": "fallback"
+      "summary_mode": "openai"
     },
     {
       "id": "biorxiv:10.1101/2024.12.23.630036",
@@ -121,7 +121,7 @@
       "also_seen_in": [
         "bioRxiv"
       ],
-      "score": 10.09,
+      "score": 10.08,
       "matched_topics": [
         "单细胞扰动"
       ],
@@ -131,15 +131,15 @@
       "score_breakdown": {
         "单细胞扰动": 7.0,
         "领域上下文": 0.5,
-        "新鲜度": 1.59
+        "新鲜度": 1.58
       },
       "summary": {
-        "takeaway": "这项研究聚焦于单细胞扰动。原文摘要要点：Predicting single-cell transcriptional responses to perturbations is central to dissecting gene regulation and accelerating therapeutic design, yet the field lacks a rigorous, task-spanning assessment of model behavior. We present a large-scale benchmark of 13 representative methods and baselines across 25 datasets spanning diverse perturbation modalities a…",
-        "methods": "基础模型、基准评测",
-        "relevance": "命中当前论文雷达的主题：单细胞扰动。",
-        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+        "takeaway": "大规模基准测试显示，单细胞扰动响应预测模型的性能高度依赖于扰动效应大小和评估指标，且存在保守偏差，没有方法在所有任务上一致最优。",
+        "methods": "系统比较13种方法和基线，在25个数据集上评估三个核心任务（未见单基因扰动、组合交互预测、跨细胞类型迁移），使用24个指标。",
+        "relevance": "直接针对单细胞扰动预测的当前方法进行基准测试，为理解模型能力和局限提供全面视角。",
+        "caveat": "摘要未提及具体方法名称及其表现细节，且数据集和指标的具体选择可能影响结论的普适性。"
       },
-      "summary_mode": "fallback"
+      "summary_mode": "openai"
     },
     {
       "id": "pubmed:42485225",
@@ -163,7 +163,7 @@
       "also_seen_in": [
         "PubMed"
       ],
-      "score": 9.94,
+      "score": 9.93,
       "matched_topics": [
         "药物扰动机制"
       ],
@@ -172,15 +172,15 @@
       ],
       "score_breakdown": {
         "药物扰动机制": 6.8,
-        "新鲜度": 1.94
+        "新鲜度": 1.93
       },
       "summary": {
-        "takeaway": "这项研究聚焦于药物扰动机制。原文摘要要点：MOTIVATION: Accurately predicting anticancer drug response is a central challenge in precision oncology. Existing computational methods, although valuable, often depend on pairwise molecular descriptors or limited graph-based encodings that cannot fully capture the complexity of molecular structures or their interactions with cellular states.",
-        "methods": "基准评测",
-        "relevance": "命中当前论文雷达的主题：药物扰动机制。",
-        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+        "takeaway": "提出MolDr框架，通过多尺度单纯复形嵌入整合化学拓扑和生物背景，在药物响应预测中优于或匹配现有方法。",
+        "methods": "使用拓扑深度学习，将分子表示为多尺度单纯复形，传播高阶结构信息，并与细胞谱整合，在多个基准上评估连续和离散药物响应任务。",
+        "relevance": "关乎药物响应预测，与药物扰动机制主题相关，展示了高阶拓扑特征在预测中的价值。",
+        "caveat": "摘要未提及模型在哪些特定数据集上测试，以及与其他方法的详细比较，且未涉及对药物作用机制的生物学解释。"
       },
-      "summary_mode": "fallback"
+      "summary_mode": "openai"
     },
     {
       "id": "pubmed:42544574",
@@ -233,7 +233,7 @@
       "also_seen_in": [
         "PubMed"
       ],
-      "score": 9.69,
+      "score": 9.68,
       "matched_topics": [
         "GRN / Regulon"
       ],
@@ -243,15 +243,15 @@
       "score_breakdown": {
         "GRN / Regulon": 6.4,
         "领域上下文": 0.5,
-        "新鲜度": 1.59
+        "新鲜度": 1.58
       },
       "summary": {
-        "takeaway": "这项研究聚焦于GRN / Regulon。原文摘要要点：Fibroblast growth factor receptor 3 (FGFR3) is one of the most frequently altered genes in bladder cancer, primarily through activating mutations that drive oncogenesis and are enriched in luminal tumors. However, the underlying gene regulatory network (GRN) remains poorly characterized.",
-        "methods": "CRISPR 筛选、基因调控网络、单细胞转录组",
-        "relevance": "命中当前论文雷达的主题：GRN / Regulon。",
-        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+        "takeaway": "构建FGFR3突变驱动的基因调控网络，发现p63在FGFR3驱动的膀胱肿瘤中发挥促肿瘤作用，并存在正反馈环路。",
+        "methods": "整合转录组数据、CRISPR筛选和单细胞RNA测序，通过敲降和ChIP-seq验证p63功能。",
+        "relevance": "涉及基因调控网络分析，与GRN/Regulon主题直接相关，揭示特定癌症中的调控机制。",
+        "caveat": "摘要未提及具体的数据集规模或统计显著性的详细信息，且结论可能基于特定细胞系和模型，需要进一步验证。"
       },
-      "summary_mode": "fallback"
+      "summary_mode": "openai"
     },
     {
       "id": "arxiv:2608.02961v1",
@@ -274,7 +274,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 8.49,
+      "score": 8.48,
       "matched_topics": [
         "Cell Foundation Model"
       ],
@@ -285,15 +285,15 @@
       "score_breakdown": {
         "Cell Foundation Model": 5.4,
         "领域上下文": 1.0,
-        "新鲜度": 1.59
+        "新鲜度": 1.58
       },
       "summary": {
-        "takeaway": "这项研究聚焦于Cell Foundation Model。原文摘要要点：We study a self-supervised generation task for single-cell gene expression vectors: given a set of vectors from a cell type, we aim to generate additional gene expression vectors of that cell type. For this task we characterize both the biological fidelity of the generated gene expression vectors and the scaling behavior of the pretraining loss.",
-        "methods": "Transformer、基础模型、因果建模",
-        "relevance": "命中当前论文雷达的主题：Cell Foundation Model。",
-        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+        "takeaway": "研究了自回归Transformer用于单细胞生成，首次联合拟合双指数缩放定律和计算最优前沿，并讨论了微调用于扰动响应预测。",
+        "methods": "使用因果Transformer和量化VAE分词器，在基因表达向量上训练，通过改变参数和数据量研究缩放行为。",
+        "relevance": "与Cell Foundation Model主题相关，提供了单细胞基础模型的扩展性分析，并直接指向扰动预测应用。",
+        "caveat": "摘要未提供具体生成质量的细节或与其他生成模型的比较，且只关注了一个细胞类型生成任务。"
       },
-      "summary_mode": "fallback"
+      "summary_mode": "openai"
     },
     {
       "id": "biorxiv:10.64898/2026.03.09.710580",
@@ -321,7 +321,7 @@
       "also_seen_in": [
         "bioRxiv"
       ],
-      "score": 7.24,
+      "score": 7.23,
       "matched_topics": [
         "单细胞扰动"
       ],
@@ -331,15 +331,15 @@
       "score_breakdown": {
         "单细胞扰动": 3.0,
         "领域上下文": 2.0,
-        "新鲜度": 1.24
+        "新鲜度": 1.23
       },
       "summary": {
-        "takeaway": "这项研究聚焦于单细胞扰动。原文摘要要点：Single-cell transcriptomic assays--pooled CRISPR/Perturb-seq screens, clonal lineage tracing, and 10x Flex fixed RNA profiling--are central to modern biology, yet their processing has depended on Cell Ranger, a proprietary tool restricted to 10x products, with no open end-to-end pipeline for Perturb-seq or Flex. We present STAR Suite, which extends the STAR…",
-        "methods": "Perturb-seq、CRISPR 筛选、scRNA-seq",
-        "relevance": "命中当前论文雷达的主题：单细胞扰动。",
-        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+        "takeaway": "STAR Suite将多种转录组学处理整合到单个可执行文件中，媲美Cell Ranger性能且速度更快，为Perturb-seq等数据提供开源处理方案。",
+        "methods": "基于STAR aligner扩展，采用新的哈希算法，处理多种测序类型，通过AI辅助开发，在多样性数据上验证。",
+        "relevance": "与单细胞扰动数据预处理的工具相关，可能支持更高效的单细胞扰动实验分析。",
+        "caveat": "摘要未提及基准测试的具体细节和局限性，以及在不同物种或实验条件下的适用性。"
       },
-      "summary_mode": "fallback"
+      "summary_mode": "openai"
     }
   ],
   "fetch_report": {
@@ -368,9 +368,10 @@
   },
   "summary_report": {
     "requested": 7,
-    "model": null,
-    "openai": 0,
-    "fallback": 7,
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai": 7,
+    "fallback": 0,
     "errors": []
   }
 }
