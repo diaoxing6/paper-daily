@@ -25,6 +25,14 @@ METHOD_LABELS = {
     "diffusion": "扩散模型",
     "variational autoencoder": "变分自编码器",
     "benchmark": "基准评测",
+    "large language model": "大语言模型",
+    "retrieval-augmented": "检索增强生成",
+    "knowledge graph": "知识图谱",
+    "reinforcement learning": "强化学习",
+    "continual learning": "持续学习",
+    "self-supervised": "自监督学习",
+    "vision-language": "视觉语言模型",
+    "contrastive learning": "对比学习",
 }
 
 
@@ -82,7 +90,8 @@ def _summarize_batch(
         for paper in papers
     ]
     instructions = (
-        "你是谨慎的生物医学论文编辑。根据标题和摘要生成简明中文解读，不得添加摘要中没有的结果、"
+        "你是谨慎的科研论文编辑，熟悉计算机科学与计算生物学。根据标题和摘要生成简明中文解读，"
+        "不得添加摘要中没有的结果、"
         "数值或因果结论。仅返回合法 JSON 对象，不要 Markdown。顶层格式必须为 {\"papers\": [...]}，"
         "papers 数组中的每项必须包含 id、takeaway、"
         "methods、relevance、caveat 五个字符串字段。takeaway 用 1–2 句说明核心贡献；methods 概括"

@@ -23,8 +23,18 @@ def _e(value: Any) -> str:
     return html.escape(str(value or ""), quote=True)
 
 
-def _paper_card(paper: dict[str, Any], index: int, highlighted: bool = False) -> str:
+def _paper_card(
+    paper: dict[str, Any],
+    index: int,
+    category_labels: dict[str, str],
+    highlighted: bool = False,
+) -> str:
     topics = paper.get("matched_topics") or []
+    categories = paper.get("matched_categories") or []
+    category_html = "".join(
+        f'<span class="channel-pill">{_e(category_labels.get(category, category))}</span>'
+        for category in categories
+    )
     topics_html = "".join(f'<span class="topic-pill">{_e(topic)}</span>' for topic in topics)
     authors = paper.get("authors") or []
     author_text = ", ".join(authors[:4])
@@ -39,12 +49,18 @@ def _paper_card(paper: dict[str, Any], index: int, highlighted: bool = False) ->
     mode_label = "AI 中文解读" if paper.get("summary_mode") == "openai" else "本地摘要"
     source = SOURCE_LABELS.get(paper.get("source"), paper.get("source", "SOURCE"))
     search_text = " ".join(
-        [paper.get("title", ""), paper.get("abstract", ""), author_text, " ".join(topics)]
+        [
+            paper.get("title", ""),
+            paper.get("abstract", ""),
+            author_text,
+            " ".join(topics),
+            " ".join(category_labels.get(category, category) for category in categories),
+        ]
     ).casefold()
     card_class = "paper-card highlight-card" if highlighted else "paper-card"
     badge = '<span class="priority-badge">优先阅读</span>' if highlighted else ""
     return f"""
-      <article class="{card_class}" id="paper-{index}" data-topics="{_e('|'.join(topics))}" data-search="{_e(search_text)}">
+      <article class="{card_class}" id="paper-{index}" data-categories="{_e('|'.join(categories))}" data-topics="{_e('|'.join(topics))}" data-search="{_e(search_text)}">
         <div class="card-rail"><span>{index:02d}</span></div>
         <div class="card-body">
           <div class="paper-kicker">
@@ -55,7 +71,7 @@ def _paper_card(paper: dict[str, Any], index: int, highlighted: bool = False) ->
           </div>
           <h3><a href="{_e(paper.get('url'))}" target="_blank" rel="noreferrer">{_e(paper.get('title'))}</a></h3>
           <p class="authors">{_e(author_text or '作者信息暂缺')} · {_e(paper.get('venue') or paper.get('source'))}</p>
-          <div class="topic-row">{topics_html}</div>
+          <div class="topic-row">{category_html}{topics_html}</div>
           <div class="summary-panel">
             <div class="summary-heading"><span>中文速读</span><em>{_e(mode_label)}</em></div>
             <p class="takeaway">{_e(summary.get('takeaway', '暂无摘要'))}</p>
@@ -73,6 +89,8 @@ def _paper_card(paper: dict[str, Any], index: int, highlighted: bool = False) ->
 def build_html(payload: dict[str, Any], config: dict[str, Any], archive_dates: list[str]) -> str:
     site = config["site"]
     papers = payload.get("papers") or []
+    categories = site.get("categories", [])
+    category_labels = {item["id"]: item["name"] for item in categories}
     generated_at = payload.get("generated_at")
     try:
         generated = datetime.fromisoformat(generated_at).astimezone(ZoneInfo(site["timezone"]))
@@ -95,21 +113,43 @@ def build_html(payload: dict[str, Any], config: dict[str, Any], archive_dates: l
         source_status = ['<span class="source-status status-sample"><i></i>示例数据</span>']
 
     topic_counts: dict[str, int] = {}
+    category_counts: dict[str, int] = {item["id"]: 0 for item in categories}
     for paper in papers:
         for topic in paper.get("matched_topics") or []:
             topic_counts[topic] = topic_counts.get(topic, 0) + 1
+        for category in paper.get("matched_categories") or []:
+            category_counts[category] = category_counts.get(category, 0) + 1
+    topic_categories = {
+        topic["name"]: topic.get("category", "")
+        for topic in config["ranking"].get("topics", [])
+    }
     topic_buttons = "".join(
-        f'<button class="filter-btn" data-topic="{_e(topic)}">{_e(topic)} <span>{count}</span></button>'
+        f'<button class="filter-btn" data-topic="{_e(topic)}" data-category="{_e(topic_categories.get(topic, ""))}">{_e(topic)} <span>{count}</span></button>'
         for topic, count in sorted(topic_counts.items(), key=lambda item: (-item[1], item[0]))
     )
 
+    channel_cards = [
+        f'''<button class="channel-card active" data-category="" style="--channel:#13233a">
+          <span class="channel-index">00</span><span class="channel-short">ALL</span>
+          <strong>全部方向</strong><p>浏览所有频道的综合推荐</p><em>{len(papers)} 篇</em>
+        </button>'''
+    ]
+    for index, category in enumerate(categories, start=1):
+        channel_cards.append(
+            f'''<button class="channel-card" data-category="{_e(category['id'])}" style="--channel:{_e(category.get('accent', '#167e79'))}">
+          <span class="channel-index">{index:02d}</span><span class="channel-short">{_e(category.get('short', 'TOPIC'))}</span>
+          <strong>{_e(category['name'])}</strong><p>{_e(category.get('description', ''))}</p><em>{category_counts.get(category['id'], 0)} 篇</em>
+        </button>'''
+        )
+    channel_cards_html = "".join(channel_cards)
+
     highlight_count = min(int(site["highlight_count"]), len(papers))
-    highlight_cards = "".join(_paper_card(paper, index + 1, True) for index, paper in enumerate(papers[:highlight_count]))
-    remaining_cards = "".join(
-        _paper_card(paper, index + 1, False) for index, paper in enumerate(papers[highlight_count:], start=highlight_count)
+    paper_cards = "".join(
+        _paper_card(paper, index + 1, category_labels, index < highlight_count)
+        for index, paper in enumerate(papers)
     )
     if not papers:
-        highlight_cards = """
+        paper_cards = """
           <div class="empty-state">
             <span>NO SIGNAL YET</span>
             <h3>今天还没有匹配到论文</h3>
@@ -120,7 +160,13 @@ def build_html(payload: dict[str, Any], config: dict[str, Any], archive_dates: l
     openai_count = sum(1 for paper in papers if paper.get("summary_mode") == "openai")
     archive_options = "".join(f'<option value="{_e(date)}">{_e(date)}</option>' for date in archive_dates[:30])
     data_json = json.dumps(
-        {"generated_at": generated_at, "paper_count": len(papers), "topics": topic_counts},
+        {
+            "generated_at": generated_at,
+            "paper_count": len(papers),
+            "topics": topic_counts,
+            "categories": categories,
+            "category_counts": category_counts,
+        },
         ensure_ascii=False,
     ).replace("</", "<\\/")
 
@@ -136,15 +182,15 @@ def build_html(payload: dict[str, Any], config: dict[str, Any], archive_dates: l
     :root {{ --ink:#13233a; --ink-soft:#526074; --paper:#f4f1e9; --card:#fffdf8; --line:#d9d4c8; --accent:#ef5d3f; --teal:#167e79; --lime:#d7ee72; --shadow:0 18px 55px rgba(19,35,58,.09); }}
     * {{ box-sizing:border-box; }}
     html {{ scroll-behavior:smooth; }}
-    body {{ margin:0; color:var(--ink); background:var(--paper); font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif; line-height:1.65; }}
+    body {{ margin:0; color:var(--ink); background:radial-gradient(circle at 8% 0,rgba(215,238,114,.18),transparent 24rem),radial-gradient(circle at 94% 18%,rgba(22,126,121,.09),transparent 28rem),var(--paper); font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif; line-height:1.65; }}
     a {{ color:inherit; }}
     button,input,select {{ font:inherit; }}
     .page-shell {{ width:min(1180px,calc(100% - 40px)); margin:0 auto; }}
     .site-header {{ padding:24px 0 0; }}
     .nav {{ display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--ink); padding-bottom:18px; gap:20px; }}
     .brand {{ display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:900; letter-spacing:-.04em; }}
-    .brand-mark {{ width:34px; height:34px; border-radius:50%; background:var(--accent); position:relative; box-shadow:inset -8px -8px 0 rgba(19,35,58,.12); }}
-    .brand-mark:after {{ content:""; position:absolute; width:9px; height:9px; border-radius:50%; background:var(--lime); top:5px; right:4px; }}
+    .brand-mark {{ width:36px; height:36px; border-radius:10px; background:var(--ink); position:relative; transform:rotate(-7deg); box-shadow:inset -9px -9px 0 rgba(239,93,63,.85); }}
+    .brand-mark:after {{ content:""; position:absolute; width:10px; height:10px; border-radius:50%; background:var(--lime); top:5px; right:5px; }}
     .brand small {{ display:block; font-size:10px; letter-spacing:.18em; color:var(--ink-soft); line-height:1; }}
     .nav-meta {{ display:flex; align-items:center; gap:18px; font-size:12px; font-weight:700; letter-spacing:.06em; }}
     .live-dot {{ display:inline-flex; align-items:center; gap:8px; }}
@@ -168,6 +214,23 @@ def build_html(payload: dict[str, Any], config: dict[str, Any], archive_dates: l
     .source-status i {{ width:7px; height:7px; border-radius:50%; background:#9ca3af; }}
     .source-status b {{ font-weight:600; color:var(--ink-soft); }}
     .status-ok i {{ background:var(--teal); }} .status-error i {{ background:var(--accent); }} .status-sample i {{ background:#d6a928; }}
+    .channel-directory {{ margin:58px 0 28px; scroll-margin-top:24px; }}
+    .directory-heading {{ display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:20px; }}
+    .directory-heading h2 {{ margin:0; font-family:Georgia,"Noto Serif SC",serif; font-size:clamp(32px,5vw,55px); line-height:1; font-weight:400; letter-spacing:-.045em; }}
+    .directory-heading p {{ max-width:490px; margin:0; color:var(--ink-soft); font-size:13px; }}
+    .channel-grid {{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }}
+    .channel-card {{ position:relative; min-height:190px; padding:20px; text-align:left; color:var(--ink); background:rgba(255,253,248,.68); border:1px solid var(--line); cursor:pointer; overflow:hidden; transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease; }}
+    .channel-card:before {{ content:""; position:absolute; inset:0 auto 0 0; width:5px; background:var(--channel); transform:scaleY(.16); transform-origin:bottom; transition:transform .25s ease; }}
+    .channel-card:hover,.channel-card.active {{ transform:translateY(-3px); border-color:var(--channel); box-shadow:var(--shadow); background:var(--card); }}
+    .channel-card:hover:before,.channel-card.active:before {{ transform:scaleY(1); }}
+    .channel-index {{ position:absolute; top:15px; right:16px; color:var(--line); font:italic 30px Georgia,serif; }}
+    .channel-short {{ display:inline-block; color:var(--channel); font-size:10px; font-weight:950; letter-spacing:.18em; }}
+    .channel-card strong {{ display:block; margin-top:24px; font:500 23px/1.15 Georgia,"Noto Serif SC",serif; }}
+    .channel-card p {{ min-height:42px; margin:10px 0 18px; color:var(--ink-soft); font-size:12px; line-height:1.55; }}
+    .channel-card em {{ font-style:normal; color:var(--channel); font-size:11px; font-weight:850; }}
+    .active-channel {{ display:inline-flex; align-items:center; gap:8px; margin:0 0 14px; color:var(--accent); font-size:11px; font-weight:900; letter-spacing:.15em; }}
+    .active-channel:before {{ content:""; width:24px; height:2px; background:currentColor; }}
+    .paper-section {{ scroll-margin-top:24px; }}
     .controls {{ margin:38px 0 30px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }}
     .search-wrap {{ position:relative; flex:1 1 300px; }}
     .search-wrap:before {{ content:"⌕"; position:absolute; left:17px; top:7px; font-size:25px; color:var(--ink-soft); }}
@@ -196,7 +259,9 @@ def build_html(payload: dict[str, Any], config: dict[str, Any], archive_dates: l
     .paper-card h3 a:hover {{ background-size:100% 2px; }}
     .authors {{ margin:0; color:var(--ink-soft); font-size:13px; }}
     .topic-row {{ display:flex; flex-wrap:wrap; gap:7px; margin:17px 0; }}
-    .topic-pill {{ background:#e7eee9; color:#245c58; border-radius:999px; padding:4px 10px; font-size:11px; font-weight:750; }}
+    .topic-pill,.channel-pill {{ border-radius:999px; padding:4px 10px; font-size:11px; font-weight:750; }}
+    .topic-pill {{ background:#e7eee9; color:#245c58; }}
+    .channel-pill {{ background:var(--ink); color:var(--card); }}
     .summary-panel {{ border-left:3px solid var(--lime); background:#f5f7e8; padding:18px 20px; margin-top:18px; }}
     .summary-heading {{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; }}
     .summary-heading span {{ font-size:12px; font-weight:900; letter-spacing:.12em; }}
@@ -211,7 +276,6 @@ def build_html(payload: dict[str, Any], config: dict[str, Any], archive_dates: l
     .paper-link.secondary {{ background:transparent; color:var(--ink); border:1px solid var(--line); }}
     .anchor-link {{ color:var(--ink-soft); text-decoration:none; font-family:monospace; font-size:11px; }}
     .highlight-card:first-child {{ border-top:3px solid var(--accent); }}
-    .remaining-section {{ margin-top:72px; }}
     .empty-state {{ border:1px dashed var(--ink-soft); padding:70px 30px; text-align:center; }}
     .empty-state span {{ letter-spacing:.2em; font-size:11px; color:var(--accent); }} .empty-state h3 {{ font-family:Georgia,serif; font-size:32px; margin:10px 0; }}
     .no-results {{ display:none; text-align:center; padding:50px; color:var(--ink-soft); }}
@@ -221,70 +285,95 @@ def build_html(payload: dict[str, Any], config: dict[str, Any], archive_dates: l
     @media (max-width:800px) {{
       .page-shell {{ width:min(100% - 24px,1180px); }} .hero {{ grid-template-columns:1fr; padding-top:45px; }} .date-block {{ border-left:0; border-top:1px solid var(--line); padding:18px 0 0; }}
       .signal-strip {{ grid-template-columns:repeat(3,1fr); }} .source-line {{ grid-column:1/-1; border-top:1px solid var(--line); }} .stat {{ padding:17px 12px; }}
+      .channel-grid {{ grid-template-columns:repeat(2,minmax(0,1fr)); }} .directory-heading {{ align-items:start; flex-direction:column; }}
       .paper-card {{ grid-template-columns:42px 1fr; }} .card-rail {{ padding:22px 9px; font-size:14px; }} .card-body {{ padding:21px 17px; }} dl {{ grid-template-columns:1fr; }}
       .nav-meta .update-label {{ display:none; }} .section-title {{ align-items:start; flex-direction:column; }}
     }}
-    @media (max-width:480px) {{ .nav-meta {{ font-size:10px; }} .brand small {{ display:none; }} h1 {{ font-size:50px; }} .paper-card h3 {{ font-size:23px; }} .score {{ margin-left:0; }} .card-footer {{ align-items:flex-start; }} }}
+    @media (max-width:480px) {{ .nav-meta {{ font-size:10px; }} .brand small {{ display:none; }} h1 {{ font-size:50px; }} .channel-grid {{ grid-template-columns:1fr; }} .channel-card {{ min-height:160px; }} .paper-card h3 {{ font-size:23px; }} .score {{ margin-left:0; }} .card-footer {{ align-items:flex-start; }} }}
   </style>
 </head>
 <body>
   <header class="site-header page-shell">
     <nav class="nav" aria-label="主导航">
-      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span>CELL PAPER RADAR<small>DAILY RESEARCH SIGNAL</small></span></a>
-      <div class="nav-meta"><span class="live-dot">自动更新</span><span class="update-label">{_e(site['timezone'])}</span></div>
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span>RESEARCH RADAR<small>MULTI-FIELD PAPER SIGNAL</small></span></a>
+      <div class="nav-meta"><a href="#channels">方向导航</a><span class="live-dot">每日更新</span><span class="update-label">{_e(site['timezone'])}</span></div>
     </nav>
   </header>
   <main id="top" class="page-shell">
     <section class="hero">
-      <div><div class="eyebrow">DAILY INTELLIGENCE</div><h1>把新论文变成<br><em>研究信号。</em></h1><p class="hero-copy">{_e(site['description'])} 先看相关性，再看方法与局限，把检索时间留给真正值得精读的工作。</p></div>
+      <div><div class="eyebrow">YOUR DAILY RESEARCH MAP</div><h1>从多个方向，<br>发现<em>新信号。</em></h1><p class="hero-copy">{_e(site['description'])} 从计算机科学到计算生物学，点击研究频道即可进入当天的专属推荐。</p></div>
       <div class="date-block"><span>TODAY'S EDITION</span><strong>{_e(date_label)}</strong><small>更新于 {_e(generated_label)}</small></div>
     </section>
     <section class="signal-strip" aria-label="今日统计">
       <div class="stat"><b>{len(papers):02d}</b><span>相关论文</span></div>
-      <div class="stat"><b>{unique_sources:02d}</b><span>有效来源</span></div>
+      <div class="stat"><b>{len(categories):02d}</b><span>研究频道</span></div>
       <div class="stat"><b>{openai_count:02d}</b><span>AI 解读</span></div>
       <div class="source-line">{''.join(source_status)}</div>
+    </section>
+    <section class="channel-directory" id="channels" aria-labelledby="channel-title">
+      <div class="directory-heading"><div><div class="eyebrow">EXPLORE BY FIELD</div><h2 id="channel-title">研究方向导航</h2></div><p>每个频道拥有独立的推荐名额。选择一个方向，查看今天最值得关注的论文；也可以回到“全部方向”浏览综合榜单。</p></div>
+      <div class="channel-grid">{channel_cards_html}</div>
     </section>
     <section class="controls" aria-label="筛选论文">
       <label class="search-wrap"><span hidden>搜索论文</span><input id="search" type="search" placeholder="搜索标题、作者、摘要或主题…" autocomplete="off"></label>
       <select class="archive-select" id="archive" aria-label="历史归档"><option value="">最近归档</option>{archive_options}</select>
     </section>
-    <div class="filter-row"><button class="filter-btn active" data-topic="">全部 <span>{len(papers)}</span></button>{topic_buttons}</div>
-    <section>
-      <div class="section-title"><h2>今日优先阅读</h2><p>按研究方向匹配、新鲜度与来源综合排序</p></div>
-      <div class="papers" id="highlight-papers">{highlight_cards}</div>
-    </section>
-    <section class="remaining-section" {'hidden' if len(papers) <= highlight_count else ''}>
-      <div class="section-title"><h2>更多相关论文</h2><p>继续浏览今天的候选工作</p></div>
-      <div class="papers" id="remaining-papers">{remaining_cards}</div>
+    <div class="filter-row"><button class="filter-btn active" data-topic="" data-category="">全部主题 <span>{len(papers)}</span></button>{topic_buttons}</div>
+    <section class="paper-section">
+      <div class="active-channel" id="active-channel">ALL RESEARCH CHANNELS</div>
+      <div class="section-title"><h2 id="paper-section-title">今日综合推荐</h2><p id="paper-section-copy">按方向匹配、新鲜度与来源综合排序 · 当前显示 <span id="visible-count">{len(papers)}</span> 篇</p></div>
+      <div class="papers" id="paper-list">{paper_cards}</div>
     </section>
     <div class="no-results" id="no-results">没有找到符合当前筛选条件的论文。</div>
   </main>
-  <footer class="site-footer page-shell"><div><strong>CELL PAPER RADAR</strong><br>自动筛选仅用于文献发现，研究结论请以论文原文为准。</div><div>arXiv · bioRxiv · PubMed · Semantic Scholar<br>Generated by GitHub Actions</div></footer>
+  <footer class="site-footer page-shell"><div><strong>RESEARCH PAPER RADAR</strong><br>自动筛选仅用于文献发现，研究结论请以论文原文为准。</div><div>arXiv · bioRxiv · PubMed · Semantic Scholar<br>Generated daily by GitHub Actions</div></footer>
   <script type="application/json" id="radar-data">{data_json}</script>
   <script>
     (() => {{
       const search = document.querySelector('#search');
-      const buttons = [...document.querySelectorAll('.filter-btn')];
+      const topicButtons = [...document.querySelectorAll('.filter-btn')];
+      const channelButtons = [...document.querySelectorAll('.channel-card')];
       const cards = [...document.querySelectorAll('.paper-card')];
       const empty = document.querySelector('#no-results');
+      const visibleCount = document.querySelector('#visible-count');
+      const sectionTitle = document.querySelector('#paper-section-title');
+      const activeChannelLabel = document.querySelector('#active-channel');
+      const radarData = JSON.parse(document.querySelector('#radar-data').textContent);
+      const categoryMap = new Map((radarData.categories || []).map(item => [item.id, item]));
+      let activeCategory = '';
       let activeTopic = '';
       function applyFilters() {{
         const query = search.value.trim().toLocaleLowerCase();
         let visible = 0;
         cards.forEach(card => {{
+          const categoryMatch = !activeCategory || card.dataset.categories.split('|').includes(activeCategory);
           const topicMatch = !activeTopic || card.dataset.topics.split('|').includes(activeTopic);
           const textMatch = !query || card.dataset.search.includes(query);
-          card.hidden = !(topicMatch && textMatch);
+          card.hidden = !(categoryMatch && topicMatch && textMatch);
           if (!card.hidden) visible += 1;
         }});
         empty.style.display = visible ? 'none' : 'block';
-        document.querySelectorAll('.remaining-section').forEach(section => {{
-          section.hidden = ![...section.querySelectorAll('.paper-card')].some(card => !card.hidden);
-        }});
+        visibleCount.textContent = visible;
       }}
-      buttons.forEach(button => button.addEventListener('click', () => {{
-        buttons.forEach(item => item.classList.remove('active'));
+      function selectCategory(category, updateHash = true) {{
+        activeCategory = category;
+        activeTopic = '';
+        channelButtons.forEach(item => item.classList.toggle('active', item.dataset.category === category));
+        topicButtons.forEach((item, index) => {{
+          const belongs = !item.dataset.category || !category || item.dataset.category === category;
+          item.hidden = !belongs;
+          item.classList.toggle('active', index === 0);
+        }});
+        const item = categoryMap.get(category);
+        sectionTitle.textContent = item ? `${{item.name}} · 今日推荐` : '今日综合推荐';
+        activeChannelLabel.textContent = item ? `${{item.short}} / ${{item.name}}` : 'ALL RESEARCH CHANNELS';
+        if (updateHash) history.replaceState(null, '', category ? `#channel/${{category}}` : '#channels');
+        applyFilters();
+        if (updateHash) document.querySelector('.paper-section').scrollIntoView({{behavior:'smooth', block:'start'}});
+      }}
+      channelButtons.forEach(button => button.addEventListener('click', () => selectCategory(button.dataset.category)));
+      topicButtons.forEach(button => button.addEventListener('click', () => {{
+        topicButtons.forEach(item => item.classList.remove('active'));
         button.classList.add('active');
         activeTopic = button.dataset.topic;
         applyFilters();
@@ -293,6 +382,8 @@ def build_html(payload: dict[str, Any], config: dict[str, Any], archive_dates: l
       document.querySelector('#archive').addEventListener('change', event => {{
         if (event.target.value) window.open(`data/archive/${{event.target.value}}.json`, '_blank');
       }});
+      const initialCategory = location.hash.startsWith('#channel/') ? location.hash.slice(9) : '';
+      selectCategory(categoryMap.has(initialCategory) ? initialCategory : '', false);
     }})();
   </script>
 </body>
@@ -320,4 +411,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

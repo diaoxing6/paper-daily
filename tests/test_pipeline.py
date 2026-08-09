@@ -32,6 +32,21 @@ class PipelineTests(unittest.TestCase):
         self.assertTrue(ranked[0]["matched_topics"])
         self.assertGreater(ranked[0]["score"], self.config["ranking"]["min_score"])
 
+    def test_ranker_covers_all_configured_research_channels(self) -> None:
+        ranked = rank_papers(
+            self.fixture,
+            self.config,
+            now=datetime(2026, 8, 5, tzinfo=timezone.utc),
+        )
+        configured = {item["id"] for item in self.config["site"]["categories"]}
+        covered = {
+            category
+            for paper in ranked
+            for category in paper.get("matched_categories", [])
+        }
+        self.assertEqual(configured, covered)
+        self.assertTrue(all(paper.get("category_scores") for paper in ranked))
+
     def test_deduplicate_prefers_doi(self) -> None:
         papers = [dict(self.fixture[0], doi="10.1/example", source="arXiv"), dict(self.fixture[0], doi="10.1/example", source="PubMed")]
         unique = deduplicate(papers)
@@ -106,6 +121,29 @@ class PipelineTests(unittest.TestCase):
         page = build_html({"generated_at": "2026-08-05T00:00:00+00:00", "papers": [paper]}, self.config, [])
         self.assertNotIn("<script>alert(1)</script>", page)
         self.assertIn("&lt;script&gt;alert(1)&lt;/script&gt;", page)
+
+    def test_renderer_builds_clickable_category_navigation(self) -> None:
+        ranked = rank_papers(
+            self.fixture,
+            self.config,
+            now=datetime(2026, 8, 5, tzinfo=timezone.utc),
+        )
+        prepared = []
+        for paper in ranked:
+            item = dict(paper)
+            item["summary"] = fallback_summary(item)
+            item["summary_mode"] = "fallback"
+            prepared.append(item)
+        page = build_html(
+            {"generated_at": "2026-08-05T00:00:00+00:00", "papers": prepared},
+            self.config,
+            [],
+        )
+        self.assertIn('id="channels"', page)
+        self.assertIn('data-category="large-language-models"', page)
+        self.assertIn('data-category="knowledge-graphs"', page)
+        self.assertIn('data-categories="', page)
+        self.assertIn("#channel/", page)
 
 
 if __name__ == "__main__":

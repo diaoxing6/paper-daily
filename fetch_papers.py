@@ -51,10 +51,10 @@ def _session(config: dict[str, Any]) -> requests.Session:
 def fetch_arxiv(config: dict[str, Any], start: datetime, end: datetime) -> list[Paper]:
     options = config["fetch"]["sources"]["arxiv"]
     category_query = " OR ".join(f"cat:{category}" for category in options["categories"])
-    interest_terms = [
-        "single cell", "single-cell", "perturb-seq", "perturbation prediction", "virtual cell",
-        "cell foundation model", "gene regulatory network", "regulon", "drug perturbation",
-        "multi-omics perturbation", "mechanistic inference", "counterfactual prediction",
+    interest_terms = options.get("queries") or [
+        term
+        for topic in config["ranking"]["topics"]
+        for term in topic["terms"][:1]
     ]
     interest_query = " OR ".join(f'all:"{term}"' for term in interest_terms)
     query = f"({category_query}) AND ({interest_query})"
@@ -169,9 +169,11 @@ def _pubmed_date(article: ET.Element) -> str:
 
 def fetch_pubmed(config: dict[str, Any], start: datetime, end: datetime) -> list[Paper]:
     options = config["fetch"]["sources"]["pubmed"]
+    allowed_categories = set(options.get("topic_categories") or [])
     topic_terms = [
         term
         for topic in config["ranking"]["topics"]
+        if not allowed_categories or topic.get("category") in allowed_categories
         for term in topic["terms"][:2]
     ]
     term_query = " OR ".join(f'"{term}"[Title/Abstract]' for term in topic_terms)

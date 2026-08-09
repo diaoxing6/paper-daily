@@ -1,14 +1,14 @@
-# Cell Paper Radar
+# Research Paper Radar
 
-面向单细胞扰动、虚拟细胞、Cell Foundation Model、多组学扰动、药物扰动机制、GRN / regulon 与机制推理的每日论文雷达。
+面向计算机科学与计算生物学的多方向每日论文雷达。当前包含计算生物学、大语言模型、知识图谱、强化学习、持续学习、预训练与基础模型、多模态学习七个可点击频道。
 
 项目每天自动从 arXiv、bioRxiv、PubMed 和 Semantic Scholar 获取新论文，做主题匹配与相关性排序，可选调用 DeepSeek 或 OpenAI 生成中文解读，最后发布为 GitHub Pages 静态网页。没有 API Key 时也能正常运行，会自动使用中文模板与英文摘要摘录作为降级结果。
 
 ## 每日流程
 
 1. GitHub Actions 每天 08:17（Asia/Singapore）触发；避开整点的 Actions 高峰。
-2. 获取最近 3 天的论文，短暂的源站故障不会中断其他来源。
-3. 按标题、摘要、研究主题、新鲜度和引用信息综合排序，并按 DOI / 标题去重。
+2. 获取最近 4 天的论文，短暂的源站故障不会中断其他来源。
+3. 按标题、摘要、研究主题、新鲜度和引用信息综合排序，并按 DOI / 标题去重；每个研究频道保留独立推荐名额，避免热门方向挤占全部结果。
 4. 默认使用 `DEEPSEEK_API_KEY` 调用 `deepseek-v4-flash`，生成中文「核心贡献 / 方法 / 相关性 / 注意点」；没有 Key 时使用本地降级摘要。
 5. 更新 `docs/index.html`、`docs/data/latest.json` 和每日归档，并部署 GitHub Pages。
 
@@ -27,7 +27,7 @@ python run_pipeline.py --fixture tests/fixtures/sample_papers.json
 
 ## 配置
 
-研究主题、关键词、来源开关、回溯天数和展示数量都在 `config.yaml` 中。工作流使用 IANA 时区 `Asia/Singapore`，当前 cron 为每天 08:17。
+研究频道、子主题、关键词、来源开关、回溯天数、每频道名额和展示数量都在 `config.yaml` 中。工作流使用 IANA 时区 `Asia/Singapore`，当前 cron 为每天 08:17。
 
 ### 可选 Secrets / Variables
 

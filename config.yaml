@@ -1,20 +1,69 @@
 site:
-  title: "Cell Paper Radar"
-  subtitle: "单细胞扰动 · 虚拟细胞 · 机制推理"
-  description: "每天自动聚合并筛选与你研究方向最相关的新论文。"
+  title: "Research Paper Radar"
+  subtitle: "计算机科学 · 计算生物学 · 每日研究信号"
+  description: "每天从多个论文源聚合新工作，按你关注的研究方向筛选、排序并生成中文速读。"
   timezone: "Asia/Singapore"
-  max_papers: 30
-  highlight_count: 6
+  max_papers: 49
+  per_category_limit: 7
+  highlight_count: 8
+  categories:
+    - id: "bio-computing"
+      name: "计算生物学"
+      short: "BIO"
+      description: "单细胞扰动、虚拟细胞、药物机制与调控网络"
+      accent: "#177e75"
+    - id: "large-language-models"
+      name: "大语言模型"
+      short: "LLM"
+      description: "推理、智能体、对齐、RAG 与高效模型"
+      accent: "#ef5d3f"
+    - id: "knowledge-graphs"
+      name: "知识图谱"
+      short: "KG"
+      description: "图谱构建、图推理、实体链接与 Graph RAG"
+      accent: "#7b5bb5"
+    - id: "reinforcement-learning"
+      name: "强化学习"
+      short: "RL"
+      description: "离线强化学习、多智能体、奖励建模与策略优化"
+      accent: "#d48727"
+    - id: "continual-learning"
+      name: "持续学习"
+      short: "CL"
+      description: "终身学习、增量学习、灾难性遗忘与持续预训练"
+      accent: "#2574a9"
+    - id: "pretraining"
+      name: "预训练与基础模型"
+      short: "PRE"
+      description: "自监督学习、基础模型、表示学习与高效预训练"
+      accent: "#2e8b57"
+    - id: "multimodal-learning"
+      name: "多模态学习"
+      short: "MM"
+      description: "视觉语言、音视频理解、跨模态生成与统一表征"
+      accent: "#c04b78"
 
 fetch:
-  lookback_days: 3
+  lookback_days: 4
   request_timeout_seconds: 30
   user_agent: "CellPaperRadar/1.0 (academic literature monitor)"
   sources:
     arxiv:
       enabled: true
-      max_results: 200
-      categories: ["q-bio.GN", "q-bio.QM", "q-bio.CB", "cs.LG", "cs.AI"]
+      max_results: 400
+      categories: ["q-bio.GN", "q-bio.QM", "q-bio.CB", "cs.AI", "cs.CL", "cs.LG", "cs.IR", "cs.CV", "cs.DB", "stat.ML"]
+      queries:
+        - "single cell perturbation"
+        - "virtual cell"
+        - "large language model"
+        - "language model agent"
+        - "knowledge graph"
+        - "reinforcement learning"
+        - "continual learning"
+        - "foundation model"
+        - "self-supervised learning"
+        - "multimodal learning"
+        - "vision language model"
     biorxiv:
       enabled: true
       max_results: 300
@@ -22,6 +71,7 @@ fetch:
       enabled: true
       max_results: 200
       email: ""
+      topic_categories: ["bio-computing"]
     semantic_scholar:
       enabled: true
       max_results_per_query: 40
@@ -29,6 +79,12 @@ fetch:
         - "single cell perturbation prediction"
         - "virtual cell foundation model"
         - "gene regulatory network mechanism inference"
+        - "large language model reasoning agent alignment"
+        - "knowledge graph graph RAG reasoning"
+        - "reinforcement learning offline multi agent"
+        - "continual learning catastrophic forgetting"
+        - "foundation model pretraining self supervised"
+        - "multimodal vision language model"
 
 ranking:
   min_score: 5.5
@@ -39,6 +95,7 @@ ranking:
     Semantic Scholar: 0.4
   topics:
     - name: "单细胞扰动"
+      category: "bio-computing"
       weight: 2.0
       terms:
         - "single-cell perturbation"
@@ -48,6 +105,7 @@ ranking:
         - "perturbation prediction"
         - "cellular response prediction"
     - name: "虚拟细胞"
+      category: "bio-computing"
       weight: 2.0
       terms:
         - "virtual cell"
@@ -56,6 +114,7 @@ ranking:
         - "in silico cell"
         - "whole-cell model"
     - name: "Cell Foundation Model"
+      category: "bio-computing"
       weight: 1.8
       terms:
         - "cell foundation model"
@@ -65,6 +124,7 @@ ranking:
         - "single-cell transformer"
         - "single cell transformer"
     - name: "多组学扰动"
+      category: "bio-computing"
       weight: 1.7
       terms:
         - "multi-omics perturbation"
@@ -74,6 +134,7 @@ ranking:
         - "multimodal single cell"
         - "perturbation transcriptomics"
     - name: "药物扰动机制"
+      category: "bio-computing"
       weight: 1.7
       terms:
         - "drug perturbation"
@@ -82,6 +143,7 @@ ranking:
         - "compound perturbation"
         - "pharmacogenomics"
     - name: "GRN / Regulon"
+      category: "bio-computing"
       weight: 1.6
       terms:
         - "gene regulatory network"
@@ -90,6 +152,7 @@ ranking:
         - "transcriptional regulation"
         - "causal gene network"
     - name: "机制推理"
+      category: "bio-computing"
       weight: 1.6
       terms:
         - "mechanistic inference"
@@ -98,6 +161,127 @@ ranking:
         - "causal representation"
         - "counterfactual prediction"
         - "causal mechanism"
+    - name: "大语言模型"
+      category: "large-language-models"
+      weight: 1.9
+      terms:
+        - "large language model"
+        - "large-language model"
+        - "language model agent"
+        - "llm agent"
+        - "language model reasoning"
+        - "instruction tuning"
+        - "mixture of experts"
+    - name: "检索增强与对齐"
+      category: "large-language-models"
+      weight: 1.7
+      terms:
+        - "retrieval-augmented generation"
+        - "retrieval augmented generation"
+        - "RAG"
+        - "language model alignment"
+        - "direct preference optimization"
+        - "reward model"
+    - name: "知识图谱"
+      category: "knowledge-graphs"
+      weight: 2.0
+      terms:
+        - "knowledge graph"
+        - "knowledge graphs"
+        - "knowledge graph completion"
+        - "knowledge graph reasoning"
+        - "graph RAG"
+        - "graph retrieval augmented"
+    - name: "图谱构建与表示"
+      category: "knowledge-graphs"
+      weight: 1.7
+      terms:
+        - "entity linking"
+        - "ontology learning"
+        - "relation extraction"
+        - "link prediction"
+        - "neuro-symbolic"
+        - "graph representation learning"
+    - name: "强化学习"
+      category: "reinforcement-learning"
+      weight: 2.0
+      terms:
+        - "reinforcement learning"
+        - "offline reinforcement learning"
+        - "model-based reinforcement learning"
+        - "policy optimization"
+        - "actor-critic"
+        - "Q-learning"
+    - name: "多智能体与奖励学习"
+      category: "reinforcement-learning"
+      weight: 1.8
+      terms:
+        - "multi-agent reinforcement learning"
+        - "multiagent reinforcement learning"
+        - "reward modeling"
+        - "reward learning"
+        - "reinforcement learning from human feedback"
+        - "RLHF"
+    - name: "持续学习"
+      category: "continual-learning"
+      weight: 2.0
+      terms:
+        - "continual learning"
+        - "lifelong learning"
+        - "incremental learning"
+        - "catastrophic forgetting"
+        - "online continual learning"
+        - "class-incremental learning"
+    - name: "持续适应与预训练"
+      category: "continual-learning"
+      weight: 1.8
+      terms:
+        - "continual pretraining"
+        - "continual pre-training"
+        - "continual instruction tuning"
+        - "test-time adaptation"
+        - "domain-incremental learning"
+        - "task-incremental learning"
+    - name: "预训练"
+      category: "pretraining"
+      weight: 1.8
+      terms:
+        - "pretraining"
+        - "pre-training"
+        - "pretrained model"
+        - "foundation model"
+        - "masked modeling"
+        - "representation pretraining"
+    - name: "自监督与表示学习"
+      category: "pretraining"
+      weight: 1.7
+      terms:
+        - "self-supervised learning"
+        - "self supervised learning"
+        - "contrastive learning"
+        - "representation learning"
+        - "pretraining objective"
+        - "pre-training objective"
+    - name: "多模态学习"
+      category: "multimodal-learning"
+      weight: 2.0
+      terms:
+        - "multimodal learning"
+        - "multi-modal learning"
+        - "multimodal model"
+        - "multimodal large language model"
+        - "vision-language model"
+        - "vision language model"
+    - name: "跨模态理解与生成"
+      category: "multimodal-learning"
+      weight: 1.8
+      terms:
+        - "cross-modal"
+        - "image-text"
+        - "audio-language"
+        - "video-language"
+        - "vision-language"
+        - "omni-modal"
   context_terms:
     - "single-cell"
     - "single cell"
@@ -110,8 +294,6 @@ ranking:
     - "wireless network"
     - "power grid"
     - "traffic prediction"
-    - "image segmentation"
-    - "large language model benchmark"
 
 summary:
   enabled: true
@@ -120,6 +302,6 @@ summary:
   model: "deepseek-v4-flash"
   thinking_mode: "disabled"
   reasoning_effort: "low"
-  max_papers: 20
+  max_papers: 49
   batch_size: 8
   language: "zh-CN"
