@@ -1,0 +1,2660 @@
+{
+  "generated_at": "2026-10-12T06:10:25+00:00",
+  "timezone": "Asia/Singapore",
+  "papers": [
+    {
+      "id": "arxiv:2610.13722v1",
+      "title": "Enhancing Legal Reasoning in Pre-trained Language Models via Knowledge Graph-Guided Multi-Task Pre-training",
+      "abstract": "Legal language understanding requires reasoning over semi-structured regulatory documents, yet standard pre-training objectives do not explicitly target this structural capability. Because current legal language models rely solely on masked language modeling, they treat statutory text as flat token sequences and ignore the underlying hierarchical constraints. To bridge this gap, we present a multi-task pre-training approach for German traffic law (StVO). Our approach combines three complementary objectives: Next Sentence Prediction (NSP), Knowledge Graph (KG) Guided Clustering (CLU), and Knowledge Graph (KG) Aware Paragraph Classification (CLS). This approach explicitly encodes structured legal knowledge directly into the model weights. This encoding enables zero-shot legal reasoning at inference time and removes the need for discrete graph traversal. We evaluate our approach across nine Transformer-based encoders and 324 experimental runs. On synthetic StVO question answering, our models demonstrate consistent relative improvements between 10.3% and 155.0% over baselines. Furthermore, relative to the established LexGLUE baselines (Chalkidis et al., 2022), our models improve over prior results on four of seven legal benchmarks. It also achieves consistent zero-shot transfer gains between 3.4% and 15.8% on Austrian driving regulations. These experimental results indicate that our training approach generalizes successfully beyond the initial training legal domain.",
+      "authors": [
+        "Ibrahim Siddig",
+        "Munir Georges"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13722v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13722v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 20.96,
+      "matched_topics": [
+        "检索增强与对齐",
+        "知识图谱",
+        "预训练",
+        "自监督与表示学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "knowledge-graphs",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "RAG",
+        "knowledge graph",
+        "pre-training",
+        "pre-training objective"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "知识图谱": 7.0,
+        "预训练": 7.0,
+        "自监督与表示学习": 2.55,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "knowledge-graphs": 8.86,
+        "pretraining": 11.41
+      },
+      "summary": {
+        "takeaway": "提出一种多任务预训练方法，将结构化法律知识编码进模型权重，以实现零样本法律推理，无需推理时进行离散图遍历。",
+        "methods": "针对德国交通法（StVO），结合三个目标进行预训练：下一句预测（NSP）、知识图谱引导聚类（CLU）和知识图谱感知段落分类（CLS）。在九种基于Transformer的编码器上进行了324次实验，并在合成StVO问答、LexGLUE基准和奥地利驾驶法规上评估。",
+        "relevance": "与检索增强与对齐、知识图谱、预训练及自监督与表示学习等主题相关，因为其利用知识图谱指导多任务预训练来增强法律领域语言模型的结构化推理能力。",
+        "caveat": "摘要报告了相对改进（10.3%-155.0%在合成StVO问答上，3.4%-15.8%在奥地利法规零样本迁移上），但未提供具体数值结果；改进幅度范围宽，且合成问答可能无法完全反映真实法律推理的复杂性。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.01.752251",
+      "title": "VINTER: a generative vision-language model for annotating and interrogating spatial tissues",
+      "abstract": "Spatial transcriptomics links gene expression to tissue structure, yet current models learn embeddings whose meaning is assigned afterwards or read histology without measured expression. Tissue decisions are therefore rarely made from morphology, genes and neighbourhood together, or examined through them. Here we introduce VINTER, a generative vision-language model aligned on 1.45 million histology-caption pairs that reads histology, measured gene expression and spatial neighbourhood as one sequence. It returns the probability of every tissue class, and because genes enter as text, its molecular evidence can be edited with the image held fixed. Reading all three sources together, VINTER annotated tissue more accurately than spatial-domain methods and a spatial foundation model, and transferred across cohorts without target labels. Editing only the neighbourhood resolved the follicular B-cell and plasma-cell programmes behind its reading of tertiary lymphoid structure (TLS) maturation in lung and kidney cancer. Its class probabilities exposed what single labels conceal in triple-negative breast cancer: immune heterogeneity within stroma and cancer hidden beneath benign labels. Without retraining, the same model transferred to Visium HD and single-cell Xenium data and resolved follicular architecture within colorectal cancer TLS. VINTER thus turns spatial annotation into an interrogable reading of tissue across platforms and resolutions.",
+      "authors": [
+        "Wu, J.",
+        "Xu, W.",
+        "Zhuang, Y.",
+        "Zhang, Y.",
+        "Loza Lopez, M. d. J.",
+        "yang, y.",
+        "Nakai, K."
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.01.752251",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.01.752251.full.pdf",
+      "doi": "10.64898/2026.10.01.752251",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 20.71,
+      "matched_topics": [
+        "预训练",
+        "多模态学习",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "pretraining",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "vision-language",
+        "vision-language model"
+      ],
+      "score_breakdown": {
+        "预训练": 2.7,
+        "多模态学习": 7.0,
+        "跨模态理解与生成": 7.0,
+        "领域上下文": 2.0,
+        "新鲜度": 1.01
+      },
+      "category_scores": {
+        "pretraining": 6.71,
+        "multimodal-learning": 18.01
+      },
+      "summary": {
+        "takeaway": "提出VINTER，一种生成式视觉-语言模型，将组织学图像、测量的基因表达和空间邻域作为统一序列读取，实现可编辑分子证据的空间组织标注与跨平台/分辨率迁移。",
+        "methods": "在145万组织学-描述对上进行对齐训练，模型读取组织学、测量基因表达和空间邻域作为序列，输出每个组织类别的概率。通过编辑基因文本（保持图像固定）进行 interrogate，并在肺/肾癌TLS成熟、三阴性乳腺癌异质性等场景评估，还零样本迁移至Visium HD和Xenium数据。",
+        "relevance": "与预训练、多模态学习及跨模态理解与生成主题相关，因其结合视觉和基因表达文本进行生成式建模，并支持跨模态编辑与迁移。",
+        "caveat": "摘要未提供定量性能指标（如准确率数值），也未说明模型在更广泛组织类型或疾病中的泛化能力；跨平台迁移结果仅基于特定数据集（Visium HD、Xenium），可能受限于训练数据覆盖范围。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13215v1",
+      "title": "Monarch-MoE: Structured Experts for Multimodal Continual Instruction Tuning",
+      "abstract": "Learning new tasks in multimodal continual instruction tuning can cause catastrophic forgetting of previously acquired knowledge. Although multi-expert LoRA distributes learning across experts, updates to a dense low-rank expert can still affect many output features. We introduce Monarch-MoE, which replaces the dense factors in LoRA experts with block-diagonal factors connected by a fixed permutation. This structure provides blockwise gradient isolation: individual block-pair updates affect only one output block, while connections between all input and output blocks are maintained. To make these compact experts practical on memory-limited hardware, we combine batched computation, fused forward operators, and an optimized backward pass. Across three continual-learning methods evaluated on MLLM-DCL and UCIT with LLaVA-1.5-7B, Monarch-MoE improves first-task retention while reducing adapter parameters by approximately 75% and 50%, respectively. In the main comparison, first-task forgetting is as low as 0.52 percentage points on MLLM-DCL and 0.10 on UCIT, with method-dependent trade-offs in final performance. Our implementation supports fine-tuning and inference on a single 24 GB RTX 4090, with lower measured memory use and competitive runtime in the evaluated settings. Together, these algorithmic and systems improvements make structured experts a practical option for continual adaptation on memory-limited hardware.",
+      "authors": [
+        "Xi Zhang",
+        "Boyu Diao",
+        "Zesen Chen",
+        "Ruiqi Liu",
+        "Hangda Liu",
+        "Yongjun Xu"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13215v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13215v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 18.86,
+      "matched_topics": [
+        "大语言模型",
+        "持续学习",
+        "持续适应与预训练"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "continual-learning"
+      ],
+      "matched_terms": [
+        "catastrophic forgetting",
+        "continual instruction tuning",
+        "instruction tuning"
+      ],
+      "score_breakdown": {
+        "大语言模型": 7.0,
+        "持续学习": 3.0,
+        "持续适应与预训练": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 8.86,
+        "continual-learning": 11.86
+      },
+      "summary": {
+        "takeaway": "提出Monarch-MoE，用块对角因子替换LoRA专家中的稠密因子，实现块级梯度隔离，从而在多模态持续指令调优中减少灾难性遗忘并大幅降低适配器参数。",
+        "methods": "将Monarch结构（块对角因子加固定置换）引入多专家LoRA，结合批处理计算、融合前向算子和优化反向传播。在MLLM-DCL和UCIT基准上，使用LLaVA-1.5-7B评估三种持续学习方法。",
+        "relevance": "与大语言模型、持续学习及持续适应与预训练主题相关，因其针对多模态持续指令调优中的遗忘问题提出结构化专家方法。",
+        "caveat": "摘要报告了首任务遗忘低至0.52和0.10个百分点，参数减少约75%和50%，但最终性能存在方法依赖的权衡；评估仅基于MLLM-DCL和UCIT数据集及LLaVA-1.5-7B与RTX 4090硬件，泛化性需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.12942v1",
+      "title": "In-Context Learning Can Help Vision-Language Models Overcome Training Priors",
+      "abstract": "Vision-language models (VLMs) learn strong statistical regularities during training, which can make them fail to properly respond to visual evidence when input images violate those regularities. It is challenging to disambiguate these prior-induced errors from errors caused by the model missing the underlying visual capabilities. In this work, we use controlled visual in-context learning to encourage the model to focus on the visual evidence, and demonstrate that this alone is frequently sufficient to correct the errors -- suggesting that the models in fact do possess the relevant visual capabilities. Specifically, we show that across five vision-centric tasks, demonstrations yield large gains on prior-conflicting counterfactual examples ($+27.2\\%$ for Qwen3-VL 235B and $+15.1\\%$ for Qwen3-VL 32B) while leaving accuracy on prior-aligned examples nearly unchanged. These findings generalize across five VLM families with gains from $+9.7\\%$ to $+30.3\\%$. We analyze visual representations and find that demonstrations indeed redirect attention toward grounding cues while reducing reliance on cues that support the learned prior. Finally, we find that in-context learning is limited when the underlying visual capability is weak or absent. Together, these results show that current VLMs possess visual grounding capabilities that standard evaluations may overlook, underscoring the need for controlled evaluation design in diagnosing and improving model capability.",
+      "authors": [
+        "Kun Wang",
+        "Xindi Wu",
+        "Sanghyuk Chun",
+        "Olga Russakovsky",
+        "Esin Tureci"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.12942v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.12942v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 18.41,
+      "matched_topics": [
+        "检索增强与对齐",
+        "多模态学习",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "vision-language",
+        "vision-language model"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "多模态学习": 7.0,
+        "跨模态理解与生成": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "multimodal-learning": 15.86
+      },
+      "summary": {
+        "takeaway": "通过受控视觉上下文学习（in-context learning）证明，视觉-语言模型在反事实示例上的错误多因训练先验而非缺乏视觉能力，演示可纠正这些错误且不损害先验对齐示例的准确率。",
+        "methods": "在五个以视觉为中心的任务上，使用视觉上下文学习演示，评估Qwen3-VL等五个VLM家族。分析视觉表示以观察注意力重定向。",
+        "relevance": "与检索增强与对齐、多模态学习及跨模态理解与生成主题相关，因其研究如何通过上下文学习引导VLM关注视觉证据，克服训练先验。",
+        "caveat": "摘要指出当底层视觉能力弱或缺失时，上下文学习效果有限；增益范围（+9.7%至+30.3%）因模型和任务而异，且实验主要基于特定VLM家族，结论的普适性需更多验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13737v1",
+      "title": "SafeDiSTL: Decomposing Joint Constraints for Safe Multi-Agent Reinforcement Learning",
+      "abstract": "Cooperative multi-agent tasks often impose constraints on a shared objective or collective safety. A team level violation cost function can measure this constraint outcome, but does not distinguish which agents' actions most strongly influence that violation. We present SafeDiSTL, a constrained multi-agent reinforcement learning framework that allows for credit assignment even with joint constraint measurements. We use Signal Temporal Logic (STL) robustness to measure episode-level violation through running-maximum cost increments. Smooth full-episode robustness and differentiable dynamics provide action sensitivities, which allocate each cost increment across agents at the same decision time. These sensitivities account for delayed effects when weighting agents' shares of each cost increment. We study the framework in cooperative payload transport, connected navigation, and networked traffic control tasks. SafeDiSTL achieves 1.6-5.1x the safe-success rate in transport, improves navigation safe-success by 11.1%, and delivers 50-68% more throughput in traffic when compared to constrained baselines. Results demonstrate a strong improvement of the learned policy in dealing with shared constraint while retaining the performance of unconstrained policies.",
+      "authors": [
+        "Hongrui Zheng",
+        "Aditya Singh",
+        "Rahul Mangharam"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13737v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13737v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 15.86,
+      "matched_topics": [
+        "强化学习",
+        "多智能体与奖励学习"
+      ],
+      "matched_categories": [
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "multi-agent reinforcement learning",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "强化学习": 7.0,
+        "多智能体与奖励学习": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "reinforcement-learning": 15.86
+      },
+      "summary": {
+        "takeaway": "提出SafeDiSTL框架，利用信号时序逻辑（STL）鲁棒性和可微动力学计算动作敏感性，在联合约束测量下实现多智能体强化学习的信用分配。",
+        "methods": "使用STL鲁棒性通过运行最大成本增量测量回合级违规，平滑全回合鲁棒性和可微动力学提供动作敏感性，将成本增量分配给智能体。在合作载荷运输、联网导航和网络化交通控制任务中评估。",
+        "relevance": "与强化学习及多智能体与奖励学习主题相关，因其解决多智能体合作任务中共享约束下的信用分配与安全策略学习问题。",
+        "caveat": "摘要未提供与基线比较的绝对安全成功率或详细统计显著性，结果基于三个特定任务；该方法依赖于可微动力学假设，在不可微或高度随机环境中可能受限。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13755v1",
+      "title": "Matched-Context Group Policy Optimization for LLM Agent Training",
+      "abstract": "Training long-horizon language model agents requires assigning credit to intermediate decisions from sparse terminal feedback. Within a finite group of sibling rollouts, useful action comparisons depend on their context, evidence for both alternatives, and how that evidence enters learning. We propose Matched-Context Group Policy Optimization (MCGPO), a procedure for constructing weighted action preferences from already collected trajectories. MCGPO defines comparison contexts with pre-action state summaries and observed rubric progress, annotated by task rules. Two-action support selects among ordered exact and coarse matching rules. Fixed folds separate candidate decisions from the terminal outcomes used to orient their preferences, and support-dependent evidence weights scale an auxiliary pairwise objective alongside shared GraphGPO task learning. MCGPO reuses rollout data and each response's original history, preserving critic-free training. Across six environment-backbone settings with three training seeds each, MCGPO improves mean success over matched GraphGPO: by 0.47-1.46 percentage points on ALFWorld and WebShop with Qwen2.5-1.5B and 7B, and by 3.96 and 5.16 points on WebShop with Qwen3-4B and 8B. The ALFWorld gains build on baseline success above 92%, where remaining headroom is limited. Integrated success improves in three of four Qwen2.5 settings. Three-seed factorial controls support opposite-fold evidence and evidence weighting; joint state-rubric matching achieves the highest mean in all four representation-control settings.",
+      "authors": [
+        "Chenxu Zhang",
+        "Yaorui Shi",
+        "Wenlong Zhang",
+        "Jianchao Tan",
+        "Zihan Wang",
+        "Yiming Cheng"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13755v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13755v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 15.86,
+      "matched_topics": [
+        "大语言模型",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "language model agent",
+        "llm agent",
+        "policy optimization"
+      ],
+      "score_breakdown": {
+        "大语言模型": 7.0,
+        "强化学习": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 8.86,
+        "reinforcement-learning": 8.86
+      },
+      "summary": {
+        "takeaway": "提出Matched-Context Group Policy Optimization (MCGPO)，通过从已收集轨迹构建加权动作偏好，改善长程LLM智能体训练中的信用分配。",
+        "methods": "利用动作前状态摘要和观察到的评分进度定义比较上下文，由任务规则标注。采用两动作支持选择有序精确和粗略匹配规则，固定折分分离候选决策与终端结果，支持依赖的证据权重缩放辅助成对目标。在ALFWorld和WebShop上使用Qwen2.5-1.5B/7B和Qwen3-4B/8B评估。",
+        "relevance": "与大语言模型及强化学习主题相关，因其针对LLM智能体训练中的稀疏终端反馈和信用分配问题提出新的策略优化方法。",
+        "caveat": "摘要报告平均成功率的提升幅度较小（0.47-1.46个百分点在ALFWorld/WebShop Qwen2.5上，3.96和5.16点在WebShop Qwen3上），且ALFWorld基线成功已超92%，提升空间有限；结果基于三个训练种子和有限环境，泛化性需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13111v1",
+      "title": "What Do Visual-Head Discovery Scores Actually Find? Attention Source, Necessity, and Random-Control Pitfalls in Vision-Language Models",
+      "abstract": "Attention heads that attend to image regions relevant to a question are increasingly used to steer, ground and interpret vision-language models (VLMs) and to reduce their hallucinations. They are mostly found by ranking heads with an attention- pattern score and validated by steering or masking them. We ask how the choices inside such a discovery score shape the heads it returns, and which of the two validations identifies them. On Qwen3-VL-8B-Instruct we vary the query type, the discovery corpus and the token positions whose attention is read (the attention source) in a full 2 x 3 x 2 design, and test all 12 head-sets for steerability (CERS: Contrastive Evidence-Region Steering score) and necessity (NCS: Necessity Con- trast Score) against layer-matched random head-sets. (1) The attention source and the query type reshape the selected heads far more than the corpus: changing the source keeps a median of 49 of the top-100 heads, the query 55 and the cor- pus 84, while two halves of the same data share 96-99. (2) Necessity follows the attention source: head-sets discovered from query-span attention are more nec- essary than last-token ones (difference 0.083, p=6 x 10^-10), and the two re- ferring + query-span sets lie 17-19 standard deviations above 250 layer-matched random sets (Holm-adjusted p=0.048). The referring + query-span effect re- plicates on several recent VLMs. (3) Steerability is not specific to the discovered heads: no discovered head-set steers better than its layer-matched random sets (rank p >= 0.14), and random sets drawn from the same or from any layer span the discovered sets' scores. Necessity therefore separates the discovery settings, while steering at this strength does not. We turn these findings into a protocol for reporting visual-head discoveries.",
+      "authors": [
+        "Md Abdul Kadir",
+        "Daniel Sonntag"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13111v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13111v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 15.86,
+      "matched_topics": [
+        "多模态学习",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "vision-language",
+        "vision-language model"
+      ],
+      "score_breakdown": {
+        "多模态学习": 7.0,
+        "跨模态理解与生成": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "multimodal-learning": 15.86
+      },
+      "summary": {
+        "takeaway": "系统研究视觉头发现评分中注意力来源、查询类型和语料对所选头部的影响，并发现必要性验证能区分发现设置，而可操控性验证不具特异性，随机头集可匹配发现头集的可操控性。",
+        "methods": "在Qwen3-VL-8B-Instruct上采用2x3x2全因子设计，变化查询类型、发现语料和注意力读取的token位置（注意力来源），测试12个头集的CERS（可操控性）和NCS（必要性）对比层匹配随机头集。",
+        "relevance": "与多模态学习及跨模态理解与生成主题相关，因其研究视觉-语言模型中视觉头发现的评估方法，对可解释性和幻觉减少有启示。",
+        "caveat": "摘要指出可操控性验证不具特异性，必要性效应仅在部分VLM上复现；实验主要基于Qwen3-VL-8B-Instruct，结论在其他架构上的普适性需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.12907v1",
+      "title": "BLEND: Balancing Personalization vs. Generalization in Federated Vision-Language Models",
+      "abstract": "Federated vision-language models (FedVLMs) represent one of the emerging frontiers of machine learning, aiming to integrate federated learning within the fine-tuning pipelines of vision-language models (VLMs). In this work, we introduce BLEND, a new framework designed to jointly enhance the personalization and generalization capabilities of FedVLMs. BLEND proposes a selective VLM parameter fine-tuning and aggregation strategy that consists of (i) global vision and text adapters shared across clients, and (ii) a personalized vision projection adapter tailored to each client. BLEND further introduces a novel loss function that blends the outputs of the global and personalized adapters to achieve personalization, while simultaneously promoting generalization through a principled anchor design implemented via the projection heads of the zero-shot VLM. Extensive experiments demonstrate that BLEND consistently outperforms state-of-the-art baselines, highlighting its ability to effectively balance personalization and generalization across diverse system settings. (Code is available at: https://github.com/payamsiabd/BLEND.git)",
+      "authors": [
+        "Payam Abdisarabshali",
+        "Fardis Nadimi",
+        "Kasra Borazjani",
+        "Naji Khosravan",
+        "Richeng Jin",
+        "Seyyedali Hosseinalipour"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.12907v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.12907v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 15.86,
+      "matched_topics": [
+        "多模态学习",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "vision-language",
+        "vision-language model"
+      ],
+      "score_breakdown": {
+        "多模态学习": 7.0,
+        "跨模态理解与生成": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "multimodal-learning": 15.86
+      },
+      "summary": {
+        "takeaway": "提出BLEND框架，通过选择性参数微调与聚合（全局视觉/文本适配器与个性化视觉投影适配器）及混合损失，联合提升联邦视觉-语言模型的个性化与泛化能力。",
+        "methods": "BLEND包含共享的全局视觉和文本适配器以及每个客户端个性化的视觉投影适配器，并引入混合损失函数，通过零样本VLM的投影头设计锚点以促进泛化。在多种系统设置下与最先进基线比较。",
+        "relevance": "与多模态学习及跨模态理解与生成主题相关，因其在联邦学习框架下微调视觉-语言模型，平衡个性化与泛化。",
+        "caveat": "摘要未提供具体性能数值或统计显著性，仅称一致优于基线；个性化与泛化的平衡可能依赖于特定客户端数据分布，泛化到更异构的联邦环境需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13335v1",
+      "title": "AgentTune: A Unified Training Lifecycle for Tool-Using LLM Agents",
+      "abstract": "Tool-using agents increasingly require a common substrate for building, training, evaluating, distilling, and maintaining agentic systems, yet existing tooling typically addresses these stages in isolation. We present AgentTune, a source-available Python library that provides a unified framework for developing and optimizing tool-using agents. At its core, AgentTune introduces a two-tier EventLog representation that preserves agent trajectories while supporting consistent projections for training, evaluation, and auditing. Building on this substrate, the library provides a shared agent runtime, tool-calling reinforcement learning, agentic distillation, retrieval-augmented generation, decision workflows, evaluation utilities, and a designed path toward self-healing agents. These components are exposed through composable interfaces so that agent strategies, training methods, evaluation procedures, and recovery mechanisms can be combined without requiring separate representations or pipelines. We demonstrate the framework across agentic tasks including legal contract search and domain-specific applications, illustrating its use for trajectory-based optimization, tool-use evaluation, and cross-task agent development. AgentTune is released as a source-available library at https://github.com/Lexsi-Labs/AgentTune",
+      "authors": [
+        "R E Zera Marveen Lyngkhoi",
+        "Abhivansh Gupta",
+        "Vidushee Vats",
+        "Ram Mohan Rao Kadiyala",
+        "Vinay Kumar Sankarapu",
+        "Pratinav Seth"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13335v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13335v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 14.41,
+      "matched_topics": [
+        "大语言模型",
+        "检索增强与对齐",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "llm agent",
+        "reinforcement learning",
+        "retrieval-augmented generation"
+      ],
+      "score_breakdown": {
+        "大语言模型": 7.0,
+        "检索增强与对齐": 2.55,
+        "强化学习": 3.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 11.41,
+        "reinforcement-learning": 4.86
+      },
+      "summary": {
+        "takeaway": "AgentTune 是一个面向工具使用 LLM agent 的统一训练生命周期框架，旨在将构建、训练、评估、蒸馏和维护等阶段整合到同一套表示与运行时中。",
+        "methods": "提出两级 EventLog 表示以保留 agent 轨迹并支持训练、评估和审计投影；在此基础上提供共享 agent runtime、工具调用强化学习、agentic distillation、RAG、决策工作流、评估工具，并设计自愈 agent 路径。框架在包括法律合同搜索和领域特定应用的 agentic 任务上展示。",
+        "relevance": "与给定研究主题中的大语言模型、检索增强与对齐、强化学习直接相关，尤其涉及工具调用 agent 的强化学习、RAG 和统一开发管线。",
+        "caveat": "摘要未说明具体实验设置、基线比较、量化指标或消融结果，无法从摘要判断各组件相对现有工具的实际增益。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13697v1",
+      "title": "Improving Semantic Coverage in AI Test & Evaluation through Generative Augmentation",
+      "abstract": "In test and evaluation (T&E) of AI models, evaluators typically have access only to a held-out test dataset and no knowledge of the training data or its semantic composition. If critical input conditions---such as time-of-day, weather, or scene location---are underrepresented in this test dataset, T&E results can be misleadingly due to this semantic coverage gap. We propose a three-stage generative AI pipeline to detect and fill such semantic gaps without requiring ground-truth labels of these semantics. First, vision-language models (VLMs) perform zero-shot binary labeling of semantic factors, and an embedding-space clustering step identifies which semantics most affect downstream model behavior. Second, diffusion-based image-to-image models transform existing covered images into the underrepresented semantic domain, preserving scene content while augmenting high-level appearance. Third, statistical analysis of the augmented image embeddings verifies that the synthetic imagery improves dataset coverage before it is incorporated. Crucially, the synthetic data is used only to enrich the test set and no model retraining is performed for T&E. We validate the full pipeline on both image classification and object detection under day/night semantic gaps, showing that the augmented test datasets better distinguish models with and without exposure to the missing semantic, thereby yielding T&E conclusions that more closely match those of an ideal, fully covered dataset. Code available at https://github.com/Hashe037/DEDUCE",
+      "authors": [
+        "Connor Hashemi",
+        "Bharadwaj Ravichandran",
+        "Connor Anderson",
+        "Shitij Govil",
+        "Brandon RichardWebster",
+        "Brian Hu",
+        "Keith Fieldhouse"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13697v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13697v1",
+      "doi": "10.1117/12.3094951",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 14.36,
+      "matched_topics": [
+        "检索增强与对齐",
+        "多模态学习",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "vision-language",
+        "vision-language model"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 6.8,
+        "多模态学习": 3.0,
+        "跨模态理解与生成": 2.7,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 8.66,
+        "multimodal-learning": 7.56
+      },
+      "summary": {
+        "takeaway": "提出三阶段生成式增强流水线，用于检测并填补 AI 测试评估数据集中的语义覆盖缺口，且无需目标语义的真实标签。",
+        "methods": "第一阶段用 VLM 对语义因素做零样本二分类，并用嵌入空间聚类识别对下游模型行为影响最大的语义；第二阶段用扩散图像到图像模型将已有覆盖图像转换到欠代表语义域；第三阶段通过增强图像嵌入的统计分析验证覆盖改善。合成数据仅用于丰富测试集，不进行模型再训练。在日/夜语义缺口下的图像分类和目标检测任务上验证。",
+        "relevance": "与检索增强与对齐、多模态学习、跨模态理解与生成相关，聚焦多模态测试评估中的数据覆盖和生成式增强。",
+        "caveat": "摘要未给出具体数据集规模、定量提升幅度或失败案例；方法依赖 VLM 和扩散模型的有效性，且验证语义限于日/夜等示例。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13438v1",
+      "title": "Rollout-Time Intervention: Unlocking Agentic Reinforcement Learning Beyond Policy Limits",
+      "abstract": "Reinforcement learning (RL) has emerged as a key paradigm for improving large language model (LLM) agents, enabling stronger reasoning, planning, and tool-use in interactive environments. However, existing agent RL methods remain fundamentally constrained by an on-policy reasoning bottleneck: when tasks exceed the model's current capability boundary, effective trajectories become extremely sparse and training often collapses. We introduce Rollout-Time Intervention (RTI), a technique designed to elicit successful trajectories beyond the policy's intrinsic exploration capacity. RTI operates by leveraging reward-side evidence (i.e., evaluation rubrics) during rollout to convert erroneous trajectories into successful ones, providing effective learning signals for tasks that the policy rarely solves on its own. Although intervention trajectories are inherently off-policy, we find that they can effectively guide policy optimization when trajectories with excessive distributional shifts are filtered out. Extensive experiments across five benchmarks demonstrate that RTI consistently outperforms RL baselines, enabling the post-trained policy to approach the performance of substantially stronger contemporary LLMs and, more importantly, transcend its original capability boundary. The code is available at https://github.com/Alibaba-NLP/qqr.",
+      "authors": [
+        "Chen Xi",
+        "Ding Ruixue",
+        "Wang Zhigaoyuan",
+        "Zhang Fanrui",
+        "Zhang Qiang",
+        "Chen Boli",
+        "Wang Shihang",
+        "Wang Tianfu",
+        "Ren Ailin",
+        "Wang Pengyong",
+        "Xie Pengjun",
+        "Xiong Hui"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13438v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13438v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 14.26,
+      "matched_topics": [
+        "大语言模型",
+        "检索增强与对齐",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "large language model",
+        "policy optimization",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "大语言模型": 2.85,
+        "检索增强与对齐": 2.55,
+        "强化学习": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 7.26,
+        "reinforcement-learning": 8.86
+      },
+      "summary": {
+        "takeaway": "提出 Rollout-Time Intervention，通过在 rollout 阶段利用奖励侧证据将错误轨迹转化为成功轨迹，使 agent 强化学习能超越当前策略能力边界。",
+        "methods": "RTI 在 rollout 期间使用评估 rubric 等奖励侧证据干预轨迹，生成 off-policy 干预轨迹；通过过滤分布偏移过大的轨迹来指导策略优化。在五个基准上实验，并发布代码于 https://github.com/Alibaba-NLP/qqr。",
+        "relevance": "与大语言模型、检索增强与对齐、强化学习相关，针对 LLM agent 的强化学习、工具使用和交互环境训练。",
+        "caveat": "摘要未披露五个基准的具体名称、基线细节和数值结果；干预轨迹本质上 off-policy，摘要虽称过滤有效，但未说明过滤标准与失败条件。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13321v1",
+      "title": "Host-Aware Web Crawling for LLM Pretraining Data",
+      "abstract": "Web crawling is a major source of large language model (LLM) pretraining data, yet data-selection pipelines discard a large share of crawled pages. We investigate how a crawler should allocate its budget across and within hosts to collect more high-quality pretraining data. Combining document-level quality classifier scores, web-graph centrality metrics, and Common Crawl's per-host crawl coverage, we find that roughly half of the variation in classifier scores occurs between hosts. In the crawls we analyze, a few pages from a host also provide a useful estimate of the quality of its remaining pages. Common Crawl uses harmonic centrality, a graph centrality metric, to guide its crawl allocation. In our simulations, using centrality to choose which hosts to crawl yields limited gains over random ordering and performs worse for some classifiers. For deciding how deeply to crawl each host, sampling a few pages and then fetching more from hosts with higher-scoring samples collects several times more high-quality pages per fetch than uniform depth or centrality-based allocation. Finally, Common Crawl's observed per-host coverage has little correlation with the evaluated quality signals. We estimate that tens of millions of high-quality pages remain among known but uncrawled URLs in each crawl examined, with most concentrated on a small share of hosts.",
+      "authors": [
+        "Malte Ostendorff"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13321v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13321v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 14.26,
+      "matched_topics": [
+        "大语言模型",
+        "检索增强与对齐",
+        "预训练"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "RAG",
+        "large language model",
+        "pretraining"
+      ],
+      "score_breakdown": {
+        "大语言模型": 2.85,
+        "检索增强与对齐": 2.55,
+        "预训练": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 7.26,
+        "pretraining": 8.86
+      },
+      "summary": {
+        "takeaway": "研究网页爬虫应如何在 host 之间和 host 内部分配预算，以获取更多高质量 LLM 预训练数据。",
+        "methods": "结合文档级质量分类器分数、网页图中心性指标和 Common Crawl 的 per-host 抓取覆盖率进行分析与模拟；比较 centrality 选择 host、随机顺序、均匀深度以及先采样少量页面再决定抓取深度的策略。",
+        "relevance": "与大语言模型、检索增强与对齐、预训练相关，关注预训练数据采集与高质量网页选择。",
+        "caveat": "结论基于所分析的 Common Crawl 抓取和模拟结果，摘要未说明具体分类器、质量信号细节及跨 crawl 的泛化性；高质量页面估计为 tens of millions，但实际可用于训练的比例未说明。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13695v1",
+      "title": "Verifiable Retrieval for Legal Reasoning through Structure-driven Knowledge Graph",
+      "abstract": "Any automation within reliability-critical contexts such as medicine or law has to be transparent and verifiable. Despite their advantages, current LLM-based systems do not meet these requirements due to their inherent black-box nature. Retrieval Augmented Generation (RAG) attempts to ground the generative process in the relevant interpretable documents, thereby reducing the risk of AI 'hallucinations' and potentially enabling verification of the initial generation context. However, as the number and size of potential sources increases, naive retrieval approaches tend to perform worse, ignoring critical context elements. In this paper we aim to tackle this problem in the context of German Legal Code. Using structure-driven parsing to create a Knowledge Graph (KG) for the source document navigation and retrieval, we compare several KG-informed chunking and retrieval strategies and evaluate their effect on the accuracy of retrieved citations.",
+      "authors": [
+        "Ibrahim Siddig",
+        "Sviatoslav Tugeev",
+        "Munir Georges"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13695v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13695v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 13.96,
+      "matched_topics": [
+        "检索增强与对齐",
+        "知识图谱"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "knowledge-graphs"
+      ],
+      "matched_terms": [
+        "RAG",
+        "knowledge graph",
+        "retrieval augmented generation"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 5.1,
+        "知识图谱": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 6.96,
+        "knowledge-graphs": 8.86
+      },
+      "summary": {
+        "takeaway": "针对德国法律法典，利用结构驱动解析构建知识图谱，以改进 RAG 检索的可验证性和引用准确性。",
+        "methods": "使用结构驱动解析从源文档创建知识图谱，用于导航和检索；比较多种 KG informed 的分块与检索策略，并评估其对检索引用准确率的影响。",
+        "relevance": "与检索增强与对齐、知识图谱相关，聚焦法律推理中的可验证检索和 RAG。",
+        "caveat": "摘要未给出具体数据集、基线、评价指标数值或与 naive RAG 的定量对比；方法仅针对德国法律法典，跨法域泛化性未说明。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13766v1",
+      "title": "Shortcut Learning in Geospatial Foundation Model Embeddings for Cross-Disaster Damage Assessment",
+      "abstract": "Geospatial foundation models can support disaster damage assessment, but high accuracy on familiar disasters may hide shortcut learning: prediction from event or scene characteristics rather than evidence that transfers to a new disaster. We study embeddings from TerraMind, Prithvi-EO-2.0, DOFA, and DINOv3 on the multi-disaster datasets xView2 and BRIGHT. Holding out an entire disaster, instead of randomly splitting image tiles, reduces mean balanced accuracy from 0.807 to 0.638 on xView2 and from 0.818 to 0.568 on BRIGHT. Four sets of tests examine what information supports prediction: event and acquisition context, before/after image inputs, building count, and correct image pairing. Pre-event images remain predictive, and a classifier given only the annotated number of buildings reaches balanced accuracy of 0.629 and 0.653. Combining before/after features performs best on average on xView2, but does not improve over pre-only features on BRIGHT. Shuffling image pairs within the same disaster and damage class causes modest losses. Motivated by these findings, we test whether feature transformations learned only from training disasters improve generalization to unseen disasters. These transformations improve performance, with supervised contrastive learning performing best on xView2 and PCA on BRIGHT. Our results highlight the importance of evaluation on unseen domains for assessing model robustness and show that simple feature-level transformations can improve generalization. Code and experiments can be found at https://github.com/alishibli97/gfm-shortcut-learning.",
+      "authors": [
+        "Ali Shibli",
+        "Andrea Nascetti",
+        "Yifang Ban"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13766v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13766v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 13.96,
+      "matched_topics": [
+        "检索增强与对齐",
+        "预训练",
+        "自监督与表示学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "RAG",
+        "contrastive learning",
+        "foundation model"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "预训练": 7.0,
+        "自监督与表示学习": 2.55,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "pretraining": 11.41
+      },
+      "summary": {
+        "takeaway": "研究表明地理空间基础模型嵌入在跨灾害损害评估中可能存在 shortcut learning，按灾害整体留出评估会显著降低准确率，简单特征变换可改善对未见灾害的泛化。",
+        "methods": "使用 TerraMind、Prithvi-EO-2.0、DOFA 和 DINOv3 的嵌入，在 xView2 和 BRIGHT 多灾害数据集上，将整个灾害留出而非随机划分图像块；设计四组测试考察 event 和采集上下文、灾前/灾后图像、建筑数量和正确图像配对的影响；并测试仅从训练灾害学习的特征变换。",
+        "relevance": "与检索增强与对齐、预训练、自监督与表示学习相关，涉及基础模型嵌入评估、域外泛化和表示学习。",
+        "caveat": "摘要未说明特征变换的完整实现细节和所有统计显著性；结论基于 xView2 和 BRIGHT 数据集及所评估的四个模型，跨其他灾害类型或地理区域的泛化性未验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13816v1",
+      "title": "Dream to Remember: Continual Steering of Generalist Robot Policies with World Models",
+      "abstract": "Generalist robot policies are trained with imitation learning and are bounded by the quality and coverage of their demonstrations. Reinforcement learning can improve and extend them, either by fine-tuning the policy weights or by training a small module to steer the input noise of a frozen generative policy. When tasks arrive sequentially, both approaches suffer from catastrophic forgetting. Fine-tuning on a task degrades prior tasks, and steering only shifts forgetting to the shared steering module. We propose Dream to Remember (D2R), which continually steers a frozen generalist policy toward new tasks, while retaining its earlier skills. As the steering module learns a new task, a frozen pretrained world model rehearses prior tasks through imagined rollouts, anchoring the module to its earlier behavior without a replay buffer or new data. When the world model is faithful enough, D2R learns the new task entirely in imagination. Otherwise, it learns the task in the environment while using the world model only to rehearse prior tasks. On CALVIN, D2R improves eight tasks in sequence entirely in imagination, raising average success from 63.7% to 74.8%, while LoRA fine-tuning on the same sequence drops it to 11.7%. With a frozen off-the-shelf generalist policy and world model, $π_0$ and A2World, D2R learns unseen LIBERO-90 tasks in the environment while keeping $π_0$'s performance on the LIBERO suites it was fine-tuned on, even though the world model is not accurate enough for policy optimization. Finally, on a real Franka robot, D2R improves three tasks in sequence entirely in imagination while retaining the earlier improvements.",
+      "authors": [
+        "Bahey Tharwat",
+        "Iman Nematollahi",
+        "Marvin Alles",
+        "Xingyuan Zhang",
+        "Akshay L Chandra",
+        "Abhinav Valada"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13816v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13816v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 13.41,
+      "matched_topics": [
+        "检索增强与对齐",
+        "强化学习",
+        "持续学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning",
+        "continual-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "catastrophic forgetting",
+        "policy optimization",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "强化学习": 6.0,
+        "持续学习": 3.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "reinforcement-learning": 7.86,
+        "continual-learning": 4.86
+      },
+      "summary": {
+        "takeaway": "提出 Dream to Remember，通过持续 steering 冻结的通用机器人策略，并利用世界模型对旧任务进行想象回放，以缓解灾难性遗忘。",
+        "methods": "在冻结的通用策略上训练 steering 模块；当世界模型足够忠实时可完全在想象中学习新任务，否则在环境中学习新任务并用世界模型仅排练旧任务。在 CALVIN、LIBERO-90 和真实 Franka 机器人上使用 π0 和 A2World 等冻结策略与世界模型进行实验。",
+        "relevance": "与检索增强与对齐、强化学习、持续学习相关，关注机器人策略持续学习和世界模型驱动的 rehearsal。",
+        "caveat": "摘要给出 CALVIN 上平均成功率从 63.7% 到 74.8% 而 LoRA 微调降至 11.7%，但未说明统计方差和所有任务细节；世界模型不够准确时仍需环境交互，方法依赖预训练世界模型和通用策略的质量。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.12866v1",
+      "title": "CaptchaAgent: Verifiable Visual Reasoning for CAPTCHA Solving",
+      "abstract": "Modern reasoning CAPTCHAs require fine-grained perception, compositional relation reasoning, and grounded browser interaction. End-to-end vision-language model agents remain brittle in this setting because a missed object, incorrect count, or confused relation can propagate directly to the final action. To address this problem, we present CaptchaAgent, a structured visual reasoning framework for interactive CAPTCHA solving. Instead of predicting an action directly from a screenshot, CaptchaAgent first constructs a visual intermediate representation (V-IR) that explicitly records entities, attributes, and spatial or topological relations. A symbol-only ASCII protocol further requires the parser to commit to a concrete object set and count. Building on this global representation, localized evidence refinement revisits ambiguous regions at higher effective resolution, while counterfactual consistency verification tests whether the resulting action remains stable under task-preserving transformations. Across three proprietary backbones on Open CaptchaWorld, CaptchaAgent improves Pass@1 by 21.3-25.8 percentage points over a commercially available browser agent baseline evaluated with the same backbones. On the separate offline Oedipus-data benchmark, it further improves average Pass@1 by 9.2-12.3 percentage points over the Oedipus solver across three matched backbones. The intermediate traces show that exact counting, continuous geometry, and ordered execution remain major sources of automation difficulty for the evaluated agents, providing practical guidance for designing more resilient compositional CAPTCHAs.",
+      "authors": [
+        "Shangquan Sun",
+        "Ruoyu Chen",
+        "Zhirui Liu",
+        "Xiang Liu",
+        "Chenghao Qian",
+        "Wenqi Ren",
+        "Xiaochun Cao"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.12866v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.12866v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 12.96,
+      "matched_topics": [
+        "大语言模型",
+        "检索增强与对齐",
+        "多模态学习",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "language model agent",
+        "vision-language",
+        "vision-language model"
+      ],
+      "score_breakdown": {
+        "大语言模型": 2.85,
+        "检索增强与对齐": 2.55,
+        "多模态学习": 3.0,
+        "跨模态理解与生成": 2.7,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 7.26,
+        "multimodal-learning": 7.56
+      },
+      "summary": {
+        "takeaway": "提出 CaptchaAgent，一种结构化视觉推理框架，通过显式视觉中间表示、ASCII 符号协议、局部证据精炼和反事实一致性验证来提高交互式 CAPTCHA 求解的鲁棒性。",
+        "methods": "先构建视觉中间表示 V-IR，记录实体、属性和空间或拓扑关系；使用仅符号的 ASCII 协议要求解析器确定对象集合和数量；基于全局表示进行局部证据精炼；用任务保持变换测试动作稳定性。在 Open CaptchaWorld 和 Oedipus-data 基准上，用三种专有骨干模型评估。",
+        "relevance": "与大语言模型、检索增强与对齐、多模态学习、跨模态理解与生成相关，涉及多模态 agent 的视觉推理和浏览器交互。",
+        "caveat": "摘要报告相对商业浏览器 agent 基线 Pass@1 提升 21.3 至 25.8 个百分点，相对 Oedipus solver 提升 9.2 至 12.3 个百分点，但未说明绝对 Pass@1 和骨干模型具体名称；结论限于所评估的 CAPTCHA 基准，真实网站泛化性未说明。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42848419",
+      "title": "Latent causal diffusions for single-cell perturbation modeling.",
+      "abstract": "Perturbation screens hold the potential to systematically map regulatory processes at single-cell resolution, yet modeling and predicting transcriptome-wide responses to perturbations remains a major computational challenge. Existing methods often underperform simple baselines, fail to disentangle measurement noise from biological signal, and provide limited insight into the causal structure governing cellular responses. Here, we present the latent causal diffusion (LCD), a generative model that frames single-cell gene expression as a stationary diffusion process observed under measurement noise. LCD outperforms established approaches in predicting the distributional shifts of unseen perturbation combinations in single-cell RNA-sequencing screens while simultaneously learning a mechanistic dynamical system of gene regulation. To interpret these learned dynamics, we develop an approach we call causal linearization via perturbation responses (CLIPR), which yields an approximation of the direct causal effects between all genes modeled by the diffusion. CLIPR provably identifies causal effects under a linear drift assumption and recovers causal structure in both simulated systems and a genome-wide perturbation screen, where it clusters genes into coherent functional modules and resolves causal relationships that standard differential expression analysis cannot. The LCD-CLIPR framework bridges generative modeling with causal inference to predict unseen perturbation effects and map the underlying regulatory mechanisms of the transcriptome.",
+      "authors": [
+        "Lars Lorch",
+        "Jiaqi Zhang",
+        "Charlotte Bunne",
+        "Andreas Krause",
+        "Bernhard Schölkopf",
+        "Caroline Uhler"
+      ],
+      "published": "2026-10-08",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42848419/",
+      "pdf_url": "",
+      "doi": "10.1073/pnas.2602630123",
+      "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 12.61,
+      "matched_topics": [
+        "单细胞扰动",
+        "机制推理"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "causal inference",
+        "single-cell perturbation"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 7.0,
+        "机制推理": 2.4,
+        "领域上下文": 1.0,
+        "新鲜度": 1.01
+      },
+      "category_scores": {
+        "bio-computing": 12.61
+      },
+      "summary": {
+        "takeaway": "提出潜因果扩散（LCD）生成模型与CLIPR因果线性化方法，用于单细胞扰动响应预测并推断基因调控因果结构。",
+        "methods": "将单细胞基因表达建模为在测量噪声下观测的平稳扩散过程；在单细胞RNA测序扰动筛选中预测未见扰动组合的分布偏移；通过CLIPR在线性漂移假设下近似基因间直接因果效应，并在模拟系统和全基因组扰动筛选中验证。",
+        "relevance": "直接关联单细胞扰动建模与机制推理，结合生成建模与因果推断以预测未见扰动效应并映射转录组调控机制。",
+        "caveat": "摘要未提供具体定量结果、数据集规模和基线对比细节；CLIPR的因果识别依赖线性漂移假设，其在实际生物系统中的适用性需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13056v1",
+      "title": "A4-MR: Abnormality-aware Anatomical Alignment for MR",
+      "abstract": "Recent advances in large-scale foundation models have enabled strong generalization across a wide range of clinical and research tasks in magnetic resonance imaging (MRI). However, existing vision-language MRI models remain limited in anatomy-specific localization and pathology-aware representation, particularly in real-world settings. We introduce A4-MR, a 3D vision-language foundation model trained on approximately 50,000 MRI studies comprising 491,000 series, roughly half of which are paired with radiology reports. A4-MR is designed to: (1) learn anatomy localization through large-scale pretraining with noisy labels; (2) align image and text representations at the anatomical level; and (3) learn distinct representations of healthy and abnormal anatomy. Across a diverse set of downstream tasks, A4-MR outperforms existing foundation models, including a +1.7 AUROC improvement over MedSigLIP for abnormality detection. Using a frozen encoder, A4-MR also surpasses an end-to-end task-specific MedNeXt model for knee segmentation by +1.4 Dice and performs comparably to the best task-specific model for abdominal organ segmentation on AMOS, within 0.4 Dice. Finally, without anatomical prompts, A4-MR localizes 3D anatomy comparably to MedSAM2 provided with ground-truth bounding boxes. Together, these results demonstrate that anatomy-level multimodal alignment and abnormality-aware representation learning can enable a single MRI foundation model to support localization, segmentation, and pathology-related tasks.",
+      "authors": [
+        "Noel D'souza",
+        "Zhijian Yang",
+        "Nishank Singla",
+        "Pranay Doshi",
+        "Krisztian Koos",
+        "Fei Tan",
+        "Bruno Nunes",
+        "Laszlo Rusko",
+        "Bernadett Kolozsvari",
+        "Eszter Sabo",
+        "Emanuele Valeriano",
+        "Vikash Gupta",
+        "Seyed Iman Zare Estakhraji",
+        "Marc Lebel",
+        "Farzin Haddadpour",
+        "Taha Kass-Hout",
+        "Erhan Bas"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13056v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13056v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 12.51,
+      "matched_topics": [
+        "预训练",
+        "自监督与表示学习",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "pretraining",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "pretraining",
+        "representation learning",
+        "vision-language"
+      ],
+      "score_breakdown": {
+        "预训练": 5.4,
+        "自监督与表示学习": 2.55,
+        "跨模态理解与生成": 2.7,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "pretraining": 9.81,
+        "multimodal-learning": 4.56
+      },
+      "summary": {
+        "takeaway": "提出A4-MR，一个在约5万例MRI研究上训练的3D视觉-语言基础模型，实现解剖定位、图文解剖级对齐及健康与异常解剖的区分表征。",
+        "methods": "基于约50,000例MRI研究（491,000个序列，约一半配对放射报告）进行大规模预训练，利用噪声标签学习解剖定位；在多个下游任务上与MedSigLIP、MedNeXt、MedSAM2等模型比较。",
+        "relevance": "涉及预训练、自监督与表示学习以及跨模态理解与生成，与医学影像基础模型的多模态对齐和病理感知表征学习主题相关。",
+        "caveat": "摘要仅报道了部分下游任务的AUROC、Dice等指标，未提供所有任务的完整结果和模型泛化性细节；预训练数据规模虽大但来源和多样性未详述。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13272v1",
+      "title": "OWLET: On-Policy Weighted Learning via Evidence Transfer for Video Large Language Model Post-Training",
+      "abstract": "Post-training has become a key stage for eliciting reasoning capabilities in Video Large Language Models (Video-LLMs). Existing post-training methods mainly follow two paradigms: reinforcement learning (RL) and on-policy distillation (OPD). However, they do not fully exploit visual evidence for effective training. RL supervises the policy with a single trajectory-level reward, which is too coarse-grained for video reasoning: the same response-level advantage is applied to every generated token, disregarding that the tokens of a video response are grounded in the visual stream to very different degrees. OPD provides token-level supervision through output-distribution matching, but lacks direct supervision of the spatiotemporal representations that produce those outputs. We observe across extensive experiments that the same model reasons more accurately when its video view combines global temporal context with question-relevant details. Comparing the same student-generated response under this view and uniform sampling reveals changes in token likelihoods and internal representations, providing a training signal for evidence use. Building on this observation, we propose OWLET, an evidence-privileged RL method that derives training signals from a richer teacher view. This view couples uniform global context with question-conditioned local windows, providing visual evidence without requiring a larger model. To better exploit this privileged visual evidence, OWLET introduces (i) \\textbf{evidence-aware credit redistribution}, which compares token likelihoods across the two views and redistributes positive response-level advantages according to their relative evidence support; and (ii) \\textbf{spatiotemporal state alignment}, which aligns the two views' hidden states on verifier-accepted responses.",
+      "authors": [
+        "Qitan Lv",
+        "Ke Fan",
+        "Hong Wang",
+        "Wen Wu",
+        "Yilin Wang",
+        "Bowen Zhou",
+        "Feng Wu",
+        "Chao Zhang"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13272v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13272v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.86,
+      "matched_topics": [
+        "大语言模型",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "large language model",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "大语言模型": 7.0,
+        "强化学习": 3.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 8.86,
+        "reinforcement-learning": 4.86
+      },
+      "summary": {
+        "takeaway": "提出OWLET，一种证据优先的强化学习后训练方法，通过结合全局时序上下文与问题相关局部窗口的教师视图，为视频大语言模型提供证据感知的训练信号。",
+        "methods": "基于对同一学生生成响应在不同视频视图下token似然和内部表示变化的观察，引入证据感知信用重分配（比较两视图token似然并重新分配响应级优势）和时空状态对齐（在验证器接受的响应上对齐两视图隐藏状态）。",
+        "relevance": "涉及大语言模型与强化学习，与视频大语言模型后训练中利用视觉证据进行细粒度监督的主题相关。",
+        "caveat": "摘要未提供具体实验数据集、基线对比和定量结果；方法依赖教师视图的构建和验证器接受响应，其通用性和计算开销未详细说明。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.01.755314",
+      "title": "Evaluating Autonomous LLM Agents Across Molecular Prediction and Optimization Benchmarks",
+      "abstract": "Large language model (LLM) agents are increasingly capable of carrying out autonomous computational research, but it remains unclear whether they can develop molecular modeling methods that compete with strong human-developed approaches. Here, we evaluate autonomous method development across four settings: Therapeutics Data Commons (TDC) ADMET tasks, the OpenADMET ExpansionRx Challenge, the activity prediction track of the OpenADMET PXR Induction Challenge, and the Practical Molecular Optimization (PMO) benchmark. Agents followed the prescribed data splits, metrics, and evaluation protocols for each benchmark. On TDC, the best agent-developed score across configurations improved on the leaderboard reference on 18 of 21 tasks and on the combined leaderboard and peer-reviewed reference on 17, while individual Codex configurations improved on the combined reference on 13 tasks. On ExpansionRx, five-agent and single-agent Codex configurations achieved overall scores corresponding to fourth and sixth place relative to the published final leaderboard, with the five-agent configuration reaching top-five performance on seven of nine endpoints. On PXR, five-agent Codex achieved a mean absolute error slightly outperforming the best published challenge entry. On PMO, five-agent Codex developed a molecular optimizer that outperformed existing methods evaluated under the benchmark's standard setup; other methods obtained higher reported scores under modified conditions, including additional molecular pretraining data or a different oracle-call budget. Together, these results show that current LLM agents can autonomously develop high-performing molecular prediction and optimization methods across substantially different drug-discovery settings, in several cases matching or exceeding leading human-developed approaches.",
+      "authors": [
+        "Smbatyan, K.",
+        "Ghukasyan, T.",
+        "Petrosyan, G."
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.01.755314",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.01.755314.full.pdf",
+      "doi": "10.64898/2026.10.01.755314",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 11.71,
+      "matched_topics": [
+        "大语言模型",
+        "预训练"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "large language model",
+        "llm agent",
+        "pretraining"
+      ],
+      "score_breakdown": {
+        "大语言模型": 7.0,
+        "预训练": 2.7,
+        "新鲜度": 1.01
+      },
+      "category_scores": {
+        "large-language-models": 9.01,
+        "pretraining": 4.71
+      },
+      "summary": {
+        "takeaway": "评估自主LLM智能体在四个分子预测与优化基准上开发方法的能力，结果显示其可自主开发出高性能方法，在多个任务上匹配或超越人类领先方法。",
+        "methods": "在TDC ADMET任务、OpenADMET ExpansionRx挑战、OpenADMET PXR诱导挑战的活性预测赛道以及PMO基准上，智能体遵循预设数据划分、指标和评估协议开发方法；比较不同配置（如Codex单智能体与五智能体）与已发表排行榜结果。",
+        "relevance": "涉及大语言模型与预训练，与LLM智能体在药物发现中自主进行分子建模和优化的能力评估主题相关。",
+        "caveat": "摘要未提供各基准的详细任务列表、具体指标数值和消融实验；结果基于特定基准和评估协议，向其他药物发现场景的泛化性需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13915v1",
+      "title": "Where to Look Matters: Rethinking Sub-Volume Sampling in 3D Medical Self-supervised Learning",
+      "abstract": "Self-supervised learning on 3D medical images commonly relies on random sub-volume sampling during pretraining. However, random cropping implicitly treats all spatial regions as equally worth observing, despite anatomical priors and spatial redundancy that make regions inherently unequal in their value for representation learning. To this end, we first show through controlled crop-quality manipulations that better sub-volumes lead to better downstream transfer, revealing the observation policy as an overlooked bottleneck in 3D medical SSL. Motivated by this finding, we revisit sub-volume sampling as a \\emph{where-to-look} problem. We propose \\textbf{\\method}, a plug-and-play framework that replaces random cropping with an offline coarse-to-fine probe bank guided by \\textit{anatomy-awareness}, \\textit{informativeness}, and \\textit{diversity}. We instantiate \\method as a lightweight \\lite variant using geometric and image-statistical cues, and a diagnostic \\feat variant using frozen visual features, to examine whether lightweight volume-intrinsic priors suffice or richer semantic cues reliably provide additional value. Extensive experiments across multiple 3D medical SSL backbones and downstream tasks demonstrate that \\method-\\lite consistently improves transfer performance over random sampling. Mechanistic analyses further attribute these gains to more anatomically plausible and informative observations, reduced spatial redundancy, more efficient learning dynamics, and more structured representations.",
+      "authors": [
+        "Junkai Liu",
+        "Le Zhang"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13915v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13915v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.56,
+      "matched_topics": [
+        "预训练",
+        "自监督与表示学习"
+      ],
+      "matched_categories": [
+        "pretraining"
+      ],
+      "matched_terms": [
+        "pretraining",
+        "representation learning",
+        "self-supervised learning"
+      ],
+      "score_breakdown": {
+        "预训练": 2.7,
+        "自监督与表示学习": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "pretraining": 11.56
+      },
+      "summary": {
+        "takeaway": "指出3D医学自监督预训练中随机子体积采样忽视空间区域价值差异，并提出即插即用框架以解剖感知、信息量和多样性引导子体积采样。",
+        "methods": "通过受控裁剪质量实验表明更好子体积带来更好下游迁移；提出离线从粗到细探针库替代随机裁剪，实例化轻量版（利用几何和图像统计线索）与诊断版（利用冻结视觉特征）；在多个3D医学SSL骨干和下游任务上评估。",
+        "relevance": "涉及预训练、自监督与表示学习，与3D医学影像自监督学习中采样策略对表示学习影响的研究主题相关。",
+        "caveat": "摘要未提供具体下游任务、数据集和定量提升幅度；轻量版与诊断版的对比结论基于有限实验，其泛化到其他模态或任务需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13267v1",
+      "title": "Forgetting is Not Always Bad: A Neuro-Inspired Memory Repair Mechanism for Poisoned LLM Agents",
+      "abstract": "Large language model (LLM) agents are highly vulnerable to memory-poisoning attacks. Existing defenses primarily rely on external modules for either static memory isolation or continuous online auditing, resulting in low memory efficiency and high computational overhead. To address these limitations, inspired by neuroscientific mechanisms that weak reactivation can destabilize memories and induce decay in the absence of reinforcement, we propose an agent-intrinsic training-free memory repair framework, DREAM (Dynamic Reactivation for Engram Attenuation in Memory), that enables selective functional forgetting of poisoned memories. Specifically, DREAM implements a three-stage pipeline: perturbation-induced implicit reactivation to reveal the structural fragility of malicious memories, adaptive anomaly diagnosis based on multi-dimensional activation patterns to detect topological anomalies, and a dynamic memory repair module that selectively suppresses harmful memories while reinforcing benign ones. Extensive experiments across diverse attackers and real-world tasks demonstrate that DREAM reduces attack success rates by over 95\\% against backdoor poisoning while preserving strong benign utility. DREAM also achieves competitive robustness against injection attacks. In terms of runtime and token consumption, DREAM achieves up to a 2.13$\\times$ speedup and a 37.7\\% reduction in token consumption compared with A-MemGuard. Furthermore, DREAM also achieves a task success rate of 92.96\\% on poisoned multi-agent systems.",
+      "authors": [
+        "Lei Liu",
+        "Yunji Liang",
+        "Xiaowen Zhang",
+        "Jingqi Liu",
+        "Qi Li",
+        "Bin Guo",
+        "Zhiwen Yu"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13267v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13267v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.41,
+      "matched_topics": [
+        "大语言模型",
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "large language model",
+        "llm agent"
+      ],
+      "score_breakdown": {
+        "大语言模型": 7.0,
+        "检索增强与对齐": 2.55,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 11.41
+      },
+      "summary": {
+        "takeaway": "受神经科学弱再激活导致记忆衰减启发，提出免训练智能体内存修复框架DREAM，选择性功能遗忘被投毒记忆，同时保持良性效用。",
+        "methods": "三阶段流程：扰动诱导隐式再激活以揭示恶意记忆结构脆弱性；基于多维激活模式的自适应异常诊断检测拓扑异常；动态内存修复模块选择性抑制有害记忆并强化良性记忆；在多种攻击者和真实任务上评估。",
+        "relevance": "涉及大语言模型与检索增强与对齐，与LLM智能体内存投毒防御及对齐主题相关。",
+        "caveat": "摘要未提供具体攻击类型、任务数据集和详细消融实验；结果基于特定攻击设置，对新型或自适应攻击的鲁棒性需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13923v1",
+      "title": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
+      "abstract": "Deep-space communications operate under intermittent connectivity, long propagation delays, and relay storage constraints. In such networks, the Bundle Protocol enables store-carry-forward communication, requiring relay nodes to manage limited storage and scarce contact opportunities. Relay-side scheduling and dropping decisions are inherently goal-oriented: transmission resources should be allocated to bundles most valuable to downstream mission objectives. Conventional schedulers, such as FIFO, do not explicitly optimize task utility and may provide unfair service across heterogeneous planetary sources. This paper presents a closed-loop modeling and learning framework for relay-side bundle and flow management in a contact-driven deep-space network, where lunar and Martian updates are forwarded through a shared-buffer relay to Earth. We quantify destination-side information freshness using excess age $Δ_i^e(t)=[Δ_i(t)-d_i(t)]^+$, where $Δ_i(t)$ denotes the Age of Information of source $i$ and $d_i(t)$ is a source-dependent delay baseline. Based on this metric, we define a goal-oriented loss that supports source-dependent nonlinear penalties, allowing prioritization according to mission relevance. We formulate relay control as a constrained semi-Markov decision process (CSMDP) and solve it using masked Lagrangian Proximal Policy Optimization (PPO). Feasibility-aware action masking restricts transmissions to bundles that can complete within the remaining contact window. DTNSim simulations indicate improved age-based utility and inter-flow fairness compared with baseline schedulers. The proposed framework jointly optimizes relay-side bundle scheduling, dropping, and flow control under contact-driven dynamics with explicit fairness considerations across heterogeneous sources.",
+      "authors": [
+        "Sajjad Baghaeea",
+        "Aimin Lib",
+        "Shanmugarajan Balasubramanian",
+        "Elif Uysal"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13923v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13923v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.41,
+      "matched_topics": [
+        "检索增强与对齐",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "policy optimization",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "强化学习": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "reinforcement-learning": 8.86
+      },
+      "summary": {
+        "takeaway": "提出面向目标的深空通信中继束管理与流控闭环学习框架，利用约束半马尔可夫决策过程和掩码拉格朗日PPO联合优化调度、丢弃和流控。",
+        "methods": "以月球和火星更新经共享缓冲中继转发至地球为场景，定义基于超额年龄的目标导向损失支持源相关非线性惩罚；将中继控制建模为CSMDP，用掩码拉格朗日PPO求解，并采用可行性感知动作掩码限制传输；使用DTNSim仿真评估。",
+        "relevance": "涉及检索增强与对齐及强化学习，与深空通信中基于强化学习的资源管理和公平性优化主题相关。",
+        "caveat": "摘要仅提及DTNSim仿真结果改善，未提供具体数值、对比基线和真实部署验证；场景假设可能简化了实际深空通信的复杂性。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13015v1",
+      "title": "Generalized Proximal Policy Optimization: Unifying LLM RL Algorithms from the Perspective of Divergence",
+      "abstract": "Reinforcement learning has become the foundational paradigm for enhancing the reasoning capabilities of LLMs. Yet the dominant approach, Proximal Policy Optimization (PPO), relies on a geometrically degenerate clipping proxy that cannot adapt its resistance to policy shifts, leading to premature clipping and degraded exploration. Subsequent variants alleviate these issues through fragmented and heuristic modifications. We propose Generalized Proximal Policy Optimization (GPPO), a principled and unified framework for understanding and designing LLM RL algorithms through the lens of divergence. We establish a generalized $f$-divergence trust-region theory with a monotonic performance improvement guarantee, and show that different $f$-divergences induce distinct geometries and policy update dynamics. We further introduce novel estimator topologies that provide more faithful divergence estimates than the conventional single-sample Monte Carlo estimation. Under this framework, PPO and recent variants such as DAPO, DPPO, and RIPO emerge as special cases, establishing a principled two-dimensional design space of {Divergence $\\times$ Estimator}. Extensive experiments on eight competition-level math and coding benchmarks show that both dimensions are critical. The best-performing GPPO instantiation surpasses standard GRPO by up to 50% and 14% on math and coding, delivering SOTA performance.",
+      "authors": [
+        "Zhicheng Cai",
+        "Xinyuan Guo",
+        "Hanlin Wu",
+        "Weinan Dai",
+        "Yuyan Zhou",
+        "Wei-Ying Ma",
+        "Ya-Qin Zhang",
+        "Hao Zhou"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13015v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13015v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.41,
+      "matched_topics": [
+        "检索增强与对齐",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "policy optimization",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "强化学习": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "reinforcement-learning": 8.86
+      },
+      "summary": {
+        "takeaway": "提出广义近端策略优化（GPPO），从散度视角统一理解和设计LLM强化学习算法，建立广义f散度信任域理论及单调性能改进保证。",
+        "methods": "引入广义f散度信任域理论，展示不同f散度导致不同几何和策略更新动态；提出新的估计器拓扑以更忠实估计散度；将PPO、DAPO、DPPO、RIPO等作为特例，形成{散度×估计器}二维设计空间；在八个竞赛级数学和编程基准上实验。",
+        "relevance": "涉及检索增强与对齐及强化学习，与LLM强化学习算法统一设计和理论分析主题相关。",
+        "caveat": "摘要未提供实验中的具体基准名称、超参数设置和全面消融；理论保证依赖假设，实际算法选择的最优性需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.12848v1",
+      "title": "Reinforcement Learning via Fixed-point Flow Matching",
+      "abstract": "In maximum entropy and behavior-constrained reinforcement learning (RL), the optimal policy is given by a Boltzmann distribution. Generating samples from this distribution can be challenging, as it is often complex and multimodal. While flow policies trained with flow matching provide a powerful framework for representing such distributions, they traditionally rely on access to training data, which is generally unavailable in online RL. To address this limitation, we propose fixed-point flow matching (FFM), a data-free procedure for training and fine-tuning flow policies in RL. FFM leverages the target flow identity to formulate the actor update as a fixed-point iteration, utilizing a flow-matching-style regression objective where the critic's action gradients serve as regression targets. We show that the optimal policy is a fixed point of this iteration. Through extensive experiments, we demonstrate that FFM effectively fine-tunes pretrained flow policies in the offline-to-online setting and enables efficient and accurate training of flow policies from scratch in online RL. These results establish fixed-point flow matching as a principled approach for learning expressive flow-based policies without requiring training data.",
+      "authors": [
+        "Denis Blessing",
+        "Onur Celik",
+        "Gerhard Neumann"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.12848v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.12848v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.41,
+      "matched_topics": [
+        "检索增强与对齐",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "强化学习": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "reinforcement-learning": 8.86
+      },
+      "summary": {
+        "takeaway": "提出 fixed-point flow matching (FFM)，一种无需训练数据的流程策略训练与微调方法，可在RL中将actor更新视为不动点迭代。",
+        "methods": "利用目标流恒等式将actor更新形式化为不动点迭代，并用flow-matching风格回归目标、以critic的动作梯度作为回归目标；在离线到在线及在线RL设置中进行实验。",
+        "relevance": "直接对应强化学习与对齐主题，为最大熵和行为约束RL中表达性流程策略的学习提供新方法。",
+        "caveat": "摘要未给出具体基准、模型或数值结果，也未说明不动点迭代的收敛性与计算开销。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13818v1",
+      "title": "TabMF: Learning Dataset Representations with Tabular Foundation Models",
+      "abstract": "Representations of supervised datasets support higher-level machine-learning tasks such as dataset retrieval and distribution-shift monitoring. However, existing approaches typically rely either on hand-crafted meta-features or on dataset encoders trained specifically for representation learning. We introduce TabMF, a framework that repurposes pretrained tabular foundation models (TFMs) as encoders of supervised datasets. TabMF equips a predictive TFM with an architecture-aware dataset-level readout and adapts the model end-to-end using contrastive post-training on stochastic views of synthetic supervised datasets. We instantiate TabMF on TabICLv2 and TabPFN-2.5 and evaluate the resulting representations across six tasks on unseen real datasets. Simple frozen TFM readouts yield competitive representations, indicating that predictive pretraining already induces substantial dataset-level structure. The two TabMF encoders obtain the strongest aggregate performance among the evaluated learned and classical dataset representations, with particularly strong results in dataset retrieval, compact benchmark construction, and distribution-shift severity assessment.",
+      "authors": [
+        "Rafiq Kamel",
+        "Nicolas Atienza",
+        "Aziz Fouché",
+        "Nicola Cancedda",
+        "Josif Grabocka"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13818v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13818v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.41,
+      "matched_topics": [
+        "预训练",
+        "自监督与表示学习"
+      ],
+      "matched_categories": [
+        "pretraining"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "pretraining",
+        "representation learning"
+      ],
+      "score_breakdown": {
+        "预训练": 7.0,
+        "自监督与表示学习": 2.55,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "pretraining": 11.41
+      },
+      "summary": {
+        "takeaway": "提出 TabMF，将预训练表格基础模型改造为监督数据集级编码器。",
+        "methods": "为预测性TFM配备架构感知的数据集级readout，并在合成监督数据集的随机视图上做对比式后训练；在TabICLv2与TabPFN-2.5上实例化，并在未见真实数据集的六项任务上评估。",
+        "relevance": "涉及预训练与自监督/表示学习，与检索增强中对数据集表示和检索的需求相关。",
+        "caveat": "摘要仅给出聚合性能结论，未列出各任务具体指标或失败情形；对比式后训练依赖合成数据集构造。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13654v1",
+      "title": "TabReliBench: Evaluating Tabular Foundation Models Beyond Predictive Accuracy",
+      "abstract": "Tabular foundation models (TFMs) are increasingly popular for their strong predictive performance. Many also provide posterior predictive distributions (PPDs), whose reliability remains less studied. We assess reliability through point prediction, distributional quality, marginal and subgroup calibration, and interval efficiency. We then introduce TabReliBench, a large classification and regression benchmark for these comparisons and dataset-level analyses. We find that TFMs' rankings change between TabArena and our benchmark and across reliability metrics. Regression TFMs usually achieve near-nominal marginal coverage and retain narrow intervals, but this favorable marginal behavior does not imply valid conditional coverage. Dataset-level analyses show that classification difficulty often accompanies poor calibration, whereas regression predictive performance is not a reliable indicator of calibration. Ensembling improves predictive performance but does not consistently improve calibration of PPDs; TFMs also benefit little from conformal post-processing, which does not reliably resolve subgroup gaps. Reliable TFM selection therefore requires multidimensional evaluation beyond aggregate rankings. Code is available at https://github.com/Tianqi-Zhao/TabReliBench.",
+      "authors": [
+        "Tianqi Zhao",
+        "Jia Guo",
+        "Yan Shuo Tan",
+        "Qiong Zhang"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13654v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13654v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.41,
+      "matched_topics": [
+        "检索增强与对齐",
+        "预训练"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "RAG",
+        "foundation model"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "预训练": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "pretraining": 8.86
+      },
+      "summary": {
+        "takeaway": "提出 TabReliBench，从预测准确性之外的多维可靠性角度评估表格基础模型。",
+        "methods": "从点预测、分布质量、边际与子组校准、区间效率等维度评估TFM；构建分类与回归基准并进行数据集级分析，同时考察集成与保形后处理。",
+        "relevance": "与检索增强与对齐、预训练主题相关，强调TFM选择需超越聚合排名。",
+        "caveat": "摘要只报告定性发现（如排名变化、边际覆盖不代表条件覆盖），未给出具体数值；结论限于所评估的基准与模型。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.12904v1",
+      "title": "GIST: Generator-state-Informed Supervision for Tabular Foundation Models",
+      "abstract": "Tabular foundation models (TFMs) based on prior-data fitted networks typically use sampled hard query labels, leaving avoidable sampling variability in pretraining. A key observation is that intermediate generator states can reveal label uncertainty beyond a sampled outcome. We propose Generator-state-Informed Supervision for TFMs (GIST), which uses these states to average query losses over conditional label distributions. GIST jointly designs task generation and query supervision, using entropy-calibrated encodings to obtain tractable, input-consistent targets on supported label-dependent branches. We show that this averaging preserves the population objective and yields no larger gradient covariance at fixed parameters within each generating distribution. Under matched pretraining schedules, GIST improves mean rank across three architectures on both TabArena and TALENT without changing architecture or inference. Across these benchmarks and architectures, GIST wins 62.1% of paired dataset-level comparisons against the corresponding hard-label controls.",
+      "authors": [
+        "Zhangyang Peng",
+        "Jingze Shi",
+        "Tongyi Zhang",
+        "Yuyu Luo"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.12904v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.12904v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.41,
+      "matched_topics": [
+        "检索增强与对齐",
+        "预训练"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "RAG",
+        "foundation model",
+        "pretraining"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "预训练": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "pretraining": 8.86
+      },
+      "summary": {
+        "takeaway": "提出 GIST，用生成器中间状态对条件标签分布做损失平均，以减少TFM预训练中采样硬标签带来的方差。",
+        "methods": "联合设计任务生成与查询监督，采用熵校准编码获得可处理且输入一致的目标；在匹配预训练计划下于三种架构、TabArena和TALENT基准上与硬标签对照比较。",
+        "relevance": "针对预训练目标的改进，与预训练及对齐主题下的表格基础模型训练相关。",
+        "caveat": "摘要仅给出相对提升比例和胜负比例，未列出绝对指标；方法依赖生成器支持的条件分支与熵校准编码。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.12830v1",
+      "title": "Cross-Behavior Policy Optimization: Unified Learning from Offline Demonstrations and On- and Off-Policy Rollouts via a Shared Regression Target",
+      "abstract": "Reasoning post-training draws on offline demonstrations and policy-generated rollouts, yet conventional supervised fine-tuning (SFT) followed by reinforcement learning (RL) separates their objectives and limits continued reuse of collected responses. We propose \\textbf{Cross-Behavior Policy Optimization} (CBPO), which makes these sources compatible with one regression loss through a fixed-reference target. Because the generating policy does not enter this target, positive and negative offline completions, reference responses, and current and historical rollouts can share a common reward-labeled record format and replay buffer. As new responses enter the buffer, optimization retains the same regression objective without coordinating separate SFT and RL objectives or requiring stored behavior-policy probabilities, importance weighting, or a learned critic. Restricting the available sources gives offline, on-policy, and off-policy variants, while CBPO-Unified combines them. Across two model scales and four mathematical reasoning benchmarks, CBPO delivers leading \\texttt{avg@32} and \\texttt{pass@32} performance across benchmarks and data regimes. On Qwen3-1.7B, CBPO-Unified improves benchmark-averaged \\texttt{avg@32} and \\texttt{pass@32} over SFT DAPO by 2.33 and 4.44 percentage points, respectively. In the replay ablation, retaining historical rollouts improves these metrics by 1.87 and 3.72 percentage points over the no-history configuration.",
+      "authors": [
+        "Du Cheng",
+        "Junyu Lu",
+        "Jingfan Zhang",
+        "Yuzhuo Zhang",
+        "Haoxuan Jia",
+        "Shichao Weng"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.12830v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.12830v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.41,
+      "matched_topics": [
+        "检索增强与对齐",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "policy optimization",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "强化学习": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "reinforcement-learning": 8.86
+      },
+      "summary": {
+        "takeaway": "提出 Cross-Behavior Policy Optimization (CBPO)，用固定参考目标下的统一回归损失整合离线示范与在线/离线策略rollout。",
+        "methods": "设计固定参考回归目标，使离线正负完成、参考回应及当前与历史rollout共享统一奖励标注格式与回放缓冲；无需存储行为策略概率、重要性加权或学习critic，并给出离线、on-policy、off-policy变体及CBPO-Unified。",
+        "relevance": "直接对应强化学习与对齐主题，统一SFT与RL的后训练流程。",
+        "caveat": "摘要只给出数学推理基准上的部分数字对比，未涵盖更广任务；回放与统一目标的具体权衡未详细说明。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42847618",
+      "title": "The metabolic matrix hypothesis of recurrent BPPV: Otoconia-otolithic membrane-endolymph fragility.",
+      "abstract": "Benign paroxysmal positional vertigo (BPPV) is treated as a purely mechanical disorder of displaced otoconia, yet this model alone does not readily account for spontaneous otoconia detachment, bilateral or multicanal disease, high recurrence rates, or the clustering of BPPV with systemic metabolic conditions in a subset of patients. This article proposes and structures a unifying mechanistic model-the Metabolic Matrix Hypothesis-linking systemic metabolic states to otoconial fragility, and derives testable predictions from it. It is a hypothesis-generating narrative and theoretical synthesis-not a systematic review or meta-analysis-of otoconial matrix biology, otolithic membrane anchoring, endolymph chemistry, and the dispersed clinical literature on metabolic risk factors for BPPV. Evidence supporting each proposed pathway is graded narratively as established clinical association, experimental or animal evidence, mechanistic inference, or speculative extension. In a biologically distinct subset of patients, recurrent idiopathic BPPV may represent the mechanical expression of a systemic metabolic fragility of the otoconia-otolithic membrane-endolymph unit. Vitamin D deficiency, estrogen withdrawal, osteoporosis, insulin resistance, oxidative stress, thyroid autoimmunity, and microvascular insufficiency may act as convergent entry points into impaired matrix resilience rather than independent risks. The model generates testable predictions and a clinically accessible metabolic evaluation for recurrent, bilateral, or multicanal disease, complementing repositioning maneuvers.",
+      "authors": [
+        "Pedro Stapleton-Garcia"
+      ],
+      "published": "2026-10-08",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42847618/",
+      "pdf_url": "",
+      "doi": "10.1177/09574271261493213",
+      "venue": "Journal of vestibular research : equilibrium & orientation",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 11.41,
+      "matched_topics": [
+        "机制推理",
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "mechanistic inference"
+      ],
+      "score_breakdown": {
+        "机制推理": 2.4,
+        "检索增强与对齐": 6.8,
+        "新鲜度": 1.01
+      },
+      "category_scores": {
+        "bio-computing": 4.61,
+        "large-language-models": 9.01
+      },
+      "summary": {
+        "takeaway": "提出“代谢基质假说”，将复发性BPPV机制统一为耳石-耳石膜-内淋巴单元的代谢脆弱性表现。",
+        "methods": "对耳石基质生物学、耳石膜锚定、内淋巴化学及BPPV代谢危险因素文献做假设生成式叙述性综合，证据按临床关联、实验/动物证据、机制推断、推测性外推分级。",
+        "relevance": "与机制推理主题相关，为复发性、双侧或多管性BPPV提供可检验机制模型和代谢评估思路。",
+        "caveat": "作者明确其为假设生成而非系统综述或元分析，未提供定量验证；各通路证据强度不一。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13648v1",
+      "title": "SPARQL-LLM in the TEXT2SPARQL 2026 Challenge",
+      "abstract": "Querying distributed data represented as Knowledge Graphs (KGs) via SPARQL remains a difficult task, requiring fluency in query syntax, endpoint specifications, and schema details. Knowledge Graph Question Answering (KGQA) systems address this by automatically translating natural language into SPARQL, and recent advances in Large Language Models (LLMs) have made this translation increasingly feasible. In this paper, we describe SPARQL-LLM, our open-source KGQA system, in the context of the TEXT2SPARQL 2026 challenge. In this challenge, SPARQL-LLM ranks first overall among eight competing approaches across all datasets, achieving up to 59% higher accuracy than the second-best approach and supporting multilingual question answering in English, German, and Spanish. SPARQL-LLM is publicly released at https://github.com/sib-swiss/sparql-llm and deployed in production over decentralized bioinformatics KGs at https://www.expasy.org/chat.",
+      "authors": [
+        "Panayiotis Smeros",
+        "Vincent Emonet",
+        "Ruijie Wang",
+        "Ana-Claudia Sima",
+        "Tarcisio Mendes de Farias"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13648v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13648v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 10.71,
+      "matched_topics": [
+        "大语言模型",
+        "知识图谱"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "knowledge-graphs"
+      ],
+      "matched_terms": [
+        "knowledge graph",
+        "knowledge graphs",
+        "large language model"
+      ],
+      "score_breakdown": {
+        "大语言模型": 2.85,
+        "知识图谱": 6.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.71,
+        "knowledge-graphs": 7.86
+      },
+      "summary": {
+        "takeaway": "介绍 SPARQL-LLM 在 TEXT2SPARQL 2026 挑战中的开源KGQA系统，并报告排名第一。",
+        "methods": "用LLM将自然语言转换为SPARQL以查询知识图谱，系统支持英语、德语和西班牙语问答，并部署于生物信息学KG及公开代码库。",
+        "relevance": "涉及大语言模型与知识图谱，属于检索增强与对齐相关方向。",
+        "caveat": "摘要仅报告相对第二名的最高准确率优势和总体排名，未列出各数据集绝对指标或错误分析。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13184v1",
+      "title": "AdaC-GRPO: Towards Mastering Long-Horizon Visual Sudoku Puzzles via Adaptive Curriculum Learning",
+      "abstract": "While reinforcement learning with verifiable reward (RLVR) enhances reasoning in large language models, its efficacy in long-horizon multimodal tasks remains underexplored. Visual Sudoku puzzles pose a representative challenge, requiring multi-step deductive reasoning over both local constraints and global dependency chains. To this end, we introduce FG-Sudoku, a fine-grained benchmark categorized by grid size and required deductive steps. Evaluations reveal that frontier MLLMs fail on complex long-range dependencies (e.g., 9*9 puzzles). During post-training, this near-zero success rate causes severe reward sparsity, halting standard RLVR. We propose Adaptive Curriculum Group Relative Policy Optimization (AdaC-GRPO) to overcome this. Unlike rigid or prior-based schedules, AdaC-GRPO dynamically constructs training batches by tracking the model's \"Zone of Proximal Development\" via online rollout accuracy. Experiments demonstrate that AdaC-GRPO enables Qwen2.5-VL-7B to approach the performance of Gemini-2.5-Flash while bridging 62.2% of the overall accuracy gap to Gemini-2.5-Pro, with its generalizability further validated across InternVL-3.5 and Qwen3-VL.",
+      "authors": [
+        "Sida Li",
+        "Yuanxin Liu",
+        "Linli Yao",
+        "Shicheng Li",
+        "Xu Sun",
+        "Haoli Bai",
+        "Xiaohui Li"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13184v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13184v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 10.71,
+      "matched_topics": [
+        "大语言模型",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "large language model",
+        "policy optimization",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "大语言模型": 2.85,
+        "强化学习": 6.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.71,
+        "reinforcement-learning": 7.86
+      },
+      "summary": {
+        "takeaway": "提出 AdaC-GRPO，通过自适应课程学习缓解长时程视觉数独任务中的奖励稀疏问题。",
+        "methods": "引入按网格大小和推理步数分级的FG-Sudoku基准，用在线rollout准确率跟踪“最近发展区”并动态构建训练批次；在Qwen2.5-VL-7B上实验，并在InternVL-3.5和Qwen3-VL上验证泛化。",
+        "relevance": "对应大语言模型与强化学习主题，探索RLVR在多模态长时程推理中的适用性。",
+        "caveat": "摘要只给出相对Gemini-2.5-Pro的差距缩小比例等有限数字，未说明基准上限或失败模式；课程构建依赖在线精度估计。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13840v1",
+      "title": "Studying Comics at Scale with Artificial Intelligence: The PAGE Framework and Three Studies of American Comics and Japanese Manga",
+      "abstract": "Comics are one of the great visual records of the twentieth century: hundreds of thousands of pages in which a mass readership saw its leaders, its wars and its heroes. Most of this record has never been studied as a whole; comics scholarship proceeds one book at a time. We argue that artificial intelligence, including generative models, can change this to the benefit of the medium itself. We propose PAGE, a framework that makes artificial intelligence an instrument for comics research. It parses every scan into panels, text and a bibliographic record; annotates each page with a vision-language model that follows a written codebook, as a human coder would; grounds samples of these readings in human annotation; and explains change across an archive, with estimates controlled for publisher and genre. We demonstrate the framework on 3,929 American comic books (1938--1956) and 87 volumes of Japanese manga, in three studies, each resting on a different capability. The first pairs text search with visual reading to recover how a mass medium portrayed political power. The second measures the page's visual form across an industry and recovers the hand of individual artists. The third follows who speaks across two comics traditions, checked against human annotation. Beyond research, the same instruments can make archives searchable by what is drawn, open comics to blind and low-vision readers, and help preserve fragile collections and credit uncredited artists. We outline a research agenda in which artificial intelligence strengthens the study, preservation and reach of the medium.",
+      "authors": [
+        "Emilio Ferrara"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13840v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13840v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 10.61,
+      "matched_topics": [
+        "检索增强与对齐",
+        "多模态学习",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "vision-language",
+        "vision-language model"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "多模态学习": 3.0,
+        "跨模态理解与生成": 2.7,
+        "领域上下文": 0.5,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.91,
+        "multimodal-learning": 8.06
+      },
+      "summary": {
+        "takeaway": "提出 PAGE 框架，用 AI 与生成模型将漫画档案作为整体研究，通过三项研究展示其在文本与视觉阅读、页面视觉形式及对话归属上的能力。",
+        "methods": "框架将扫描页解析为画格、文本与书目记录，用视觉-语言模型按书面码本标注页面，并将样本阅读结果与人工标注对齐；随后在控制出版商与体裁的条件下解释档案变化。数据为 3,929 本美国漫画（1938–1956）与 87 卷日本漫画。",
+        "relevance": "与检索增强与对齐、多模态学习及跨模态理解与生成相关，因它结合文本检索与视觉阅读，并用视觉-语言模型进行跨模态标注与档案分析。",
+        "caveat": "摘要未给出标注一致性、模型准确率或控制变量的具体数值，也未说明三项研究的抽样与泛化范围。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13781v1",
+      "title": "SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models",
+      "abstract": "Driving world action models (WAMs) learn from paired trajectories and future observations. Post-training with reinforcement learning allows the policy to explore alternative trajectories and improve planning using driving rewards. However, driving logs contain future videos only for the recorded trajectories, leaving these alternatives without corresponding visual supervision. Thus, we introduce SimVTA, a simulation-grounded post-training framework that combines trajectory optimization with video supervision. First, we sample candidate trajectories for each observation and use a real-world simulator (e.g., World Engine) to render future videos for high-reward candidates in real-world scenes reconstructed with 3D Gaussian Splatting (3DGS). This provides trajectory-matched supervision independent of the model's own predictions. Under a limited rendering budget, we prioritize video supervision for higher-error futures among these rendered candidates. Finally, we optimize trajectory planning with Group Relative Policy Optimization (GRPO) and use a flow-matching loss on the matched videos to update shared representations. At inference time, the model predicts trajectories directly, without simulator calls. On NAVSIM v1, applying SimVTA to a WAM initialization improves PDMS from 86.2 to 91.3 (+5.1). It achieves 88.2 EPDMS on NAVSIM v2 and an average HD-Score of 38.8 in closed-loop evaluation on HUGSIM. Ablations show that updating shared representations with video supervision improves planning, while prioritizing higher-error futures among high-reward trajectories further improves performance.",
+      "authors": [
+        "Changhui Jing",
+        "Haochen Tian",
+        "Hongchen Li",
+        "Tianyu Li",
+        "Caojun Wang",
+        "Zihao Zhang",
+        "Yanhao Liu",
+        "Chengen Xie",
+        "Bailin Li",
+        "Hao Zhao",
+        "Zhenjie Yang"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13781v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13781v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 10.41,
+      "matched_topics": [
+        "检索增强与对齐",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "policy optimization",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "强化学习": 6.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "reinforcement-learning": 7.86
+      },
+      "summary": {
+        "takeaway": "提出 SimVTA，一种基于仿真的后训练框架，把轨迹优化与视频监督结合，为驾驶世界动作模型生成与轨迹匹配的未来视频监督。",
+        "methods": "为每个观测采样候选轨迹，用真实世界模拟器（如 World Engine）在经 3D Gaussian Splatting 重建的场景中为高奖励候选渲染未来视频；在有限渲染预算下优先监督高误差未来；用 GRPO 优化轨迹规划，并对匹配视频用 flow-matching 损失更新共享表示。推理时直接预测轨迹。",
+        "relevance": "与强化学习及检索增强与对齐相关，因它使用 GRPO 和奖励引导的后训练，并结合仿真生成的视觉监督对齐轨迹与视频表示。",
+        "caveat": "摘要未说明模拟器重建误差、渲染预算大小或候选轨迹分布对结果的影响；结论限于 NAVSIM v1/v2 与 HUGSIM 的评测设置。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13594v1",
+      "title": "MENTOR: Learning from Failure with On-Policy Pedagogical Intervention",
+      "abstract": "Reinforcement Learning from Verifiable Rewards (RLVR) is a key driver for Large Reasoning Models, but it is vulnerable to \"zero-reward collapse\", a training failure where a sudden increase in task difficulty causes the learning signal to vanish. We argue that the conventional approach of discarding these failed trajectories is wasteful, as they contain valuable diagnostic information about the model's cognitive gaps, a bright side that can be leveraged for recovery. Existing solutions, however, often regress to static, \"off-policy-style\" interventions like pre-defined hint libraries or perform post-hoc refinement, failing to provide the adaptive, forward-looking guidance needed to escape the collapse. To address this, we propose a paradigm shift towards on-policy pedagogical intervention and introduce MENTOR, a multi-agent framework that acts as a live mentor. MENTOR diagnoses the root cause of failure in real-time and dynamically generates targeted, instructional prompts to guide the learning agent's next attempt. As a plug-and-play module, MENTOR integrates seamlessly into existing policy optimization pipelines like GRPO without modifying the training infrastructure. Extensive experiments on math and code generation show that MENTOR effectively mitigates zero-reward collapse, outperforming state-of-the-art baselines. Notably, it achieves massive average relative gains of up to 78.3% on Llama-3.2-3B-Instruct over its base model.",
+      "authors": [
+        "Guanlan Yue",
+        "Hang Yu",
+        "Xiaoyong Huang",
+        "Ruipeng Li",
+        "Wei Zhang",
+        "Bingchang Liu",
+        "Rui Wang"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13594v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13594v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 10.41,
+      "matched_topics": [
+        "检索增强与对齐",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "policy optimization",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "强化学习": 6.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 4.41,
+        "reinforcement-learning": 7.86
+      },
+      "summary": {
+        "takeaway": "提出 MENTOR，一种在线策略教学干预的多智能体框架，利用失败轨迹实时诊断原因并生成针对性指令，以缓解零奖励崩塌。",
+        "methods": "MENTOR 作为即插即用模块集成到 GRPO 等策略优化流程；多智能体实时诊断失败根因并动态生成教学提示，引导学习智能体下一次尝试。在数学与代码生成任务上评测。",
+        "relevance": "与强化学习及检索增强与对齐相关，因它针对 RLVR 训练失败问题，改进策略优化中的反馈与对齐。",
+        "caveat": "摘要未给出除 Llama-3.2-3B-Instruct 上平均相对增益 78.3% 之外的完整实验细节、基线配置或失败诊断的可靠性分析。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13485v1",
+      "title": "Proactive Agentic Orchestration",
+      "abstract": "Agentic orchestration delegates tasks to sub-agents with independent contexts, providing a key path to extending the effective execution horizon of large language model agents. However, existing orchestration methods face two limitations: in execution, current methods fix sub-agents' goals and harnesses at creation time, limiting their adaptability to dynamic real-world environments; in optimization, sparse and delayed feedback constrains effective learning of the orchestration policy. To address these limitations, we introduce POrchestra, an on-the-fly proactive agentic orchestration framework. It allows sub-agents to proactively communicate with the orchestrator at any logical point to request harness adjustments while maintaining continuity of local execution. This mechanism not only enables sub-agents to adapt seamlessly to dynamic environments but also naturally inspires On-Policy Orchestration Distillation (OPOD) based on hindsight feedback. OPOD attributes sub-agents' proactive revision requests back to preceding orchestration decisions to derive targeted improvement signals, and leverages these signals as process supervision alongside the final reward to optimize the orchestration policy. We evaluate POrchestra on three long-horizon agent benchmarks spanning deep research, dynamic digital assistance, and software engineering. POrchestra improves task success by an average of 9.1% relative to the strongest baseline; combined with OPOD, it improves small-orchestrator success by an average of 10.0% relative to existing training baselines. POrchestra also achieves a more favorable cost-performance trade-off. Our code is publicly available at https://github.com/XueyangFeng/POrchestra.",
+      "authors": [
+        "Xueyang Feng",
+        "Chaozhuo Li",
+        "Xiaohe Bo",
+        "Jiakai Tang",
+        "Chenxi Li",
+        "Qiwei Ye",
+        "Xu Chen"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13485v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13485v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 10.11,
+      "matched_topics": [
+        "大语言模型",
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "language model agent",
+        "large language model"
+      ],
+      "score_breakdown": {
+        "大语言模型": 5.7,
+        "检索增强与对齐": 2.55,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 10.11
+      },
+      "summary": {
+        "takeaway": "提出 POrchestra，一种即时主动式智能体编排框架，允许子智能体在任意逻辑点请求调整 harness，并据此推导在线策略编排蒸馏信号。",
+        "methods": "子智能体可主动与编排器通信以请求 harness 调整，同时保持局部执行连续性；On-Policy Orchestration Distillation（OPOD）将子智能体的主动修改请求归因于先前的编排决策，作为过程监督与最终奖励一起优化编排策略。在深度研究、动态数字助手与软件工程三个长时程智能体基准上评测。",
+        "relevance": "与大语言模型及检索增强与对齐相关，因它改进 LLM 智能体编排策略的学习与对齐，并利用过程监督优化。",
+        "caveat": "摘要未说明主动请求的频率、通信开销或 OPOD 信号的噪声水平；结论限于所报告的三类基准与基线对比。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13116v1",
+      "title": "DRYLAB-Bench: Benchmarking the Biosecurity Risk of Agentic LLM Mutation Design",
+      "abstract": "As large language models (LLMs) acquire advanced biological design capabilities, they offer substantial research benefits but simultaneously introduce severe dual-use risks, such as engineering enhanced pathogens or drug-resistant bacteria. While biosecurity frameworks recognize these threats, the actual risk of LLMs executing dangerous biological modifications remains unquantified, particularly when augmented with specialized biological design tools (BDTs). Existing evaluations primarily assess hazardous knowledge possession rather than practical application, overlook risk amplification from BDTs, and rely on unreliable, expensive, or hazardous validation methods. To address these gaps, we introduce DRYLAB-Bench (Design Risk Yielded by LLM Agent in Biodesign), the first comprehensive benchmark evaluating the high-risk biological mutation design capabilities of LLM agents. Moving beyond basic question-answering, DRYLAB-Bench tasks agents with 30 genuinely hazardous mutation-design scenarios distilled from biosecurity guidelines. It evaluates models in a multi-round, tool-augmented environment where LLMs orchestrate BDTs to iteratively refine candidates. Crucially, it scores designs directly against 187,695 empirical wet-lab measurements from ProteinGym and ViroGym using our proposed Biosecurity Risk Score (BRS), quantifying risk-associated effects while enabling scalable and safe ground-truth verification. Evaluations of 15 frontier models reveal substantial baseline threats: without tools, 67.6% of one-shot designs exceed the average measured variant, and 21.4% reach the highest-risk decile. Equipping models with BDTs significantly amplifies this risk, raising the pooled risk by \\(ΔBRS=+0.116\\) and the top-decile share to 23.5%. Code: https://github.com/drylab-bio/DRYLAB-Bench",
+      "authors": [
+        "Yuzhen Wang",
+        "Chunxiao Li",
+        "Baichen Le",
+        "Lewen Yan",
+        "Jie Zhang",
+        "Yucheng T. Yang",
+        "Xing-Ming Zhao",
+        "Lijun Li",
+        "Jing Shao"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13116v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13116v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 10.11,
+      "matched_topics": [
+        "大语言模型",
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "large language model",
+        "llm agent"
+      ],
+      "score_breakdown": {
+        "大语言模型": 5.7,
+        "检索增强与对齐": 2.55,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 10.11
+      },
+      "summary": {
+        "takeaway": "提出 DRYLAB-Bench，首个评估 LLM 智能体高风险生物突变设计能力的基准，并用 Biosecurity Risk Score 对设计进行可扩展且安全的真实数据评分。",
+        "methods": "基准包含 30 个从生物安全指南提炼的高风险突变设计场景，在多轮工具增强环境中让 LLM 编排生物设计工具迭代优化候选；直接对照 ProteinGym 与 ViroGym 的 187,695 条湿实验测量进行评分。评测 15 个前沿模型。",
+        "relevance": "与大语言模型及检索增强与对齐相关，因其评估智能体工具使用与生物设计能力，并涉及安全对齐风险。",
+        "caveat": "摘要报告无工具时 67.6% 的一次设计超过平均测量变体、21.4% 达到最高风险十分位，配备 BDT 后风险池增加 ΔBRS=+0.116、最高十分位升至 23.5%；但未说明场景覆盖度、评分阈值校准或模型间差异的细节。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.05.08.723625",
+      "title": "Mechanisms Matter: Transportability of Cellular Perturbation Effects",
+      "abstract": "Predicting cellular responses to perturbations across biological contexts is central to drug development, yet deep learning models often fail to outperform simple baselines. Leveraging causal transportability theory, we show that cross-context generalization is governed by shared causal mechanisms, not merely distributional similarity. To enable controlled evaluation, we develop a causal simulator that generates realistic semi-synthetic Perturb-seq datasets with tunable mechanistic divergence, providing benchmarks with known ground-truth causal structure. Further, we adapt the Vendi score to the perturbation setting to quantify effective response diversity and diagnose mode collapse, a failure mode invisible to standard per-perturbation metrics. Extensive experiments across six deep learning models and five simple baselines on semi-synthetic and real Perturb-seq datasets reveal a cross-context generalization gap: performance under cross-context splits drops substantially, often to simple baseline levels. Notably, even on synthetic data with fully specified causal structure, no model generalizes across contexts with different causal mechanisms. Across real and semi-synthetic datasets, lower cross-context concordance of transcriptome-wide impact tracks larger transfer gaps, providing an empirical proxy for perturbation-relevant mechanistic divergence. Code is available at https://github.com/microsoft/mechanisms_matter.",
+      "authors": [
+        "Qi, S.-a.",
+        "Chapfuwa, P."
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.05.08.723625",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.05.08.723625.full.pdf",
+      "doi": "10.64898/2026.05.08.723625",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.96,
+      "matched_topics": [
+        "单细胞扰动",
+        "机制推理",
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "causal mechanism",
+        "perturb-seq"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 3.0,
+        "机制推理": 2.4,
+        "检索增强与对齐": 2.55,
+        "新鲜度": 1.01
+      },
+      "category_scores": {
+        "bio-computing": 7.41,
+        "large-language-models": 4.56
+      },
+      "summary": {
+        "takeaway": "指出细胞扰动效应的跨上下文泛化由共享因果机制 governs，而非仅分布相似性，并表明现有深度学习模型在因果机制不同的上下文间难以泛化。",
+        "methods": "基于因果可输运性理论，开发因果模拟器生成具有可调机制分歧的半合成 Perturb-seq 数据集，提供已知因果结构的基准；将 Vendi 分数适配到扰动场景以量化有效响应多样性并诊断模式崩塌。在六个深度学习模型与五个简单基线上，于半合成与真实 Perturb-seq 数据评测。",
+        "relevance": "与单细胞扰动、机制推理及检索增强与对齐相关，因其研究扰动效应预测的跨上下文泛化与因果机制，涉及模型对齐到机制而非仅分布。",
+        "caveat": "摘要未给出具体泛化性能数值或 Vendi 分数的量化结果；结论基于所选的六模型五基线及特定 Perturb-seq 数据集，泛化到其他扰动模态或生物系统尚不明确。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.12975v1",
+      "title": "SmartSalesBench: A Resistance-Aware Multi-Turn Benchmark for Evaluating LLM Sales Agents",
+      "abstract": "We present SmartSalesBench, the first multi-turn conversational benchmark explicitly designed to evaluate large language model (LLM) sales agents against psychologically grounded, resistant buyer personas. Existing task-oriented dialogue benchmarks assume cooperative users and measure task completion; SmartSalesBench inverts this assumption, placing agents against personas programmed to resist and challenge across conversations of up to twenty turns. The benchmark includes five agent profiles, twelve buyer personas, fifteen smartphone products across six price tiers, and four controlled experiments with 3 iterations totaling 13,680 sessions. Both sales-agent and buyer persona generations are grounded through retrieval-augmented generation (RAG). We introduce nine evaluation metrics grouped into three tiers: primary outcome metrics (CR, BRS, RIR), secondary quality metrics (SMS, PFS, ETI), and exploratory metrics planned for future reporting (ITS, ARI, SPI). Our evaluation combines automated LLM-as-judge scoring with internal human assessment (n = 50, \\k{appa} = 0.71, Pearson r = 0.81 with BRS).",
+      "authors": [
+        "P N Bhargav Teja",
+        "Velpula Lokesh Reddy",
+        "Madhu Basumata",
+        "Susen Sarkar",
+        "Rajasekhara Reddy Duvvuru Muni"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.12975v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.12975v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 9.81,
+      "matched_topics": [
+        "大语言模型",
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "large language model",
+        "retrieval-augmented generation"
+      ],
+      "score_breakdown": {
+        "大语言模型": 2.85,
+        "检索增强与对齐": 5.1,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "large-language-models": 9.81
+      },
+      "summary": {
+        "takeaway": "提出 SmartSalesBench，首个针对心理上抵抗型买家角色的多轮对话基准，用于评估 LLM 销售智能体。",
+        "methods": "基准包含五个智能体画像、十二个买家角色、十五款智能手机产品（六个价格层级）及四组对照实验共 13,680 场会话（3 次迭代，最多二十轮）。销售智能体与买家角色生成均通过检索增强生成（RAG）接地。评估含九项指标，分三层：主要结果指标（CR、BRS、RIR）、次要质量指标（SMS、PFS、ETI）及未来报告探索指标（ITS、ARI、SPI），结合自动 LLM-as-judge 与内部人工评估（n=50，κ=0.71，与 BRS 的 Pearson r=0.81）。",
+        "relevance": "与大语言模型及检索增强与对齐相关，因其评估 LLM 销售智能体在对抗性多轮对话中的对齐与表现，并使用 RAG 接地生成。",
+        "caveat": "摘要未报告各指标的基线数值或模型排名；人工评估样本为 50，探索指标尚未报告，基准的生态效度与买家角色覆盖范围需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.08.25.746955",
+      "title": "Proteome modulation by opposite inotropic drugs in human engineered cardiac tissue revealed by topology-driven cross-modal integration",
+      "abstract": "Engineered heart tissues (EHTs) represent an innovative platform enabling physiologically relevant in vitro evaluation of drug-induced cardiac responses. While functional characterization remains central to EHTs, molecular profiling is increasingly used to elucidate mechanisms underlying drug-induced phenotypes. Proteomics provides broad molecular characterization of drug responses at the protein level, yet the complexity, heterogeneity, and high dimensionality of proteomics datasets challenge conventional statistical approaches, which are not designed for cross-modal integration and streamlined multi-omics analysis. In this study, we developed an innovative framework based on topological data analysis (TDA) for the integration of large proteomics profiles and functional readouts to investigate system-level responses to drugs with opposing inotropic effects, epinephrine and doxorubicin. Samples were organized into a topological connectivity network according to multimodal similarity enabling simultaneous exploration of treatments, cardiac function and proteome alterations. Highly correlated features were then used for pathway enrichment analysis, which revealed strong similarities between the enrichment profiles associated with contractile force and epinephrine. These findings are consistent with the positive inotropic effect of epinephrine, whereas doxorubicin exhibited an opposing enrichment profile. Energy homeostasis, mitochondrial translation and proteostasis emerged as the major cellular processes displaying opposite associations with the two inotropic drugs, highlighting a link between cardiac contractility and perturbations in these processes. In conclusion, our TDA-based framework successfully integrated functional and proteomic data to uncover treatment-specific remodeling in EHTs, offering a modular and scalable approach that could be adapted to other in vitro organ models for systems-level mechanistic studies and next-generation drug development.",
+      "authors": [
+        "Staykova, D. K.",
+        "Snippert, D.",
+        "Wessels, H. J. C. T.",
+        "Passier, R.",
+        "Conte, F."
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746955",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746955.full.pdf",
+      "doi": "10.64898/2026.08.25.746955",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.51,
+      "matched_topics": [
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "cross-modal"
+      ],
+      "score_breakdown": {
+        "跨模态理解与生成": 7.0,
+        "领域上下文": 0.5,
+        "新鲜度": 1.01
+      },
+      "category_scores": {
+        "multimodal-learning": 9.51
+      },
+      "summary": {
+        "takeaway": "提出基于拓扑数据分析（TDA）的框架，整合大型蛋白质组学谱与功能读出，揭示两种相反变力药物在工程心脏组织中的系统级响应与治疗特异性重塑。",
+        "methods": "在工程心脏组织（EHTs）中研究肾上腺素与多柔比星；将样本按多模态相似性组织为拓扑连通网络，同时探索治疗、心脏功能与蛋白质组变化；用高相关特征做通路富集分析。",
+        "relevance": "与跨模态理解与生成相关，因其整合功能读出与蛋白质组数据，进行跨模态分析以理解药物诱导表型。",
+        "caveat": "摘要未给出样本量、统计功效或拓扑网络参数的具体数值；结论基于所研究两种药物与 EHT 模型，向其他 organ 模型或药物的推广性需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.09.30.755776",
+      "title": "Additive-input encoding fails operator-level target-held-out prediction on current Perturb-seq screens",
+      "abstract": "Pooled Perturb-seq screens are often interpreted through a linear steady-state model in which each targeted gene supplies an additive perturbation input. Although this formulation identifies an operator on the observed response subspace in closed form, identifiability alone does not establish that inferred operators generalize to new perturbation targets. We evaluated fixed program-space additive inputs in three Perturb-seq screens -- Replogle K562 essential, Replogle RPE1 essential, and Jost 2020 -- using target-grouped nested cross-validation and matched signal-to-noise linear-truth controls. For inverse operator prediction, real held-out error remained at the predict-zero baseline (0.96, 1.00, and 1.00), whereas matched linear controls achieved 0.18, 0.53, and 0.72. This discrepancy persisted across random K562 target panels, an overdetermined Jost dimension sweep, direction-only fits, ridge and truncated-SVD estimators, and five linear ground-truth ensembles. Forward target-held-out prediction was more nuanced: fixed, footprint, and learned linear encodings modestly beat a predict-training-mean baseline in K562 but not in RPE1 or Jost, and the K562 gains recovered only about 7% of the gap to the matched linear control. On the tested screens, fitted fixed program-space operators should not be interpreted as validated target-generalizing regulatory operators. We release anchor-op, a reproducible toolkit for target-grouped evaluation, identifiability checks, and matched-geometry positive controls for perturbation-response models.",
+      "authors": [
+        "Fullmer, K.",
+        "Kutzen, D.",
+        "Terooatea, T. W."
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.30.755776",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.09.30.755776.full.pdf",
+      "doi": "10.64898/2026.09.30.755776",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.01,
+      "matched_topics": [
+        "单细胞扰动"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "perturb-seq"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 7.0,
+        "新鲜度": 1.01
+      },
+      "category_scores": {
+        "bio-computing": 9.01
+      },
+      "summary": {
+        "takeaway": "在当前的 Perturb-seq 筛选数据上，固定程序空间的加性输入编码无法泛化到新的扰动靶点，因此推断出的调控算子不应被解释为目标泛化的调控机制。",
+        "methods": "在 Replogle K562 essential、Replogle RPE1 essential 和 Jost 2020 三个 Perturb-seq 筛选中评估固定程序空间加性输入；采用目标分组嵌套交叉验证，并设置匹配信噪比的线性真值正对照；比较逆算子预测和正向目标留出预测，涵盖随机 K562 靶点面板、过定 Jost 维度扫描、仅方向拟合、ridge 与 truncated-SVD 估计器以及五个线性真值集成。",
+        "relevance": "该论文直接针对单细胞扰动响应建模的可泛化性，与单细胞扰动主题相关，为基于 Perturb-seq 的调控推断提供了评估基准和负面结果警示。",
+        "caveat": "结论基于所测试的三个 Perturb-seq 筛选和特定线性加性输入模型，摘要未说明是否验证其他非线性模型或体内扰动数据；正向预测的结论存在数据集异质性。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.01.755546",
+      "title": "Impaired value estimation over space explains turn-induced freezing of gait in Parkinson's disease: A cortico-basal ganglia-inspired reinforcement learning model",
+      "abstract": "Parkinson's disease (PD) gait is characterized by reduced walking speed, short shuffling steps, increased double stance time, and increased step time variability. The most debilitating symptom in PD is freezing of gait (FOG), a context-dependent locomotion arrest, mostly occurring while encountering turns, obstacles, and narrow pathways. FOG is more pronounced during turning, a complex task that challenges motor planning and execution. Here, we simulate this phenomenon using a computational model inspired by the cortico-basal ganglia circuitry, based on reinforcement learning (RL) principles. In the model, the agent was trained to learn a value profile while navigating a path that involved turning. To simulate PD conditions, we clamped the temporal difference (TD) error, typically associated with dopaminergic signaling. Our model results show that compared to healthy controls (HC), PD non-freezers and PD freezers exhibit a reduction in turning velocity and step length, alongside an attenuated compensatory step-width widening at the sharpest turn, more pronounced in PD freezers, who additionally show increased step time variability. These kinematic impairments worsen during tighter turns. Ultimately, this model implicates FOG as a problem of impaired estimation of value over space and could potentially represent a generalized deficit in gait impairments in PD.",
+      "authors": [
+        "Bhattacharya, N.",
+        "Nair, S. S.",
+        "Chakravarthy, V. S.",
+        "Muralidharan, V."
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.01.755546",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.01.755546.full.pdf",
+      "doi": "10.64898/2026.10.01.755546",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.01,
+      "matched_topics": [
+        "强化学习"
+      ],
+      "matched_categories": [
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "强化学习": 7.0,
+        "新鲜度": 1.01
+      },
+      "category_scores": {
+        "reinforcement-learning": 9.01
+      },
+      "summary": {
+        "takeaway": "一个受皮层-基底节环路启发的强化学习模型表明，帕金森病冻结步态可被解释为空间价值估计受损，尤其在转弯时表现更明显。",
+        "methods": "构建基于强化学习的计算模型，智能体在包含转弯的路径中学习价值分布；通过钳制时序差分（TD）误差模拟帕金森病条件，比较健康对照、帕金森非冻结者和冻结者的运动学特征。",
+        "relevance": "该论文使用强化学习模型解释帕金森病冻结步态，与强化学习主题直接相关，展示了 RL 在运动障碍机制建模中的应用。",
+        "caveat": "结论完全来自计算模拟，未使用真实患者数据或实验验证；摘要未报告模型参数拟合或与临床数据的定量比较。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.05.08.723896",
+      "title": "Born with an abstract code for number: evidence from cross-modal and cross-format neural adaptation in the first three days of life",
+      "abstract": "One of the most astonishing abilities documented in human newborns is their capacity to spontaneously match sets of items on the basis of their number, even when they are presented in different modalities (auditory and visual) and formats (sequential and simultaneous). These behavioural findings suggest that the newborn brain comes to life endowed with a system that encodes number in an abstract, supramodal format, but direct neural evidence for such a representation is lacking. Using high-density EEG and a frequency-tagging paradigm, we measured neural entrainment to periodically presented visual arrays that were either numerically congruent or incongruent with previously familiarized and concurrently presented auditory sequences in 21 newborns (0-3 days old). The amplitude of neural entrainment to the visual arrays provided a robust index of cross-modal numerical congruency: it was significantly reduced for numerically congruent relative to incongruent stimuli. This cross-modal and cross-format numerosity-specific repetition suppression effect provides evidence for an abstract code for number in the newborn brain, reinforcing the view that number constitutes a foundational dimension of human perception since birth.",
+      "authors": [
+        "Buiatti, M.",
+        "Eccher, E.",
+        "Petrizzo, I.",
+        "Pradal, U.",
+        "Taddei, F.",
+        "Vallortigara, G.",
+        "Izard, V.",
+        "Piazza, M."
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.05.08.723896",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.05.08.723896.full.pdf",
+      "doi": "10.64898/2026.05.08.723896",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.01,
+      "matched_topics": [
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "cross-modal"
+      ],
+      "score_breakdown": {
+        "跨模态理解与生成": 7.0,
+        "新鲜度": 1.01
+      },
+      "category_scores": {
+        "multimodal-learning": 9.01
+      },
+      "summary": {
+        "takeaway": "新生儿大脑在出生后前三天即表现出抽象数字编码，跨模态和跨格式的数值一致性会引发神经适应抑制。",
+        "methods": "对 21 名 0-3 天新生儿使用高密度 EEG 和频率标记范式，测量视觉阵列的神经夹带，视觉阵列与先前熟悉并同时呈现的听觉序列在数值上一致或不一致。",
+        "relevance": "该研究涉及跨模态数值表征，与跨模态理解与生成主题相关，为抽象跨模态编码提供神经证据。",
+        "caveat": "样本量较小（21 名新生儿），仅测试视觉-听觉跨模态数值一致性；摘要未说明是否控制其他低水平刺激差异，且未涉及生成任务。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42855009",
+      "title": "Gene Regulatory Network Reconstruction to Decipher the Molecular Mechanisms Governing Bacteriocyte-Based Symbioses.",
+      "abstract": "Intracellular bacteria with beneficial roles for their hosts are present in more than 10% of all insect species. In intracellular nutritional symbioses, these symbionts are typically confined to specialized host cells known as bacteriocytes. Bacteriocytes are remarkable novel cells that arose independently and repeatedly across multiple insect lineages. They are fascinating structures, yet the molecular mechanisms regulating their development, function and even their evolutionary origins, remain largely unknown. Nonetheless, an important role for certain transcription factors in development and homeostasis of bacteriocytes has been highlighted by several studies, hinting at the importance of the transcriptional networks regulated by them. Gene Regulatory Network (GRN) inference facilitates discovery of regulatory interactions underlying complex biological processes, as first shown in the model species Drosophila melanogaster and subsequently successfully applied to several other insect species. Here, we propose de novo computational inference as a strategy to reconstruct GRNs of bacteriocytes. We propose that the pea aphid Acyrthosiphon pisum is best suited to establish the first comparative framework for reconstructing and analyzing GRNs that control bacteriocyte development, function and death. This framework in turn can serve for evo-devo studies, by extending these analyses to other aphids, to other hemipterans and, more broadly, to other insects harboring bacteriocytes.",
+      "authors": [
+        "Erwan Cruché",
+        "Mélanie Ribeiro Lopes",
+        "Patrick Callaerts",
+        "Sergio Peignier",
+        "Federica Calevro"
+      ],
+      "published": "2026-10-09",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855009/",
+      "pdf_url": "",
+      "doi": "10.1016/j.cois.2026.101633",
+      "venue": "Current opinion in insect science",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 8.96,
+      "matched_topics": [
+        "GRN / Regulon"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "gene regulatory network"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 6.4,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "bio-computing": 8.96
+      },
+      "summary": {
+        "takeaway": "提出利用从头计算推断策略重建含菌细胞（bacteriocyte）的基因调控网络，以豌豆蚜 Acyrthosiphon pisum 作为首个比较框架。",
+        "methods": "基于基因调控网络推断的计算方法，以豌豆蚜为模式物种，提出建立重建和分析控制含菌细胞发育、功能和死亡的 GRN 的比较框架，并可扩展到其他蚜虫、半翅目和昆虫。",
+        "relevance": "该论文聚焦于 GRN 推断以解析含菌细胞共生机制，与 GRN / Regulon 主题直接相关。",
+        "caveat": "摘要为观点/框架性文章，未提供新 GRN 推断结果或实验验证；具体计算方法和数据未在摘要中详述。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13432v1",
+      "title": "Does Financial Speech Need Continual Learning Regularization? A Study of EWC and mini-KFAC on Earnings Call ASR",
+      "abstract": "Earnings call transcription presents a realistic continual learning scenario where Automatic Speech Recognition (ASR) systems are updated with new recordings but risk catastrophic forgetting of previously learned financial speech patterns. Adapting Whisper-small from a general-domain speech corpus to the Earnings22 benchmark reveals the opposite: all evaluated methods exhibit improvement on held-out financial speech from the same domain during adaptation rather than forgetting. This task complementarity makes regularization counterproductive. Nevertheless, when regularization is warranted, a layer-wise mini-Kronecker-Factored Approximate Curvature (mini-KFAC) approximation seems to achieve lower word error rates (WERs) and more stable optimization than standard diagonal Elastic Weight Consolidation (EWC). The results suggest that task complementarity should be assessed before applying continual learning constraints, and prefer mini-KFAC EWC over diagonal EWC when needed.",
+      "authors": [
+        "Thai Quoc On",
+        "Homayoon Beigi"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13432v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13432v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 8.86,
+      "matched_topics": [
+        "持续学习"
+      ],
+      "matched_categories": [
+        "continual-learning"
+      ],
+      "matched_terms": [
+        "catastrophic forgetting",
+        "continual learning"
+      ],
+      "score_breakdown": {
+        "持续学习": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "continual-learning": 8.86
+      },
+      "summary": {
+        "takeaway": "在财报电话会议 ASR 持续学习场景中，任务互补性导致正则化反而有害；若需正则化，mini-KFAC 近似比标准对角 EWC 表现更好。",
+        "methods": "将 Whisper-small 从通用领域语音语料适配到 Earnings22 基准，评估 EWC 和 mini-KFAC 等持续学习方法；比较词错误率和优化稳定性。",
+        "relevance": "该论文研究持续学习在金融语音识别中的应用，与持续学习主题相关，并检验 EWC 和 mini-KFAC 正则化效果。",
+        "caveat": "结论基于单一 ASR 模型和 Earnings22 基准，摘要未报告统计显著性或多数据集验证；任务互补性的普遍性尚不明确。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2610.13021v1",
+      "title": "EmbodiedCLBench: Evaluating Continual Learning for Self-Evolving Embodied Agents",
+      "abstract": "Continual learning requires models to accumulate past experience and transfer it to new tasks. Despite substantial research on continual learning, existing work remains largely confined to non-embodied settings, without extending to embodied environments. To address this gap, we introduce EmbodiedCLBench, the first benchmark in embodied simulation for evaluating the continual learning capability of self-evolving agents. With compositional generalization as the core evaluation principle, our benchmark evaluates whether agents can first learn from basic tasks and then recombine the acquired skills to solve complex, unseen advanced tasks. Based on EmbodiedCLBench, we conduct extensive experiments across multiple agent harnesses and learning methods, revealing consistent limitations and distinctive behaviors. Our results show that while advanced tasks can be hardly solved under zero-shot setting, the experience from basic tasks enables consistent improvement. Such benefit from the experience remains stable even if the task complexity increases. However, this improvement does not scale accordingly with the number of learning samples, and current agents cannot extract meaningful information from additional experience. Collectively, our findings highlight continual learning as a fundamental yet underexplored capability, and our benchmark offers valuable resources for designing effective self-evolving agents in embodied environments. Our code and dataset are available at https://pku-value-lab.github.io/EmbodiedCLBench-homepage.",
+      "authors": [
+        "Jie Huang",
+        "Yanan Chen",
+        "Ruixun Liu",
+        "Kaichen He",
+        "Xinyi He",
+        "Rui Huang",
+        "Zilong Zheng",
+        "Zhenliang Zhang",
+        "Yiwu Zhong"
+      ],
+      "published": "2026-10-09",
+      "updated": "2026-10-09",
+      "url": "http://arxiv.org/abs/2610.13021v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.13021v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 8.86,
+      "matched_topics": [
+        "持续学习"
+      ],
+      "matched_categories": [
+        "continual-learning"
+      ],
+      "matched_terms": [
+        "continual learning"
+      ],
+      "score_breakdown": {
+        "持续学习": 7.0,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "continual-learning": 8.86
+      },
+      "summary": {
+        "takeaway": "提出首个具身模拟持续学习基准 EmbodiedCLBench，发现基础任务经验可稳定提升复杂任务表现，但提升不随学习样本数量扩展，当前智能体无法从额外经验中提取有效信息。",
+        "methods": "构建具身模拟基准，以组合泛化为核心评估原则，测试多种智能体框架和学习方法，评估智能体能否先学习基础任务再重组技能解决未见复杂任务。",
+        "relevance": "该论文直接评估具身智能体的持续学习能力，与持续学习主题高度相关，并提供基准资源。",
+        "caveat": "摘要未说明具体具身环境和任务类型，也未报告计算成本或失败原因分析；结论可能受基准设计限制。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.01.756118",
+      "title": "Forest-weighted causal correlation: A scalable framework for causal inference in ecological time series",
+      "abstract": "1. Detecting causal relationships from ecological time series remains challenging because community dynamics are often nonlinear, high-dimensional, noisy, and strongly synchronized. These characteristics can reduce the reliability of existing causal inference methods and complicate the identification of ecological interactions in complex natural systems. 2. I introduce Forest-weighted Causal Correlation (FORCC), a machine-learning-based framework that infers directional causality from adaptive neighborhood structures learned by random forests. Rather than evaluating causal direction through cross-map reconstruction, FORCC quantifies directional dependence from the preservation of neighborhood structure using rank-based associations among forest-weight matrices. 3. Simulations of coupled nonlinear systems showed that FORCC accurately recovered causal direction while substantially reducing synchronization-induced false-positive detections relative to conventional convergent cross mapping. Chatterjee's {xi} exhibited the strongest resistance to synchronization-induced errors among the evaluated rank-based statistics. 4. Application to a 12-year marine community time series from Maizuru Bay, Japan, identified asymmetric relationships between individual taxa and community dynamics, revealing candidate driver-like and passenger-like roles that were not readily explained by seasonal synchrony alone. 5. By combining adaptive neighborhood learning with rank-based causal inference, FORCC provides a scalable framework for causal discovery in ecological time series. The method offers a practical tool for screening causal relationships, generating ecological hypotheses, and investigating complex interactions in multivariate natural systems.",
+      "authors": [
+        "Kishi, S."
+      ],
+      "published": "2026-10-08",
+      "updated": "2026-10-08",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.01.756118",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.01.756118.full.pdf",
+      "doi": "10.64898/2026.10.01.756118",
+      "venue": "ecology",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.41,
+      "matched_topics": [
+        "机制推理"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "causal inference"
+      ],
+      "score_breakdown": {
+        "机制推理": 6.4,
+        "新鲜度": 1.01
+      },
+      "category_scores": {
+        "bio-computing": 8.41
+      },
+      "summary": {
+        "takeaway": "提出森林加权因果相关（FORCC）框架，利用随机森林学习的自适应邻域结构推断定向因果关系，在模拟中准确恢复因果方向并减少同步导致的假阳性。",
+        "methods": "基于随机森林权重矩阵的秩关联量化方向依赖，替代交叉映射重建；在耦合非线性系统模拟中与收敛交叉映射比较，并应用于日本舞鹤湾 12 年海洋群落时间序列。",
+        "relevance": "该论文属于因果推断方法，用于机制推理，与机制推理主题相关，适合生态时间序列的因果发现。",
+        "caveat": "摘要仅报告模拟和单一海洋群落应用，未提供广泛基准比较或真实因果验证；方法在非生态领域的适用性未说明。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42858065",
+      "title": "Single-cell gene networks nominate IKZF1 as an Alzheimer's disease microglial regulator.",
+      "abstract": "BackgroundMicroglia drive neuroinflammation in Alzheimer's disease (AD), yet no approved therapy targets this compartment. Human genome-wide association studies consistently implicate innate immune loci in AD risk, establishing microglial transcriptional programs as therapeutically relevant but pharmacologically underexploited targets.ObjectiveWe sought to identify transcription factors (TFs) governing microglial state transitions computationally and to nominate structurally tractable drug repurposing candidates.MethodsWe applied trajectory inference (PAGA), pseudobulk DESeq2, pySCENIC gene regulatory network (GRN) inference, CellChat, and virtual screening of 1962 approved compounds to 236,002 microglial nuclei from 84 donors (SEA-AD atlas).ResultsIKZF1 was the sole target TF retained under cisTarget v10 motif constraints, with peak regulon activity in LateAD-DAM (pseudotime ρ = + 0.309) and replication in an independent bulk cohort (GSE95587; adjusted p = 0.004). CellChat identified SLIT2→ROBO2 from multiple neuron subtypes (predominantly inhibitory interneurons) as the top predicted pathway to microglia. Tafamidis (→IRF8) and diflunisal (→PPARG) were top virtual screening hits; all evaluated compounds failed the pre-specified selectivity threshold.ConclusionsIKZF1 is prioritized as a candidate late-disease microglial TF, supported by six convergent evidence dimensions including independent bulk replication. Tafamidis and diflunisal are low-confidence repurposing hypotheses requiring experimental validation.",
+      "authors": [
+        "Çağrı Özkurt"
+      ],
+      "published": "2026-10-10",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42858065/",
+      "pdf_url": "",
+      "doi": "10.1177/13872877261496918",
+      "venue": "Journal of Alzheimer's disease : JAD",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 8.21,
+      "matched_topics": [
+        "GRN / Regulon"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "gene regulatory network",
+        "regulon"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 4.8,
+        "领域上下文": 0.5,
+        "新鲜度": 1.71
+      },
+      "category_scores": {
+        "bio-computing": 8.21
+      },
+      "summary": {
+        "takeaway": "通过单细胞基因网络分析将 IKZF1 提名为阿尔茨海默病小胶质细胞调控因子，并提名 Tafamidis 和 diflunisal 为低置信度药物重定位假设。",
+        "methods": "对 SEA-AD 图谱中 84 名供体的 236,002 个小胶质细胞核应用轨迹推断（PAGA）、pseudobulk DESeq2、pySCENIC GRN 推断、CellChat 以及 1962 种已批准化合物的虚拟筛选，并在独立 bulk 队列 GSE95587 中重复。",
+        "relevance": "该研究使用 GRN 推断提名 AD 小胶质细胞调控因子，与 GRN / Regulon 主题直接相关，展示单细胞网络分析在疾病机制和药物重定位中的应用。",
+        "caveat": "IKZF1 为计算提名，需实验验证；所有评估化合物均未通过预设选择性阈值，药物重定位假设为低置信度；摘要未提供功能扰动实验。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42854686",
+      "title": "Mapping transcriptional responses to cellular perturbations with RNA fingerprinting.",
+      "abstract": "Single-cell perturbation dictionaries measure how cells respond to genetic and chemical perturbations, creating the opportunity to assign causal interpretations to observational data. We introduce RNA fingerprinting, a statistical framework that maps transcriptional responses from new experiments onto reference perturbation dictionaries. RNA fingerprinting learns perturbation representations, or \"fingerprints,\" from single-cell data, then probabilistically assigns query cells to one or more candidate perturbations. We benchmark on ground-truth datasets, demonstrating accurate assignments at single-cell resolution, scalability to genome-wide screens, and the ability to resolve combinatorial perturbations. We demonstrate broad utility across diverse biological settings: identifying context-specific regulators of p53 under ribosomal stress, characterizing dose-dependent drug mechanisms of action, and uncovering cytokine-driven B cell heterogeneity during secondary influenza infection in vivo. Together, these results establish RNA fingerprinting as a versatile framework for interpreting single-cell datasets by linking cellular states to their underlying perturbations.",
+      "authors": [
+        "Isabella N Grabski",
+        "Junsuk Lee",
+        "John D Blair",
+        "Carol Dalgarno",
+        "Isabella Mascio",
+        "Alexandra Bradu",
+        "David A Knowles",
+        "Rahul Satija"
+      ],
+      "published": "2026-10-09",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42854686/",
+      "pdf_url": "",
+      "doi": "10.1016/j.cell.2026.09.017",
+      "venue": "Cell",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 6.06,
+      "matched_topics": [
+        "单细胞扰动"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "single-cell perturbation"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 3.0,
+        "领域上下文": 0.5,
+        "新鲜度": 1.36
+      },
+      "category_scores": {
+        "bio-computing": 6.06
+      },
+      "summary": {
+        "takeaway": "提出RNA fingerprinting统计框架，将新实验的转录响应映射到参考扰动字典，实现单细胞分辨率下的扰动分配。",
+        "methods": "从单细胞数据学习扰动表征（fingerprints），概率性地将查询细胞分配给一个或多个候选扰动；在ground-truth数据集上进行基准测试，并应用于多种生物学场景。",
+        "relevance": "该工作直接针对单细胞扰动主题，提供将细胞状态与其潜在扰动联系起来的通用框架，有助于因果解释观测数据。",
+        "caveat": "摘要未提供具体性能数值、数据集名称或与其他方法的定量比较；主要验证基于ground-truth数据集，实际应用中参考字典的覆盖度和质量可能限制其分配准确性。"
+      },
+      "summary_mode": "openai"
+    }
+  ],
+  "fetch_report": {
+    "window_start": "2026-10-08",
+    "window_end": "2026-10-12",
+    "sources": {
+      "arxiv": {
+        "status": "ok",
+        "count": 127
+      },
+      "biorxiv": {
+        "status": "ok",
+        "count": 300
+      },
+      "pubmed": {
+        "status": "ok",
+        "count": 9
+      },
+      "semantic_scholar": {
+        "status": "error",
+        "count": 0,
+        "error": "HTTPError: 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=single+cell+perturbation+prediction&limit=40&fields=paperId%2Ctitle%2Cabstract%2Cauthors%2CpublicationDate%2Curl%2CopenAccessPdf%2CexternalIds%2Cvenue%2"
+      }
+    },
+    "total": 436
+  },
+  "summary_report": {
+    "requested": 49,
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai": 49,
+    "fallback": 0,
+    "errors": []
+  }
+}
