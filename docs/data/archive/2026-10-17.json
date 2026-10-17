@@ -1,0 +1,930 @@
+{
+  "generated_at": "2026-10-17T04:39:06+00:00",
+  "timezone": "Asia/Singapore",
+  "papers": [
+    {
+      "id": "biorxiv:10.64898/2026.10.12.758490",
+      "title": "BioMod: Biological Module Tokenization for Single-Cell Foundation Modeling",
+      "abstract": "Single-cell foundation models typically represent cells as flat sequences of individual genes, requiring higher-order biological organization to be inferred implicitly from sparse expression profiles. Similar to the evolution from character-level to semantic tokenization in natural language processing,we hypothesize that cellular states can be more efficiently represented using biologically meaningful intermediate units. Here we present BioMod, a 50-million-parameter single-cell foundation model that introduces biological modules as representation units between genes and cells. BioMod constructs an overlapping vocabulary of 660 biological modules derived from curated pathways and data-driven gene programs, replacing thousands of gene-level inputs with compact module representations. Pretrained on approximately 73 million human cells using high-ratio module masking with an asymmetric decoder, BioMod achieves state-of-the-art performance across cell-type annotation, zero-shot batch integration, perturbation-response prediction and drug-response forecasting while maintaining a compact architecture that enables efficient inference on a single GPU. Module-level analyses further demonstrate that BioMod captures biologically meaningful cellular programs and preserves pathway-level organization.",
+      "authors": [
+        "Meng, L.",
+        "Zhu, J.",
+        "Han, B.",
+        "Zang, Y.",
+        "Li, W.",
+        "Zong, K.",
+        "Zhong, J.",
+        "Yang, Y.",
+        "Liu, J.",
+        "Jia, J.",
+        "Sun, R.",
+        "Yu, G.",
+        "Han, J.",
+        "Chen, Y.",
+        "Zhang, L.",
+        "Xu, J."
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758490",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758490.full.pdf",
+      "doi": "10.64898/2026.10.12.758490",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 16.53,
+      "matched_topics": [
+        "Cell Foundation Model",
+        "预训练"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "cell foundation model",
+        "foundation model",
+        "single-cell foundation model"
+      ],
+      "score_breakdown": {
+        "Cell Foundation Model": 7.0,
+        "预训练": 7.0,
+        "领域上下文": 0.5,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "bio-computing": 9.53,
+        "pretraining": 9.53
+      },
+      "summary": {
+        "takeaway": "提出BioMod，将生物学模块作为基因与细胞之间的表示单元，以模块级token化替代扁平基因序列构建单细胞基础模型。",
+        "methods": "从精选通路与数据驱动基因程序构建660个重叠生物模块词表，用高比例模块掩码和非对称解码器在约7300万人类细胞上预训练，参数量约5000万。",
+        "relevance": "直接对应Cell Foundation Model与预训练主题，探索模块级中间表示与掩码语言建模在单细胞基础模型中的应用。",
+        "caveat": "摘要报告在多个任务上达到state-of-the-art，但未给出具体指标数值、基线配置与消融细节，性能提升幅度无法从摘要判断。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42886592",
+      "title": "Inferring gene regulatory networks from single-cell transcriptomics jointly through graph neural networks and Transformer.",
+      "abstract": "Inferring gene regulatory networks (GRNs) is crucial for understanding the complex regulatory relationships that govern gene expression in cells. Recently, several computational methods have been proposed for reconstructing GRNs from single-cell RNA sequencing (scRNA-seq) data. However, most of these methods primarily focus on pairwise regulatory relationships between genes, failing to leverage the global regulatory structure of GRNs, which is crucial for exploring the complex regulatory interactions between transcription factors (TFs) and their target genes. To address these limitations, we propose GTGRNS, a supervised learning framework that integrates a graph neural network with a Transformer encoder for GRN inference from scRNA-seq data. Specifically, we utilize the GraphSAGE model to integrate regulatory network topological information with gene expression features, facilitating the learning of gene representations. By leveraging the Transformer model, we further extract complex dependencies of gene pairs, which are crucial for determining regulatory levels. The comparative experiments on several benchmark datasets demonstrate the effectiveness and competitiveness of the proposed GTGRNS in the task of GRN inference.",
+      "authors": [
+        "Yanglan Gan",
+        "Tao Liu",
+        "Guangwei Xu",
+        "Wenjing Guo",
+        "Guobing Zou"
+      ],
+      "published": "2026-10-16",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42886592/",
+      "pdf_url": "",
+      "doi": "10.1109/TCBBIO.2026.3740828",
+      "venue": "IEEE transactions on computational biology and bioinformatics",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 14.83,
+      "matched_topics": [
+        "GRN / Regulon",
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "gene regulatory network",
+        "grn inference"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 7.0,
+        "检索增强与对齐": 2.55,
+        "领域上下文": 2.0,
+        "新鲜度": 2.08
+      },
+      "category_scores": {
+        "bio-computing": 12.28,
+        "large-language-models": 7.83
+      },
+      "summary": {
+        "takeaway": "提出GTGRNS，将图神经网络与Transformer编码器结合，从scRNA-seq数据推断基因调控网络。",
+        "methods": "用GraphSAGE融合调控网络拓扑信息与基因表达特征学习基因表示，再用Transformer编码器提取基因对的复杂依赖，以监督学习框架推断调控关系，并在多个基准数据集上做对比实验。",
+        "relevance": "属于GRN/Regulon推断方法，涉及图表示学习与Transformer在调控网络重建中的应用。",
+        "caveat": "摘要仅称在基准数据集上有竞争力，未报告具体性能数值；监督学习设定依赖标签来源，摘要未说明标签构建方式与跨数据集泛化情况。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.03.05.709928",
+      "title": "REMAG: recovery of eukaryotic genomes from metagenomic data using non-contrastive self-supervised learning",
+      "abstract": "Metagenome-assembled genomes (MAGs) are central to exploring microbial communities. Yet, despite the relevance of protists and fungi to diverse ecosystems, eukaryotic MAG recovery lags behind that of prokaryotes. A major bottleneck is that most state-of-the-art binning pipelines exclusively rely on prokaryotic single-copy core gene reference databases and are optimized for smaller genomes. To address this gap, we present REMAG (Recovery of Eukaryotic MAGs), a tool designed to recover high-quality eukaryotic genomes suited for long-read metagenomic data. REMAG uses a fine-tuned HyenaDNA genomic foundation model to efficiently filter eukaryotic contigs. It then employs a dual-encoder Siamese network trained with the non-contrastive Barlow Twins loss to learn a shared embedding space by integrating contig composition and differential coverage. Finally, high-quality bins are extracted using greedy iterative Leiden clustering optimized with eukaryotic single-copy core gene constraints. In benchmarks based on simulated mixed prokaryotic/eukaryotic communities and real datasets of varying sizes and origin, we demonstrate REMAG's ability to recover more near-complete eukaryotic genomes than existing state-of-the-art tools, which often produce highly fragmented eukaryotic bins. REMAG provides an automated eukaryotic binning method that scales effectively with the increasing size and sequencing depth of metagenomic datasets.",
+      "authors": [
+        "Gomez-Perez, D.",
+        "Raguideau, S.",
+        "Warring, S.",
+        "James, R.",
+        "Hildebrand, F.",
+        "Quince, C."
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.03.05.709928",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.03.05.709928.full.pdf",
+      "doi": "10.64898/2026.03.05.709928",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 14.08,
+      "matched_topics": [
+        "检索增强与对齐",
+        "预训练",
+        "自监督与表示学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "RAG",
+        "foundation model",
+        "self-supervised learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "预训练": 2.7,
+        "自监督与表示学习": 6.8,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "large-language-models": 4.58,
+        "pretraining": 11.53
+      },
+      "summary": {
+        "takeaway": "提出REMAG，针对长读长宏基因组数据回收高质量真核基因组，弥补现有分箱流程偏重原核生物的不足。",
+        "methods": "微调HyenaDNA基因组基础模型过滤真核contig；用双编码器Siamese网络结合Barlow Twins非对比自监督损失，融合contig组成与差异覆盖度学习共享嵌入；最后用受真核单拷贝核心基因约束的贪心迭代Leiden聚类提取bins。",
+        "relevance": "涉及预训练基因组基础模型、自监督表示学习和真核MAG回收，与预训练、自监督与表示学习主题相关。",
+        "caveat": "摘要未给出回收基因组数量、完整度等具体数值；基准主要基于模拟混合群落和有限真实数据集，对其他生态系统的泛化仍需验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42880218",
+      "title": "Emerging frontiers for AI in single-cell genomics.",
+      "abstract": "We are just over a decade into the single-cell revolution in biology, which has been coupled to the growing use of artificial intelligence (AI) in single-cell genomics. Most early single-cell RNA embedding models and subsequent \"foundation models\"-representational models pretrained on large single-cell datasets-did not gain wide traction among experimental biologists. However, as massive single-cell RNA-sequencing (scRNA-seq) atlas efforts ramp up, there is a clear rationale for exploiting AI models to interpret new datasets in the context of vast existing data resources. Meanwhile, the advent of single-cell epigenetic/multiomic assays and Perturb-seq technologies presents new opportunities for AI modeling. Here, we review AI embedding and foundation models for scRNA-seq and single-cell assay for transposase-accessible chromatin using sequencing (scATAC-seq), extensive machine-learning efforts to exploit single-cell multiome in regulatory genomics, and AI strategies to learn \"virtual cell\" models from Perturb-seq, ending with a description of current limitations of single-cell AI models and an outlook for future advances.",
+      "authors": [
+        "Sneha Mitra",
+        "Jiaxin Li",
+        "Christina S Leslie"
+      ],
+      "published": "2026-10-15",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42880218/",
+      "pdf_url": "",
+      "doi": "10.1016/j.molcel.2026.09.014",
+      "venue": "Molecular cell",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 13.13,
+      "matched_topics": [
+        "单细胞扰动",
+        "虚拟细胞",
+        "预训练"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "perturb-seq",
+        "virtual cell"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 3.0,
+        "虚拟细胞": 3.0,
+        "预训练": 2.7,
+        "领域上下文": 1.5,
+        "新鲜度": 1.73
+      },
+      "category_scores": {
+        "bio-computing": 10.43,
+        "pretraining": 7.13
+      },
+      "summary": {
+        "takeaway": "综述单细胞基因组学中AI嵌入与基础模型的现状与前沿，涵盖scRNA-seq、scATAC-seq、多组学调控基因组学及基于Perturb-seq的虚拟细胞建模。",
+        "methods": "综述性文章，梳理单细胞RNA嵌入模型与基础模型、单细胞表观遗传/多组学分析中的机器学习方法、Perturb-seq虚拟细胞学习策略，并讨论当前局限与未来方向。",
+        "relevance": "直接覆盖单细胞扰动、虚拟细胞与预训练主题，为相关方法提供领域背景与问题定位。",
+        "caveat": "为综述而非原始研究，不含新实验结果；摘要指出多数早期基础模型未获实验生物学家广泛采用，具体局限需见正文。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42848419",
+      "title": "Latent causal diffusions for single-cell perturbation modeling.",
+      "abstract": "Perturbation screens hold the potential to systematically map regulatory processes at single-cell resolution, yet modeling and predicting transcriptome-wide responses to perturbations remains a major computational challenge. Existing methods often underperform simple baselines, fail to disentangle measurement noise from biological signal, and provide limited insight into the causal structure governing cellular responses. Here, we present the latent causal diffusion (LCD), a generative model that frames single-cell gene expression as a stationary diffusion process observed under measurement noise. LCD outperforms established approaches in predicting the distributional shifts of unseen perturbation combinations in single-cell RNA-sequencing screens while simultaneously learning a mechanistic dynamical system of gene regulation. To interpret these learned dynamics, we develop an approach we call causal linearization via perturbation responses (CLIPR), which yields an approximation of the direct causal effects between all genes modeled by the diffusion. CLIPR provably identifies causal effects under a linear drift assumption and recovers causal structure in both simulated systems and a genome-wide perturbation screen, where it clusters genes into coherent functional modules and resolves causal relationships that standard differential expression analysis cannot. The LCD-CLIPR framework bridges generative modeling with causal inference to predict unseen perturbation effects and map the underlying regulatory mechanisms of the transcriptome.",
+      "authors": [
+        "Lars Lorch",
+        "Jiaqi Zhang",
+        "Charlotte Bunne",
+        "Andreas Krause",
+        "Bernhard Schölkopf",
+        "Caroline Uhler"
+      ],
+      "published": "2026-10-08",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42848419/",
+      "pdf_url": "",
+      "doi": "10.1073/pnas.2602630123",
+      "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 11.6,
+      "matched_topics": [
+        "单细胞扰动",
+        "机制推理"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "causal inference",
+        "single-cell perturbation"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 7.0,
+        "机制推理": 2.4,
+        "领域上下文": 1.0,
+        "新鲜度": 0.0
+      },
+      "category_scores": {
+        "bio-computing": 11.6
+      },
+      "summary": {
+        "takeaway": "提出潜因果扩散模型LCD，将单细胞基因表达建模为带测量噪声的平稳扩散过程，并用CLIPR从学习到的动力学中近似基因间直接因果效应。",
+        "methods": "以生成式扩散模型刻画扰动响应分布，同时学习基因调控的机制性动力系统；CLIPR在线性漂移假设下可证明地识别因果效应，并在模拟系统与全基因组扰动筛选中验证。",
+        "relevance": "直接对应单细胞扰动与机制推理主题，连接生成建模与因果推断以预测未见扰动组合并解析调控机制。",
+        "caveat": "因果可识别性依赖线性漂移假设；摘要未给出预测性能的具体数值，真实数据上的因果结构验证范围有限。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.12.758682",
+      "title": "Towards Robust Automated Mouse Scratching Behavior Detection for Itch Research",
+      "abstract": "Automated detection of mouse scratching behavior could reduce manual annotation and is essential for preclinical itch research. However, robust performance across laboratories remains a challenge for current methods. We present Scratch-AID+, a framework dedicated to automated mouse scratching detection, including a diverse and progressive set of approaches: classic ResNet-based detectors, task-adaptive fine-tuning of video foundation models, and in-context learning with advanced multimodal large language models. To simulate real-world use cases, we benchmark on a public dataset and utilize additional cross-laboratory video recordings for independent testing. We find that classic baselines suffered severe performance degradation on external data under the realistic setting with sparse scratching events. In contrast, fine-tuned video foundation models successfully bridged this generalizability gap, achieving significantly better detection performance. Furthermore, frozen multimodal large language models demonstrated promising out-of-the-box ability using only few-shot demonstrations. We also examined the effects of different video preprocessing strategies. Our findings highlight the improved performance and generalizability of the adapted foundation models for automated scratching behavior analysis and shed light on the real-world deployment of such detectors. Our code is publicly available at https://anonymous.4open.science/r/scratch aid-plus/.",
+      "authors": [
+        "Yang, S.",
+        "Pan, A.",
+        "Shin, H.",
+        "Chen, H.",
+        "Zhang, Z.",
+        "Shad, A.",
+        "Huang, W.",
+        "Liu, Y.",
+        "Liu, W.",
+        "Luo, H.",
+        "Xu, C.",
+        "Chen, J.",
+        "Xu, M.",
+        "Luo, W.",
+        "Yu, H.",
+        "Shen, L."
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758682",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758682.full.pdf",
+      "doi": "10.64898/2026.10.12.758682",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 10.58,
+      "matched_topics": [
+        "大语言模型",
+        "预训练",
+        "多模态学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "large language model",
+        "multimodal large language model"
+      ],
+      "score_breakdown": {
+        "大语言模型": 2.85,
+        "预训练": 2.7,
+        "多模态学习": 3.0,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "large-language-models": 4.88,
+        "pretraining": 4.73,
+        "multimodal-learning": 5.03
+      },
+      "summary": {
+        "takeaway": "提出Scratch-AID+框架，系统比较经典检测器、视频基础模型微调与多模态大模型上下文学习在自动小鼠抓挠行为检测中的表现与跨实验室泛化性。",
+        "methods": "在公开数据集上基准测试，并用其他实验室视频做独立测试；比较ResNet类检测器、任务自适应微调的视频基础模型，以及冻结多模态大模型的few-shot上下文学习，并考察不同视频预处理策略。",
+        "relevance": "涉及大语言/多模态模型、基础模型预训练与迁移，但应用对象为行为视频而非分子或单细胞数据。",
+        "caveat": "摘要称微调视频基础模型显著缩小泛化差距，但未给出具体指标；抓挠事件稀疏场景下经典基线退化严重，方法在其他行为任务上的适用性未验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.06.01.729028",
+      "title": "A multimodal foundation model to integrate histology with spatial molecular programs",
+      "abstract": "Histology and spatial transcriptomics provide complementary views of cancer morphology and molecular organization, yet their spatial correspondence has not been learned at scale. We developed SQUALL, a multimodal foundation model pretrained on histMol, comprising 1.93 billion spatially aligned histology-transcriptomics spots/bins from 3,446 sections across 33 tissues and 12 platforms. By learning spatial morphology-molecular correspondences, SQUALL enables virtual spatial transcriptomics, tumor microenvironment characterization, and molecularly informed histology representations for clinical prediction. SQUALL generalized virtual spatial gene expression profiling across cohorts, cancers, and platforms. Its representations resolve tumor microenvironments including progression-associated tumor trajectories in breast cancer and recurrence-associated immune-excluded regions in ovarian tumor, together with underlying transcriptional programs. Applied to whole-slide histology, SQUALL enabled outcome and treatment-response prediction while revealing interpretable features associated with risk. Together, these results establish large-scale spatially aligned histology-transcriptomics pretraining as a general framework for connecting tissue morphology, molecular programs, microenvironmental organization, and clinical phenotypes.",
+      "authors": [
+        "Zhang, Z.",
+        "Qin, B.",
+        "Zhao, Y.",
+        "Qi, Z.",
+        "Xu, H.",
+        "Wang, Y.",
+        "Zheng, W.",
+        "Dai, J.",
+        "Chen, A.",
+        "Wang, N.",
+        "Nie, L.",
+        "Zhang, P.",
+        "Zhang, H.",
+        "Zhao, Y.",
+        "Xu, T.",
+        "Lin, S.",
+        "Ren, P.",
+        "Zhang, Z.",
+        "Xue, L.",
+        "Xue, X.",
+        "Yang, Z.",
+        "Xu, J.",
+        "Ma, J.",
+        "Pan, D.",
+        "Wang, C.",
+        "Liu, Z.",
+        "Meng, Y.",
+        "Zeng, Z."
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.06.01.729028",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.06.01.729028.full.pdf",
+      "doi": "10.64898/2026.06.01.729028",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 10.53,
+      "matched_topics": [
+        "预训练"
+      ],
+      "matched_categories": [
+        "pretraining"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "pretraining"
+      ],
+      "score_breakdown": {
+        "预训练": 7.0,
+        "领域上下文": 1.5,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "pretraining": 10.53
+      },
+      "summary": {
+        "takeaway": "提出多模态基础模型SQUALL，在大规模空间对齐的组织学-转录组数据上预训练，学习形态与分子程序的空间对应关系。",
+        "methods": "构建histMol数据集，含33种组织、12个平台、3446张切片的19.3亿个空间对齐的组织学-转录组spot/bin；预训练后用于虚拟空间转录组、肿瘤微环境刻画和临床预测。",
+        "relevance": "对应预训练主题，展示大规模空间多模态预训练在连接组织形态与分子程序方面的框架。",
+        "caveat": "摘要未报告虚拟表达预测与临床预测的具体性能数值和外部验证细节；数据覆盖以肿瘤等组织为主，跨平台泛化程度需看正文。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.05.756906",
+      "title": "A split-control criterion for few-shot adaptation in single-cell perturbation prediction",
+      "abstract": "Few-shot adaptation can help or harm single-cell perturbation prediction, but conventional evaluation shares a control estimate between calibration responses and held-out targets. We show how methods carry control error into their predictions and derive its contribution to score inflation. Nested control-depth experiments support inverse-depth scaling of inner-product inflation; correlation inflation also depends on the control noise-to-signal ratio. Independent-control scoring changed the rank of 40 of 52 configuration-dataset entries. We introduce SafeDelta, a split-control criterion that uses calibration data to decide whether to adapt. Across six datasets, mean gated gain was non-negative under the original two-control evaluation. On a deep plate, fixed predictions and decisions retained positive mean gains under three additional independent control references. The same reproducibility principle identified a fibrosis programme that localises to scar in human liver. These results inform adaptation decisions and control-depth planning.",
+      "authors": [
+        "Liang, W.-L.",
+        "Yang, Y.-B.",
+        "Zhang, Q.-Y.",
+        "Feng, J.-C.",
+        "Wang, Q.-F.",
+        "Zou, D.",
+        "Tang, J.-L.",
+        "Liu, Y.",
+        "Wang, S.-Y.",
+        "Duan, J.",
+        "Bai, Y.",
+        "Li, Y.-F.",
+        "Sun, W.-Y.",
+        "Cao, Y.-F.",
+        "He, R.-R."
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.05.756906",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.05.756906.full.pdf",
+      "doi": "10.64898/2026.10.05.756906",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.53,
+      "matched_topics": [
+        "单细胞扰动"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "perturbation prediction",
+        "single-cell perturbation"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 7.0,
+        "领域上下文": 0.5,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "bio-computing": 9.53
+      },
+      "summary": {
+        "takeaway": "揭示少样本适应评估中校准集与测试集共享对照估计会导致评分虚高，并提出SafeDelta分割对照准则以决定是否适应。",
+        "methods": "分析对照误差如何传入预测并推导其对内积与相关性评分膨胀的贡献，开展嵌套对照深度实验；在6个数据集上评估，并在深孔板数据上用三个额外独立对照参考复现。",
+        "relevance": "直接对应单细胞扰动预测主题，聚焦少样本适应的评估偏差与可复现性，对扰动模型基准设计有方法学意义。",
+        "caveat": "摘要报告的增益为门控后均值且部分实验依赖特定对照设置；结论主要针对评估协议而非新扰动预测模型本身，适用范围需结合数据条件判断。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.11.758231",
+      "title": "A foundation model for brain organoid network dynamics uncovers intrinsic computation and convergent disease phenotypes",
+      "abstract": "Brain organoids develop self-organizing neural networks that can be used to model neurodevelopment and disease. Here we introduce PULSE, a foundation model developed using over 900 hours of high-density microelectrode array recordings of in vitro and ex vivo neural tissue. We show that this single model can address two open questions: how disease-associated variants alter network development, and how naive circuits encode information. PULSE revealed accelerated network maturation in held-out human 16p11.2-deletion organoids. It also revealed a change in network coordination shared with SHANK3 deficiency. Because organoids develop without sensory input, they let us ask how circuits encode information before any representation is learned. Closed-loop control of a virtual inverted pendulum engaged existing spontaneous activity patterns rather than creating new ones. PULSE provides a common reference frame for neural circuits across genotypes, protocols and tasks.",
+      "authors": [
+        "Schweiger, H. E.",
+        "Robbins, A.",
+        "Hernandez, S.",
+        "Moreno-Ochando, A.",
+        "Cline, I.",
+        "Doganyigit, K.",
+        "Mouzaya, M.",
+        "Hussain, K.",
+        "Pang, Z. P.",
+        "Duan, J.",
+        "Salama, S. R.",
+        "Pollen, A. A.",
+        "Bhaduri, A.",
+        "Haussler, D.",
+        "Teodorescu, M.",
+        "Mostajo-Radji, M. A."
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.11.758231",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.11.758231.full.pdf",
+      "doi": "10.64898/2026.10.11.758231",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.03,
+      "matched_topics": [
+        "预训练"
+      ],
+      "matched_categories": [
+        "pretraining"
+      ],
+      "matched_terms": [
+        "foundation model"
+      ],
+      "score_breakdown": {
+        "预训练": 7.0,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "pretraining": 9.03
+      },
+      "summary": {
+        "takeaway": "提出PULSE，一个基于超过900小时高密度微电极阵列记录训练的基础模型，可同时用于解析疾病相关变异对神经网络发育的影响，以及无感觉输入条件下神经环路的信息编码方式。",
+        "methods": "使用体外与离体神经组织的高密度微电极阵列记录数据构建基础模型；在留出的16p11.2缺失人脑类器官上评估网络成熟度；与SHANK3缺陷数据比较网络协调性；并通过闭环控制虚拟倒立摆考察自发活动模式的利用。",
+        "relevance": "与“预训练”主题相关，展示了神经电生理大规模数据上的基础模型构建及其跨基因型、协议和任务的统一参考框架。",
+        "caveat": "摘要未报告模型架构细节、训练目标、量化性能指标及样本量；表型发现基于特定类器官与记录条件，泛化性需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.12.756848",
+      "title": "Historical Areas of Hybridization in Two Striped Emerald Dragonfly Species",
+      "abstract": "The Hine's Emerald (Somatochlora hineana) is a federally endangered North American dragonfly, which has experienced significant declines due to anthropogenic forces including human encroachment into its sensitive spring fed wetland habitat and climate change. Previous research indicates hybridization with its ecologically generalist and widespread conspecific, the Clamp-Tipped Emerald (Somatochlora tenebrosa), which may induce hybridization-mediated extinction or genetic swamping. The aim of this paper is to investigate the patterns of hybridization between S. hineana and S. tenebrosa by inferring historical species ranges using Paleoecological niche modeling (PaleoENM), examining genetic structure using haplotype networks, and determining gene flow with introgression tests, shedding light on how, why, when, or where hybridization occurs in these species. Our results reveal evidence of hybridization occurring between S. hineana and S. tenebrosa among populations in Benzie County, Michigan and a newly discovered hybrid individual in Oregon County, Missouri. PaleoENM models show patterns of contact and separation across the Pleistocene, highlighting potential hybridization events throughout periods of glaciation. Finally, Introgression tests reveal evidence for unidirectional hybridization, which may result in genetic swamping of the endangered Hine's Emerald. Such studies provide essential genetic context for conserving ecologically sensitive and endangered species, identifying conservation priorities, and determining whether hybridization and introgression pose additional threats to the long-term genetic integrity and persistence of endangered populations.",
+      "authors": [
+        "Caya, J.",
+        "Goodman, A.",
+        "Cognato, A.",
+        "Hernandez, J.",
+        "Ware, J. L.",
+        "Evangelista, D."
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.12.756848",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.12.756848.full.pdf",
+      "doi": "10.64898/2026.10.12.756848",
+      "venue": "molecular biology",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.83,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 6.8,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "large-language-models": 8.83
+      },
+      "summary": {
+        "takeaway": "综合古生态位建模、单倍型网络和渗入检验，发现濒危蜻蜓Somatochlora hineana与其广布同属种S. tenebrosa存在历史杂交，并提示单向杂交可能导致遗传淹没。",
+        "methods": "使用PaleoENM推断历史分布范围；构建单倍型网络分析遗传结构；通过渗入检验评估基因流。样本涉及密歇根州Benzie County种群及密苏里州Oregon County新发现的杂交个体。",
+        "relevance": "虽被标注匹配“检索增强与对齐”，但摘要内容为群体遗传学与保护生物学研究，与检索增强或对齐方法无直接方法学关联。",
+        "caveat": "匹配主题与实际内容不符；摘要未给出渗入检验的具体统计量、样本规模及杂交事件的时间推断精度，保护学结论需谨慎解读。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.12.758580",
+      "title": "A high-resolution protein-RNA binding atlas for structure-aware interaction prediction and post-transcriptional regulatory modeling",
+      "abstract": "RNA-binding proteins (RBPs) control post-transcriptional gene expression by regulating RNA processing, localization, stability, and translation. However, our understanding of RNA regulation remains limited by the resolution, scale, and uniformity of available RBP binding maps. Here we introduce eclair CLIP (ecCLIP), a high-throughput CLIP-seq platform that combines endogenous protein tagging for uniform affinity capture with ligation-free library preparation to generate high-resolution RNA-protein binding profiles. We applied ecCLIP to 67 endogenously tagged RBPs in HEK293T cells, generating a high-quality transcriptome-scale atlas that recovered known binding preferences and captured post-transcriptional regulons linked to RNA half-life. To test the utility of the atlas, we incorporated ecCLIP into Borzuki, a Borzoi-derived sequence-to-function model trained on complementary RNA degradation, expression, CLIP, and Perturb-seq data. Inclusion of ecCLIP data improved RNA half-life prediction and assessment of 3' UTR variant effects on RNA stability, demonstrating that our atlas helps capture RNA dynamics. To directly model the cis-regulatory grammar underlying these RBP-RNA interactions, we developed Pythia, a structure-aware neural network architecture that incorporates context-free grammar-inspired fixed convolutions to explicitly encode RNA base-pairing features. Pythia predicted RBP binding from sequence and structural context and decomposed predictions into sequence- and structure-dependent components. We tested this decomposition for five RBPs using massively parallel reporter CLIP (MPRC) binding assays in cells, using synthetic RNA libraries containing mutations designed to preserve or disrupt predicted RNA structures across nominated binding sites. We used the same MPRC strategy to confirm allele-specific binding effects for variants prioritized by Pythia. Together, ecCLIP and Pythia provide a resource for structure-aware decoding of RNA-protein interaction grammar and interpretation of post-transcriptional regulatory variation.",
+      "authors": [
+        "Karimzadeh, M.",
+        "Fish, L.",
+        "Karner, H.",
+        "Linder, J.",
+        "Emadi, A.",
+        "Hernandez-Corchado, A.",
+        "Smaili, F. Z.",
+        "Stewart, E. M.",
+        "Kelley, D. R.",
+        "Wang, B.",
+        "Najafabadi, H. S.",
+        "Leonetti, M.",
+        "Goodarzi, H."
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758580",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758580.full.pdf",
+      "doi": "10.64898/2026.10.12.758580",
+      "venue": "genomics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 7.93,
+      "matched_topics": [
+        "单细胞扰动",
+        "GRN / Regulon"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "perturb-seq",
+        "regulon"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 3.0,
+        "GRN / Regulon": 2.4,
+        "领域上下文": 0.5,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "bio-computing": 7.93
+      },
+      "summary": {
+        "takeaway": "推出ecCLIP高通量CLIP-seq平台与Pythia结构感知神经网络，构建67个内源标记RBP的高分辨率蛋白-RNA结合图谱，并证明其可提升RNA半衰期预测和3' UTR变异效应评估。",
+        "methods": "在HEK293T细胞中对67个内源标记RBP进行ecCLIP；将数据纳入Borzoi衍生的Borzuki序列到功能模型；开发Pythia以固定卷积编码RNA碱基配对特征；用MPRC结合实验在5个RBP上验证序列与结构分解及等位基因特异性结合。",
+        "relevance": "与“单细胞扰动”和“GRN/Regulon”主题相关，提供转录后调控网络的高分辨率结合图谱与结构感知建模资源。",
+        "caveat": "实验主要在HEK293T单一细胞系完成；MPRC验证仅覆盖5个RBP；摘要未报告预测精度数值及图谱的假阳性率等质量指标。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.12.758444",
+      "title": "Neurite Complexity and Plasticity Markers Track Synaptic Vesicle Density in the Living Human Brain: A Multimodal PET-MRI-EEG Study",
+      "abstract": "Neuroplasticity, the brain's capacity to reorganise its structure and function, is a transdiagnostic feature across psychiatric and neurodegenerative diseases and a putative mechanism of action for pharmacological interventions. [11C]-UCBJ positron emission tomography (PET), which quantifies synaptic vesicle glycoprotein 2A (SV2A) density, offers the most direct in vivo measure of human synaptic density, but its relationship to complementary, more scalable neuroimaging measures of structural and functional plasticity remains uncharacterised. We combined [11C]-UCBJ PET, diffusion weighted imaging (DWI/NODDI), resting-state functional magnetic resonance imaging (rs-fMRI), and electroencephalography (EEG)-based sensory tasks (roving mismatch negativity, MMN; visual long-term potentiation, vLTP) in 18 healthy volunteers to test the relationship between synaptic terminal SV2A density and complementary structural and functional neuroplasticity measures, and whether these relationships were reproducible following pharmacological challenge with ketamine (n = 11) or N,N-dimethyltryptamine (DMT; n = 7). There were no statistically significant differences in PET-derived SV2A binding potential (BPND), DWI-derived neurite orientation dispersion (ODI) and structural weighted degree (SWD), EEG-derived MMN repetition suppression, and late-phase vLTP P2 potentiation, 1 to 8 days following DMT and ketamine exposure compared to baseline. BPND was coupled with ODI across cortical regions before and after pharmacological challenge, and this relationship was tighter within visual, attentional, and frontoparietal control brain networks. SWD showed a weaker, more spatially restricted association with BPND, primarily in regions belonging to the limbic and visual brain networks, but was not replicated post-drug. No consistent association was found between BPND and functional weighted degree (FWD), derived from rs-fMRI, at baseline or after pharmacological challenge. Frontotemporal BPND was positively associated with MMN repetition suppression (r = 0.61), and occipital BPND with late-phase vLTP P2 potentiation (r = 0.54), with the MMN-BPND association replicating after pharmacological challenge (r = 0.49). These findings link synaptic terminal SV2A density in the living human brain to neurite architecture and the capacity for short-term and Hebbian-like long-term synaptic plasticity, while dissociating these relationships from generic functional connectivity and magnitude of sensory-evoked responses. These data provide cross-modal validation for DWI- and EEG-derived measures as biological indices and surrogate measures of human synaptic plasticity.",
+      "authors": [
+        "Agnorelli, C.",
+        "Peill, J.",
+        "Kurtin, D. L.",
+        "Mallon, O.",
+        "Sawicka, G.",
+        "Shatalina, E.",
+        "Godfrey, K.",
+        "Murphy, R.",
+        "Ahmad, K.",
+        "Oestreich, L. K. L.",
+        "Sumner, R.",
+        "Alberti, M.",
+        "Wall, M.",
+        "Ertl, N.",
+        "Searle, G.",
+        "Clarke, M.",
+        "Zhou, K.",
+        "Osugo, M.",
+        "Sarem, U.",
+        "Weiss, B.",
+        "Greenway, K.",
+        "Jauhar, S.",
+        "Fagiolini, A.",
+        "Carhart-Harris, R.",
+        "Matthews, P. M.",
+        "Rabiner, E.",
+        "Nutt, D.",
+        "Erritzoe, D."
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758444",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758444.full.pdf",
+      "doi": "10.64898/2026.10.12.758444",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 7.28,
+      "matched_topics": [
+        "药物扰动机制",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "cross-modal",
+        "mechanism of action"
+      ],
+      "score_breakdown": {
+        "药物扰动机制": 2.55,
+        "跨模态理解与生成": 2.7,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "bio-computing": 4.58,
+        "multimodal-learning": 4.73
+      },
+      "summary": {
+        "takeaway": "在18名健康志愿者中联合[11C]-UCBJ PET、DWI/NODDI、rs-fMRI和EEG，发现突触小泡SV2A密度与神经突取向离散度及短期和类Hebbian长期可塑性指标相关，而与一般功能连接无关。",
+        "methods": "多模态PET-MRI-EEG研究；18名健康志愿者基线测量，其中11名接受ketamine、7名接受DMT药物挑战后1–8天复测；分析SV2A BPND与ODI、结构加权度、功能加权度、MMN重复抑制和vLTP P2增强的关系。",
+        "relevance": "与“药物扰动机制”和“跨模态理解与生成”主题相关，提供跨模态神经影像指标之间关系的实证验证。",
+        "caveat": "样本量小（18人，药物组11和7人）；药物挑战后部分关联未复现；摘要未说明统计多重比较校正细节，相关性不能推断因果。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.06.757143",
+      "title": "Deep-learning-driven tumor microenvironment profiling improves immunotherapy response prediction",
+      "abstract": "Immunotherapy has transformed the management of many cancers, such as clear cell renal cell carcinoma (ccRCC), yet durable clinical benefit is achieved in only a subset of patients. Immunotherapy outcomes are governed by the multicellular tumor microenvironment (TME), through the structured and directional interplay of regulatory programs and ligand-receptor communications. Yet most existing methods for immunotherapy response prediction rely on independent signatures or cell types and fail to model the structured and directional signaling network within the TME. To address this gap, we introduce EcoNet, a computational framework that first models ecosystems consisting of co-occurring cell states, then constructs intercellular and intracellular signaling networks based on the ecosystems, and applies a graph attention network to derive embeddings from the signaling network for immunotherapy response prediction. Pretrained on 2,532 pan-cancer immunotherapy samples across multiple cohorts, EcoNet outperformed existing prediction methods by 7.5-19.9% and marker-based signatures by 4.4-21.2% in AUC, and its high-attention genes were enriched among those required for T-cell-mediated tumor killing in an independent CRISPR screen; applied to ccRCC with disease-specific fine-tuning, it stratified an independent ccRCC cohort by clinical outcome (P=0.024). Biologically, high-attention genes capture an interferon-responsive program that enhances antigen presentation and immune infiltration. To validate these findings, we curated a ccRCC clinical cohort profiled with CosMx single-cell spatial transcriptomics (46 samples, ~450,000 cells) and found the response-associated TME configuration identified by EcoNet localized to immune-enriched niches, supporting the response stratification. These results establish EcoNet as a generalizable framework for TME-informed therapeutic response prediction, readily extensible to other cancer types and therapeutic contexts.",
+      "authors": [
+        "Wang, R. H.",
+        "Benard, B. A.",
+        "Ilerten, I.",
+        "Zdravkovic, S.",
+        "Al-Humadi, R.",
+        "Nasr, S.",
+        "Howitt, B.",
+        "Gentles, A. J."
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.06.757143",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.06.757143.full.pdf",
+      "doi": "10.64898/2026.10.06.757143",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 7.03,
+      "matched_topics": [
+        "单细胞扰动"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "crispr screen"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 3.0,
+        "领域上下文": 2.0,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "bio-computing": 7.03
+      },
+      "summary": {
+        "takeaway": "提出EcoNet框架，先建模共现细胞状态生态系统，再构建胞间与胞内信号网络，并用图注意力网络预测免疫治疗响应，在泛癌队列中优于现有方法和标志物签名。",
+        "methods": "在2,532个泛癌免疫治疗样本上预训练；构建生态系统与配体-受体信号网络；使用图注意力网络生成嵌入；在ccRCC上微调并在独立队列中按临床结局分层；用CosMx单细胞空间转录组（46样本、约45万细胞）验证响应相关TME配置。",
+        "relevance": "与“单细胞扰动”主题相关，利用单细胞与空间转录组刻画肿瘤微环境并预测治疗响应。",
+        "caveat": "性能提升幅度来自摘要自报，需独立复现；ccRCC外部验证队列规模未在摘要中给出；空间验证为关联性，不能确立因果机制。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42621516",
+      "title": "A series of structurally related hcp-like silver clusters suggests faceted lateral cluster growth.",
+      "abstract": "While nanoparticles and metalloid clusters are increasingly important, their formation and growth remain incompletely understood. Due to the enormous inherent complexity, the elucidation of the respective processes is usually limited to templated reactions, approximate modelling and indirect mechanistic inference. Herein, we report the synthesis of a series of metalloid silver clusters with 128, 132, 146 and 160 silver atoms within their respective silver cores. All compounds are highly unstable towards light and temperature. Nevertheless, we were able to confirm their structure using single-crystal X-ray diffraction. We discovered strong similarities between them, e.g. an overall hexagonal-prismatic shape, an unusual hcp-derived arrangement of the silver atoms within their core and the absence of partly occupied lateral facets. The title compounds form from near-identical conditions. Accordingly, a common reaction pathway in which lateral growth occurs in discrete steps seems plausible. As no thiolates were used during the synthesis, only chlorides and phosphines act as stabilizing ligands. The position of the chloride ligands within the molecules might prove to be essential for the faceted growth of the title compounds. As quantum chemical calculations indicate small Kohn-Sham frontier-orbital gaps, the structure and composition might be mostly governed by geometric factors, providing insights into the formation process of faceted nanoparticles on an atomic scale.",
+      "authors": [
+        "Mike Alexander Kordan",
+        "Claudio Schrenk",
+        "Sami Malola",
+        "Hannu Häkkinen",
+        "Andreas Schnepf"
+      ],
+      "published": "2026-10-16",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42621516/",
+      "pdf_url": "",
+      "doi": "10.1039/d6sc06118d",
+      "venue": "Chemical science",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 5.68,
+      "matched_topics": [
+        "机制推理"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "mechanistic inference"
+      ],
+      "score_breakdown": {
+        "机制推理": 2.4,
+        "新鲜度": 2.08
+      },
+      "category_scores": {
+        "bio-computing": 5.68
+      },
+      "summary": {
+        "takeaway": "报道含128、132、146和160个银原子的系列金属银簇，均呈六方棱柱形、hcp衍生核心排列且侧面无部分占据，提示侧向分步生长的共同反应路径。",
+        "methods": "在近相同条件下合成系列银簇，仅以氯化物和膦配体稳定；用单晶X射线衍射确定结构；辅以量子化学计算考察Kohn-Sham前沿轨道能隙。",
+        "relevance": "匹配“机制推理”主题，通过结构系列推断纳米颗粒形成与分面生长机制。",
+        "caveat": "化合物对光和热高度不稳定；生长路径为基于结构相似性的合理推测，未直接观测中间体；计算仅提示几何因素主导，需更多实验验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.10.758236",
+      "title": "Spatial context of cellular heterogeneity in triple-negative breast cancer reveals actionable subtypes",
+      "abstract": "Triple-negative breast cancer (TNBC) is an aggressive, heterogeneous disease with limited targeted treatment options. Leveraging bulk and spatial transcriptomics and cellular mapping of breast tissue from a large patient cohort, we identified three reproducible TNBC ecosystem subtypes that encode distinct spatial tumor-microenvironment architectures and clinically relevant treatment-response phenotype. Our analyses define: (1) an immune-exhausted subtype associated with immune checkpoint therapy (ICT); (2) a highly fibrotic/hypoxic subtype; and (3) a metabolically reprogrammed subtype characterized by nuclear-receptor and fatty-acid signaling. Spatial profiling further revealed subtype-specific organization of epithelial, immune, and stromal programs across tumor centers and invasive edges. Multiplexed imaging independently supported the contrasting immune-infiltrated and stromal-excluded architectures of the immune-engaged and fibrotic subtypes. The unique markers associated with the subtypes also provide the basis for subtyping and candidate therapeutic vulnerabilities. Our study provides a robust framework for personalized medicine, highlighting that targeting specific spatio-cellular architectures is critical to improving clinical outcomes.",
+      "authors": [
+        "Mesrizadeh, Z.",
+        "Mukund, K.",
+        "Yang, L.",
+        "Pillai, R. K.",
+        "Frankhouser, D. E.",
+        "Schmolze, D.",
+        "Neuhausen, S. L.",
+        "Zabaleta, J.",
+        "Valle, L. D.",
+        "Tomsic, J.",
+        "Ding, Y. C.",
+        "Ochoa, A.",
+        "Miele, L.",
+        "Seewaldt, V.",
+        "Subramaniam, S."
+      ],
+      "published": "2026-10-13",
+      "updated": "2026-10-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.10.758236",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.10.758236.full.pdf",
+      "doi": "10.64898/2026.10.10.758236",
+      "venue": "cancer biology",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 5.58,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "领域上下文": 1.0,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "large-language-models": 5.58
+      },
+      "summary": {
+        "takeaway": "基于大队列bulk与空间转录组及细胞图谱，识别出三种可重复的三阴性乳腺癌生态系统亚型，分别对应免疫耗竭、高纤维化/缺氧和代谢重编程，并具不同治疗响应特征。",
+        "methods": "整合bulk转录组、空间转录组和乳腺癌组织细胞图谱；定义三种生态系统亚型并分析肿瘤中心与侵袭边缘的空间组织；用多重成像独立验证免疫浸润与基质排斥架构。",
+        "relevance": "虽被标注匹配“检索增强与对齐”，但摘要为肿瘤空间转录组分型研究，与检索增强或对齐方法无直接关联。",
+        "caveat": "匹配主题与实际内容不符；摘要未给出亚型定义的具体算法、队列规模及生存或响应分析的统计细节，候选治疗脆弱性尚需功能验证。"
+      },
+      "summary_mode": "openai"
+    }
+  ],
+  "fetch_report": {
+    "window_start": "2026-10-13",
+    "window_end": "2026-10-17",
+    "sources": {
+      "arxiv": {
+        "status": "error",
+        "count": 0,
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)"
+      },
+      "biorxiv": {
+        "status": "ok",
+        "count": 300
+      },
+      "pubmed": {
+        "status": "ok",
+        "count": 7
+      },
+      "semantic_scholar": {
+        "status": "error",
+        "count": 0,
+        "error": "HTTPError: 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=single+cell+perturbation+prediction&limit=40&fields=paperId%2Ctitle%2Cabstract%2Cauthors%2CpublicationDate%2Curl%2CopenAccessPdf%2CexternalIds%2Cvenue%2"
+      }
+    },
+    "total": 307
+  },
+  "summary_report": {
+    "requested": 15,
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai": 15,
+    "fallback": 0,
+    "errors": []
+  }
+}
