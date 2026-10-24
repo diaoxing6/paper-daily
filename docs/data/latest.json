@@ -1,94 +1,95 @@
 {
-  "generated_at": "2026-10-23T05:03:06+00:00",
+  "generated_at": "2026-10-24T04:47:41+00:00",
   "timezone": "Asia/Singapore",
   "papers": [
     {
-      "id": "biorxiv:10.64898/2026.10.13.758464",
-      "title": "Metabolite-centric Knowledge Graph Unveils Predictive and Mechanistic Insights through Self-supervised Multimodal Learning",
-      "abstract": "Metabolomics research is advancing toward a comprehensive view of metabolites and their biological functions, yet conventional, dictionary-like databases fall short of presenting these complexities. To overcome this limitation, we developed MetaKG, a metabolite-centric knowledge graph that integrates diverse chemical, biological, and semantic data, coupled with a global self-supervised multimodal learning framework that generates advanced embeddings (MetaKGE) for both predictive and mechanistic analyses. MetaKG outperforms existing models in standard representation learning metrics and across 12 external datasets. Furthermore, MetaKG refines existing database information by detecting misannotated labels and uncovering previously overlooked biochemical relationships. Its predictive capability naturally yields testable biochemical hypotheses, as demonstrated in studies of G6PD deficiency and colorectal cancer. By transforming passive, database-scale information into extractable knowledge and actionable insights, MetaKG paves the way for hypothesis-driven discovery in metabolomics and holds promise for informing future research in clinical biomarker identification and therapeutic development.",
+      "id": "pubmed:42918896",
+      "title": "scHGNN: A single-cell gene regulatory network inference method based on heuristic graph neural networks.",
+      "abstract": "The construction of gene regulatory networks based on single-cell transcriptomics (scRNA-seq) data provides crucial technical support for decoding cell fate determination mechanisms at the single-cell level, elucidating molecular mechanisms underlying disease progression, and developing targeted therapeutics. Existing methods for constructing GRNs often rely excessively on gene expression features, struggling to achieve an effective balance between local direct regulatory signals and global multi-step regulatory pathways. This imbalance results in insufficient utilization of topological information within the network structure. Therefore, this study proposes a heuristic graph neural network-based GRN inference model (scHGNN). scHGNN integrates multi-order neighbor topological information into learnable weights through unified heuristic matrix and link prediction modules, thereby balancing local and global regulatory relationships. This approach effectively fuses gene expression features with network structural information to achieve precise inference of latent regulatory links within gene regulatory networks. Across GRN inference tasks using benchmark networks of varying gene scales and diverse origins, scHGNN consistently outperforms existing mainstream methods on key evaluation metrics. Furthermore, in target gene prediction cases for key transcription factors such as TP53, OTX2, and FOXP1, the model achieved validation rates as high as 76%-84% in the hTFtarget database. This not only supports its accuracy in identifying known regulatory relationships but also indicates its potential to identify high-confidence candidate regulatory interactions for further biological investigation. Collectively, these results demonstrate that scHGNN holds significant application value in elucidating gene regulatory mechanisms and exploring the molecular basis of related diseases.",
       "authors": [
-        "Lu, Y.",
-        "Guan, X.",
-        "Wu, W.",
-        "Quan, L.",
-        "Wang, L.",
-        "Chen, L.",
-        "Wang, J."
+        "Tianjiao Zhang",
+        "Xiaopeng Teng",
+        "Hongfei Zhang",
+        "Zhongqian Zhao",
+        "Yang Li",
+        "Benzhi Dong",
+        "Guohua Wang"
       ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758464",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758464.full.pdf",
-      "doi": "10.64898/2026.10.13.758464",
-      "venue": "bioinformatics",
-      "source": "bioRxiv",
+      "published": "2026-10-23",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42918896/",
+      "pdf_url": "",
+      "doi": "10.1007/s10142-026-02087-5",
+      "venue": "Functional & integrative genomics",
+      "source": "PubMed",
       "citation_count": 0,
       "influential_citation_count": 0,
       "also_seen_in": [
-        "bioRxiv"
+        "PubMed"
       ],
-      "score": 19.08,
+      "score": 14.83,
       "matched_topics": [
-        "知识图谱",
-        "自监督与表示学习",
-        "多模态学习"
+        "GRN / Regulon",
+        "图谱构建与表示"
       ],
       "matched_categories": [
-        "knowledge-graphs",
-        "pretraining",
-        "multimodal-learning"
+        "bio-computing",
+        "knowledge-graphs"
       ],
       "matched_terms": [
-        "knowledge graph",
-        "multimodal learning",
-        "representation learning"
+        "gene regulatory network",
+        "grn inference",
+        "link prediction"
       ],
       "score_breakdown": {
-        "知识图谱": 7.0,
-        "自监督与表示学习": 2.55,
-        "多模态学习": 7.0,
-        "领域上下文": 0.5,
-        "新鲜度": 1.03
+        "GRN / Regulon": 7.0,
+        "图谱构建与表示": 2.55,
+        "领域上下文": 2.0,
+        "新鲜度": 2.08
       },
       "category_scores": {
-        "knowledge-graphs": 9.53,
-        "pretraining": 5.08,
-        "multimodal-learning": 9.53
+        "bio-computing": 12.28,
+        "knowledge-graphs": 7.83
       },
       "summary": {
-        "takeaway": "本文提出以代谢物为中心的知识图谱 MetaKG，并结合自监督多模态学习生成嵌入 MetaKGE，用于预测与机制分析。",
-        "methods": "整合化学、生物学与语义数据构建知识图谱，采用全局自监督多模态学习框架生成嵌入；在标准表示学习指标和 12 个外部数据集上评估，并以 G6PD 缺乏症和结直肠癌为案例进行分析。",
-        "relevance": "与知识图谱、自监督与表示学习、多模态学习三个主题直接相关，展示了多源异构数据融合与自监督嵌入在生物医学知识发现中的应用。",
-        "caveat": "摘要仅给出定性结论（优于现有模型、检测到错误标注），未提供具体性能数值；案例结果属于可检验假设，摘要未说明实验验证程度。"
+        "takeaway": "提出 scHGNN，将多阶邻居拓扑信息融入可学习权重，以平衡局部直接调控信号与全局多步调控通路，从而提升单细胞基因调控网络推断精度。",
+        "methods": "基于启发式矩阵与链接预测模块构建图神经网络，融合基因表达特征与网络结构信息；在多种基因规模的基准网络中评估，并用 TP53、OTX2、FOXP1 等关键转录因子的靶基因预测在 hTFtarget 数据库中验证。",
+        "relevance": "直接对应 GRN/Regulon 推断与图谱构建主题，关注如何利用网络拓扑结构提升调控关系推断。",
+        "caveat": "摘要仅报告在基准网络和数据库验证中的表现，未说明所用 scRNA-seq 数据规模、噪声条件及与真实调控关系的系统评估范围。"
       },
       "summary_mode": "openai"
     },
     {
-      "id": "biorxiv:10.64898/2026.10.16.759604",
-      "title": "Genetic Perturbation Prediction Models Fail Out-of-Distribution: A Rigorous Benchmark and Systematic Evaluation",
-      "abstract": "Perturbation prediction models - which forecast transcriptional responses to gene inactivation - are increasingly proposed as in silico surrogates for genome-scale drug discovery screens. Yet, rigorous evaluation of whether these models genuinely generalize beyond their training distribution has been lacking. Existing benchmarks rely predominantly on random train-test splits, obscuring systematic failure modes that only emerge under realistic out-of-distribution (OOD) conditions. Here we introduce EL-PERTURB (Extrapolative Learning for PERTURBation Prediction), a benchmarking framework that stress-tests 20 perturbation prediction models spanning six architecture classes on both essential gene and genome-wide Perturb-seq screens, using a novel stratified OOD splitting strategy that partitions train and test sets into functionally distinct regions of transcriptional space. We find that model performance degrades substantially under OOD conditions, and that architectural complexity - including single-cell foundation model embeddings - confers no reliable advantage over well-tuned simpler baselines. EL-PERTURB establishes a rigorous benchmark for perturbation effect prediction across a gradient of generalization difficulty, providing a guide for building models that can genuinely serve as surrogates for wet-lab screening.",
+      "id": "biorxiv:10.64898/2026.10.19.760026",
+      "title": "Predicting cell-state-specific gene regulation from DNA across species",
+      "abstract": "DNA encodes the cell's phenotype, but the same DNA sequence is interpreted differently in every cell type, developmental stage, and activity state. Existing deep-learning models solve only half of this puzzle: sequence-to-function models read DNA but treat cell state as a fixed label, while single-cell foundation models represent cell state but not sequence. We developed Bolero, a sequence-to-function model whose parameters condition on atlas-scale cell-state embeddings and additional biological variables to predict cell-state-specific chromatin accessibility and transcript abundance from DNA. Trained on 10.7 million cells from 33 datasets across six mammals, Bolero matched or exceeded specialised models and resolved regulatory differences between closely related cell states, including cortical regional and developmental gradients. Extrapolating cell-state embeddings extended Bolero's predictions to cell states that are absent from training. Cell-state conditioning facilitated tracing of the effects of non-coding variants to the cell types in which they act. Using an AP-1 activity score as a further continuous conditioning axis, Bolero predicted activity-regulated chromatin changes without requiring actual stimulation data. Across human cell types, we reconstructed the cooperative grammar of motif identity and spacing underlying predicted AP-1 responses. Bolero further predicted cell-type-specific chromatin accessibility and AP-1 responses in species excluded from training, extending comparative genomics from sequence conservation to predicted functional conservation. Across 84 mammals, we found that predicted AP-1 responses were less conserved than chromatin accessibility at cis-regulatory elements, driven by the human-specific sequence variants on AP-1 and cooperating motifs. By combining reference genomes with reference cell atlases, Bolero allowed genome sequences, either native or mutated, to be queried across cell states, perturbations, and different species for their chromatin and expression signatures.",
       "authors": [
-        "Tiwari, K.",
-        "Mahajan, G.",
-        "Bellad, R. P.",
-        "Dhruw, N. K.",
-        "Jha, A. K."
+        "Liu, H.",
+        "Mao, S.",
+        "Gallent, T.",
+        "Chen, Y.",
+        "Yan, Z.",
+        "Vogel, I.",
+        "Traunmuller, L.",
+        "Zhang, R.",
+        "Buenrostro, J. D.",
+        "Zhou, J.",
+        "Greenberg, M. E."
       ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.16.759604",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.16.759604.full.pdf",
-      "doi": "10.64898/2026.10.16.759604",
-      "venue": "systems biology",
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.19.760026",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.19.760026.full.pdf",
+      "doi": "10.64898/2026.10.19.760026",
+      "venue": "genomics",
       "source": "bioRxiv",
       "citation_count": 0,
       "influential_citation_count": 0,
       "also_seen_in": [
         "bioRxiv"
       ],
-      "score": 17.63,
+      "score": 11.63,
       "matched_topics": [
-        "单细胞扰动",
         "Cell Foundation Model",
         "预训练"
       ],
@@ -99,141 +100,23 @@
       "matched_terms": [
         "cell foundation model",
         "foundation model",
-        "perturb-seq",
-        "perturbation prediction",
         "single-cell foundation model"
       ],
       "score_breakdown": {
-        "单细胞扰动": 7.0,
         "Cell Foundation Model": 5.4,
         "预训练": 2.7,
-        "领域上下文": 0.5,
+        "领域上下文": 1.5,
         "新鲜度": 1.03
       },
       "category_scores": {
-        "bio-computing": 14.93,
-        "pretraining": 5.23
+        "bio-computing": 8.93,
+        "pretraining": 6.23
       },
       "summary": {
-        "takeaway": "作者提出 EL-PERTURB 基准，发现 20 个扰动预测模型在分布外条件下性能显著下降，架构复杂度（含单细胞基础模型嵌入）并未带来可靠优势。",
-        "methods": "构建分层 OOD 划分策略，将训练与测试集分到转录空间的功能不同区域；在必需基因和全基因组 Perturb-seq 数据上评测六大架构类别的 20 个模型，并与调优后的简单基线比较。",
-        "relevance": "直接针对单细胞扰动预测的泛化评估，涉及 Cell Foundation Model 与预训练表征是否真正有助于跨分布泛化这一核心问题。",
-        "caveat": "摘要未报告具体性能数值；OOD 划分策略的设计选择可能影响结论的普适性，摘要未讨论该策略自身的敏感性。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.10.13.758934",
-      "title": "scRBP infers cell-specific RNA-binding protein regulons from single-cell transcriptomes at gene and isoform resolution",
-      "abstract": "Single-cell regulatory network inference remains dominated by transcription factors, despite RNA-binding proteins (RBPs) orchestrating major aspects of transcriptional regulation. We present scRBP, a framework that infers motif-supported RBP regulons from short- and long-read single-cell transcriptomes at gene and isoform resolution, resolves targets by transcript region (5'UTR, CDS, intron, 3'UTR), scores regulon activity in individual cells, and tests common- and rare-variant association against matched empirical nulls. From 20,746 motifs for 616 RBPs, scRBP recovered experimentally defined targets across 223 ENCODE eCLIP datasets at gene and isoform level. Across 30 tissues, transcript-region preferences separated 3'UTR-associated stability factors from intron-dominant splicing regulators. In published genome-scale CRISPRi Perturb-seq data, scRBP-inferred targets were over-represented among genes responding to RBP knockdown (1.4-2.5-fold across 161 RBPs; FDR<2x10-4). Across 6.2 million cells and 50 traits, scRBP prioritized cell-specific post-transcriptional programs linking human genetic risk to development and disease.",
-      "authors": [
-        "Ma, Y.",
-        "Tang, M.",
-        "Sriram, V.",
-        "Li, J.",
-        "Jops, C.",
-        "England, J.",
-        "Vo, D.",
-        "Liao, Y.",
-        "Smith, R. L.",
-        "Margolis, M.",
-        "Shalem, O.",
-        "Ziller, M.",
-        "Vuong, C. K.",
-        "de la Torre-Ubieta, L.",
-        "Gandal, M."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758934",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758934.full.pdf",
-      "doi": "10.64898/2026.10.13.758934",
-      "venue": "genetics",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 12.53,
-      "matched_topics": [
-        "单细胞扰动",
-        "GRN / Regulon"
-      ],
-      "matched_categories": [
-        "bio-computing"
-      ],
-      "matched_terms": [
-        "perturb-seq",
-        "regulon",
-        "transcriptional regulation"
-      ],
-      "score_breakdown": {
-        "单细胞扰动": 3.0,
-        "GRN / Regulon": 7.0,
-        "领域上下文": 0.5,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "bio-computing": 12.53
-      },
-      "summary": {
-        "takeaway": "scRBP 从短读长与长读长单细胞转录组中推断受 motif 支持的 RBP regulon，实现基因与 isoform 分辨率的细胞特异性调控网络推断。",
-        "methods": "基于 616 个 RBP 的 20,746 个 motif 推断 regulon，按转录区域（5'UTR、CDS、内含子、3'UTR）解析靶标并评分单细胞活性；用 223 个 ENCODE eCLIP 数据集验证，在 CRISPRi Perturb-seq 数据中检验靶标富集，并分析 6.2 百万细胞与 50 个性状的变异关联。",
-        "relevance": "将调控网络推断从转录因子扩展到 RNA 结合蛋白，与 GRN/Regulon 和单细胞扰动主题相关，并可与扰动数据交叉验证。",
-        "caveat": "摘要报告了富集倍数与 FDR，但未给出 regulon 推断的精确率等完整性能指标；变异关联分析为统计优先级排序，未提供功能验证。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.10.12.758706",
-      "title": "Auditing Confidence-Calibrated Benchmarking of Single-Cell Perturbation Models",
-      "abstract": "Single-cell perturbation models are increasingly assessed for both predictive performance and calibrated uncertainty under distribution shift. We constructed such an evaluation harness (two datasets, Norman 2019 and Replogle 2022; four split types over six dataset-split combinations; three models, scVI, CPA and a linear Ridge baseline; three uncertainty quantification methods, MC dropout, quantile regression and split conformal prediction) and then audited it against null baselines it had never included. Most of its headline results measure something other than what their metric names claim. The harness supplied each test cell to the model as input and then scored the model on reproducing that same cell's expression, so an identity predictor returning the input unchanged attains a perturbation-effect correlation of 1.0 on all six splits: any model given the target cell is measured against this echo ceiling rather than against a null. Against a constant train-mean predictor, scVI wins on 99.7% of Norman cells but only 0.2% of Replogle cells. One split held out sequencing batches rather than perturbations; another scores no genuinely novel perturbation after label collapse; unseen perturbations are silently replaced with a negative-control sentinel at inference; and the most convention-sensitive decision-value entry moves 29.2 percentage points under a library-size convention that changes that row's all-gene MSE by 0.01%. Because a validation budget is spent on a ranked shortlist rather than on a marginal interval, we also score each uncertainty signal by the DE-gene error it avoids in the top k: the worst-calibrated method is the best ranker, and a benchmark reporting only coverage orders the two backwards. We document six failure modes, each with its mechanism, the diagnostic that exposes it, and a detection procedure transferable to other harnesses. One result survives, with a boundary condition: split-conformal coverage calibrated on K562 residuals under-covers on RPE1 (0.900 to 0.847), and marginal coverage at the nominal 0.900 is compatible with covering 0.271 to 0.342 of the DE-gene intervals a prioritization decision would rest on. We continue to recommend conformal prediction, recalibrated per cellular context and reported per gene set rather than marginally.",
-      "authors": [
-        "Gallone, M.",
-        "Ravidath, S.",
-        "Madireddy, S."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758706",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758706.full.pdf",
-      "doi": "10.64898/2026.10.12.758706",
-      "venue": "bioinformatics",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 12.08,
-      "matched_topics": [
-        "单细胞扰动",
-        "检索增强与对齐"
-      ],
-      "matched_categories": [
-        "bio-computing",
-        "large-language-models"
-      ],
-      "matched_terms": [
-        "RAG",
-        "single-cell perturbation"
-      ],
-      "score_breakdown": {
-        "单细胞扰动": 7.0,
-        "检索增强与对齐": 2.55,
-        "领域上下文": 0.5,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "bio-computing": 9.53,
-        "large-language-models": 5.08
-      },
-      "summary": {
-        "takeaway": "本文审计一个单细胞扰动模型评估框架，发现多数主要结果测量的是与指标名称不符的对象，并记录了六种失效模式及其诊断方法。",
-        "methods": "使用 Norman 2019 与 Replogle 2022 两个数据集、四种划分共六种数据集-划分组合、三个模型（scVI、CPA、线性 Ridge 基线）和三种不确定性量化方法（MC dropout、分位数回归、split conformal），并加入此前缺失的零基线进行对照审计。",
-        "relevance": "直接关系单细胞扰动模型的评估效度与不确定性校准，对扰动预测基准设计和 conformal prediction 的使用具有警示意义。",
-        "caveat": "这是对特定评估框架的审计，结论的可推广性依赖于所审计框架的代表性；摘要中 split conformal 在 K562 校准后于 RPE1 欠覆盖的结果仍带边界条件。"
+        "takeaway": "提出 Bolero，将序列到功能模型的参数以图谱规模细胞状态嵌入为条件，从 DNA 预测细胞状态特异的染色质可及性与转录本丰度，并可外推到训练中未见的细胞状态。",
+        "methods": "在来自六种哺乳动物、33 个数据集共 1070 万个细胞上训练；以细胞状态嵌入及额外生物变量为条件；用于非编码变异效应追踪、以 AP-1 活性评分为连续条件轴预测活性调控染色质变化，并在 84 种哺乳动物中比较预测的功能保守性。",
+        "relevance": "关联 Cell Foundation Model 与预训练主题，展示如何把细胞图谱表征与序列模型结合以建模细胞状态特异的基因调控。",
+        "caveat": "摘要中的跨物种外推与变异效应预测均为模型预测结果，未说明实验验证程度；训练数据覆盖范围有限，对训练外物种与细胞状态的可靠性需进一步评估。"
       },
       "summary_mode": "openai"
     },
@@ -261,7 +144,7 @@
       "also_seen_in": [
         "PubMed"
       ],
-      "score": 11.08,
+      "score": 10.73,
       "matched_topics": [
         "药物扰动机制"
       ],
@@ -274,16 +157,74 @@
       "score_breakdown": {
         "药物扰动机制": 6.8,
         "领域上下文": 1.0,
-        "新鲜度": 2.08
+        "新鲜度": 1.73
       },
       "category_scores": {
-        "bio-computing": 11.08
+        "bio-computing": 10.73
       },
       "summary": {
-        "takeaway": "SADRP 是结构感知的多模态药物反应预测框架，联合建模药物分子结构与细胞系多组学特征。",
-        "methods": "药物表示引入最短距离路径（SDP）编码与边编码以刻画拓扑和键类型语义；细胞系侧采用多视图交互编码器整合基因表达与 DNA 甲基化；与现有方法比较并分析候选治疗物与生物标志物。",
-        "relevance": "与药物扰动机制主题相关，提供从分子结构与多组学上下文预测药物敏感性的建模思路。",
-        "caveat": "摘要仅称持续优于现有方法，未给出数据集、指标或具体数值；生物标志物与候选药物属计算预测，摘要未说明验证情况。"
+        "takeaway": "提出 SADRP 多模态框架，联合建模药物分子结构特征与同一细胞系的多组学特征以预测药物反应。",
+        "methods": "药物表示引入最短距离路径编码与边编码以捕获拓扑关系和键类型化学语义；细胞系侧用多视图交互编码器整合基因表达与 DNA 甲基化；与现有方法比较并识别候选治疗药物与生物标志物。",
+        "relevance": "对应药物扰动机制主题，涉及药物敏感性的计算预测与多模态细胞上下文建模。",
+        "caveat": "摘要未给出具体性能数值与数据集细节；所述候选药物和生物标志物为计算识别结果，缺乏实验验证说明。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.07.07.736993",
+      "title": "Metagenomic contextualization of proteins with state space models",
+      "abstract": "Genomic foundation models have emerged as powerful tools for learning representations of biological sequences, but existing approaches predominantly rely on Transformer architectures, whose quadratic attention complexity limits their ability to capture long-range genomic context. This limitation is particularly relevant for metagenomics, where sequencing data have increased more than 500-fold since 2011, generating increasingly large and diverse datasets. For example, gLM2, a Transformer-based mixed-modality genomic language model, was trained with a context window of 4,096 tokens, limiting its ability to capture extended genomic context within metagenomic contigs. Developing scalable architectures capable of processing longer sequences while integrating protein and nucleotide information is therefore essential for advancing genomic foundation models. We introduce Nammu, a 167-million-parameter, bidirectional Mamba-based genomic foundation model that integrates protein and nucleotide sequences within a 20,000-token context window. Leveraging the linear scaling of state-space models, Nammu was trained using a curriculum learning strategy on the OpenMetaGenomic (OMG) corpus, first incorporating 64 million protein sequences followed by 32 million mixed-modality metagenomic contigs. Despite using approximately 37\\% fewer training tokens than gLM2, Nammu outperformed this Transformer-based model in taxonomic classification across all evaluated taxonomic ranks on a marine metagenomic dataset from the Critical Assessment of Metagenome Interpretation (CAMI). On the exact-feature-unmatched CAMI II Strain Madness test set, Nammu achieved higher all-contig genus-classification accuracy than Kraken2 (0.9182 versus 0.8142). Nammu further outperformed gLM2 (150M) in KEGG Orthology prediction using deep-sea metagenome-assembled genomes. Together, these results demonstrate the potential of state-space architectures for scalable, multimodal genomic representation learning and highlight their ability to support accurate taxonomic and functional predictions from metagenomic sequences.",
+      "authors": [
+        "Azbijari, N.",
+        "Wynne, J. H.",
+        "Irizarry, K.",
+        "Sistla, T.",
+        "Thurber, A. R.",
+        "David, M."
+      ],
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.07.07.736993",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.07.07.736993.full.pdf",
+      "doi": "10.64898/2026.07.07.736993",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 10.68,
+      "matched_topics": [
+        "检索增强与对齐",
+        "预训练",
+        "自监督与表示学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "RAG",
+        "foundation model",
+        "representation learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "预训练": 2.7,
+        "自监督与表示学习": 2.55,
+        "领域上下文": 0.5,
+        "新鲜度": 1.38
+      },
+      "category_scores": {
+        "large-language-models": 5.43,
+        "pretraining": 8.13
+      },
+      "summary": {
+        "takeaway": "提出 1.67 亿参数的双向 Mamba 基因组基础模型 Nammu，在 2 万 token 上下文窗口内整合蛋白质与核苷酸序列，以状态空间模型的线性扩展能力处理更长的宏基因组上下文。",
+        "methods": "在 OpenMetaGenomic 语料上采用课程学习，先 6400 万蛋白质序列后 3200 万混合模态宏基因组 contig；在 CAMI 海洋宏基因组数据集上评估分类学分类，在深海 MAG 上评估 KEGG Orthology 预测，并与 gLM2、Kraken2 比较。",
+        "relevance": "关联预训练、自监督与表示学习以及检索增强与对齐主题，体现基因组基础模型架构从 Transformer 向状态空间模型的扩展。",
+        "caveat": "摘要仅报告分类学与功能注释任务，未涵盖其他基因组任务；与 gLM2 的比较基于特定数据集和训练 token 量差异，泛化性需更多评估。"
       },
       "summary_mode": "openai"
     },
@@ -309,7 +250,7 @@
       "also_seen_in": [
         "PubMed"
       ],
-      "score": 10.23,
+      "score": 9.88,
       "matched_topics": [
         "GRN / Regulon",
         "检索增强与对齐"
@@ -326,81 +267,17 @@
         "GRN / Regulon": 2.4,
         "检索增强与对齐": 2.55,
         "领域上下文": 2.0,
-        "新鲜度": 2.08
+        "新鲜度": 1.73
       },
       "category_scores": {
-        "bio-computing": 7.68,
-        "large-language-models": 7.83
+        "bio-computing": 7.33,
+        "large-language-models": 7.48
       },
       "summary": {
-        "takeaway": "scRICH 是推断单细胞通讯异质性的计算框架，将细胞间通讯与细胞内调控网络及细胞命运决定联系起来。",
-        "methods": "利用单细胞与空间转录组数据刻画细胞类型内通讯行为异质性，结合 RNA 剪接动态信息关联通讯与命运决定，构建多层调控网络连接细胞间互作与胞内响应；以角质形成细胞中 EGF 配体/受体共表达的新实验进行验证。",
-        "relevance": "连接细胞间通讯与 GRN/Regulon 及多层调控网络，与调控网络推断主题相关。",
-        "caveat": "摘要未给出与现有通讯推断方法比较的定量结果，仅提到进行了对比；验证集中于 EGF 一个案例，其他场景为应用展示。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.10.19.759651",
-      "title": "A synthetic MALDI-TOF MS atlas for microbial classification across hospitals",
-      "abstract": "Matrix-Assisted Laser Desorption/Ionization Time-of-Flight (MALDI-TOF) mass spectrometry (MS) is central to routine clinical microbiology for species identification. Its combination with machine learning is constrained by fragmented public datasets, species imbalance and acquisition-related variability. Synthetic datasets could provide more training data, but they must preserve the spectral information needed to make predictions on real samples. Here, we present an open, synthetic MALDI-TOF MS atlas comprising 4.3 million spectra across 43 clinically relevant bacterial species. To construct the atlas, we harmonised public repositories from three countries and trained a species- and institution-conditioned concept-bottleneck generative variational autoencoder (CBGM-VAE) on 179,086 measured spectra. We assessed the atlas as both a stand-alone training resource and a complement to real data, using bacterial species classification as a functional benchmark. Evaluation comprised 7,269 real spectra from more than 7 countries, 24 institutions and multiple acquisition platforms, covering: temporal, technical, biological and combined shifts. A neural network trained only on synthetic spectra achieved F1 scores ranging from 0.788 to 1.000 across external cohorts. When synthetic spectra were combined with real training data, classification performance improved or matched using real data only. These findings demonstrate that the atlas retains transferable information and can complement measured data. The openly released atlas provides a reusable resource for supervised learning and benchmarking. It can also be explored for pretraining representation-learning and foundation models in MALDI-TOF MS research.",
-      "authors": [
-        "Guerrero-Lopez, A.",
-        "Meijer, E.",
-        "Gütlin, Y.",
-        "Koch, K.",
-        "Rabbani, N.",
-        "Hitz, E.",
-        "Serrano-Conde, E.",
-        "Howden, B. P.",
-        "Sogaard, K. K.",
-        "Syed, M. A.",
-        "Oberle, M.",
-        "Moran-Gilad, J.",
-        "Hernandez-Garcia, M.",
-        "Sherry, N. L.",
-        "Egli, A."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.19.759651",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.19.759651.full.pdf",
-      "doi": "10.64898/2026.10.19.759651",
-      "venue": "microbiology",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 9.98,
-      "matched_topics": [
-        "检索增强与对齐",
-        "预训练"
-      ],
-      "matched_categories": [
-        "large-language-models",
-        "pretraining"
-      ],
-      "matched_terms": [
-        "RAG",
-        "foundation model",
-        "pretraining"
-      ],
-      "score_breakdown": {
-        "检索增强与对齐": 2.55,
-        "预训练": 5.4,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "large-language-models": 4.58,
-        "pretraining": 7.43
-      },
-      "summary": {
-        "takeaway": "本文发布覆盖 43 种临床相关细菌、430 万条谱图的公开合成 MALDI-TOF MS 图谱库，并证明仅用合成数据训练的模型可在外部队列中分类。",
-        "methods": "整合三国公共数据库的 179,086 条实测谱图，训练物种与机构条件化的概念瓶颈生成变分自编码器（CBGM-VAE）生成合成谱图；以物种分类为功能基准，在来自 7 国以上、24 家机构、多平台的 7,269 条实测谱图上评估时间、技术、生物学及复合偏移。",
-        "relevance": "涉及合成数据、预训练与跨机构泛化，与预训练及检索增强/对齐主题中的分布偏移问题相关。",
-        "caveat": "评估限于细菌物种分类这一功能基准；摘要仅给出合成数据单独训练的 F1 范围 0.788–1.000，未报告各偏移类型下的细分结果。"
+        "takeaway": "提出 scRICH 计算框架，从单细胞与空间转录组数据刻画细胞类型内通讯行为的异质性，并把细胞间通讯与细胞内调控响应及细胞命运决策联系起来。",
+        "methods": "利用单细胞和空间转录组数据；结合 RNA 剪接动态信息将通讯与细胞命运联系；构建多层调控网络连接细胞间互作与胞内响应；以角质形成细胞中 EGF 配体/受体共表达的新实验进行验证，并与其他通讯推断方法比较。",
+        "relevance": "同时关联 GRN/Regulon 与单细胞通讯推断，强调跨尺度连接通讯网络与基因调控网络。",
+        "caveat": "摘要未给出量化性能指标；验证主要集中于 EGF 案例，其他生物场景为应用展示，缺乏系统性基准比较。"
       },
       "summary_mode": "openai"
     },
@@ -421,8 +298,8 @@
         "Fang, S.",
         "Li, Y."
       ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
       "url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758713",
       "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758713.full.pdf",
       "doi": "10.64898/2026.10.13.758713",
@@ -433,7 +310,7 @@
       "also_seen_in": [
         "bioRxiv"
       ],
-      "score": 9.53,
+      "score": 9.88,
       "matched_topics": [
         "单细胞扰动"
       ],
@@ -446,452 +323,42 @@
       "score_breakdown": {
         "单细胞扰动": 7.0,
         "领域上下文": 0.5,
-        "新鲜度": 1.03
+        "新鲜度": 1.38
       },
       "category_scores": {
-        "bio-computing": 9.53
+        "bio-computing": 9.88
       },
       "summary": {
-        "takeaway": "DCAF 是统一数据有效性、评估有效性与预测建模的单细胞扰动模拟框架，在跨基因、跨细胞类型和跨区域泛化上优于现有深度学习方法及均值、线性基线。",
-        "methods": "DCAF-data 用熵正则最优传输重建扰动前后状态；DCAF-criterion 基于非沉默基因的 log fold change 改进评估灵敏度与零膨胀鲁棒性；DCAF-model 结合 JEPA 与显式调控动态建模；在细胞系与多细胞类型数据上验证，并在成年小鼠脑中复现 Dgcr8 敲低的细胞类型特异性调控异质性。",
-        "relevance": "直接面向单细胞扰动预测与评估有效性，与单细胞扰动主题高度契合。",
-        "caveat": "摘要给出定性优势结论但无量化的基准数值；小鼠脑结果为对已知调控异质性的复现，并非新发现验证。"
+        "takeaway": "提出统一框架 DCAF，同时处理单细胞扰动模拟中的数据有效性、评估有效性和预测建模三个问题。",
+        "methods": "DCAF-data 用熵正则化最优传输重建扰动前后状态；DCAF-criterion 以非沉默基因的 log fold change 评估；DCAF-model 结合 JEPA 与显式调控动态建模；在跨基因、跨细胞类型、跨区域泛化基准上比较，并在成年小鼠脑中复现 Dgcr8 敲低的细胞类型特异调控异质性。",
+        "relevance": "直接对应单细胞扰动主题，涉及扰动响应预测与评估标准构建。",
+        "caveat": "摘要未列出具体基准数据集与数值；小鼠脑案例为对已知调控异质性的复现，尚不能说明对未见扰动的泛化能力。"
       },
       "summary_mode": "openai"
     },
     {
-      "id": "biorxiv:10.64898/2026.10.12.758458",
-      "title": "Determinants of cysteine coverage by chemoproteomics",
-      "abstract": "Covalent chemoproteomics has become a powerful route to expanding the druggable proteome, enabling proteome-wide screening of compounds that covalently modify nucleophilic residues, most commonly cysteine. Yet typical experiments detect only 5-18% of the ~250,000 cysteines encoded by the human proteome, and the determinants of this limited coverage remain poorlydefined. Here we combine cysteine featurisation, explainable machine learning (ML) and robust statistical filtering to establish what governs cysteine detectability in iodoacetamide- desthiobiotin (IA-DTB) chemoproteomics. Using a scalable feature-generation pipeline, we computed physicochemical and structural properties for cysteines and the corresponding tryptic peptides and trained models that predict detectability with high accuracy. Shapley analysis identifies protein abundance and intrinsic peptide properties governing LC-MS behaviour as the dominant determinants, whereas cysteine structural descriptors contribute comparatively little, indicating that detection is constrained downstream of probe reactivity. We further introduce a distance-based statistical filter that improves reproducibility across replicates, and show that cell line selection, subcellular fractionation and alternative electrophiles together expand coverage by >30%. More broadly, this work moves optimisation of chemoproteomics workflows from empirical trial-and-error towards rational, data-driven design.",
+      "id": "biorxiv:10.64898/2026.06.30.735556",
+      "title": "Tracking claim changes from preprint to publication across 72,644 biomedical studies using large language models",
+      "abstract": "Preprints disseminate biomedical research before peer review, but how much those scientific claims change before publication in journals remains uncertain. Here, we matched 72,644 bioRxiv preprints to their peer-reviewed publications by DOI and used a large language model (Claude Sonnet 4.6) to extract one primary and up to two secondary claims from their abstracts. Content change (unchanged, minor, major/substantial) and hedging shift (more cautious, more confident, unchanged) were compared. Four raters independently labelled a 550-pair subset; model-rater agreement (quadratic-weighted Cohen's {kappa} = 0.69) approached agreement among the raters themselves ({kappa} = 0.76). The primary claims were unchanged in 39.8% of abstract pairs, minorly revised in 50.0%, and substantially revised in 10.2%. Claims became more cautious twice as often as more confident (8.4% vs 4.2%). Substantial revisions correlated with longer preprint-to-publication interval. Therefore, among bioRxiv preprints that are later published, central abstract claims remain stable through the preprint-to-publication transition.",
       "authors": [
-        "Riziotis, I. G.",
-        "Wilders, H.",
-        "Cairoli, A.",
-        "Lambert, H.",
-        "Dark, J.",
-        "Biggs, G. S.",
-        "Cawood, E. E.",
-        "McCarthy, W. J.",
-        "Nightingale, L.",
-        "Magarinos, P.",
-        "Gavrielides, M.",
-        "Ambrose, K.",
-        "Strange, A.",
-        "Skehel, M. J.",
-        "Boulton, S. J.",
-        "Lumley, J.",
-        "House, D.",
-        "Rittinger, K.",
-        "Bush, J. T."
+        "Yin, H.",
+        "Ahn, W.",
+        "Forster, P. M.",
+        "Rust, R."
       ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758458",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.12.758458.full.pdf",
-      "doi": "10.64898/2026.10.12.758458",
-      "venue": "bioinformatics",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.06.30.735556",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.06.30.735556.full.pdf",
+      "doi": "10.64898/2026.06.30.735556",
+      "venue": "scientific communication and education",
       "source": "bioRxiv",
       "citation_count": 0,
       "influential_citation_count": 0,
       "also_seen_in": [
         "bioRxiv"
       ],
-      "score": 9.33,
-      "matched_topics": [
-        "检索增强与对齐"
-      ],
-      "matched_categories": [
-        "large-language-models"
-      ],
-      "matched_terms": [
-        "RAG"
-      ],
-      "score_breakdown": {
-        "检索增强与对齐": 6.8,
-        "领域上下文": 0.5,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "large-language-models": 9.33
-      },
-      "summary": {
-        "takeaway": "该研究通过可解释机器学习与统计过滤，揭示了IA-DTB化学蛋白质组学中半胱氨酸可检测性的主导因素：蛋白丰度与肽段LC-MS内在性质，而非半胱氨酸结构特征。",
-        "methods": "对半胱氨酸及其胰酶肽段构建可扩展特征生成流程，计算理化与结构属性，训练可检测性预测模型，并用Shapley分析归因；引入基于距离的统计过滤提升重复间可重复性，并比较细胞系、亚细胞分级与替代亲电试剂对覆盖度的影响。",
-        "relevance": "文章涉及特征工程、可解释机器学习与模型归因分析，与检索增强与对齐主题中模型可解释性及数据驱动流程优化相关。",
-        "caveat": "摘要仅报告覆盖度提升大于30%的定性结论，未给出具体数值与统计细节；结论限于IA-DTB体系，是否泛化到其他探针或组织尚未说明。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.10.16.759688",
-      "title": "TiSAM: fusing spatial and histopathology foundation models for whole-slide image segmentation",
-      "abstract": "Semantic segmentation of whole-slide images (WSIs) quantifies tissue composition and architecture, but existing models require extensive annotation and lose accuracy as the number of tissue classes increases or on heterogeneous, cross-scanner datasets. Here, we present the Tissue Segment Anything Model (TiSAM), which fuses SAM3 spatial features with UNI2-h pathology features within a multi-scale decoder. Because public benchmarks contain few tissue classes, we release MegaMouse, comprising 36,833 annotations of 52 tissue classes from 12 mouse organs, and an 11-class human pancreas dataset. TiSAM achieved the highest overall performance across four public datasets compared to existing convolutional neural network and vision transformer models, maintained high accuracy on MegaMouse, and maintained high accuracy in the human pancreas dataset when trained on as few as 5 annotated WSIs where previous integrations of SAM with pathology foundation models did not. TiSAM segmentations were also more consistent across eight slide scanners compared to other models. These results establish TiSAM as a general and highly adaptable framework for tissue segmentation, enabling studies containing many tissue classes, limited annotations, or images from multiple scanners.",
-      "authors": [
-        "Ding, Z.",
-        "Dequiedt, L.",
-        "Forjaz, M.",
-        "Matos-Romero, V.",
-        "Shen, Y.",
-        "Benducci, T.",
-        "Forjaz, A.",
-        "Fei, X.",
-        "Zhu, Y.",
-        "Nwoga, P.",
-        "Dhana, W.",
-        "Pascalin, J.",
-        "Lee, S. S.",
-        "Garza, L.",
-        "Lee, S. H.",
-        "Pierce, E. J.",
-        "Canto, M. I.",
-        "Morton, J. P.",
-        "Cihakova, D.",
-        "Wirtz, D.",
-        "Data Science TeamLab,",
-        "Kiemen, A. L."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.16.759688",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.16.759688.full.pdf",
-      "doi": "10.64898/2026.10.16.759688",
-      "venue": "bioinformatics",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 9.03,
-      "matched_topics": [
-        "预训练"
-      ],
-      "matched_categories": [
-        "pretraining"
-      ],
-      "matched_terms": [
-        "foundation model"
-      ],
-      "score_breakdown": {
-        "预训练": 7.0,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "pretraining": 9.03
-      },
-      "summary": {
-        "takeaway": "TiSAM融合SAM3空间特征与UNI2-h病理基础模型特征，在多尺度解码器中实现整张切片组织分割，并在多类别、少标注与跨扫描仪场景下表现稳健。",
-        "methods": "将SAM3与UNI2-h特征在多尺度解码器内融合；发布MegaMouse数据集（12个小鼠器官、52类组织、36,833条标注）及11类人胰腺数据集；在四个公开数据集及新数据集上与传统CNN和ViT模型比较，并测试仅用5张标注WSI训练及八种扫描仪一致性。",
-        "relevance": "该工作属于预训练基础模型（SAM、病理基础模型）的特征融合与下游适配，契合预训练主题中的多模态特征整合与标注效率问题。",
-        "caveat": "摘要为作者自述结果，缺少具体指标数值与统计检验；在跨物种、跨器官及更多组织类别上的泛化性仍需外部验证。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.10.13.758918",
-      "title": "Stain Normalisation Does Not Consistently Improve Matched-Location Retrieval with Pathology Foundation Models",
-      "abstract": "Pathology foundation models provide reusable representations for computational pathology, but staining- and scanner-induced variation may compromise the robustness and reproducibility of embedding-based analyses across acquisition settings. Stain normalisation is widely used to mitigate such colour variation, yet whether it improves retrieval with modern self-supervised pathology encoders remains unclear. We test whether stain normalisation improves cross-scanner and cross-staining image retrieval using the PLISM whole-slide image subset, comprising 13 co-registered images of serial sections prepared under different staining conditions and digitised using seven scanners (91 whole-slide images). We sample 400 matched locations across the 91 images, yielding 36,400 tile instances. We compare two DINOv2-based encoders, Phikon-v2 (1,024-dimensional) and Midnight-12k (3,072-dimensional), with Reinhard and Macenko normalisation against an unnormalised baseline. Performance is measured using paired top-1 nearest-neighbour retrieval accuracy in two settings: cross-scanner retrieval of the same physical section digitised by different scanners, and cross-staining retrieval across co-registered images of serial sections, which differ in staining condition and may also contain section-level morphological variation. Neither normalisation method consistently improves top-1 retrieval relative to no normalisation, while Macenko reduces accuracy by up to 18.3 percentage points. An exploratory UMAP of unnormalised Midnight-12k slide-level mean embeddings showed partial overlap between scanner groups in a two-dimensional projection. These results challenge the routine use of stain normalisation in foundation-model retrieval pipelines and support validating preprocessing choices for each encoder and retrieval setting.",
-      "authors": [
-        "Meng, Y.",
-        "Chai, B.",
-        "Chakraborti, T."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758918",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758918.full.pdf",
-      "doi": "10.64898/2026.10.13.758918",
-      "venue": "pathology",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 9.03,
-      "matched_topics": [
-        "预训练"
-      ],
-      "matched_categories": [
-        "pretraining"
-      ],
-      "matched_terms": [
-        "foundation model"
-      ],
-      "score_breakdown": {
-        "预训练": 7.0,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "pretraining": 9.03
-      },
-      "summary": {
-        "takeaway": "在使用现代自监督病理编码器的检索任务中，染色归一化并未稳定提升跨扫描仪与跨染色匹配定位检索精度，Macenko甚至最多降低18.3个百分点。",
-        "methods": "使用PLISM WSI子集（13张共配准图像、7种扫描仪、91张WSI），采样400个匹配位置得到36,400个图块；比较DINOv2-based的Phikon-v2（1024维）与Midnight-12k（3072维）在Reinhard、Macenko归一化与无归一化基线下的成对top-1最近邻检索准确率，并对未归一化嵌入做探索性UMAP。",
-        "relevance": "直接评估病理预训练编码器的鲁棒性与预处理选择，属于预训练模型在下游检索中的可靠性研究。",
-        "caveat": "结论基于单一WSI子集与两种归一化方法及两种编码器，不能推广为所有染色归一化或编码器均无效；探索性UMAP为二维投影，非严格定量证据。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.10.13.758880",
-      "title": "Genomic foundation models do not yet boost common variant discovery beyond standard functional annotations",
-      "abstract": "Genomic foundation models (GFMs) use large-scale AI to model genetic sequences and their influence on molecular phenotypes. While GFMs have shown promise in rare variant analysis, their utility for common variant discovery remains untested. Using the surrogate functional false discovery rate framework for functionally informed GWAS discovery, we compared standard functional annotations (baselineLD) with annotations derived from three leading GFMs: the sequence-to-function models AlphaGenome and Borzoi, and the genomic language model GPN-Star. Across 27 UK Biobank traits, GPN-Star decreased locus discovery relative to a standard GWAS, whereas AlphaGenome and Borzoi increased discovery but by less than baselineLD (medians 1.8%, 3.8%, and 5.1%). When we combined the GFM and baselineLD annotations, there was no increase over baselineLD alone (median changes -0.1% to 0.2%), suggesting that AlphaGenome and Borzoi mostly capture information already in baselineLD. Thus, GFMs may require larger corpora or trait-specific feature engineering to improve discovery beyond standard functional annotations.",
-      "authors": [
-        "Bass, A. J.",
-        "Park, J.",
-        "Mukherjee, S.",
-        "Whittaker, J.",
-        "Wallace, C."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758880",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758880.full.pdf",
-      "doi": "10.64898/2026.10.13.758880",
-      "venue": "genomics",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 9.03,
-      "matched_topics": [
-        "预训练"
-      ],
-      "matched_categories": [
-        "pretraining"
-      ],
-      "matched_terms": [
-        "foundation model"
-      ],
-      "score_breakdown": {
-        "预训练": 7.0,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "pretraining": 9.03
-      },
-      "summary": {
-        "takeaway": "在27个UK Biobank性状上，基因组基础模型注释未能超越标准功能注释baselineLD以促进常见变异发现，AlphaGenome与Borzoi的提升幅度更小且与baselineLD组合后无额外增益。",
-        "methods": "采用功能性信息GWAS发现的功能性错误发现率（sfFDR）框架，比较baselineLD与三种GFM注释：序列到功能模型AlphaGenome、Borzoi及基因组语言模型GPN-Star，并评估GFM与baselineLD联合注释的效果。",
-        "relevance": "该研究检验基因组基础模型预训练表征在下游遗传发现任务中的实际效用，直接关联预训练主题中基础模型价值评估。",
-        "caveat": "结论限于常见变异与27个UK Biobank性状及所测试的三种GFM；不能排除更大语料或性状特异特征工程带来改进的可能，摘要未提供效应量置信区间等细节。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.1101/2020.04.18.047811",
-      "title": "Evolution of predator foraging in response to prey infection favors species coexistence",
-      "abstract": "As acknowledged by optimal foraging theory, predator diets depend on prey profitability. Parasites, affecting prey within food webs, are known to affect simultaneously host vulnerability to predation and host energy contents, thereby affecting profitability. In this work, we study the eco-evolutionary consequences of prey infection by a non trophically-transmitted parasite, with a simple lifecycle, on predator diet. We also analyse the consequences for coexistence between prey, predators and parasites. We model a trophic module with one predator and two prey species, one of these prey being infected by a parasite, and distinguish two effects of infection: a decrease in host fecundity (virulence effect) and an increase in vulnerability to predation (facilitation effect). Predator foraging may evolve toward specialist or generalist strategies, the latter being less efficient on a given resource. We show that virulence effects lead to specialisation on the non-infected prey while facilitation effects, by increasing prey profitability, favor specialisation on the infected prey. Combining the two effects at intermediate intensities promotes either generalist predators or the diversification of foraging strategies (coexistence of specialists), depending on the trade-off shape. We then investigate how the evolution of predator diet affects the niche overlap between predator and parasite. Facilitation effects systematically lead to a high niche overlap, ultimately resulting in the loss of the parasite. Virulence effects conversely favor coexistence by allowing a separation of the predator and parasite niches.",
-      "authors": [
-        "Prosnier, L.",
-        "Medoc, V.",
-        "Loeuille, N."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.1101/2020.04.18.047811",
-      "pdf_url": "https://www.biorxiv.org/content/10.1101/2020.04.18.047811.full.pdf",
-      "doi": "10.1101/2020.04.18.047811",
-      "venue": "ecology",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 8.83,
-      "matched_topics": [
-        "检索增强与对齐"
-      ],
-      "matched_categories": [
-        "large-language-models"
-      ],
-      "matched_terms": [
-        "RAG"
-      ],
-      "score_breakdown": {
-        "检索增强与对齐": 6.8,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "large-language-models": 8.83
-      },
-      "summary": {
-        "takeaway": "食饵感染通过毒力效应与促进被捕食效应改变捕食者觅食策略演化，进而影响食饵、捕食者与寄生虫的共存结局。",
-        "methods": "构建含一个捕食者和两个食饵物种的营养模块模型，其中一个食饵被非营养传递寄生虫感染；区分降低宿主繁殖力的毒力效应与提高被捕食脆弱性的促进效应，分析捕食者觅食策略（专化或泛化）的演化及权衡形状对共存的影响。",
-        "relevance": "该文为生态演化建模，与检索增强与对齐主题无直接方法学关联，匹配可能来自泛化的模型分析或对齐概念。",
-        "caveat": "为理论模型研究，结论依赖模型假设与权衡函数形式；摘要未给出参数范围或实证验证，难以直接外推到真实生态系统。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.10.15.759403",
-      "title": "Heatwaves and turbidity influxes have interacting and lasting effects on the foraging behaviour of three-spined stickleback Gasterosteus aculeatus",
-      "abstract": "Freshwater ecosystems support a disproportionately high share of fish species and biodiversity yet are among the most threatened ecosystems globally and are increasingly being exposed to multiple, co-occurring environmental stressors. In addition, predicting the combined impacts of environmental stressors remains a major challenge, particularly when stressors differ in how quickly they arise and how long their effects persist. Understanding how these stressors interact across time is critical for predicting their ecological consequences. Here, we examine how warming and turbidity, two widespread and intensifying stressors, interact to influence predator-prey dynamics in the three-spined stickleback (\\textit{Gasterosteus aculeatus}). Using a fully factorial experiment, fish were exposed to ambient, warmed, turbid, or combined conditions for short (one week) or prolonged (six weeks) periods, before feeding rates were quantified across prey densities using a novel stochastic Bayesian model. We found that foraging behaviour was shaped primarily by prior exposure rather than the immediate experimental conditions. Short-term exposure to both stressors increased feeding rates, whereas prolonged warming reduced them. In contrast, turbidity continued to increase feeding rates over both time periods and, when combined with warming, offset the negative effects of extended heat exposure. Changes in feeding performance at the individual level may propagate through food webs, potentially triggering trophic cascades that reduce biodiversity. Given the exceptional biodiversity of freshwater systems, such dynamics are of particular concern. We also found that behavioural changes persisted even after stressors were removed, indicating that exposure history can have lasting effects. These findings suggest that short-term experiments, such as the functional response, may actually be measuring subject experiential history rather than responses to specific experimental conditions.",
-      "authors": [
-        "Newport, C.",
-        "Morley, E.",
-        "Creswell, R.",
-        "Jackson, M.",
-        "Lambert, B."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.15.759403",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.15.759403.full.pdf",
-      "doi": "10.64898/2026.10.15.759403",
-      "venue": "animal behavior and cognition",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 8.83,
-      "matched_topics": [
-        "检索增强与对齐"
-      ],
-      "matched_categories": [
-        "large-language-models"
-      ],
-      "matched_terms": [
-        "RAG"
-      ],
-      "score_breakdown": {
-        "检索增强与对齐": 6.8,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "large-language-models": 8.83
-      },
-      "summary": {
-        "takeaway": "热浪与浊度对三刺鱼觅食行为的影响取决于先前暴露史而非即时实验条件，短期双重胁迫提高摄食率，长期变暖降低摄食率，而浊度可抵消长期热暴露的负面效应。",
-        "methods": "采用全因子实验，将鱼暴露于常温、变暖、浑浊及组合条件一周或六周，随后在不同猎物密度下量化摄食率，并使用新的随机贝叶斯模型分析。",
-        "relevance": "该文为生态生理与行为实验，与检索增强与对齐主题无直接方法学关联。",
-        "caveat": "结论基于单一物种与实验室条件，摘要未报告效应量；作者指出短期功能反应实验可能测量的是个体暴露历史而非特定条件反应，外推至野外食物网需谨慎。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.10.17.759810",
-      "title": "Super-Resolution Processing Enables In Situ Subtomogram Averaging Beyond the Nyquist Limit",
-      "abstract": "In situ subtomogram averaging (STA) for high-resolution structure determination requires fine pixel sampling, forcing a trade-off between achievable resolution and the field of view (FOV) recorded in each tomogram. Electron-event representation (EER) data can be rendered at half the physical pixel size, but whether super-resolution processing can recover useful information beyond the physical Nyquist limit from noisy in situ data remains unclear. Here, we show that super-resolution processing of EER data recovers biologically interpretable information beyond a physical Nyquist limit of 4.78 A in two in situ datasets. STA of unidentified virus particles in a Drosophila melanogaster larva yielded a 3.42 A inner capsid reconstruction, enabling de novo model building and identification of the particles as Drosophila A virus. In situ STA of ribosomes in Saccharomyces cerevisiae reached 3.18 A, with local resolution extending to 2.78 A. EER acquisition therefore provides greater flexibility in choosing the acquisition magnification: existing datasets can be re-rendered at the super-resolution pixel size when physical sampling becomes limiting, while lower-magnification acquisition can be considered when a larger FOV improves target capture or cellular context.",
-      "authors": [
-        "Pyle, E.",
-        "Bekbayev, S.",
-        "Dmello, V.",
-        "Mattei, S."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.17.759810",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.17.759810.full.pdf",
-      "doi": "10.64898/2026.10.17.759810",
-      "venue": "molecular biology",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 8.83,
-      "matched_topics": [
-        "检索增强与对齐"
-      ],
-      "matched_categories": [
-        "large-language-models"
-      ],
-      "matched_terms": [
-        "RAG"
-      ],
-      "score_breakdown": {
-        "检索增强与对齐": 6.8,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "large-language-models": 8.83
-      },
-      "summary": {
-        "takeaway": "EER数据的超分辨处理可在物理Nyquist极限之外恢复可解释信息，使原位子断层平均在两个数据集中突破4.78 Å的物理采样极限。",
-        "methods": "对EER数据进行超分辨渲染与处理，对果蝇幼虫中原位未识别病毒颗粒进行STA，并对酿酒酵母核糖体进行原位STA，评估重建分辨率与局部分辨率。",
-        "relevance": "涉及成像数据的超分辨处理与高分辨率重建方法，与检索增强与对齐主题关联较弱，可能仅涉及数据处理流程。",
-        "caveat": "仅展示两个原位数据集；超分辨恢复信息的普适性、对噪声与数据量的依赖未在摘要中量化说明。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.10.13.758828",
-      "title": "mixKIN: An ancestry-aware kinship estimation method for low coverage genomes",
-      "abstract": "Genetic kinship analysis provides insights into the social and biological organization of past populations. However, kinship estimation from low-coverage genomes, which are common in ancient DNA (aDNA) studies, remains challenging, particularly in genetically heterogeneous or admixed populations. Approaches that assume a homogeneous background relatedness can bias estimates when individuals have distinct ancestry. We developed mixKIN, an ancestry-aware kinship estimation from low-coverage genomes. Rather than using a single mismatch baseline for all pairs, mixKIN estimates pair-specific baseline by weighting within-population diversity and between-population divergence according to ancestry proportions of both individuals in each pair. We compared mixKIN with correctKin and RelateAdmix, which account for population structure and admixture, and with READv2 representing a widely used approach that assumes a homogeneous population background. To benchmark the methods, we ran extensive pedigree simulations across diverse demographic scenarios, including distant-population admixture, intra-population heterogeneity, and genetic outliers, at coverages from 1x to 0.03x. mixKIN achieved higher average classification performance in admixed and heterogeneous scenarios, while maintaining comparable performance in homogeneous populations, with relationships evaluated up to third-degree. In an application to an empirical data from a medieval English cemetery, mixKIN recovered relationships involving an individual with West African and European ancestries without the need for a manual adjustment to account for admixture. These findings support ancestry-aware mismatch normalization as a practical approach to improving kinship estimation and retaining genetically diverse individuals in kinship studies.",
-      "authors": [
-        "Kılıc, M. S.",
-        "Malaspinas, A.-S.",
-        "Koptekin, D."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758828",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758828.full.pdf",
-      "doi": "10.64898/2026.10.13.758828",
-      "venue": "bioinformatics",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 8.83,
-      "matched_topics": [
-        "检索增强与对齐"
-      ],
-      "matched_categories": [
-        "large-language-models"
-      ],
-      "matched_terms": [
-        "RAG"
-      ],
-      "score_breakdown": {
-        "检索增强与对齐": 6.8,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "large-language-models": 8.83
-      },
-      "summary": {
-        "takeaway": "mixKIN通过按两个体祖先比例加权群体内多样性与群体间分化来估计配对特异性错配基线，在混合与异质人群中提升低覆盖基因组的亲缘关系分类性能。",
-        "methods": "开发祖先感知的亲缘估计方法mixKIN，与correctKin、RelateAdmix及假设同质背景的READv2比较；在1x至0.03x覆盖度、远群体混合、群体内异质与遗传离群等场景下进行系谱模拟基准，并应用于中世纪英格兰墓地实证数据。",
-        "relevance": "涉及低覆盖基因组数据的统计建模与基准比较，与检索增强与对齐主题仅间接相关。",
-        "caveat": "性能优势主要见于混合与异质场景，同质人群仅保持可比；评估至三级亲缘关系，摘要未给出各场景具体数值与不确定性，实证应用为单个墓地案例。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.10.18.759908",
-      "title": "PigGPA: A Domain-Constrained Agent for Porcine Genomic Breeding with Verifiable Tool Execution",
-      "abstract": "Large language model agents can plan and execute scientific analyses, but successful task completion does not establish whether analytical decisions remain consistent across independent sessions or whether computations follow the parameters specified beforehand. We investigated these limitations using four genomic analysis tasks. General-purpose agents showed limited consistency in analytical decisions across repeated sessions (57.5-58.8%). Incorporating domain knowledge improved analytical performance, with reusable skills increasing mean evaluation scores from 73.44 to 89.06/100 , but did not resolve decision variability or ensure agreement between specified and executed parameters. To address these limitations, we developed an approach combining domain-constrained analytical skills with call-level execution contracts. Each tool invocation is linked to a pre-execution parameter declaration through SHA-256 hashing, with actual command-line arguments and execution records subsequently checked against the declared parameters. We implemented this approach in PigGPA, an autonomous agent for porcine genomic breeding that integrates statistical genetics, sequence-based functional prediction and multi-omics annotation. PigGPA completed all benchmark tasks with full agreement between declared and executed parameters, while its core quantitative-genetic results closely matched established software (r = 0.999-1.000). An application to loin muscle depth further demonstrated an integrated workflow from genetic association analysis to functional interpretation. These findings show that domain knowledge improves analytical performance, while direct verification of tool execution provides an additional basis for reproducible scientific computation.",
-      "authors": [
-        "Liang, C.",
-        "Zhang, Y.",
-        "Wei, W.",
-        "Wang, Z.",
-        "Li, K."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.18.759908",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.18.759908.full.pdf",
-      "doi": "10.64898/2026.10.18.759908",
-      "venue": "bioinformatics",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 8.23,
+      "score": 9.38,
       "matched_topics": [
         "大语言模型"
       ],
@@ -899,100 +366,37 @@
         "large-language-models"
       ],
       "matched_terms": [
-        "language model agent",
         "large language model"
       ],
       "score_breakdown": {
-        "大语言模型": 5.7,
-        "领域上下文": 0.5,
-        "新鲜度": 1.03
+        "大语言模型": 7.0,
+        "新鲜度": 1.38
       },
       "category_scores": {
-        "large-language-models": 8.23
+        "large-language-models": 9.38
       },
       "summary": {
-        "takeaway": "提出将领域约束分析技能与调用级执行契约相结合的LLM代理方法，并在猪基因组育种代理PigGPA中实现，使声明参数与实际执行参数完全一致。",
-        "methods": "在四个基因组分析任务上比较通用代理的重复会话一致性；用SHA-256哈希将每次工具调用与执行前参数声明绑定，再核对命令行参数与执行记录；PigGPA整合统计遗传学、基于序列的功能预测和多组学注释，并与既有软件结果比较。",
-        "relevance": "直接关联大语言模型主题，关注LLM代理在科学计算中的可重复性与工具执行验证。",
-        "caveat": "摘要仅报告四个基准任务及猪育种单一应用场景，未说明任务选取的代表性、跨其他领域的外推能力或执行契约带来的额外开销。"
+        "takeaway": "通过匹配 72,644 篇 bioRxiv 预印本与正式发表版本，发现摘要核心主张在预印本到发表过程中总体保持稳定。",
+        "methods": "按 DOI 匹配预印本与期刊论文；用 Claude Sonnet 4.6 从摘要提取一个主要主张和至多两个次要主张，比较内容变化程度与措辞谨慎度变化；4 名评分者对 550 对子集独立标注，模型与评分者一致性 kappa=0.69。",
+        "relevance": "关联大语言模型主题，展示 LLM 用于大规模科研文本主张提取与变迁分析。",
+        "caveat": "结论限于最终被发表的 bioRxiv 预印本，未发表的预印本不在分析范围；主张提取依赖 LLM，标注一致性低于人工评分者间一致性，且相关性分析不构成因果结论。"
       },
       "summary_mode": "openai"
     },
     {
-      "id": "biorxiv:10.64898/2026.08.16.744525",
-      "title": "Relational Graph Convolutional Networks for Glioblastoma Biomarker Discovery via ceRNA and Copy Number Variation Analysis",
-      "abstract": "Glioblastoma (GBM) is a highly aggressive brain tumor with a five-year survival rate of 6.9%, attributable in substantial part to the shortage of reliable biomarkers. Competing endogenous RNA (ceRNA) and copy number variation (CNV) analyses each carry biomarker-identification potential, but existing work treats them separately and does not integrate multiple regulatory mechanisms. We therefore applied relational graph convolutional networks (RGCNs) to ceRNA and CNV knowledge graphs under a late-fusion ensemble architecture. Across 10-fold cross-validation the RGCN discriminated best among the graph architectures tested (AUCROC 0.874 {+/-} 0.070), significantly exceeding graph convolutional, graph attention and relational attention networks. Combining the ceRNA and CNV branches at the decision level gave the best overall performance (AUCROC 0.883 {+/-} 0.072; PR-AUC 0.208 {+/-} 0.152) and improved on the ceRNA-only model in precision--recall terms, although that improvement does not survive correction for multiple comparisons and we therefore report it as suggestive. Screening the late-fusion ranking against the existing glioma literature left five candidates that are absent from the curated glioblastoma biomarker set and the subject of at most one prior glioma report, among them hsa-miR-203b and hsa-miR-5683, each differentially expressed by more than fivefold on a log_2 scale. All five are computational predictions. Relational graph learning over a ceRNA network, combined with genomic dosage at the decision level, is thus a workable framework for biomarker prioritization, and the five loci give targeted experimental work a place to start.",
+      "id": "biorxiv:10.64898/2026.09.11.750704",
+      "title": "Discrete synaptic states and context-modulated readouts support continual learning",
+      "abstract": "Biological neural systems learn new behaviors while retaining earlier ones, whereas sequentially trained artificial networks often overwrite parameters and forget previously learned behaviors. We introduce the Context-modulated Synaptic-states Recurrent Neural Network (CoSyn-RNN), a new continual-learning model inspired by heterogeneous synaptic states and neuromodulatory control. CoSyn-RNN combines sparse recurrent allocation with a discrete protection rule: after each task, recurrent neurons whose synaptic weights cross a fixed threshold form a task-specific neuron group, and their associated parameters enter a protected state during later learning. A neuron-specific gain and a task-cued mask over a fixed base readout control how recurrent activity contributes to behavior. Across various task sequences consisting of many cognitive tasks, training and validation losses and accuracies were maintained throughout learning. The protection rule produced modular, task-ordered recurrent structure compatible with forward reuse of earlier computations. Pairwise recruitment measurements further defined minimum- and maximum-cost curricula that produced markedly different final recurrent structures and different remaining capacity for future learning. Thus, CoSyn-RNN provides a biologically inspired model in which protected synaptic states, sparse allocation, and context-dependent modulation support continual learning.",
       "authors": [
-        "Khandelwal, S.",
-        "Zhan, J.",
-        "Jarvis, N."
+        "Gao, Y.",
+        "Mihalas, S.",
+        "Turcu, D."
       ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.16.744525",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.08.16.744525.full.pdf",
-      "doi": "10.64898/2026.08.16.744525",
-      "venue": "bioinformatics",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 8.03,
-      "matched_topics": [
-        "知识图谱"
-      ],
-      "matched_categories": [
-        "knowledge-graphs"
-      ],
-      "matched_terms": [
-        "knowledge graph",
-        "knowledge graphs"
-      ],
-      "score_breakdown": {
-        "知识图谱": 6.0,
-        "新鲜度": 1.03
-      },
-      "category_scores": {
-        "knowledge-graphs": 8.03
-      },
-      "summary": {
-        "takeaway": "在ceRNA与CNV知识图谱上应用关系图卷积网络并以晚期融合集成，用于胶质母细胞瘤生物标志物优先级排序，并给出五个待实验验证的计算候选。",
-        "methods": "构建ceRNA和CNV知识图谱，比较RGCN与GCN、GAT、关系注意力网络，采用10折交叉验证和决策级晚期融合；将排序结果与现有胶质瘤文献及 curated 生物标志物集比对。",
-        "relevance": "关联知识图谱主题，展示图学习在生物医学知识图谱上的生物标志物发现应用。",
-        "caveat": "融合模型相对ceRNA单模型的精确率-召回率提升未通过多重比较校正，仅属提示性；五个候选均为计算预测，未经实验验证，且附带效应量较大但需独立确认。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.10.18.759043",
-      "title": "NeuroPilot: Longitudinal intravital neural imaging across scales and modalities through an agentic platform",
-      "abstract": "Longitudinal intravital imaging is essential for understanding how neural populations evolve across behavioral states, yet converting large-scale recordings into biological insight remains a fundamental challenge because neural signals are degraded by noise, non-rigid motion, and heterogeneous recording conditions. Here we introduce NeuroPilot, an agentic framework that transforms neural imaging analysis into a closed-loop, context-aware process, integrating a multimodal large language model with callable computational imaging modules to adaptively coordinate workflows from raw recordings to population-level readouts. Across heterogeneous imaging and experimental regimes, NeuroPilot restores motion-degraded recordings and supports consistent neural signal recovery, detection, and tracking in challenging deep-brain, freely moving, and longitudinal settings. These enable neuronal population tracking across spinal stimulation paradigms, deep-brain imaging, and continuous 24-hour mPFC recordings aligned with spontaneous sleep-wake behavior. By converting heterogeneous intravital recordings into stable population activity maps, NeuroPilot supports behavioral decoding and reveals structured neural dynamics across behavioral states and transitions. NeuroPilot establishes a scalable agentic paradigm for neural imaging analysis, expanding experimental access to the measurement, visualization, and interpretation of neural population activity.",
-      "authors": [
-        "Zhang, G.",
-        "Luo, Y.",
-        "Ju, F.",
-        "Liu, D.",
-        "Zhang, D.",
-        "Guo, C.",
-        "Han, J.",
-        "Qiu, S.",
-        "Wang, T.",
-        "Wang, J.",
-        "Ma, M.",
-        "Li, B.",
-        "Jiang, Y.",
-        "Wei, P.",
-        "Liu, X.",
-        "Chi, N.",
-        "Li, Z."
-      ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.18.759043",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.18.759043.full.pdf",
-      "doi": "10.64898/2026.10.18.759043",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.11.750704",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.09.11.750704.full.pdf",
+      "doi": "10.64898/2026.09.11.750704",
       "venue": "neuroscience",
       "source": "bioRxiv",
       "citation_count": 0,
@@ -1000,51 +404,149 @@
       "also_seen_in": [
         "bioRxiv"
       ],
-      "score": 7.88,
+      "score": 9.38,
       "matched_topics": [
-        "大语言模型",
-        "多模态学习"
+        "持续学习"
       ],
       "matched_categories": [
-        "large-language-models",
-        "multimodal-learning"
+        "continual-learning"
       ],
       "matched_terms": [
-        "large language model",
-        "multimodal large language model"
+        "continual learning"
       ],
       "score_breakdown": {
-        "大语言模型": 2.85,
-        "多模态学习": 3.0,
-        "新鲜度": 1.03
+        "持续学习": 7.0,
+        "新鲜度": 1.38
       },
       "category_scores": {
-        "large-language-models": 4.88,
-        "multimodal-learning": 5.03
+        "continual-learning": 9.38
       },
       "summary": {
-        "takeaway": "提出NeuroPilot代理框架，将多模态大语言模型与可调用计算成像模块结合，把神经成像分析组织为闭环、上下文感知流程。",
-        "methods": "集成多模态LLM与可调用计算成像模块，在多种成像与实验条件下处理噪声、非刚性运动及异质记录，完成运动校正、信号恢复、检测与追踪，并用于脊髓刺激、深脑成像和24小时mPFC记录。",
-        "relevance": "同时关联大语言模型与多模态学习，体现代理式多模态系统在生物成像分析中的工作流协调。",
-        "caveat": "摘要未给出量化性能指标或与现有方法的系统比较，也未说明失败模式、计算成本及在不同实验室数据上的泛化程度。"
+        "takeaway": "提出受异质性突触状态与神经调质控制启发的 CoSyn-RNN，通过离散保护规则与上下文调制读出支持持续学习，避免顺序训练中的灾难性遗忘。",
+        "methods": "结合稀疏循环分配与离散保护规则：任务后跨过固定阈值的循环神经元形成任务特异神经元组并在后续学习中受保护；用神经元特异增益与任务线索掩码控制固定基础读出；在多任务序列上评估损失与准确率，并测量神经元募集以定义最小与最大成本课程。",
+        "relevance": "直接对应持续学习主题，提供受生物启发的可塑性保护与模块化结构设计。",
+        "caveat": "摘要仅报告认知任务序列上的训练与验证表现，未说明与主流持续学习方法的系统比较，也未涉及真实神经数据验证。"
       },
       "summary_mode": "openai"
     },
     {
-      "id": "biorxiv:10.64898/2026.10.17.759791",
-      "title": "A Mechanistic Theory Unifying Value and Schema in the Prefrontal Cortex",
-      "abstract": "Animals exhibit behavioural flexibility by making reward-optimal decisions in unfamiliar situations. Computing value from minimal reward feedback requires leveraging known structure in the world. The Prefrontal Cortex (PFC) plays a pivotal role in both value computation and learning world structure, however mechanistic explanations for each---within the frameworks of Reinforcement Learning and Cognitive Maps---are largely distinct. We develop a mechanistic model of PFC that unifies value and structure through behavioural flexibility. In this model, value acts as a control signal that gates structured working memory representations of the current context in order to ultimately control behaviour. This is a significant departure from the conventional perspective of value, in which it is used for action readout. Critically, this model generalises to novel contexts without the need for additional synaptic plasticity. We demonstrate that recurrent neural networks (RNNs) meta-trained with either reinforcement learning or supervised learning recapitulate this exact model on various value-based tasks. These results not only provide a parsimonious explanation of both the value and schema frameworks of PFC function, but also propose a new mechanistic interpretation of the role of PFC in flexible decision making.",
+      "id": "biorxiv:10.64898/2026.10.19.760276",
+      "title": "A genomic foundation model for interpreting human genetic diversity",
+      "abstract": "Interpreting human genomes requires models that recognize shared biological functions while accounting for variation underlying traits, disease susceptibility and adaptation. Here we present hEVO, a genomic foundation model trained on 4.784 billion distinct haplotype sequences reconstructed from whole genome sequencing (WGS) data for 63,809 individuals selected from 550,237 samples across eight cohorts. Pretraining integrates shared sequence features and naturally occurring allelic differences without clinical or functional labels. Against representatives of the Evo 2, NT, GPN and other genomic model families, hEVO ranked first in 18 of 19 primary comparisons spanning functional annotation, variant interpretation and human evolution. Its pretrained allele scores generalized across all six complementary variant benchmarks without task-specific training, achieving the highest performance across clinical pathogenicity, fine-mapped causal variants and experimentally measured regulatory effects. Retrospective ClinVar reclassification further demonstrated improved identification of pathogenic classifications later downgraded, supporting reassessment of earlier clinical interpretations. Predictive strengths extended to ancestry inference, human accelerated sequences and preference for reported selected alleles. This breadth was achieved with substantially fewer parameters than billion-parameter comparators and low inference overhead in the evaluated workloads. These findings establish human haplotype diversity as a source of transferable biological information for interpreting both the disruption of genome function and the variation retained during human evolution.",
       "authors": [
-        "Warren, J.",
-        "Jensen, K. T.",
-        "Behrens, T.",
-        "Whittington, J. C."
+        "Xu, Q.",
+        "Wu, Z.",
+        "Dong, M.",
+        "Bao, T.",
+        "ng, W.",
+        "Huang, X.",
+        "Yang, H.",
+        "Zhou, Y.",
+        "Yi, X.",
+        "Zhang, S.",
+        "Huang, D.",
+        "Sham, P. C.",
+        "Zhou, W.",
+        "Li, M. J."
       ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.17.759791",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.17.759791.full.pdf",
-      "doi": "10.64898/2026.10.17.759791",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.19.760276",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.19.760276.full.pdf",
+      "doi": "10.64898/2026.10.19.760276",
+      "venue": "genomics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.38,
+      "matched_topics": [
+        "预训练"
+      ],
+      "matched_categories": [
+        "pretraining"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "pretraining"
+      ],
+      "score_breakdown": {
+        "预训练": 7.0,
+        "新鲜度": 1.38
+      },
+      "category_scores": {
+        "pretraining": 9.38
+      },
+      "summary": {
+        "takeaway": "提出人类单倍型基因组基础模型 hEVO，在功能注释、变异解读和人类进化等19项主要比较中18项排名第一，且参数量显著少于十亿级参数对比模型。",
+        "methods": "从8个队列550,237份样本中选取63,809名个体的WGS数据，重建47.84亿条单倍型序列进行无监督预训练，并与 Evo 2、NT、GPN 等模型族比较，在六个变异基准上零样本评估。",
+        "relevance": "直接对应预训练主题：展示以人类遗传多样性为语料的基因组基础模型如何获得可迁移的生物学表征，为预训练数据的组成与规模选择提供参考。",
+        "caveat": "摘要未报告参数量的具体数值、推理开销的量化指标及基准数据集的组成细节，性能优势的统计显著性亦未说明。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.03.03.709333",
+      "title": "Leveraging the joint site frequency spectrum to detect genomic regions of early divergence",
+      "abstract": "Detecting genomic loci underlying local adaptation is a central goal in population genetics. Such loci have been discovered using a variety of approaches, but the statistical performance of these approaches can depend substantially on the frequencies of the alleles underlying phenotypic adaptation. In particular, multiple evolutionary modeling studies have shown that rare alleles of large effect can make substantial contributions to phenotypic variance and potentially adaptive divergence, but most selection inference methods are not sensitive to rare alleles. We used simulations of evolutionary divergence to compare commonly-used FST scans to a likelihood-based approach that interrogates the whole frequency spectrum. We found that the likelihood-based approach outperforms FST in simulations in which low frequency alleles play a substantial role in driving trait divergence. We applied both approaches to genomic data from Ostrinia nubilalis (the European Corn Borer), a species in which population-specific variation in circannual rhythms and mate preference phenotypes have driven recent reproductive isolation. The likelihood-based approach recovers previously discovered genomic loci and finds several new candidate regions that may be relevant for reproductive isolation between populations. Our findings demonstrate how the two-dimensional frequency spectrum may help to identify loci contributing to reproductive isolation in contexts when commonly used methods are less powerful.",
+      "authors": [
+        "Calderon, A.",
+        "Kozak, G. M.",
+        "Uricchio, L."
+      ],
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.03.03.709333",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.03.03.709333.full.pdf",
+      "doi": "10.64898/2026.03.03.709333",
+      "venue": "evolutionary biology",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.18,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 6.8,
+        "新鲜度": 1.38
+      },
+      "category_scores": {
+        "large-language-models": 9.18
+      },
+      "summary": {
+        "takeaway": "基于联合位点频率谱的似然方法在低频等位基因驱动性状分化的模拟中优于 FST 扫描，并在欧洲玉米螟数据中召回已知位点与新候选区域。",
+        "methods": "通过进化分化模拟比较常用 FST 扫描与全频率谱似然方法，随后将两者应用于 Ostrinia nubilalis 的基因组数据。",
+        "relevance": "摘要-matched_topic 标注的“检索增强与对齐”仅属主题匹配层面的关联，实质内容为群体遗传学选择信号检测方法比较，与检索增强或对齐方法无直接技术关联。",
+        "caveat": "模拟设定与真实数据的效应量未知；新候选区域仅被提出，摘要未表明已获独立实验验证；与所标注主题的实际关联较弱。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.07.757440",
+      "title": "Computational Evaluation of tDCS Montage Separability and Dose Coverage for Practice-Specific Mindfulness Experiments",
+      "abstract": "A practice-specific stimulation experiment requires candidate montages that differ in regional electric-field exposure without sacrificing interpretable target dose. We evaluated this requirement for transcranial direct current stimulation (tDCS) montages intended to test focused-attention and open-monitoring mindfulness practices. Four focused-attention candidates and six open-monitoring candidates formed 24 pairs, evaluated with SimNIBS 4.6 in 20 existing anatomical head models at a linearly scaled current of 2 mA. Outcomes were regional 99th-percentile field magnitude, a normalized double-dissociation index (DDI), suprathreshold overlap, and individual dose coverage. Eighteen pairs passed four recorded progression criteria, but only five also met a post hoc requirement that both intended regional contrasts be positive in at least 80% of heads. A positive DDI alone concealed a reversed salience-region contrast in one conventional comparison. The nominated F3-centered 4-by-1 ring paired with F8-Fp2 sponges (FA-05 x OM-02) produced both directional preferences in 20/20 heads, with median DDI 1.561 and median suprathreshold Dice 0.000. The conventional F3-Fp2 and FT8-FCz sponge pair (FA-02 x OM-07) produced both preferences in 19/20 heads, with DDI 0.627 and Dice 0.186. Both anatomical targets reached the operational 0.20 V/m floor in 11/20 versus 20/20 heads, respectively. ROAST 4.0, with ring placement held fixed, supported both nominations but exposed dose disagreement. Across conductivity sensitivity draws, directional separability persisted more consistently than absolute dose. These results establish a regional separability-dose trade-off within the tested candidate set and show why a summed contrast cannot substitute for a directional conjunction. They support selection of a discriminating experiment, not whole-network selectivity, physiological efficacy, or a validated treatment.",
+      "authors": [
+        "Bruschi, D. L.",
+        "Schiavi, A.",
+        "Joseph, I."
+      ],
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.07.757440",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.07.757440.full.pdf",
+      "doi": "10.64898/2026.10.07.757440",
       "venue": "neuroscience",
       "source": "bioRxiv",
       "citation_count": 0,
@@ -1052,33 +554,276 @@
       "also_seen_in": [
         "bioRxiv"
       ],
-      "score": 7.58,
+      "score": 9.18,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 6.8,
+        "新鲜度": 1.38
+      },
+      "category_scores": {
+        "large-language-models": 9.18
+      },
+      "summary": {
+        "takeaway": "在20个解剖头模型中评估 tDCS 蒙太奇的可分离性与剂量覆盖，发现区域可分离性与绝对剂量之间存在权衡，且单一 DDI 指标可能掩盖对比方向反转。",
+        "methods": "用 SimNIBS 4.6 在20个已有头模型中以2 mA评估4种聚焦注意与6种开放觉察候选蒙太奇的24种配对，指标包括区域99百分位场强、归一化双重解离指数、超阈值重叠和个体剂量覆盖，并用 ROAST 4.0 与电导率敏感性抽样复核。",
+        "relevance": "摘要-matched_topic 标注为“检索增强与对齐”，但研究实质是神经调控计算建模，与检索增强或对齐方法无技术关联。",
+        "caveat": "仅为计算模拟，作者明确声明不支持全网络选择性、生理有效性或已验证疗效；头模型数量有限，剂量结论依赖电导率假设。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.13.758966",
+      "title": "Decision benchmarking reveals when protein foundation models add experimental value",
+      "abstract": "Protein engineering is shifting from model-based variant scoring to deciding what to measure next. This exposes a limitation of fixed-dataset benchmarks, which rank predictors without showing when their advantage survives as evidence accumulates. We therefore introduce decision benchmarking across 217 ProteinGym assays, 2.47 million variants and 95 predictors to evaluate whether models and measurements improve decisions at matched cost. Zero-shot accuracy explained less than one-fifth of the variation in discovery after calibration. Calibrated priors exceeded budget-matched additivity at 20-100 measurements, but the advantage narrowed as component measurements accumulated. Measured additivity then overtook zero-shot models after 50-100 measurements for top-variant discovery and around 500 for global ranking. The same principle showed that double-mutant measurements improved prediction in models using mutation identity, whereas prediction-guided acquisition improved discovery. Evidence-based routing improved strategy selection. Decision benchmarking thus identifies which strategy adds value given the information already available and the decision that follows.",
+      "authors": [
+        "Ding, W.",
+        "Lu, C.",
+        "Li, Y.",
+        "Gong, H.",
+        "Wang, Z."
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758966",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758966.full.pdf",
+      "doi": "10.64898/2026.10.13.758966",
+      "venue": "bioengineering",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.03,
+      "matched_topics": [
+        "预训练"
+      ],
+      "matched_categories": [
+        "pretraining"
+      ],
+      "matched_terms": [
+        "foundation model"
+      ],
+      "score_breakdown": {
+        "预训练": 7.0,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "pretraining": 9.03
+      },
+      "summary": {
+        "takeaway": "提出决策基准测试，表明在匹配成本下预测模型并不总优于实测策略，优势随累积测量数变化，零样本准确率对发现过程的解释力有限。",
+        "methods": "覆盖217个 ProteinGym 实验、247万变异和95个预测器，以匹配成本下的决策质量评估模型与测量策略，比较校准先验、加性测量与零样本模型等。",
+        "relevance": "对应预训练主题：为评估蛋白质基础模型的实际效用提供决策导向框架，提示固定数据集排名不足以反映模型在实验流程中的价值。",
+        "caveat": "结论基于 ProteinGym 实验体系，是否外推到其他蛋白工程场景未在摘要中说明；各策略优劣的量化边界依赖具体成本设定。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.19.760098",
+      "title": "What does domain-specific pretraining buy? A 170,000-parameter plant peptide language model against the ESM-2 scaling curve",
+      "abstract": "Small signalling peptides (SSPs) coordinate development and stress response in plants, and the computational tools that identify them represent sequences using general-purpose protein language models trained across all known proteins. How much a representation learned on the SSP sequence space itself is worth, measured against generalist embeddings of varying size, has not to our knowledge been quantified. We pretrain PhytoPepBERT, a 169,567-parameter masked language model implemented from scratch with no deep-learning framework, on 1,469 plant SSP precursors retrieved from UniProtKB spanning five peptide families (RALF, PSK, CLE, PEP, RGF) and a length-matched negative class of non-SSP plant proteins. Sequences are clustered at 70% alignment identity and every cross-validation fold is grouped by cluster, so no homologue of a held-out sequence appears in training. Domain pretraining is worth a great deal relative to where it starts. Family classification by k-nearest neighbours over frozen embeddings reaches 85.2% +/- 2.4% against 58.0% +/- 4.3% for an architecturally identical, identically initialised untrained backbone (chance 16.7%), and against 75.1% for dipeptide composition and 67.6% for BLOSUM62. The advantage is largest where the backbone stays frozen: linear probing gives 82.9% against 67.6% untrained, while full fine-tuning narrows the gap to 85.4% against 83.6%. Masked-residue accuracy is 20.5% against 3.4% untrained, elevated across all five peptide families and lowest on the non-SSP negatives. Benchmarked against ESM-2 at four scales under an identical protocol, those 169,567 domain-pretrained parameters buy approximately what 7.5M generalist parameters buy: PhytoPepBERT ties esm2_t6_8M_UR50D (86.1% +/- 2.8\\%, two of five paired folds) and is overtaken thereafter, by 2.5 points at 35M, 7.0 at 150M and 11.6 at 650M, losing every paired fold above the smallest checkpoint. TAPE, the second representation the reference pipeline uses, leads by 3.6 points at 92M. Generalist scale therefore continues to pay on this task well beyond the point where a domain model of this size can follow. We report an exchange rate rather than a victory: domain pretraining delivers roughly a forty-fold parameter efficiency against the generalist curve, and nothing beyond it.",
+      "authors": [
+        "Vomo-Donfack, K. L.",
+        "Aberbache, M.",
+        "Cantez, A.",
+        "Hoszu, A.",
+        "Ginot, G.",
+        "Gonzalez Doblas, V.",
+        "Morilla, I."
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.19.760098",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.19.760098.full.pdf",
+      "doi": "10.64898/2026.10.19.760098",
+      "venue": "plant biology",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.03,
+      "matched_topics": [
+        "预训练"
+      ],
+      "matched_categories": [
+        "pretraining"
+      ],
+      "matched_terms": [
+        "pretraining"
+      ],
+      "score_breakdown": {
+        "预训练": 7.0,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "pretraining": 9.03
+      },
+      "summary": {
+        "takeaway": "从头预训练169,567参数的植物小信号肽语言模型 PhytoPepBERT，其冻结表征在家族分类上接近7.5M参数的 ESM-2，但在更大通用模型下被超越，约体现四十倍参数效率。",
+        "methods": "在1,469条 UniProtKB 植物 SSP 前体及长度匹配负类上预训练掩码语言模型，按70%同一性聚类并做按簇分组的交叉验证，与未训练同架构骨架、二肽组成、BLOSUM62 及四个规模的 ESM-2 和 TAPE 比较。",
+        "relevance": "直接对应预训练主题：定量回答领域特定预训练相对通用模型缩放曲线的价值边界，并采用严格同源分组避免数据泄漏。",
+        "caveat": "任务为五个肽家族的分类，语料规模小；作者自述为参数效率的“汇率”而非优越性；结果可能限于该任务与数据分布。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.13.758998",
+      "title": "Optimising neural contrast and minimising tissue shrinkage in dragon lizard brains: buffered Lugol's iodine versus phosphotungstic acid for contrast-enhanced μCT",
+      "abstract": "Contrast-enhanced micro-computed tomography (CT) has become a valuable tool for addressing neuroanatomical questions that previously required destructive histology. As a relatively new technique, it remains subject to ongoing technical refinement, and taxon- and tissue-specific protocol optimisation. We evaluated the performance of two common contrast-enhancing agents, buffered Lugol's iodine and phosphotungstic acid (PTA) in aqueous solution, for CT visualisation of the nervous system in the Jacky dragon lizard, Amphibolurus muricatus by comparing staining time, contrast specificity and brain tissue shrinkage evaluated at three concentrations (1.25%, 2.5% and 5%). Buffered Lugol's iodine outperformed aqueous PTA by requiring shorter staining times (as short as four days) and providing better white matter-grey matter differentiation, whereas PTA required longer incubation periods of approximately three weeks and produced poorer white-grey matter differentiation. Importantly, buffered Lugol's iodine produced higher brain-to-endocast occupancy estimates than aqueous PTA, suggesting substantially reduced tissue shrinkage. PTA-treated specimens exhibited an estimated 13.3% reduction in occupancy and approximately 20% greater brain tissue shrinkage than buffered Lugol's-treated specimens. Together, these findings demonstrate that buffered Lugol's iodine staining provides the high level of internal tissue contrast required to resolve fine-scale neuroanatomical organisation in three dimensions, preserves the spatial relationships among anatomical structures, and reduces artefacts, all of which result in a closer correspondence between the brain and endocranial cavity. From a practical perspective, the study provides guidance for contrast agent selection in future CT studies and reveals that buffered Lugol's iodine is better suited to fine-scale neuroanatomical, volumetric and geometric morphometric analyses, whereas PTA is advantageous for applications prioritising general soft-tissue or musculoskeletal visualisation.",
+      "authors": [
+        "Navea, F.",
+        "Black, J. R.",
+        "Dissanayake, D. S. B.",
+        "Whiteley, S. L.",
+        "Kerr, C. C.",
+        "Collin, S. P.",
+        "Crowe-Riddell, J. M."
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758998",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.13.758998.full.pdf",
+      "doi": "10.64898/2026.10.13.758998",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.83,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 6.8,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "large-language-models": 8.83
+      },
+      "summary": {
+        "takeaway": "在杰克龙蜥脑部对比增强微CT中，缓冲 Lugol 碘液较水溶液 PTA 染色更快、白灰质对比更好且组织收缩更小。",
+        "methods": "在 Amphibolurus muricatus 中比较缓冲 Lugol 碘液与水性 PTA 在1.25%、2.5%、5%三种浓度下的染色时间、对比特异性和脑组织收缩，以脑-内模占位率估计收缩。",
+        "relevance": "摘要-matched_topic 标注为“检索增强与对齐”，但内容为成像染色方案优化，与检索增强或对齐无技术关联。",
+        "caveat": "单物种、样本量未在摘要中说明；收缩估计基于占位率间接推断；结论限于该物种与所测浓度范围。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.13.759017",
+      "title": "Beyond Mean Pooling: Statistical Meta-Aggregation for Subject-Level EEG Classification in Parkinson's Disease",
+      "abstract": "Electroencephalography (EEG) provides a non-invasive, temporally precise tool for studying neural alterations associated with Parkinson's disease (PD). When labels are defined at the subject level but inputs are epoch level, a key design choice is how epoch-wise predictions are aggregated to a single subject-level decision. Most prior work uses mean pooling, which assumes all epochs contribute equally and independently. This study proposes a statistical meta-aggregation strategy that represents each subject by 14 descriptors of the epoch-wise prediction distribution, including measures of central tendency, dispersion, shape, and high-confidence concentration. Using a self-supervised contrastive encoder trained on task-evoked EEG from the Simon conflict task, and a sample of 90 subjects including 57 PD and 33 control, this work evaluates the proposed framework under subject-wise five-fold cross-validation. Replacing mean pooling with statistical meta-aggregation lifts subject-level ROC-AUC from 0.655 to 0.872 for logistic regression and from 0.724 to 0.840 for support vector machines, without modifying the encoder or the classifier family. Averaging predictions across three independent self-supervised pretraining seeds yields competitive performance and improved balanced accuracy. These results suggest that, in this dataset, the way epoch-level predictions are summarized at the subject level has a substantial effect on final PD classification performance.",
+      "authors": [
+        "Taghipour Langrodi, P.",
+        "Khodadadi, A.",
+        "Rezaei, F.",
+        "Anvarian, Z.",
+        "Sotero, R. C.",
+        "Madadi, S."
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.13.759017",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.13.759017.full.pdf",
+      "doi": "10.64898/2026.10.13.759017",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 7.28,
       "matched_topics": [
         "检索增强与对齐",
-        "强化学习"
+        "预训练"
       ],
       "matched_categories": [
         "large-language-models",
-        "reinforcement-learning"
+        "pretraining"
       ],
       "matched_terms": [
         "RAG",
-        "reinforcement learning"
+        "pretraining"
       ],
       "score_breakdown": {
         "检索增强与对齐": 2.55,
-        "强化学习": 3.0,
+        "预训练": 2.7,
         "新鲜度": 1.03
       },
       "category_scores": {
         "large-language-models": 4.58,
-        "reinforcement-learning": 5.03
+        "pretraining": 4.73
       },
       "summary": {
-        "takeaway": "提出一个机制模型，将PFC中的价值计算与结构化世界模型统一：价值作为控制信号门控当前情境的工作记忆表征，而非直接用于动作读出。",
-        "methods": "构建机制模型并在多种价值任务上训练；用强化学习或监督学习元训练的循环神经网络复现该模型行为，检验其无需额外突触可塑性即可泛化到新情境。",
-        "relevance": "关联强化学习与检索增强/对齐主题，涉及PFC功能、价值学习与结构化表征的机制解释。",
-        "caveat": "摘要为理论与计算建模结果，未提供实验神经数据验证；模型的生物学可实现性及对更复杂任务的适用性未在摘要中说明。"
+        "takeaway": "用14个描述epoch级预测分布特征的统计元聚合替代均值池化，在帕金森病被试级 EEG 分类中显著提升 ROC-AUC。",
+        "methods": "基于 Simon 冲突任务 EEG 的自监督对比编码器，90名被试（57例PD、33例对照），被试级五折交叉验证，比较均值池化与统计元聚合在逻辑回归和 SVM 下的表现，并测试三个预训练种子的集成。",
+        "relevance": "同时涉及预训练与聚合对齐：说明自监督预训练表征之上，epoch 到被试级的汇总方式对最终决策影响很大。",
+        "caveat": "样本量小且为单一数据集与单一任务，未做外部验证；提升幅度可能部分源于该数据集的特定分布。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.19.760045",
+      "title": "Virtual lineages: in silico lineage tracing from single-cell and spatial transcriptomes",
+      "abstract": "Experimental lineage tracing reveals histories and fates of individual cells but is costly and often impractical, particularly in primary human tissues. Gene expression differences that persist across cell divisions provide a basis for inferring ancestry from more accessible single cell transcriptomes, yet accurate lineage reconstruction remains challenging. Here, we introduce isCORAL, an in silico lineage-tracing framework that reconstructs clonal relationships and maps cell-fate dynamics from transcriptome snapshots alone. By identifying memory genes with heritable expression differences, isCORAL infers probabilistic clonal relationships and uses them to construct clone-oriented embeddings and dynamic cell-fate maps. Across diverse lineage-tracing datasets, isCORAL markedly outperforms tested alternatives in both memory-gene identification and lineage reconstruction. We use isCORAL to resolve early fate biases among transcriptionally similar hematopoietic stem cells and predict distinct developmental routes to shared outcomes. We extend isCORAL to spatial transcriptomics, validating inferred clonal relationships against an experimentally recorded lineage tree in mouse tumors and inferring early epiblast and amnion dynamics in a human embryo. Together, isCORAL enables lineage-resolved studies of development and disease from standard single cell and spatial transcriptomes, and provides an explicit representation of lineage memory for future virtual cell models.",
+      "authors": [
+        "Lin, Y.",
+        "Lin, Y."
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.19.760045",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.19.760045.full.pdf",
+      "doi": "10.64898/2026.10.19.760045",
+      "venue": "systems biology",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 7.03,
+      "matched_topics": [
+        "虚拟细胞"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "virtual cell"
+      ],
+      "score_breakdown": {
+        "虚拟细胞": 3.0,
+        "领域上下文": 2.0,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "bio-computing": 7.03
+      },
+      "summary": {
+        "takeaway": "提出从单细胞与空间转录组快照推断克隆关系的框架 isCORAL，在记忆基因识别和谱系重建上优于所测替代方法，并扩展到空间数据与人类胚胎。",
+        "methods": "识别具有可遗传表达差异的记忆基因，推断概率化克隆关系，构建克隆导向嵌入与动态细胞命运图；在多个谱系追踪数据集上比较，并在小鼠肿瘤实验谱系树和人类胚胎数据中验证。",
+        "relevance": "对应虚拟细胞主题：为虚拟细胞模型提供显式的谱系记忆表征，并支持从常规转录组做谱系分辨研究。",
+        "caveat": "依赖记忆基因信号的可检测性，推断结果为概率性而非实验谱系；摘要仅报告在部分数据集上优于“所测替代方法”，未给出适用范围边界。"
       },
       "summary_mode": "openai"
     },
@@ -1107,7 +852,7 @@
       "also_seen_in": [
         "PubMed"
       ],
-      "score": 7.18,
+      "score": 6.83,
       "matched_topics": [
         "GRN / Regulon"
       ],
@@ -1120,86 +865,88 @@
       "score_breakdown": {
         "GRN / Regulon": 2.4,
         "领域上下文": 1.5,
-        "新鲜度": 2.08
+        "新鲜度": 1.73
       },
       "category_scores": {
-        "bio-computing": 7.18
+        "bio-computing": 6.83
       },
       "summary": {
-        "takeaway": "利用单细胞RNA测序发现，阿特拉津暴露与中脑多巴胺能神经元中多巴胺相关基因激活及自噬相关转录脆弱性相关，且黑质致密部比腹侧被盖区更敏感。",
-        "methods": "对暴露28天的成年雄性小鼠中脑组织进行scRNA-seq，每组3只；进行差异表达、程序性细胞死亡模块评分、亚群分析、拟时序轨迹和基因调控网络推断，并用免疫荧光验证Slc18a2与LC3B。",
-        "relevance": "关联GRN/Regulon主题，包含基因调控网络推断及细胞类型特异性转录响应分析。",
-        "caveat": "每组仅3只小鼠，属亚急性单一剂量暴露；Th-Atg5调控关系为计算推断，需实验验证；结论主要基于关联性转录证据。"
+        "takeaway": "单细胞RNA测序显示，阿特拉津暴露会重塑小鼠中脑多巴胺能神经元的转录谱，其中自噬相关特征增强，且黑质致密部比腹侧被盖区表现出更强的易损性。",
+        "methods": "对暴露于ATZ 28天的成年雄鼠中脑组织进行scRNA-seq（每组3只），比较多巴胺相关基因表达、程序性细胞死亡模块评分和亚群差异，并用伪时序轨迹分析和基因调控网络推断分析，再做免疫荧光验证。",
+        "relevance": "该研究利用单细胞转录组和基因调控网络推断，刻画多巴胺能神经元在环境暴露下的区域选择性转录易损性，与GRN/Regulon主题直接相关。",
+        "caveat": "样本量较小（每组3只），GRN中的Th-Atg5关系仅为计算推断，需实验验证；摘要未给出效应量或因果机制证据。"
       },
       "summary_mode": "openai"
     },
     {
-      "id": "biorxiv:10.64898/2025.12.01.691701",
-      "title": "Cognitive cartography of mammalian brains using meta-analysis of AI experts",
-      "abstract": "No individual mind can fully grasp the complexity of modern neuroscientific literature. Where human experts flag, the latest AI models excel. Here we show how frontier large language models can systematically and quantitatively summarise literature-wide neuroscientific knowledge about the cognitive functions and dysfunctions associated with each brain region. Meta-analysis of these AI experts reveals structure-function mappings to which existing meta-analytic frameworks are blind, demonstrated by causal manipulations including lesions and intracranial stimulation. It also unlocks the possibility of extending quantitative literature meta-analysis and decoding of brain maps to other model organisms beyond human. As proof-of-concept, we integrate LLM meta-analysis with species-specific transcriptomics and connectomics in human, macaque, and mouse, discovering that the human molecular circuit for cognition is evolutionarily conserved. Altogether, literature synthesis with AI experts can fundamentally catalyze neuroscientific discovery by overcoming the barrier of data aggregation from heterogeneous studies, finally bringing together a scattered literature to identify latent insights across disparate subfields, modalities, and species.",
+      "id": "pubmed:42910171",
+      "title": "Computational Prediction of the Therapeutic Mechanisms From the Turmeric-Pueraria-Coix Seed Botanical Formula in Rheumatoid Arthritis.",
+      "abstract": "Rheumatoid arthritis (RA) is characterized by progressive synovial inflammation and immune-metabolic reprogramming. The polyphenol-rich Turmeric-Pueraria-Coix seed (TPC) formula shows therapeutic potential against RA, though its multi-target mechanisms remain uncharacterized. To explore how TPC modulates ferroptosis and oxidative stress in RA, we integrated systems nutrition network analysis with multicohort transcriptomic datasets to identify candidate targets. Ensemble machine learning algorithms and independent cohort validation prioritized key biomarkers. Molecular dynamics (MD) simulations evaluated the dynamic behavior and interaction persistence of polyphenol-target complexes, and single-cell in silico overexpression and knockout analyses characterized the regulatory consequences of perturbing these targets within RA synovial networks. Analysis identified 85 bioactive phytochemicals in the TPC formula, forming a polyphenol-dominant matrix mapping to 40 RA targets. Algorithmic and cross-cohort prioritization isolated six core genes (ALOX5, CD38, CDK1, EZH2, MAPK8, and PTGS2) linked to RA synovial transcriptomic patterns, with varying predictive performance across external cohorts. SHAP analysis highlighted PTGS2, CD38, and MAPK8; however, MD simulations prioritized CD38 and MAPK8 as stable targets of coumestrol, whereas PTGS2 exhibited less dynamic stability. Single-cell perturbation analysis revealed similar regulatory responses following MAPK8 and PTGS2 modulation, whereas CD38 knockout produced a distinct network response. These findings link TPC-derived polyphenols to CD38/MAPK8 signaling and ferroptosis in RA, providing testable molecular hypotheses for experimental validation.",
       "authors": [
-        "Luppi, A. I.",
-        "Ali, H.",
-        "Liu, Z.-Q. I.",
-        "Milisav, F.",
-        "Sala, A.",
-        "Annen, J.",
-        "Gozzi, A.",
-        "Bzdok, D.",
-        "Misic, B."
+        "Weiya Lan",
+        "Qianwei Lu",
+        "Xudong Rui",
+        "Ke Li",
+        "Chaoji Su",
+        "Qiang Su",
+        "Yanchang Huang",
+        "Run Shi",
+        "Wei Chen",
+        "Fang Tang"
       ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2025.12.01.691701",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2025.12.01.691701.full.pdf",
-      "doi": "10.64898/2025.12.01.691701",
-      "venue": "neuroscience",
-      "source": "bioRxiv",
+      "published": "2026-10-23",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42910171/",
+      "pdf_url": "",
+      "doi": "10.1002/fsn3.72503",
+      "venue": "Food science & nutrition",
+      "source": "PubMed",
       "citation_count": 0,
       "influential_citation_count": 0,
       "also_seen_in": [
-        "bioRxiv"
+        "PubMed"
       ],
-      "score": 5.88,
+      "score": 6.78,
       "matched_topics": [
-        "大语言模型"
+        "单细胞扰动"
       ],
       "matched_categories": [
-        "large-language-models"
+        "bio-computing"
       ],
       "matched_terms": [
-        "large language model"
+        "single-cell perturbation"
       ],
       "score_breakdown": {
-        "大语言模型": 2.85,
-        "领域上下文": 1.0,
-        "新鲜度": 1.03
+        "单细胞扰动": 3.0,
+        "领域上下文": 0.5,
+        "新鲜度": 2.08
       },
       "category_scores": {
-        "large-language-models": 5.88
+        "bio-computing": 6.78
       },
       "summary": {
-        "takeaway": "展示前沿大语言模型可系统定量汇总文献中脑区与认知功能/功能障碍的映射，并整合物种特异性转录组与连接组数据。",
-        "methods": "对AI专家进行文献元分析，构建脑区-功能映射；结合病变和颅内刺激等因果操作证据；将LLM元分析与人、猕猴和小鼠的转录组及连接组整合。",
-        "relevance": "直接关联大语言模型主题，体现LLM用于跨文献知识聚合与脑图谱解码。",
-        "caveat": "摘要未量化LLM提取的准确性或与人类专家标注的一致性；结论依赖文献覆盖偏差及模型自身偏差，跨物种保守性推断需独立验证。"
+        "takeaway": "整合网络分析、机器学习和单细胞扰动分析，提出姜黄-葛根-薏苡仁配方中的多酚可能通过CD38/MAPK8信号及铁死亡相关通路发挥抗RA作用。",
+        "methods": "整合系统营养网络分析与多队列转录组数据，用集成机器学习及独立队列验证筛选核心基因，结合分子动力学模拟和单细胞in silico过表达/敲除分析。",
+        "relevance": "该研究使用单细胞in silico扰动分析评估靶点调控后果，与单细胞扰动主题相关。",
+        "caveat": "结果主要是计算预测和可检验假设，未做实验验证；不同外部队列中预测性能存在差异，分子动力学显示PTGS2稳定性较低。"
       },
       "summary_mode": "openai"
     },
     {
-      "id": "biorxiv:10.64898/2026.10.16.759449",
-      "title": "muDM: A Queryable Multi-Resolution Data Model for Vector Geometry in Spatial Bioimaging",
-      "abstract": "Spatial bioimaging combines raster imagery with vector geometries that encode molecular measurements, connectivity, and anatomical labels. A major challenge is to connect and jointly query these resources at scale, because the vector structures that locate them cannot be searched across resolutions. muDM is a spatial data model for associating vector geometry with its annotated records. Under a single schema, it arranges 2D and 3D geometries, together with their identities and measurements, as a precomputed multi-resolution pyramid, a columnar store that can be queried in place from object storage and equivalent render-ready tiles from the same index. Deployed in a public catalog containing more than 100 datasets, this single model supports connectome meshes, multiplexed tissue imaging, and spatial transcriptomics. For neuron meshes, classifiers which use geometry together with linked synapse counts exceed the performance of geometry-only models, while coarser levels preserved most balanced accuracy and using up to two orders of magnitude less stored geometry.",
+      "id": "biorxiv:10.64898/2026.02.01.703086",
+      "title": "HiChIA-Rep quantifies the similarity between enrichment-based chromatin interactions datasets",
+      "abstract": "Background: Enrichment-based 3D genome mapping technologies ChIA-PET, HiCAR, and related methods each yields a two-dimensional (2D) pairwise contact matrix encoding chromatin interaction frequencies and a one-dimensional (1D) coverage vector, indicating protein binding or chromatin accessibility. However, a lack of accessible and interpretable computational tools to quantify the similarity between these datasets prevents rigorous data quality assessment and biological implications. Results: We developed HiChIA-Rep, an efficient algorithm incorporating both 1D and 2D signals to measure similarity via graph signal processing methods. Implemented in Python, HiChIA-Rep takes standard file format as inputs: .hic, .bedpe for 2D contact matrix and .bigwig or .bedgraph for 1D coverage vector. HiChIA-Rep utilizes 1D and 2D signals effectively to distinguish biological replicates from non-replicates, cell lines, experiment types, and protein factors, often outperforming existing tools. In addition, HiChIA-Rep can evaluate specific genomic regions of interest, and its utility is demonstrated for correlating differential gene expression and transcriptional chromatin interactions mediated by RNA Polymerase II in MCF10A and MCF7 cell lines. Conclusions: HiChIA-Rep is readily applicable to existing ChIA-PET, HiChIP, PLAC-seq, HiCAR, and ChIATAC data. More broadly, HiChIA-Rep provides a graph signal processing framework to jointly analyze 1D and 2D signals, paving the ways to incorporate and interpret multiple data modalities probed by the emerging single-cell multi-ome methods in the future. We expect HiChIA-Rep to be a fundamental tool for the 3D genomics community.",
       "authors": [
-        "Ljungquist, B.",
-        "Hotaling, N.",
-        "Schaub, N."
+        "Kim, S. S.",
+        "Jackson, J. T.",
+        "Zhang, H. B.",
+        "Kim, M."
       ],
-      "published": "2026-10-19",
-      "updated": "2026-10-19",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.16.759449",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.16.759449.full.pdf",
-      "doi": "10.64898/2026.10.16.759449",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.02.01.703086",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.02.01.703086.full.pdf",
+      "doi": "10.64898/2026.02.01.703086",
       "venue": "bioinformatics",
       "source": "bioRxiv",
       "citation_count": 0,
@@ -1207,7 +954,99 @@
       "also_seen_in": [
         "bioRxiv"
       ],
-      "score": 5.58,
+      "score": 6.43,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "领域上下文": 1.5,
+        "新鲜度": 1.38
+      },
+      "category_scores": {
+        "large-language-models": 6.43
+      },
+      "summary": {
+        "takeaway": "提出HiChIA-Rep，联合1D覆盖信号与2D接触矩阵，基于图信号处理量化富集型染色质互作数据集的相似性。",
+        "methods": "用Python实现，输入.hic/.bedpe和.bigwig/.bedgraph，结合1D与2D信号计算相似度，并在生物重复、细胞系、实验类型和蛋白因子区分等任务上评估。",
+        "relevance": "该工具面向多模态染色质数据的联合表示与相似性评估，与检索增强与对齐中数据对齐和表示比较的问题相关。",
+        "caveat": "摘要未提供具体性能数值和完整基准；对新兴单细胞多组学方法的适用性仍属展望。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.15.759426",
+      "title": "Optimal transport reveals unresolved cells in single cell multi-omics",
+      "abstract": "Single-cell multi-omics methods align cells across modalities, integrate them into one embedding and transfer labels between them. All three steps depend on a match between cells in two modalities, but this match usually stays hidden inside each tool. Its errors are hidden too, and every cell looks equally certain. Here we make the match explicit. For each pair of datasets, we build a soft coupling matrix with optimal transport and use it in three ways beyond estimating the match itself: to score how uncertain each cell's match is, to upgrade existing integration and label-transfer tools without retraining them, and to decide which cells to set aside. Across 78 dataset pairs spanning six modality combinations, we evaluated ten integration and ten label-transfer tools using matched random removal as the control. We developed an ensemble coupling achieving the most accurate recovery of true cell pairs. Feeding couplings back into the tools improved label transfer clearly but improved integration only in how well the modalities mix. The ambiguity score, which we computed as a group-vote margin, gave the larger and more consistent gain in both tasks. Ambiguous-flagged cells matched worse in almost every dataset and removing them beat random removal in 98% of integration tests and 91% of label-transfer comparisons. These hard-to-integrate cells are mostly among rare, transitional and poorly measured populations. Making correspondence explicit therefore provides a practical way to distinguish reliable cross-modality results from uncertain ones while flagging cells that might have important roles in development and disease.",
+      "authors": [
+        "Piran, M.",
+        "Vafaee, F."
+      ],
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.15.759426",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.15.759426.full.pdf",
+      "doi": "10.64898/2026.10.15.759426",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 6.23,
+      "matched_topics": [
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "cross-modal"
+      ],
+      "score_breakdown": {
+        "跨模态理解与生成": 2.7,
+        "领域上下文": 1.5,
+        "新鲜度": 1.03
+      },
+      "category_scores": {
+        "multimodal-learning": 6.23
+      },
+      "summary": {
+        "takeaway": "用最优传输显式构建跨模态细胞匹配，并据此评估匹配不确定性、改进现有整合与标签转移工具，以及筛除不确定细胞。",
+        "methods": "对每对数据集构建soft coupling矩阵，在78个数据集对、6种模态组合上评估10种整合工具和10种标签转移工具，以匹配随机移除为对照，并开发集成耦合与歧义评分。",
+        "relevance": "该工作直接处理跨模态细胞对齐、整合和标签转移，与跨模态理解与生成主题高度相关。",
+        "caveat": "歧义评分主要提升标签转移，对整合的改善有限；被标记的不确定细胞多来自稀有、过渡或测量质量较差群体，其生物学解释仍需谨慎。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.09.14.751457",
+      "title": "ssJSD: A fusion of sparsity and spatial information for HiC single-cell clustering",
+      "abstract": "Single-cell high-throughput chromatin conformation capture (scHiC) enables profiling three dimensional genome architecture at cellular resolution, providing insights into cell-to-cell variability and cellular functions. Recent frameworks utilize spatial interaction patterns to derive dissimilarity measures for downstream tasks such as cell clustering. However, the inherent sparsity and ultra-high dimensionality of scHiC contact matrices pose significant challenges. A central hurdle is that existing measures typically treat all zeros without distinction, failing to differentiate biologically meaningful structural zeros (SZs) from technical dropouts. Here, we introduce ssJSD (spatial and sparsity informed Jensen-Shannon Divergence), a computational framework designed to explicitly account for scHiC-specific sparsity patterns. By integrating band-wise contact frequency profiles with SZ-induced sparsity matrices, ssJSD leverages both spatial interaction patterns and biological absence of contacts. We adopted two complementary integration strategies: an early fusion approach that concatenates information into a single representation, and a late fusion approach that integrates JSD-based dissimilarities through diverse averaging methods. Through simulations and applications to human cell lines and prefrontal cortex data, we demonstrate that ssJSD improves clustering accuracy and effectively distinguishes cell types. Our study indicates that integrating SZ patterns is important for accurately quantifying cell-to-cell variability in 3D genomics.",
+      "authors": [
+        "Lee, S. W.",
+        "Lin, S."
+      ],
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.14.751457",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.09.14.751457.full.pdf",
+      "doi": "10.64898/2026.09.14.751457",
+      "venue": "genomics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 5.93,
       "matched_topics": [
         "检索增强与对齐"
       ],
@@ -1220,28 +1059,76 @@
       "score_breakdown": {
         "检索增强与对齐": 2.55,
         "领域上下文": 1.0,
-        "新鲜度": 1.03
+        "新鲜度": 1.38
       },
       "category_scores": {
-        "large-language-models": 5.58
+        "large-language-models": 5.93
       },
       "summary": {
-        "takeaway": "提出muDM空间数据模型，在单一模式下将2D/3D向量几何及其注释记录组织为可查询的多分辨率金字塔，并支持对象存储原地查询与渲染瓦片。",
-        "methods": "构建预计算多分辨率金字塔与列式存储，统一管理几何、身份和测量；在含100多个数据集的公共目录中支持连接组网格、多重组织成像和空间转录组；用结合几何与突触计数的分类器评估。",
-        "relevance": "关联检索增强与对齐主题，涉及大规模空间生物成像数据的高效检索与多分辨率查询。",
-        "caveat": "摘要仅报告在公共目录中的部署与分类评估，未说明查询延迟、存储开销的完整基准或与其他空间数据模型的系统对比。"
+        "takeaway": "提出ssJSD框架，在scHiC聚类中区分结构性零与技术性丢失，并融合空间接触模式与稀疏性信息。",
+        "methods": "整合band-wise接触频率谱与结构性零诱导的稀疏矩阵，采用早期融合和晚期融合两种策略，在模拟数据、人类细胞系和前额叶皮层数据上评估聚类。",
+        "relevance": "该研究针对单细胞三维基因组数据的表示学习与细胞对齐/聚类，与检索增强与对齐中的相似性度量和数据整合相关。",
+        "caveat": "摘要未报告具体聚类指标数值；结构性零的判定依赖模型假设，在真实数据中的普适性仍需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42835979",
+      "title": "A systematic review of structure-activity relationships in bacterial levan: physicochemical mediation and context-dependent functionality.",
+      "abstract": "Bacterial levan is a β-(2 → 6)-linked fructan with variable β-(2 → 1) branching, molar-mass distribution and higher-order organization. Although these descriptors are frequently associated with antioxidant, anti-inflammatory and prebiotic outcomes, the evidential basis for direct structure-activity relationships remains uncertain. We systematically reviewed 26 primary studies identified through Scopus and Web of Science Core Collection using a PRISMA 2020-informed process. Eligibility was separated from post-inclusion appraisal, and studies were classified according to whether they provided direct within-study evidence, indirect triangulated evidence or contextual observations only. Evidence was synthesized separately for chemical antioxidant assays, cell-based inflammatory models, microbial fermentation/prebiotic systems, gastrointestinal-protection models and material-performance tests. Across regimes, molar mass alone did not consistently explain activity, and few studies jointly measured polymer structure, physicochemical state and functional outcome. Diffusion, aggregation, molecular accessibility and interfacial interactions are therefore not treated as established mediators; rather, they form a testable interpretive model consistent with the available indirect evidence. Low-resolution studies were retained to characterize the evidentiary landscape but were excluded from positive mechanistic inference. This review defines the minimum analytical and experimental conditions required to test levan structure-function hypotheses and provides a chemistry-centred framework for future, within-system validation.",
+      "authors": [
+        "Tran Thi Thu Suong",
+        "Nguyen Phung Kieu",
+        "Hoang Ngoc Cuong",
+        "Tran Dinh Thang",
+        "Nguyen Ngoc Tuan"
+      ],
+      "published": "2026-10-23",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42835979/",
+      "pdf_url": "",
+      "doi": "10.1039/d6ra04924a",
+      "venue": "RSC advances",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 5.68,
+      "matched_topics": [
+        "机制推理"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "mechanistic inference"
+      ],
+      "score_breakdown": {
+        "机制推理": 2.4,
+        "新鲜度": 2.08
+      },
+      "category_scores": {
+        "bio-computing": 5.68
+      },
+      "summary": {
+        "takeaway": "系统综述表明，细菌果聚糖的摩尔质量等结构描述与抗氧化、抗炎和益生元功能之间缺乏一致的直接证据，现有证据更多是间接或情境性观察。",
+        "methods": "按PRISMA 2020流程从Scopus和Web of Science检索并纳入26项原始研究，按直接、间接三角验证和情境观察分级，分功能体系综合证据。",
+        "relevance": "该综述聚焦结构-活性关系的证据强度和机制推理边界，与机制推理主题相关。",
+        "caveat": "纳入研究异质性大且多数为低分辨率研究，不能据此建立机制性因果；扩散、聚集和界面相互作用仅作为可检验的解释模型提出。"
       },
       "summary_mode": "openai"
     }
   ],
   "fetch_report": {
-    "window_start": "2026-10-19",
-    "window_end": "2026-10-23",
+    "window_start": "2026-10-20",
+    "window_end": "2026-10-24",
     "sources": {
       "arxiv": {
         "status": "error",
         "count": 0,
-        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28cat%3Aq-bio.GN+OR+cat%3Aq-bio.QM+OR+cat%3Aq-bio.CB+OR+cat%3Acs.AI+OR+cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.IR+OR+cat%3Acs.CV+OR+cat%3Acs.DB+OR+cat%"
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)"
       },
       "biorxiv": {
         "status": "ok",
@@ -1249,7 +1136,7 @@
       },
       "pubmed": {
         "status": "ok",
-        "count": 6
+        "count": 9
       },
       "semantic_scholar": {
         "status": "error",
@@ -1257,13 +1144,13 @@
         "error": "HTTPError: 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=single+cell+perturbation+prediction&limit=40&fields=paperId%2Ctitle%2Cabstract%2Cauthors%2CpublicationDate%2Curl%2CopenAccessPdf%2CexternalIds%2Cvenue%2"
       }
     },
-    "total": 306
+    "total": 309
   },
   "summary_report": {
-    "requested": 23,
+    "requested": 22,
     "provider": "deepseek",
     "model": "deepseek-v4-flash",
-    "openai": 23,
+    "openai": 22,
     "fallback": 0,
     "errors": []
   }
