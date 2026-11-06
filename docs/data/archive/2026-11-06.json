@@ -1,0 +1,848 @@
+{
+  "generated_at": "2026-11-06T06:59:26+00:00",
+  "timezone": "Asia/Singapore",
+  "papers": [
+    {
+      "id": "biorxiv:10.64898/2026.10.24.761590",
+      "title": "scRM: A single-cell foundation model trained on scRNA-seq reads",
+      "abstract": "To our knowledge, scRM is the first single-cell foundation model trained on sequencing reads, demonstrating that raw data pretraining is not only feasible but competitive at a fraction of the computational cost. We anticipate that scaling this framework and exploring alternative architectures will unlock biological information inaccessible to count models and extend the dataset-specific pretraining it already makes possible. The source code is available at https://github.com/altoslabs/scRM.",
+      "authors": [
+        "He, D.",
+        "Patro, R.",
+        "Nassar, M.",
+        "Wu, H.",
+        "Yan, Q.",
+        "Xu, G.",
+        "Torkenczy, K.",
+        "Liu, J.",
+        "Tyanova, S."
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.24.761590",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.24.761590.full.pdf",
+      "doi": "10.64898/2026.10.24.761590",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 17.0,
+      "matched_topics": [
+        "Cell Foundation Model",
+        "预训练"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "cell foundation model",
+        "foundation model",
+        "pretraining",
+        "single-cell foundation model"
+      ],
+      "score_breakdown": {
+        "Cell Foundation Model": 7.0,
+        "预训练": 7.0,
+        "领域上下文": 1.0,
+        "新鲜度": 1.0
+      },
+      "category_scores": {
+        "bio-computing": 10.0,
+        "pretraining": 10.0
+      },
+      "summary": {
+        "takeaway": "提出 scRM，首个直接在 scRNA-seq 测序 reads 上训练的单细胞基础模型，表明原始数据预训练可行，且以更低的计算成本具有竞争力。",
+        "methods": "在测序 reads 而不是表达计数上预训练单个单细胞基础模型；摘要未说明具体架构、数据规模和评测指标。",
+        "relevance": "直接对应“Cell Foundation Model”和“预训练”主题，讨论预训练数据形式（reads vs counts）的选择。",
+        "caveat": "摘要仅给出定性“competitive”和有竞争力的说法，未提供与计数模型对比的定量结果；架构细节、预训练数据和评测设置需查原文。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.28.762297",
+      "title": "A single-cell multimodal foundation model enables cross modality analysis between transcriptome and chromatin",
+      "abstract": "Most single-cell studies measure either gene expression or chromatin accessibility, and connecting the two usually requires fitting a model to each study. Here we present MUTUAL (MUltiome Transfer in a Unified Aligned Latent space), which keeps the single-cell foundation models scFoundation and EpiAgent frozen, combines their embeddings with linear summaries of each modality and learns a shared RNA--ATAC space from 3.0 million paired cells of 400 public multiome datasets. Applied without refitting to ten datasets not used for training, MUTUAL matched cells' RNA and ATAC profiles more accurately than methods fitted on other donors of the same dataset, annotated ATAC-only cells more accurately and transferred transcription-factor motif activity to RNA-only cells beyond what cell-type assignment provides. In a maturation series of stem-cell-derived islets, motif activity predicted from RNA largely reproduced the measured stage-wise changes when other libraries of the series served as the reference. MUTUAL makes public multiome data directly usable by single-modality studies.",
+      "authors": [
+        "Bao, X.",
+        "Zhu, J.",
+        "Song, X.",
+        "Zhang, X.",
+        "Zeng, H.",
+        "Vu, H. T. H.",
+        "Zhang, H.",
+        "Zhang, Z.",
+        "Yao, M.",
+        "Liang, M.",
+        "Liu, K.",
+        "Parker, S. C.",
+        "Chen, S.",
+        "Liu, J."
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.28.762297",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.28.762297.full.pdf",
+      "doi": "10.64898/2026.10.28.762297",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 15.4,
+      "matched_topics": [
+        "Cell Foundation Model",
+        "预训练"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "cell foundation model",
+        "foundation model",
+        "single-cell foundation model"
+      ],
+      "score_breakdown": {
+        "Cell Foundation Model": 5.4,
+        "预训练": 7.0,
+        "领域上下文": 1.0,
+        "新鲜度": 1.0
+      },
+      "category_scores": {
+        "bio-computing": 8.4,
+        "pretraining": 10.0
+      },
+      "summary": {
+        "takeaway": "提出 MUTUAL，在冻结的 scFoundation 与 EpiAgent 基础上学习共享 RNA–ATAC 潜空间，使公共 multiome 数据可直接用于单模态研究。",
+        "methods": "保持 scFoundation 和 EpiAgent 冻结，将其嵌入与各模态线性摘要结合，在 400 个公共 multiome 数据集共 300 万配对细胞上学习共享空间；在 10 个未参与训练的数据集上不重新拟合直接评估。",
+        "relevance": "对应“Cell Foundation Model”和“预训练”主题，展示如何在预训练基础模型之上做跨模态对齐与迁移。",
+        "caveat": "结果来自摘要自述，未给出具体性能数值；线性摘要能否保留复杂模态信息、对未覆盖组织或平台的泛化性尚不明确。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.21.760765",
+      "title": "Dopaminergic reward signals shape foraging decisions through learned value expectations",
+      "abstract": "A fundamental function of the nervous system is to direct animals towards life-sustaining resources and enable adaptive strategies for acquiring them. Foraging, the challenge of securing these resources from the environment, requires making decisions that balance local gains against costs, opening a window on value-based decision making in ecological context. Yet despite the centrality of foraging in life, the algorithms and neural mechanisms underlying foraging decisions are not well understood. We studied mice making stay-or-leave patch foraging decisions for water across poor- and rich-resource environments with dynamic local reward outcomes. We found that mice integrate immediate rewards, local reward history, and reward (i.e. value) expectations to guide foraging decisions, favoring greater time investment in rich-environment patches. Computational models revealed influence of a time-varying bias which mirrored the shape of a learned value function. Consistent with a reinforcement learning mechanism, dopamine in the ventral striatum signaled a temporal-difference reward prediction error, which could be used as a teaching signal to construct value functions, and calibrated optogenetic manipulation of dopamine to create fictive reward signals recapitulated the value-related decision bias. Taken together, our results shed new light on the neurocomputational basis of foraging, revealing a novel role for value expectations in dynamic environments. Further, they establish generalized function of biological reinforcement learning in ecological context, demonstrating a specific role for the canonical dopamine reward circuit in shaping temporally resolved value expectations to guide behavior and cognition. The unification of this framework with foraging opens a new avenue to elucidate principles of how animals learn and dynamically adjust cognitive strategies for real-world ecological problems.",
+      "authors": [
+        "Kingsbury, L. E.",
+        "May, H.",
+        "Uchida, N."
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.21.760765",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.21.760765.full.pdf",
+      "doi": "10.64898/2026.10.21.760765",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 11.8,
+      "matched_topics": [
+        "检索增强与对齐",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 6.8,
+        "强化学习": 3.0,
+        "新鲜度": 1.0
+      },
+      "category_scores": {
+        "large-language-models": 8.8,
+        "reinforcement-learning": 5.0
+      },
+      "summary": {
+        "takeaway": "小鼠觅食实验表明，觅食决策整合即时奖励、局部奖励历史与价值期望，腹侧纹状体多巴胺信号符合时序差分奖励预测误差，并可能作为构建价值函数的教学信号。",
+        "methods": "小鼠在水资源贫乏与丰富环境中做留驻或离开斑块的觅食决策；计算建模、腹侧纹状体多巴胺记录，以及校准光遗传学操纵产生虚构奖励信号。",
+        "relevance": "对应“强化学习”与“检索增强与对齐”主题，提供生物强化学习与价值期望的神经机制证据。",
+        "caveat": "动物实验结论向人类或人工系统的推广需谨慎；摘要未给出效应量、样本量和统计细节。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.30.763028",
+      "title": "Assessing reinforcement learning and vigor with an online decision-making battery",
+      "abstract": "Reinforcement learning and vigor are two fundamental aspects of decision-making modulated by dopamine. Although vigor is highly relevant for mood disorders, it has been overlooked by previous batteries characterizing decision-making abilities. We developed a test battery with two RL tasks (RL/working memory, go/no-go task) and two vigor tasks (physical effort discounting, foraging task) and administered it to an online community sample (N = 162). We used computational modeling and factor analysis to identify two factors reflecting RL and vigor. The RL factor reflected participants' general decision-making ability, while vigor corresponded to a motivational propensity to obtain rewards. Both factors demonstrated moderately strong test-retest reliability (ICC(2,1) = .65 and .67, respectively) over a one-to-two-week interval. Moreover, both factors were meaningfully related to self-report scales. The RL and vigor factors were negatively and positively associated with mania, respectively, although further analyses revealed that vigor was not fully independent of RL. Neither factor was significantly associated with depression symptoms. Collectively, we present preliminary evidence that vigor may represent a separate factor from RL in line with the putative dopamine hypothesis, paving the way for future longitudinal assessments of RL and vigor in mood disorders.",
+      "authors": [
+        "Wenke, S.",
+        "Granwald, T.",
+        "Ferrante, A.",
+        "Nilsson, M.",
+        "Ekström, I.",
+        "Papenberg, G.",
+        "Guitart-Masip, M."
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763028",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763028.full.pdf",
+      "doi": "10.64898/2026.10.30.763028",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 11.55,
+      "matched_topics": [
+        "检索增强与对齐",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "强化学习": 7.0,
+        "新鲜度": 1.0
+      },
+      "category_scores": {
+        "large-language-models": 4.55,
+        "reinforcement-learning": 9.0
+      },
+      "summary": {
+        "takeaway": "开发包含两个 RL 任务和两个 vigor 任务的在线决策测评组，在社区样本中经因子分析识别出 RL 与 vigor 两个因子，二者重测信度中等偏强，且均与自评量表相关。",
+        "methods": "在线社区样本 N=162，完成 RL/工作记忆、go/no-go、体力努力折扣和觅食任务；用计算建模与因子分析提取因子，间隔一至两周评估重测信度。",
+        "relevance": "对应“强化学习”与“检索增强与对齐”主题，涉及 RL 与动机（vigor）的测量与分离。",
+        "caveat": "为初步证据，vigor 未完全独立于 RL；两个因子均与抑郁症状无显著关联；样本为在线社区样本，需纵向研究验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.30.763050",
+      "title": "Diffusion-Based Synthetic Pretraining for Root Segmentation in Rhizotron Images",
+      "abstract": "Rhizotrons allow root system architecture to be studied non-destructively in soil. However, automated analysis of rhizotron images remains difficult: roots have low contrast against soil, soil particles resemble fine roots, and deep learning models need many manually annotated images that are slow and subjective to produce. Synthetic images could provide paired images and annotations at scale, but rhizotron images are largely absent from the data used to train generative models. We built a pipeline combining Low-Rank Adaptation (LoRA), ControlNet and inpainting to generate synthetic rhizotron images with paired root masks. We compared training on synthetic data only, real data only, and synthetic pretraining followed by fine-tuning on real images, using three segmentation models: nnU-Net v2, YOLO26 and Mask2Former. Synthetic-only training reached a Dice score of up to 0.60. Synthetic pretraining followed by fine-tuning on the full real training set (two annotated rhizotron images) reached 0.80, and nnU-Net v2 and Mask2Former reached 0.62 with only two annotated image patches containing visible roots. When real annotations were limited, pretraining also improved segmentation of unseen crops, including lettuce, barley, wheat, maize, tomato, cucumber, French bean and field bean. We also introduced a Soft Dice score that compares predictions with probabilistic consensus maps from seven independent annotators, accounting for annotator disagreement. Models matched average human agreement on low-ambiguity patches but remained below it on high-ambiguity patches. In conclusion, diffusion-generated images can complement real annotations and help scale root segmentation, although their effect on downstream root trait measurements still needs to be validated.",
+      "authors": [
+        "Lu, F.",
+        "Kootstra, G.",
+        "Hartley, Z. K. J.",
+        "van de Zedde, R.",
+        "Pound, M. P.",
+        "Willemsen, V."
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763050",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763050.full.pdf",
+      "doi": "10.64898/2026.10.30.763050",
+      "venue": "plant biology",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 11.55,
+      "matched_topics": [
+        "检索增强与对齐",
+        "预训练"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "RAG",
+        "pretraining"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "预训练": 7.0,
+        "新鲜度": 1.0
+      },
+      "category_scores": {
+        "large-language-models": 4.55,
+        "pretraining": 9.0
+      },
+      "summary": {
+        "takeaway": "用扩散模型生成带配对根掩膜的合成根系图像，在真实标注极少时，合成预训练加真实微调可提升根分割性能，并引入考虑标注者分歧的 Soft Dice 指标。",
+        "methods": "结合 LoRA、ControlNet 与 inpainting 生成合成 rhizotron 图像及根掩膜；比较仅合成、仅真实、合成预训练后真实微调三种策略，使用 nnU-Net v2、YOLO26、Mask2Former；真实训练集仅两张标注图像。",
+        "relevance": "对应“预训练”和“检索增强与对齐”主题（以合成数据补充稀缺标注），展示生成式数据增强在科学图像分割中的预训练作用。",
+        "caveat": "下游根性状测量的效果仍需验证；高模糊区域模型仍低于人类平均一致性；真实标注仅两张图像，结论的稳健性有限。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.30.763071",
+      "title": "Social foragers rely more on dynamic cues than prior beliefs in unpredictable natural environments",
+      "abstract": "Foraging is a prime example of adaptive decision-making in uncertain and changing environments. Foragers need to continuously integrate their direct experiences and observations of what others are doing with what they already know about the distribution of prey. Yet little is known about the importance of prior knowledge relative to dynamically sampled information in social foraging settings. Here, we investigated the role of prior beliefs in five large-scale ice-fishing competitions involving 49--53 highly experienced ice-fishers in 251 foraging trips. To quantify their prior spatial beliefs, participants marked areas they believed to have high resource abundance on topographic maps containing isoclines (i.e., depth curves) before each competition. GPS devices and headcams tracked behavioural states and foraging success. We found that prior beliefs about the fish distribution are to a large extent driven by lake topography and therefore converge across individuals. However, these prior beliefs were not systematically linked to foraging success. While prior beliefs predicted spot choices, especially in the beginning of competitions, they were heavily outweighed by dynamic personal and social information sources. Exploring how the use of prior beliefs differed between foraging trips, we found that high reliance on prior beliefs was associated with reduced avoidance of unsuccessful locations which resulted in limited spatial exploration. We conclude that dynamic information sampling and accumulation are key processes in social foraging decisions, with prior spatial beliefs playing only a minor role in natural environments where resources are hard to predict in advance.",
+      "authors": [
+        "Schakowski, A.",
+        "Deffner, D.",
+        "Kortet, R.",
+        "Niemela, P. T.",
+        "Kavelaars, M. M.",
+        "Pykala, M.",
+        "Kurvers, R. H. J. M."
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763071",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763071.full.pdf",
+      "doi": "10.64898/2026.10.30.763071",
+      "venue": "animal behavior and cognition",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.8,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 6.8,
+        "新鲜度": 1.0
+      },
+      "category_scores": {
+        "large-language-models": 8.8
+      },
+      "summary": {
+        "takeaway": "在五场大型冰钓比赛中，经验丰富的觅食者虽持有由湖底地形驱动且趋同的先验空间信念，但动态个人与社会信息远重于先验信念，且过度依赖先验与探索减少相关。",
+        "methods": "五场比赛共 49–53 名冰钓者、251 次觅食行程；赛前在地形图上标记高资源区域以量化先验，用 GPS 和头戴摄像头追踪行为状态与觅食成功。",
+        "relevance": "对应“检索增强与对齐”主题中的先验知识与动态信息权衡，为不确定环境下的决策提供自然场景证据。",
+        "caveat": "为观察性野外研究，难以建立因果；样本为特定高经验人群，生态与任务特异性可能限制外推。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.01.763546",
+      "title": "Expertise modifies neural responses to causal inference during language comprehension",
+      "abstract": "Linguistic communication relies on shared common ground, yet different individuals in a community have specialized semantic knowledge. As a key example, physicians acquire rich knowledge about the causes of illness. An open question is whether such \"causal expertise\" influences the neural basis of language comprehension. Here we tested the hypothesis that when understanding everyday language like, \"Holly used a grimy faucet during her overseas plane ride. Now she has the stomach flu,\" medical experts retrieve richer representations in semantic networks of the brain. Physicians (n=16) and age- and education-matched controls (n=16) undergoing fMRI read two-sentence vignettes that elicited implicit causal inferences about illness or object mechanics as well as control vignettes that did not elicit causal inferences. Vignettes were linguistically matched across conditions and were accessible to experts and non-experts alike. Across both groups, causal vignettes about illness engaged a temporoparietal semantic network previously implicated in thinking about animates, i.e., people and animals (precuneus and left temporoparietal junction), whereas causal vignettes about object mechanics engaged a semantic network associated with places and objects. Critically, physicians' responses in the animacy network were more robust and self-similar, suggesting the activation of richer semantic knowledge. Medical expertise effects were specific to biological inferences rather than mechanical or mental state inferences. By contrast, individually localized frontotemporal language and frontoparietal reasoning networks did not respond preferentially to causally connected sentences or show effects of expertise. Our findings suggest that causal expertise alters neural responses to causal inferences that unfold automatically during language comprehension.",
+      "authors": [
+        "Hauptman, M.",
+        "Bedny, M."
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.01.763546",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.01.763546.full.pdf",
+      "doi": "10.64898/2026.11.01.763546",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.4,
+      "matched_topics": [
+        "机制推理"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "causal inference"
+      ],
+      "score_breakdown": {
+        "机制推理": 6.4,
+        "新鲜度": 1.0
+      },
+      "category_scores": {
+        "bio-computing": 8.4
+      },
+      "summary": {
+        "takeaway": "医学专业知识会改变语言理解中因果推断的神经反应：医师在涉及疾病的因果小故事中，生命性语义网络反应更强且更自相似。",
+        "methods": "医师 n=16 与年龄和教育匹配的对照 n=16 接受 fMRI，阅读引发生病或物体机械因果推断的两句小故事及对照小故事；考察个体定位的语言与推理网络。",
+        "relevance": "对应“机制推理”主题，展示领域专长如何影响自动因果推断的语义网络表征。",
+        "caveat": "样本量小（每组 16 人）；效应局限于生物因果推断；摘要未报告具体统计量，行为层面的理解差异也未详述。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42973439",
+      "title": "Identification of auxin response factor ARF27 as a regulator of maize root morphogenesis.",
+      "abstract": "Auxin is a central phytohormone that mediates root development. This study investigated the genetic basis of auxin-mediated primary root growth in Zea mays (maize) seedlings, which is not well-understood in this key cereal crop. To address this knowledge gap, 618 accessions from the Wisconsin Diversity panel were leveraged for a genome wide association study (GWAS) followed by reverse genetics and in silico gene regulatory network reconstruction (GRN). The GWAS identified several candidate genes associated with variation in root growth responses, including RAMOSA2 and multiple members of the AUXIN RESPONSE FACTOR (ARF) gene family. Maize AUXIN RESPONSE FACTOR27 (ZmARF27), an ortholog of Arabidopsis ARF7 and ARF19, was prioritized for functional characterization. A reduction in ZmARF27 levels led to short primary roots, insensitivity to exogenous auxin, and altered transcriptional responses. Reconstruction of an ZmARF27 GRN included known maize classical root development genes, such as ROOTLESS CONCERNING CROWN ROOTS, numerous auxin pathway genes, and genes associated with cell wall biogenesis. Altogether, this study identifies ZmARF27 as a novel genetic driver of auxin-mediated root growth and gene expression in maize.",
+      "authors": [
+        "Linkan Dash",
+        "Melissa A Draves",
+        "Rajdeep S Khangura",
+        "Maxwell R McReynolds",
+        "Rebekah L Muench",
+        "Craig L Cowling",
+        "Gaoyuan Song",
+        "Brian P Dilkes",
+        "Justin W Walley",
+        "Dior R Kelley"
+      ],
+      "published": "2026-11-03",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42973439/",
+      "pdf_url": "",
+      "doi": "10.1111/nph.71718",
+      "venue": "The New phytologist",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 8.0,
+      "matched_topics": [
+        "GRN / Regulon",
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "gene regulatory network"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 2.4,
+        "检索增强与对齐": 2.55,
+        "领域上下文": 0.5,
+        "新鲜度": 1.35
+      },
+      "category_scores": {
+        "bio-computing": 5.45,
+        "large-language-models": 5.6
+      },
+      "summary": {
+        "takeaway": "通过 GWAS 与反向遗传学，将玉米 ZmARF27 鉴定为生长素介导的主根生长与基因表达的新调控因子。",
+        "methods": "利用 Wisconsin Diversity panel 的 618 份材料做根生长响应 GWAS，结合反向遗传学与 in silico 基因调控网络重建；对 ZmARF27 进行功能表征。",
+        "relevance": "对应“GRN / Regulon”主题，涉及以 GWAS 候选基因为核心构建调控网络。",
+        "caveat": "GRN 为 in silico 重建，未在摘要中说明实验验证程度；功能结论主要基于降低 ZmARF27 水平的表型，机制细节有限。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42987443",
+      "title": "A time-resolved single-nucleus atlas of cochlear aging reveals biphasic inflammaging and Tbx2-dependent inner hair cell maintenance.",
+      "abstract": "BACKGROUND: Age-related hearing loss (ARHL) is the most prevalent sensory deficit in older adults, yet its molecular progression remains poorly resolved. Few cochlear single-cell studies have integrated cell-cell communication, gene regulatory network (GRN) reconstruction, and cross-cohort bulk validation into one temporal framework. METHODS: We reanalyzed publicly available single-nucleus RNA sequencing data from C57BL/6 J mouse cochleae at 3, 12, and 24 months and cross-validated against two independent bulk microarray cohorts. Ligand-receptor interactions were inferred and validated at the ligand-expression level. GRNs were reconstructed and perturbed in silico; and feature selection extracted cross-scale inflammatory features. RESULTS: ARHL did not follow a linear decline. A cochlea-wide type I interferon response peaked at 12 months and resolved by 24. Apolipoprotein E followed a three-phase trajectory, baseline, compensatory upregulation, collapse, across spiral ganglion neurons, inner hair cells (IHCs), macrophages, and fibrocytes. SLIT-ROBO axon-guidance signaling shut down in these cells, alongside neurotrophic and Notch withdrawal. In silico perturbation identified T-box transcription factor 2 (Tbx2) as a protective GRN node: knockout drove 81.2% of IHCs toward aging and overexpression 74.6% toward youth. A 13-gene inflammatory panel showed midlife activation and end-stage exhaustion in macrophages, mirroring the interferon peak. CONCLUSION: These findings support a two-stage ARHL model, midlife immune activation followed by end-stage synaptic, lipid, and axon-guidance collapse, positioning the midlife window and Tbx2-dependent IHC maintenance as candidate intervention targets, pending in vivo validation.",
+      "authors": [
+        "He Zhao",
+        "Yan Wang",
+        "Qi Wang",
+        "Xiaohui Ma",
+        "Kun Zhao",
+        "Xiaoyu Zhai",
+        "Runmeng Wang",
+        "Mingxun Han",
+        "Limei Cui",
+        "Yan Sun"
+      ],
+      "published": "2026-11-05",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42987443/",
+      "pdf_url": "",
+      "doi": "10.1016/j.heares.2026.109851",
+      "venue": "Hearing research",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 6.15,
+      "matched_topics": [
+        "GRN / Regulon"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "gene regulatory network"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 2.4,
+        "领域上下文": 0.5,
+        "新鲜度": 2.05
+      },
+      "category_scores": {
+        "bio-computing": 6.15
+      },
+      "summary": {
+        "takeaway": "构建了小鼠耳蜗衰老的时间分辨单核转录组图谱，揭示双相炎症衰老和Tbx2依赖的内毛细胞维持机制。",
+        "methods": "重新分析C57BL/6J小鼠耳蜗3、12、24月龄的单核RNA测序数据，用两个独立bulk微阵列队列交叉验证；推断配体-受体相互作用、重建基因调控网络（GRN）并进行计算机扰动；提取跨尺度炎症特征。",
+        "relevance": "该研究重建并扰动GRN，识别Tbx2为保护性GRN节点，与GRN/Regulon主题直接相关。",
+        "caveat": "结论基于公开数据的再分析和计算机扰动，Tbx2等干预靶点尚待体内验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42983080",
+      "title": "Transcriptomic convergence and the female protective effect in autism.",
+      "abstract": "Autism spectrum disorder (ASD) is highly heritable, and mutations in hundreds of genes have been implicated as individually rare causes of ASD1-3. Understanding how disruptions to these functionally diverse genes lead to the core features of ASD remains a major challenge4. Moreover, ASD is three- to four-fold more common in male than in female individuals5, and female autistic people tend to carry more autosomal risk alleles for ASD compared with their male counterparts6,7; however, the biological basis of this 'female protective effect' (FPE) has remained unknown8,9. Here we show that individual perturbations of 18 ASD genes in human neural progenitor cells converge on shared effects on gene expression, including widespread downregulation of other ASD genes. De novo reconstruction of a gene regulatory network enabled identification of central transcriptional regulators that drive this transcriptomic convergence, including prominent ASD gene CHD8 and candidates including REST. Furthermore, X-linked transcription factor ZFX, which is expressed from both the active and the inactive X chromosomes in female individuals10, emerged as a key activator of many ASD genes: we propose that the higher ZFX expression level observed in the female brain can buffer damaging mutations in diverse ASD genes, contributing to the female protective effect. Together, these results show how key gene regulatory networks can become broadly and similarly dysregulated upon disruption of individual ASD genes and provide molecular insight into the female protective effect in ASD.",
+      "authors": [
+        "Rebecca E Andersen",
+        "Maya Talukdar",
+        "Tyler Sakamoto",
+        "David Exposito-Alonso",
+        "Janet H T Song",
+        "Xuyu Qian",
+        "Seungil Lee",
+        "Nila Murugan",
+        "Ryan N Delgado",
+        "Sijing Zhao",
+        "Gwenyth Eichfeld",
+        "Julia Harms",
+        "David C Page",
+        "Christopher A Walsh"
+      ],
+      "published": "2026-11-04",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42983080/",
+      "pdf_url": "",
+      "doi": "10.1038/s41586-026-11236-6",
+      "venue": "Nature",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 5.8,
+      "matched_topics": [
+        "GRN / Regulon"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "gene regulatory network"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 2.4,
+        "领域上下文": 0.5,
+        "新鲜度": 1.7
+      },
+      "category_scores": {
+        "bio-computing": 5.8
+      },
+      "summary": {
+        "takeaway": "18个ASD基因的单独扰动在人类神经祖细胞中汇聚到共享转录组效应，并揭示ZFX可能缓冲女性ASD基因损伤。",
+        "methods": "在人类神经祖细胞中分别扰动18个ASD基因，进行表达谱分析；从头重建GRN以识别核心转录调控因子；分析X连锁转录因子ZFX的表达与功能。",
+        "relevance": "研究通过GRN重建识别驱动转录组汇聚的中心调控因子（如CHD8、REST、ZFX），与GRN/Regulon主题高度相关。",
+        "caveat": "ZFX缓冲女性保护效应的机制为基于表达和调控网络分析的推论，需进一步功能验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42980369",
+      "title": "Integrative spatial metallomics: a tutorial review of multimodal elemental imaging workflows, challenges and opportunities.",
+      "abstract": "Spatially resolved molecular assays are increasingly used to study human health and disease, revealing complex tissue organization beyond what is accessible through bulk analyses. While spatial transcriptomic, metabolomic, and proteomic approaches have rapidly matured, quantitative mapping of metals and trace elements in biological tissues and biominerals through elemental imaging remains comparatively nascent. Elemental distributions alone often provide limited biological interpretation without contextualization within the tissue microenvironment. Here, we summarize themes and computational strategies for integrating spatial elemental data with histopathology and complementary spatial molecular assays. We highlight multimodal approaches for tissue alignment, pixel-wise clustering, and correlative analysis, illustrated through limited use cases involving amyotrophic lateral sclerosis (ALS) and kidney stone formation. In the ALS cohort, pixel-level elemental profiles were clustered and compared with annotated tissue structures. In the kidney stone cohort, spatial gradients and correlations in elemental and biomolecular features from the renal papilla through the medulla to cortex were examined. Finally, we discuss key challenges for cross-sample, cohort-level analyses, including differences in spatial resolution, normalization, tissue architecture, and mechanistic inference. Addressing these challenges will require interdisciplinary collaboration, enhanced biobanking practices, and development of computational and statistical frameworks.",
+      "authors": [
+        "Naina Kumar",
+        "Nishita Paruchuri",
+        "Tracy Punshon",
+        "Brian Jackson",
+        "Kevin Cornell",
+        "Elijah Stommel",
+        "Hrishikesh Deosthali",
+        "Vismay Ravikumar",
+        "Engie Mostafa",
+        "Scott Palisoul",
+        "Louis Vaickus",
+        "Sunita Ho",
+        "Joshua Levy"
+      ],
+      "published": "2026-11-04",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42980369/",
+      "pdf_url": "",
+      "doi": "10.1039/d6ay01718e",
+      "venue": "Analytical methods : advancing methods and applications",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 5.8,
+      "matched_topics": [
+        "机制推理"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "mechanistic inference"
+      ],
+      "score_breakdown": {
+        "机制推理": 2.4,
+        "领域上下文": 0.5,
+        "新鲜度": 1.7
+      },
+      "category_scores": {
+        "bio-computing": 5.8
+      },
+      "summary": {
+        "takeaway": "综述整合空间元素成像与组织病理及互补空间分子检测的计算策略，并讨论跨样本队列分析的挑战。",
+        "methods": "教程综述，总结组织对齐、像素聚类、相关性分析等 multimodal 方法，并以ALS和肾结石形成两个用例说明。",
+        "relevance": "文中讨论空间多模态数据整合及机制推断的挑战，与机制推理主题相关。",
+        "caveat": "作为教程综述，用例有限，未提供系统性基准比较或因果机制验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42970151",
+      "title": "In vitro phenotyping and genomics: a conceptual framework linking plant tissue culture with GWAS, QTL mapping, and multi-omics.",
+      "abstract": "Standardized in vitro phenotypes provide genetically tractable traits that integrate GWAS, QTL mapping, and multi-omics, enabling mechanistic insight and genetics-informed improvement of plant regeneration. Plant tissue culture (PTC) has traditionally been employed as a technical tool for propagation, transformation, and germplasm conservation. This review reframes in vitro culture systems as quantitative phenotyping platforms that enable rigorous genetic dissection of complex traits, such as regeneration competence, stress tolerance, and developmental plasticity. By operating under highly standardized and reproducible conditions, in vitro systems reduce environmental noise and expose genotype-dependent variation that is often obscured in field or greenhouse experiments. When formalized as quantitative traits, culture responses, including callus induction, organogenesis, somatic embryogenesis, and stress survival, become amenable to genome-wide association studies (GWAS) and quantitative trait locus (QTL) mapping. Synthesizing evidence across diverse plant species, this review demonstrates that in vitro traits are genetically structured, polygenic, and biologically meaningful, reflecting coordinated regulation of hormonal signaling, chromatin accessibility, stress response pathways, and developmental gene networks. Numerous GWAS and QTL studies have identified loci and candidate genes underlying regeneration efficiency, embryogenic competence, and stress-responsive culture performance, confirming that tissue culture responsiveness is rooted in genomic architecture rather than protocol effects alone. The interpretive power of genetic mapping is substantially enhanced through integration with bioinformatic and multi-omics layers, including transcriptomics, epigenomics, proteomics, metabolomics, and network-based analyses, thereby refining candidate prioritization and facilitating mechanistic inference. This review further examines the dual role of somaclonal variation as both a constraint on clonal fidelity and a source of genetic and epigenetic diversity that can reveal cryptic genotype-phenotype relationships. Emphasis is placed on study design principles, phenotyping challenges, statistical modeling strategies, and integrative pipelines that connect genotype to in vitro phenotype and ultimately to breeding and biotechnology applications. This synthesis highlights in vitro culture systems as powerful, genetics-informed platforms for precision breeding, gene validation, and supporting efforts to more predictably and rationally manipulate complex traits, particularly in horticultural and clonally propagated crops.",
+      "authors": [
+        "Musab A Isak",
+        "Sameen Fatima",
+        "Imtiaz Haider",
+        "Halit Yetişir",
+        "Özhan Şimşek"
+      ],
+      "published": "2026-11-02",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42970151/",
+      "pdf_url": "",
+      "doi": "10.1007/s00425-026-05148-y",
+      "venue": "Planta",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 5.6,
+      "matched_topics": [
+        "机制推理"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "mechanistic inference"
+      ],
+      "score_breakdown": {
+        "机制推理": 2.4,
+        "领域上下文": 1.0,
+        "新鲜度": 1.0
+      },
+      "category_scores": {
+        "bio-computing": 5.6
+      },
+      "summary": {
+        "takeaway": "提出将植物组织培养体外表型作为定量性状，整合GWAS、QTL定位和多组学以解析再生等复杂性状的遗传机制。",
+        "methods": "综述，综合多种植物物种的GWAS、QTL及多组学（转录组、表观组、蛋白组、代谢组、网络分析）证据，讨论体细胞克隆变异、表型挑战和统计建模策略。",
+        "relevance": "强调通过多组学和网络分析从基因型到体外表型进行机制推断，与机制推理主题相关。",
+        "caveat": "为概念框架和综述，未提供新的原始实验数据或统一分析流程的实证评估。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.30.763019",
+      "title": "The Almond Expression Atlas: A comprehensive multi-tissue transcriptomic resource for almond gene expression",
+      "abstract": "Background: Improving crop adaptation and enhancing agronomic and quality traits requires a deeper understanding of gene expression regulation, for which expression atlases are valuable tools. Almond (Prunus dulcis (Mill.) D.A. Webb) is one of the most economically important tree nut crops worldwide. However, an integrated transcriptomic resource for this species is still lacking. Available data remain fragmented across independent studies, limiting their comparability and reuse. Results: Here, we present the first almond gene expression atlas: a comprehensive multi-tissue transcriptomic resource integrating publicly available RNA sequencing data. A total of 142 high-quality untreated and control samples from 17 independent projects were curated through a metadata standardization process and analyzed using a unified bioinformatics pipeline. Standardized expression profiles were generated for 25,225 annotated genes in the Prunus dulcis Texas v2.0 reference genome. The atlas integrates two complementary expression approaches: a median TPM approach capturing quantitative expression levels and a rank-based strategy implemented using the Bgee expression calling method, designed to improve comparability across heterogeneous datasets. This design enables the identification of tissue-specific candidate genes and the exploration of expression patterns across tissues and developmental stages. Its applicability is demonstrated through two use cases, highlighting its ability to identify biologically meaningful gene sets associated with bud dormancy transitions and to prioritize candidate reference genes for RT-qPCR normalization in almond. Conclusions: The Almond Expression Atlas v1.0 is publicly available through FruitDBase (fruitdbase.csic.es), providing an interactive platform for gene expression exploration and visualization. This resource supports functional genomics studies and facilitates candidate gene discovery in almond, while ensuring data traceability and promoting data reusability.",
+      "authors": [
+        "Lopez-Fernandez, E. M.",
+        "Zwieniecki, M.",
+        "Tixier, A.",
+        "Botia, J. A.",
+        "Martinez-Garcia, P. J."
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763019",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763019.full.pdf",
+      "doi": "10.64898/2026.10.30.763019",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 5.55,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "领域上下文": 1.0,
+        "新鲜度": 1.0
+      },
+      "category_scores": {
+        "large-language-models": 5.55
+      },
+      "summary": {
+        "takeaway": "发布首个杏仁多组织基因表达图谱，整合142个公共RNA-seq样本并标准化表达谱。",
+        "methods": "从17个独立项目 curated 142个高质量未处理/对照样本，统一生物信息学流程分析，基于Prunus dulcis Texas v2.0参考基因组生成25,225个基因的标准化表达谱，结合中位TPM和Bgee秩基表达调用。",
+        "relevance": "该资源通过整合公共数据并标准化元数据与流程，提升数据可检索性和可复用性，与检索增强与对齐主题相关。",
+        "caveat": "仅整合未处理/对照样本，图谱覆盖度和跨平台可比性受原始数据异质性限制。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.28.762240",
+      "title": "Multi-modal in situ profiling of human cells using the AVITI24 platform characterizes single-cell responses to acute stress",
+      "abstract": "Cells begin to respond to stress within minutes, but how this early response depends on cell type, neighboring cells, or cell cycle phase has been difficult to determine, because bulk assays average across cells and synchronization can induce stress. We measured 338 transcripts, 48 proteins and phosphoproteins, and six cell paint stains in situ in 1.18 million single cells from four human cell lines exposed to H2O2, alone and in co-culture, and in A549 cells exposed to TNF-, cadmium, dithiothreitol or lipopolysaccharide. In A549 cells, five distinct stressors changed the same targets in the same direction within 15 min, differing mainly in magnitude, and modestly increased JNK phosphorylation. By 30 min of H2O2 treatment, immediate-early genes (FOS, JUN, DDIT3, DUSP1, NR4A1) were induced most strongly in HCT116 and A549 cells. These changes occurred across the whole cell population rather than in a responsive subset. Cell line-specific differences persisted in co-culture, and the response of MCF7 cells did not increase with the number of adjacent, strongly-responding A549 cells. Ordering cells along the cell cycle from the same measurements identified 106 cycle-associated transcripts, and the response varied more between cell lines than among cell cycle phases. Overall, the measured regulators respond to stress within 30 minutes through a largely shared program whose magnitude depends more on cell identity than on cell cycle state or neighboring cell type.",
+      "authors": [
+        "Lang, O. W.",
+        "Gardner, A. M.",
+        "Smugereski, C. M.",
+        "Lyndaker, A. M.",
+        "Pugh, B. F.",
+        "Lai, W."
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.28.762240",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.28.762240.full.pdf",
+      "doi": "10.64898/2026.10.28.762240",
+      "venue": "genomics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 5.55,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "领域上下文": 1.0,
+        "新鲜度": 1.0
+      },
+      "category_scores": {
+        "large-language-models": 5.55
+      },
+      "summary": {
+        "takeaway": "利用AVITI24平台在单细胞原位同时测量转录本、蛋白和细胞染色，刻画人细胞对急性应激的快速共享响应程序。",
+        "methods": "在4个人类细胞系中测量338个转录本、48个蛋白/磷酸蛋白和6种cell paint染色，共118万个单细胞，暴露于H2O2（单独及共培养）及TNF-α、镉、DTT或LPS；分析应激响应、细胞周期关联和细胞邻域效应。",
+        "relevance": "研究展示多模态原位单细胞 profiling 与数据整合分析，与检索增强与对齐主题相关。",
+        "caveat": "靶向 panel 仅覆盖338个转录本和48个蛋白，结论限于所测分子和四种细胞系及特定应激条件。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.10.27.761882",
+      "title": "Tumour architecture inverts ARNT-dependent growth regulation and reveals CPE-mediated spheroid expansion in luminal breast cancer",
+      "abstract": "Tumour architecture profoundly influences cancer cell behaviour, yet functional genomic studies predominantly rely on two-dimensional (2D) cultures. Here, we performed parallel chromosome 1q focused CRISPR screens in matched 2D monolayers and three-dimensional (3D) spheroid cultures of luminal breast cancer cells, which revealed ARNT as a prominent architecture-dependent fitness regulator. ARNT depletion reduced proliferation in 2D but enhanced spheroid growth in 3D. This functional switch was reproduced in MCF7 and T47D but not in nontumorigenic MCF12A cells, indicating a tumour and architecture dependent role of ARNT. Transcriptomic profiling revealed distinct responses to ARNT perturbation in 2D and 3D and pointed to carboxypeptidase E (CPE) as a downstream effector. ARNT modulation reciprocally altered CPE expression, and genetic epistasis established CPE as required for ARNT loss driven spheroid expansion and sufficient to restore growth in ARNT overexpressing spheroids. In primary tumours, ARNT and CPE were inversely correlated in low-hypoxia TCGA Luminal A samples, and single-cell RNA sequencing revealed an inverse association within ER positive cancer cells. Together, these findings demonstrate that the growth regulatory function of ARNT depends on tumour architecture and that a functional ARNT CPE axis controls luminal breast cancer spheroid growth, underscoring the importance of incorporating 3D context into functional genomic approaches.",
+      "authors": [
+        "OZKAN COSKUN, H.",
+        "BERBER, F. B.",
+        "KANSIZ, E.",
+        "CATI, E. N.",
+        "OZAYDIN, M. S.",
+        "CANBULAT, Z.",
+        "GUZAR, E.",
+        "DURDAR, B.",
+        "TELCI, D.",
+        "KORKMAZ, G."
+      ],
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.27.761882",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.10.27.761882.full.pdf",
+      "doi": "10.64898/2026.10.27.761882",
+      "venue": "cancer biology",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 5.5,
+      "matched_topics": [
+        "单细胞扰动"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "crispr screen"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 3.0,
+        "领域上下文": 0.5,
+        "新鲜度": 1.0
+      },
+      "category_scores": {
+        "bio-computing": 5.5
+      },
+      "summary": {
+        "takeaway": "平行2D和3D CRISPR筛选发现ARNT的促生长功能在3D球体中反转，并鉴定CPE介导ARNT缺失驱动的球体扩张。",
+        "methods": "在管腔乳腺癌细胞的2D单层和3D球体中进行染色体1q聚焦的CRISPR筛选；用MCF7、T47D和MCF12A验证；转录组分析、遗传上位实验；分析TCGA管腔A样本和单细胞RNA测序数据。",
+        "relevance": "研究通过CRISPR扰动结合转录组和单细胞数据解析ARNT-CPE轴，与单细胞扰动主题相关。",
+        "caveat": "主要基于细胞系筛选和体外实验，临床样本分析为相关性观察，ARNT-CPE轴的体内功能需进一步验证。"
+      },
+      "summary_mode": "openai"
+    }
+  ],
+  "fetch_report": {
+    "window_start": "2026-11-02",
+    "window_end": "2026-11-06",
+    "sources": {
+      "arxiv": {
+        "status": "error",
+        "count": 0,
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)"
+      },
+      "biorxiv": {
+        "status": "ok",
+        "count": 300
+      },
+      "pubmed": {
+        "status": "ok",
+        "count": 8
+      },
+      "semantic_scholar": {
+        "status": "error",
+        "count": 0,
+        "error": "HTTPError: 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=single+cell+perturbation+prediction&limit=40&fields=paperId%2Ctitle%2Cabstract%2Cauthors%2CpublicationDate%2Curl%2CopenAccessPdf%2CexternalIds%2Cvenue%2"
+      }
+    },
+    "total": 308
+  },
+  "summary_report": {
+    "requested": 15,
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai": 15,
+    "fallback": 0,
+    "errors": []
+  }
+}
