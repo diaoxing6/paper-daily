@@ -1,0 +1,1472 @@
+{
+  "generated_at": "2026-11-17T08:06:41+00:00",
+  "timezone": "Asia/Singapore",
+  "papers": [
+    {
+      "id": "biorxiv:10.64898/2026.11.12.766125",
+      "title": "Graph-guided flow matching enables biologically informed prediction at single-cell resolution",
+      "abstract": "Perturb-seq enables systematic interrogation of massively parallel genetic perturbations at single-cell resolution, yet exhaustive characterization of the full perturbation space remains impractical. Here, we present Graph-guided Flow Matching (GFM), a generative framework that integrates biological knowledge graphs with latent flow matching to predict post-perturbation single-cell transcriptomes. Across multiple large-scale Perturb-seq datasets, GFM outperforms a strong linear baseline and current deep-learning models in predicting unseen single-gene perturbations, while training up to 30x faster and remaining robust with limited training data. GFM also demonstrates competitive performance in the two-gene perturbation prediction task when neither perturbed gene is observed during training. Ablation experiments show that combining flow matching with knowledge graphs enables accurate prediction of perturbation responses. Finally, GFM accurately calculates transcriptional consequences of HSP90AA1 inactivation and identifies target candidates unseen by the model in chronic myeloid leukemia. Our study establishes GFM as a biologically informed generative framework that predicts single-cell perturbation responses for prioritization of therapeutic targets.",
+      "authors": [
+        "Liou, H.-Y.",
+        "Sprang, M.",
+        "Selby, D. A.",
+        "Grossmann, G.",
+        "Vollmer, S.",
+        "Riesgo-Ferreiro, P.",
+        "Gerbracht, J. V.",
+        "Schroers, B.",
+        "Strilic, B.",
+        "Kim, J."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766125",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766125.full.pdf",
+      "doi": "10.64898/2026.11.12.766125",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 15.48,
+      "matched_topics": [
+        "单细胞扰动",
+        "知识图谱"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "knowledge-graphs"
+      ],
+      "matched_terms": [
+        "knowledge graph",
+        "knowledge graphs",
+        "perturb-seq",
+        "perturbation prediction",
+        "single-cell perturbation"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 7.0,
+        "知识图谱": 6.0,
+        "领域上下文": 0.5,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "bio-computing": 9.48,
+        "knowledge-graphs": 8.48
+      },
+      "summary": {
+        "takeaway": "提出 Graph-guided Flow Matching (GFM)，将生物知识图谱与潜在流匹配结合，用于预测扰动后的单细胞转录组。",
+        "methods": "在图谱引导下用流匹配生成潜在表示；在多个大规模 Perturb-seq 数据集上训练与评估，与线性基线及现有深度学习模型比较，并进行消融实验与双基因扰动测试，以及在慢性髓性白血病中预测 HSP90AA1 失活的转录后果。",
+        "relevance": "直接对应单细胞扰动建模主题，并利用知识图谱引入生物先验，契合知识图谱驱动的扰动响应预测。",
+        "caveat": "摘要报告的加速倍数、精度提升及靶点候选均为作者自述结果；仅以摘要可见信息判断，尚不清楚数据规模、评测集划分与统计显著性细节。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.12.766258",
+      "title": "ModBERT: a DNA modification and genetic variant-aware DNA large language model",
+      "abstract": "The development of foundation models that learn a general grammar of DNA (DNA language models) has accelerated in recent years. The vast majority of DNA large language models (LLMs), such as DNABERT-2 and Nucleotide Transformer, are pretrained almost exclusively on reference genomes. They therefore cannot represent the two sources of variation most directly tied to regulatory differences between people: genetic variants and DNA methylation. Long-read sequencing (Nanopore and PacBio) now measures both from the same native DNA molecules, but no model is designed to use this joint readout. With this in mind, we developed ModBERT, a DNA language model built on a five-letter probabilistic genome representation in which each position is a distribution over A, C, G, T, 5mC (represented with M). In pretraining, these distributions encode population allele frequencies and CpG methylation levels from 242 individuals in the 1000 Genomes Long-Read Sequencing Consortium, learned with a soft-target masked language modeling objective. We further propose probabilistic fine-tuning, in which the same representation encodes one individual's genotype and methylation. A fine-tuned model can then make person-specific predictions from a single assay. Under this novel fine-tuning framework, we show that ModBERT effectively utilizes methylation information to classify peaks from functional genomic assays, including histone mark (n=11 different marks) and transcription factor binding (n=69 TFs) ChIP-seq data, outperforming ab initio trained models and ModBERT pretrained on sequences without methylation. In silico methylation perturbations yield TF sensitivities that correlate with independent methylation-aware motif models. Using an evaluation design that separates generalization to new loci from generalization to new individuals, ModBERT predicts chromatin accessibility at held-out loci in held-out individuals (AUROC 0.88). Its predicted variant effects agree with likely causal caQTLs (Spearman correlation = 0.52) but not with variants associated only through linkage, a traditionally challenging task. Overall, ModBERT establishes a framework for personal-genome language modeling, in which a model reads each individual's genetic and epigenetic sequence rather than a shared reference. This enables in silico dissection of variant and methylation effects on gene regulation and principled prioritization of candidates for experimental validation as population-scale long-read cohorts (e.g., 1KGP and Human Pangenome Reference Consortium) grow.",
+      "authors": [
+        "Bolzan, D.",
+        "Davuluri, R. V.",
+        "Mahony, S.",
+        "AY, F."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766258",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766258.full.pdf",
+      "doi": "10.64898/2026.11.12.766258",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 14.38,
+      "matched_topics": [
+        "大语言模型",
+        "预训练"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "large language model",
+        "pretraining"
+      ],
+      "score_breakdown": {
+        "大语言模型": 7.0,
+        "预训练": 5.4,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "large-language-models": 8.98,
+        "pretraining": 7.38
+      },
+      "summary": {
+        "takeaway": "提出 ModBERT，一种在五字母概率基因组表示上预训练的 DNA 语言模型，可同时编码遗传变异与 DNA 甲基化信息，并支持个体化预测。",
+        "methods": "基于 1000 Genomes Long-Read Sequencing Consortium 242 个个体的等位基因频率与 CpG 甲基化水平，使用软目标掩码语言建模预训练；提出概率微调框架；在组蛋白修饰和转录因子 ChIP-seq 峰分类、染色质可及性预测和变异效应评估中检验。",
+        "relevance": "涉及 DNA 大语言模型预训练与个体化基因组建模，与预训练及表示学习主题相关。",
+        "caveat": "摘要报告的 AUROC 0.88 与 Spearman 0.52 等指标来自特定评测设计；模型依赖长读长队列数据，对缺乏此类数据的场景的适用性未在摘要中说明。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:43038755",
+      "title": "PathGuard-DRP: A leakage-controlled benchmark and external audit of a pathway-aware model for cancer drug response prediction.",
+      "abstract": "Drug response predictors are often evaluated on drug-cell pair splits in which compounds and cell lines remain represented during training. Such estimates support interpolation but can overstate performance under held-out cells, unseen drugs, new scaffolds, tissue shifts, or external assays. We introduce PathGuard-DRP, a leakage-controlled benchmark for pathway-aware prior modelling across separated regimes. The benchmark freezes 178,567 GDSC2 response pairs covering 967 cell lines, 214 drugs, 193 Bemis-Murcko scaffolds, and 28 tissue groups. Preprocessing, empirical priors, and hyperparameters are estimated within training folds, and performance is assessed on warm, cell-cold, tissue-heldout, drug-cold, scaffold-cold, and a sixth double-cold family that holds out drugs and cell lines simultaneously. PathGuard-prior combines Morgan fingerprints, Reactome pathway summaries, and train-only priors through a drug-conditioned pathway gate. It substantially improves warm ranking (Spearman 0.7984 versus 0.7299 for the drug-mean baseline; paired-fold 95% CI for the difference [0.0651,0.0719]) and yields only a non-significant cell-cold increment of ＋0.0045 (95% CI [-0.0007,0.0097]). It does not outperform the strongest legal simple baselines on drug-cold, scaffold-cold, or double-cold splits, where the best simple scores are 0.2627, 0.1929, and 0.1570, respectively. In a frozen PRISM known-drug audit with 16,032 rows, 344 GDSC-overlapping cells, and 55 overlapping GDSC drugs, PathGuard-prior shows a small global ranking advantage against identity and empirical-prior controls; versus GDSC-trained Morgan-only Ridge, the Spearman delta is 0.0180 (row-level 95% CI [0.0109,0.0256]; drug-clustered 95% CI [-0.0229,0.0653]). Conversely, on 353,693 PRISM rows with scaffolds absent from GDSC, PathGuard-prior reaches Spearman 0.0718 and does not exceed Morgan-only Ridge (0.0887). Both PRISM audits are cell-warm: all 344 scored cells already occur in GDSC. GDSC-calibrated split-conformal intervals transfer poorly to PRISM, with 0.5471 coverage for a nominal 0.90 target. PathGuard-DRP supports leakage-controlled evaluation and bounded known-drug interpolation, while delimiting the evidence required for chemical cold-start, uncertainty-calibration, mechanistic, or clinical claims.",
+      "authors": [
+        "Cuicui Liu",
+        "Yiting Zhou",
+        "Chaofeng Zhang",
+        "Shuang Wu",
+        "Wanjun Ma"
+      ],
+      "published": "2026-11-16",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43038755/",
+      "pdf_url": "",
+      "doi": "10.1016/j.compbiolchem.2026.109563",
+      "venue": "Computational biology and chemistry",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 12.58,
+      "matched_topics": [
+        "药物扰动机制",
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "drug response prediction"
+      ],
+      "score_breakdown": {
+        "药物扰动机制": 6.8,
+        "检索增强与对齐": 2.55,
+        "新鲜度": 2.03
+      },
+      "category_scores": {
+        "bio-computing": 10.03,
+        "large-language-models": 5.78
+      },
+      "summary": {
+        "takeaway": "提出 PathGuard-DRP 泄漏控制基准，并对通路感知药物响应模型进行外部审计，强调在细胞、药物和支架冷启动等分离场景下评估性能。",
+        "methods": "冻结 178,567 个 GDSC2 药物-细胞响应对，覆盖 967 个细胞系、214 种药物、193 个 Bemis-Murcko 支架和 28 个组织组；在训练折内估计预处理、经验先验与超参数；PathGuard-prior 结合 Morgan 指纹、Reactome 通路摘要与仅训练集先验；在 PRISM 数据上进行已知药物审计。",
+        "relevance": "涉及药物扰动响应预测与泛化评估，并提示检索式先验与对齐在药物响应建模中的边界。",
+        "caveat": "作者明确报告模型在药物冷启动、支架冷启动和双冷启动上未超过最强简单基线，且 GDSC 校准的共形区间迁移到 PRISM 覆盖不足；因此摘要不支持化学冷启动、机制或临床层面的强结论。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.11.765955",
+      "title": "State-Dependent Stimulation for Seizure Termination in a Morris-Lecar Network: A Reinforcement Learning Approach",
+      "abstract": "The efficacy of neurostimulation for seizure termination depends not only on the stimulus itself but also on the dynamical state of the epileptic network. Here, we develop a dynamical-systems-informed reinforcement-learning framework that learns when to deliver a predefined pulse to terminate seizure-like activity. We simulate a sparsely connected network of 100 extended three-dimensional Morris-Lecar neurons. Bifurcation analysis of the single-neuron model identifies bistable regimes and provides a mechanistic basis for considering transitions between resting and oscillatory activity. The learning agent uses semi-gradient Q-learning with tile coding and receives a two-dimensional time-delay embedding of either the population-averaged membrane potential or a derivative-based proxy for extracellular potential. It learns a state-dependent policy that selects between stimulation and no stimulation, without modifying the pulse waveform. Across 30 independently generated test networks, both learned policies markedly reduced median seizure duration compared with trigger-only and state-independent stimulation controls. The two learned policies performed comparably, indicating that the estimated extracellular potential proxy retained sufficient dynamical information for control in this model. These results provide a proof of concept that combining dynamical-systems-based state reconstruction with online reinforcement learning can identify effective stimulation timing for terminating seizure-like activity.",
+      "authors": [
+        "Hazi, V.",
+        "Stippinger, M.",
+        "Kiss, T.",
+        "Somogyvari, Z."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765955",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765955.full.pdf",
+      "doi": "10.64898/2026.11.11.765955",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 11.53,
+      "matched_topics": [
+        "检索增强与对齐",
+        "强化学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "Q-learning",
+        "RAG",
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "强化学习": 7.0,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "large-language-models": 4.53,
+        "reinforcement-learning": 8.98
+      },
+      "summary": {
+        "takeaway": "提出结合动力系统状态重构与强化学习的框架，学习何时施加固定脉冲以终止 Morris-Lecar 网络中的癫痫样活动。",
+        "methods": "模拟 100 个稀疏连接的扩展三维 Morris-Lecar 神经元网络；对单神经元做分岔分析识别双稳区；采用半梯度 Q 学习与 tile coding，输入为群体平均膜电位或细胞外电位代理的时间延迟嵌入；在 30 个独立测试网络上与触发式及状态无关刺激对照比较。",
+        "relevance": "属于强化学习用于状态依赖干预的建模研究，与强化学习方法主题相关，但其对象是计算神经模型而非分子扰动。",
+        "caveat": "仅为模型内概念验证，刺激波形固定且网络为模拟数据；摘要未说明向真实癫痫数据或临床场景的迁移证据。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.12.766253",
+      "title": "Regional Signals Matter: Rethinking Global Pooling for mRNA Foundation Models",
+      "abstract": "RNA foundation models with diverse architectures have shown promise for learning representations of messenger RNA (mRNA) sequences. However, existing benchmarks commonly reduce token-level embeddings to transcript-level representations through global mean pooling before fitting a downstream probe. This aggregation does not explicitly preserve the identities of biologically distinct mRNA regions. Consequently, signals associated with short regulatory regions may be diluted, confounding assessments of representation quality with the information preserved by the readout. We introduce an architecture-agnostic, region-aware readout that separately averages embeddings within the 5$'$ untranslated region (UTR), coding sequence, and 3$'$ UTR and concatenates the resulting representations for linear probing. We reproduce mRNABench evaluations for 20 frozen models from 18 families, with a median absolute score difference of 0.0009 across 380 model--dataset--target evaluations published for 19 models, and construct a region-aware benchmark using the same models, tasks, and splits. Relative to global mean pooling, region-aware pooling increases Pearson correlation, averaged across the 20 models, by 11--25\\% on translation and stability tasks, with no statistically significant decreases detected for any model on the regression tasks. On classification tasks, relative changes in the area under the precision--recall curve range from $-3\\%$ to $+11\\%$. Boundary randomization and displacement generally reduce performance, while dimensionality-matched and sequence-composition controls indicate that the gains are not explained solely by increased feature dimensionality, region length, or guanine--cytosine (GC) content. Learned attention pooling approaches region-aware performance only when supplied with one query per region. In silico perturbations reveal stronger sensitivity to upstream AUGs (uAUGs) and their Kozak context, while analyses of endogenous transcripts show approximately threefold greater recovery of length- and GC-adjusted uAUG-associated differences than global-mean probes. Both readouts capture codon optimality. Model rankings averaged over the regression tasks remain largely stable, while within a task models move by several places. Our region-aware benchmark therefore provides a biologically structured and complementary evaluation of mRNA foundation models, revealing regulatory information that is less accessible to linear probes after global mean pooling. The code is available at \\url{https://github.com/Sanford-Labs/rnaregionpooling",
+      "authors": [
+        "Na, S.",
+        "Qi, Z.",
+        "Goyal, D.",
+        "Huang, J.",
+        "Yeo, G. W.",
+        "JIN, W."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766253",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766253.full.pdf",
+      "doi": "10.64898/2026.11.12.766253",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 11.53,
+      "matched_topics": [
+        "检索增强与对齐",
+        "预训练"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "RAG",
+        "foundation model"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "预训练": 7.0,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "large-language-models": 4.53,
+        "pretraining": 8.98
+      },
+      "summary": {
+        "takeaway": "指出 mRNA 基础模型基准中全局平均池化会稀释区域特异信号，并提出按 5' UTR、编码序列和 3' UTR 分别池化再拼接的区域感知读出。",
+        "methods": "复现 mRNABench 对 18 个家族 20 个冻结模型的评估，构建区域感知基准；进行边界随机化、位移、维度匹配和序列组成对照；分析 uAUG 及其 Kozak 上下文敏感性，并比较内源转录本分析。",
+        "relevance": "涉及 mRNA 基础模型表示学习与预训练模型评测，属于预训练与表示学习主题。",
+        "caveat": "摘要报告的是线性探针下区域池化相对全局平均池化的提升，分类任务上变化范围为 -3% 到 +11%；结论限于所评估的冻结模型与任务，未证明对微调或生成任务同样有效。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42716018",
+      "title": "Causal assessment of Bayesian gene regulatory networks from single-cell transcriptomics.",
+      "abstract": "Gene regulatory network (GRN) inference is an essential tool for revealing dysregulated relationships between genes in different cell types from single-cell transcriptomic (SCT) data. GRNs based on Bayesian networks (BNs) learned from SCT data can elucidate directed regulatory relationships representing complex disease mechanisms and their interplay through graphical modeling. However, software for learning BNs from SCT data is not widely available, nor is software for evaluating the BNs' structural accuracy in representing causal relationships between genes. Here, we describe the scstruc R package. This package provides a suite of BN structure learning algorithms specifically designed to handle SCT data, to evaluate the resulting networks based on the causal relationships they represent regardless of the availability of established molecular interaction networks, and to compare regulatory relationships between conditions. We demonstrated that scstruc can identify biologically relevant differential regulatory relationships between groups on a per-cell basis.",
+      "authors": [
+        "Noriaki Sato",
+        "Marco Scutari",
+        "Seiya Imoto"
+      ],
+      "published": "2026-11-16",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42716018/",
+      "pdf_url": "",
+      "doi": "10.1016/j.crmeth.2026.101580",
+      "venue": "Cell reports methods",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 11.13,
+      "matched_topics": [
+        "GRN / Regulon"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "gene regulatory network"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 6.4,
+        "领域上下文": 1.5,
+        "新鲜度": 2.03
+      },
+      "category_scores": {
+        "bio-computing": 11.13
+      },
+      "summary": {
+        "takeaway": "介绍 scstruc R 包，用于从单细胞转录组数据学习贝叶斯基因调控网络，并在不依赖已知分子互作网络的条件下评估其因果结构。",
+        "methods": "提供一套面向单细胞转录组数据的贝叶斯网络结构学习算法，基于所表示的因果关系评估网络，并支持条件间调控关系比较；在数据上展示可识别逐细胞的差异调控关系。",
+        "relevance": "直接对应 GRN/Regulon 主题，关注从单细胞数据推断有向调控关系。",
+        "caveat": "摘要未给出与其他 GRN 推断方法的定量比较或真实因果基准的性能数据；因果评估的有效性依赖方法假设，摘要未展开。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.11.765945",
+      "title": "DynamicsPLM: A Dynamics-Enriched Small Protein Language Model for Protein Variant Effect Prediction",
+      "abstract": "Predicting how mutations impact protein function and stability remains a key challenge in computational biology. Current state-of-the-art protein language models (PLMs) primarily scale parameter size on sequence corpora to capture evolutionary constraints but remain blind to the explicit physical dynamics of folded proteins. Conversely, models trained strictly on physical dynamics neglect critical evolutionary sequence statistics. In this paper, we bridge this gap by introducing DynamicsPLM, a highly parameter-efficient 35-million-parameter model that unifies evolutionary and biophysical representation learning. Utilizing a second-stage, multi-task continual pretraining strategy on over 60,000 proteins, we enrich a foundational sequence encoder with explicit residue-level and pairwise molecular dynamics heads while preserving its original evolutionary knowledge. At inference, DynamicsPLM computes zero-shot mutation effects from sequence alone by balancing an evolutionary plausibility score against a structural dynamics disruption score. Across the massive ProteinGym benchmark and natural variants of the Tsuboyama folding stability dataset, DynamicsPLM achieves state-of-the-art accuracy among all models under 100M parameters, and matches or outperforms several billion-scale sequence-based models of its size. Our findings demonstrate that explicit structural-dynamics supervision provides a parameter-efficient alternative to raw scale. Availability: All codes including data preparation scripts, training and validation recipes, and experimental configurations for LoMuS are available at: https://github.com/kabir-ai2bio-lab/DynamicsPLM.",
+      "authors": [
+        "Dao, T. M.",
+        "Shehu, A.",
+        "Kabir, A."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765945",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765945.full.pdf",
+      "doi": "10.64898/2026.11.11.765945",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.93,
+      "matched_topics": [
+        "持续适应与预训练",
+        "预训练",
+        "自监督与表示学习"
+      ],
+      "matched_categories": [
+        "continual-learning",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "continual pretraining",
+        "pretraining",
+        "representation learning"
+      ],
+      "score_breakdown": {
+        "持续适应与预训练": 2.7,
+        "预训练": 2.7,
+        "自监督与表示学习": 2.55,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "continual-learning": 4.68,
+        "pretraining": 7.23
+      },
+      "summary": {
+        "takeaway": "提出 3500 万参数的 DynamicsPLM，将序列进化知识与显式分子动力学监督结合，用于零样本蛋白质变异效应预测。",
+        "methods": "在超过 60,000 个蛋白质上进行第二阶段多任务持续预训练，为基础序列编码器增加残基级和成对分子动力学头；推理时从序列平衡进化合理性分数与结构动力学破坏分数；在 ProteinGym 和 Tsuboyama 折叠稳定性数据集上评估。",
+        "relevance": "对应持续适应与预训练、自监督表示学习主题，强调小模型结合动力学监督的替代路线。",
+        "caveat": "摘要称其在 1 亿参数以下模型中达到最优，并与部分十亿级序列模型相当或更优；但方法依赖分子动力学标签的可得性，摘要未说明对无动力学数据蛋白的泛化。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.1101/2025.09.16.676677",
+      "title": "A systematic survey of distal element-gene regulatory interactions with Direct-Capture Targeted Perturb-seq",
+      "abstract": "Identifying the impact of distal regulatory elements on gene expression is a core challenge in human genetics. Large-scale CRISPR screens have not captured lower effect size element-gene interactions due to selection bias and limited statistical power. We developed a framework for highly powered CRISPR screens, consisting of Direct-Capture Targeted Perturb-seq (DC-TAP-seq), unbiased target selection, and a pipeline accounting for statistical power. Surveying 9,666 random distal element-gene pairs revealed that most elements that reduced gene expression had effect sizes <10%, which prior studies were underpowered to detect. Out of the 84 interactions with negative effects, 45 (53.6%) occurred within 100 Kb of the promoter of the target gene. Many elements were bound by CTCF without classical enhancer chromatin, and both housekeeping and non-housekeeping genes had similar frequencies of distal regulatory elements. We highlight limitations of predictive models and suggest that new models consider elements with smaller effect sizes. Our study provides an expanded view of distal regulatory elements and a framework for building more comprehensive maps of distal regulation.",
+      "authors": [
+        "Ray, J.",
+        "Jagoda, E.",
+        "Sheth, M. U.",
+        "Galante, J.",
+        "Amgalan, D.",
+        "Mattei, E.",
+        "Gschwind, A. R.",
+        "Munger, C. J.",
+        "Huang, J.",
+        "Munson, G.",
+        "Murphy, M.",
+        "Barry, T.",
+        "Singh, V.",
+        "Baskaran, A.",
+        "Kang, H.",
+        "Issner, R.",
+        "Epstein, C. B.",
+        "Najm, F. J.",
+        "Katsevich, E.",
+        "Gaskell, E.",
+        "Steinmetz, L. M.",
+        "Engreitz, J."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.1101/2025.09.16.676677",
+      "pdf_url": "https://www.biorxiv.org/content/10.1101/2025.09.16.676677.full.pdf",
+      "doi": "10.1101/2025.09.16.676677",
+      "venue": "genomics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.48,
+      "matched_topics": [
+        "单细胞扰动"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "crispr screen",
+        "perturb-seq"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 7.0,
+        "领域上下文": 0.5,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "bio-computing": 9.48
+      },
+      "summary": {
+        "takeaway": "开发 Direct-Capture Targeted Perturb-seq (DC-TAP-seq) 框架，系统调查远端调控元件与基因的调控互作，发现多数负效应元件效应量小于 10%。",
+        "methods": "结合直接捕获靶向 Perturb-seq、无偏靶点选择和统计功效分析流程；调查 9,666 个随机远端元件-基因对；分析效应大小分布、与启动子距离、CTCF 结合及染色质特征。",
+        "relevance": "直接对应单细胞扰动主题，提供远端调控元件功能扰动的系统测量框架。",
+        "caveat": "多数检出互作效应较弱，研究强调既往研究功效不足；摘要指出预测模型存在局限，但未给出新预测模型或跨细胞类型验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.11.766014",
+      "title": "Large language models complement established workflows for mechanistic model construction and refinement in systems biology",
+      "abstract": "Mechanistic models provide a framework for describing, understanding, and predicting biological processes, but their development requires an interdisciplinary team with expertise in biology, mathematics, and computation. Here we present Octomod, a multi-agent workflow based on large language models (LLMs) that integrates biological knowledge retrieval, model construction, parameter estimation, and hypothesis testing. Built on established software tools, including AMICI and pyPESTO, and community standards, including SBML and PEtab, Octomod supports model development and refinement through natural-language interaction with a user. The agents' proposals must pass defined checks and the user's decision before they are used. Every input, model, check, and decision is recorded, so that model building remains transparent and reproducible. We applied Octomod to four problems. Three used published data and differ in model size and in how much the user guided the run: Octomod constructed a model that matched a published model without user guidance, supported the interactive refinement of a gene-regulatory model, and built models of cell-cell communication that explained the responses of five immune cell types to different stimuli. In the fourth application, on newly generated and unpublished lipidomics data, Octomod helped to determine which processes the measurements could inform, identify unresolved label fluxes, and reduce a supplied model to those processes. Together, these results show how LLMs can strengthen and complement established workflows for constructing and refining biologically informed models.",
+      "authors": [
+        "Doresic, D.",
+        "Liu, Y.",
+        "Wieland, V.",
+        "Jost, P. J.",
+        "Huth, M.",
+        "Merkt, S.",
+        "Alvarez-Garavito, C.",
+        "Moore Dillems, P. R.",
+        "Thiele, C.",
+        "Seep, L.",
+        "Pathirana, D.",
+        "Hasenauer, J."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.11.766014",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.766014.full.pdf",
+      "doi": "10.64898/2026.11.11.766014",
+      "venue": "systems biology",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 9.48,
+      "matched_topics": [
+        "大语言模型"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "large language model"
+      ],
+      "score_breakdown": {
+        "大语言模型": 7.0,
+        "领域上下文": 0.5,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "large-language-models": 9.48
+      },
+      "summary": {
+        "takeaway": "提出了基于大语言模型的多智能体工作流 Octomod，可在自然语言交互下支持系统生物学机制模型的构建、参数估计与假设检验，并在多个应用中辅助模型开发与精炼。",
+        "methods": "基于 AMICI、pyPESTO、SBML 和 PEtab 等工具与标准构建多智能体流程，整合知识检索、建模、参数估计和假设检验；智能体提议须通过检查并经用户决策，全过程记录；应用于三个已发表数据问题和一个新生成未发表脂质组学数据问题。",
+        "relevance": "该工作直接体现大语言模型在科研工作流中的应用，与给定主题“大语言模型”高度相关，并展示其与既有计算生物学工具链的互补关系。",
+        "caveat": "摘要未提供各应用的量化性能指标或与人工建模的系统比较，第四个应用基于未发表数据，泛化性仍需更多验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.11.765895",
+      "title": "A cortically gated sensory reference to the basal ganglia guides vocal reinforcement learning in songbirds",
+      "abstract": "Songbirds learn to sing by copying a memorized tutor song. Reinforcement learning models of vocal imitation propose that a dopaminergic signal strengthens the cortico basal ganglia synapses whose activity coincides with similarity to the tutor like song. To do so, the circuit must access a representation of the tutor song. Whether such a reference is available within the songbird basal ganglia nucleus Area X, and how it arrives, is unknown. In juvenile male zebra finches that learn to imitate adult courtship songs, we found that lesions of Area X impaired imitation more severely the earlier they were made. Intracellular recordings from Area X in awake juvenile zebra finches showed that the tutor song evokes precise subthreshold depolarizations that inversely scaled with imitation proficiency throughout song learning. Silencing the upstream nucleus HVC reduced these tutor-evoked responses, whereas disinhibiting HVC enhanced them. An inhibitory gate in HVC thus supplies Area X with the temporally aligned tutor reference that reinforcement driven vocal learning requires. These findings uncover a critical missing link in biological reinforcement learning, revealing how the brain structurally routes sensory templates to the basal ganglia to guide the acquisition of complex motor skills.",
+      "authors": [
+        "Agarwal, A.",
+        "Scharff, C.",
+        "Vallentin, D."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765895",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765895.full.pdf",
+      "doi": "10.64898/2026.11.11.765895",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.98,
+      "matched_topics": [
+        "强化学习"
+      ],
+      "matched_categories": [
+        "reinforcement-learning"
+      ],
+      "matched_terms": [
+        "reinforcement learning"
+      ],
+      "score_breakdown": {
+        "强化学习": 7.0,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "reinforcement-learning": 8.98
+      },
+      "summary": {
+        "takeaway": "发现 HVC 向 Area X 提供经抑制性门控的导师歌曲感觉参考信号，为鸣唱强化学习提供所需的感觉模板通路。",
+        "methods": "在幼年雄性斑胸草雀中进行 Area X 损毁实验、清醒细胞内记录、HVC 沉默与去抑制操作，考察导师歌曲诱发的阈下去极化及其与模仿熟练度的关系。",
+        "relevance": "该研究揭示生物强化学习中感觉参考如何被路由至基底神经节，与给定主题“强化学习”的神经机制相关。",
+        "caveat": "摘要基于斑胸草雀这一动物模型，结论向其他物种或一般强化学习算法的外推需谨慎；摘要未给出样本量等细节。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.11.765853",
+      "title": "MicroDUET: a dual-headed genomic foundation model for pathogen surveillance",
+      "abstract": "Pathogen genomic surveillance works from raw reads, assembled genomes and alignments, representations that are slow and costly to compare at scale. Compact embeddings from genomic language models offer an alternative, but surveillance requires resolving both evolutionary ancestry (phylogeny) and phenotypic capability (function) - which need not co-vary. Here we present MicroDUET, which adapts a 26.6-million-parameter ProkBERT backbone with two 3.5-million-parameter adapter heads: a phylogeny head trained contrastively on genome windows from the same microbes, and a function head trained to identify genes across taxa. On held-out retrieval benchmarks, the phylogeny head returned the correct species for 80.3% and 66.6% of cellular and viral queries, and the function head the correct gene family for 97.3% and 97.2%, reaching 74.4% accuracy on an independent antimicrobial resistance-class benchmark. Across all three benchmarks MicroDUET outranked 17 other genomic encoders. Without training on lineage, clade or drug-susceptibility tasks, MicroDUET identified Mycobacterium tuberculosis and mpox virus lineages and clades (0.965, 0.975 accuracy), discriminated rifampicin resistance without lineage adjustment (AUROC 0.985), and retrospectively identified an emerging mpox lineage as anomalous (AUROC 0.974). MicroDUET operates 10^3 - 10^4 times faster than single-threaded sequence-based alignments. MicroDUET therefore provides a compact, reusable representation for scalable pathogen surveillance and sequence triage.",
+      "authors": [
+        "Barber, M.",
+        "Suster, C. J. E.",
+        "Lei, J.",
+        "Getchell, M.",
+        "Wulandari, S.",
+        "Sintchenko, V.",
+        "Pronyk, P. M."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765853",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765853.full.pdf",
+      "doi": "10.64898/2026.11.11.765853",
+      "venue": "genomics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.98,
+      "matched_topics": [
+        "预训练"
+      ],
+      "matched_categories": [
+        "pretraining"
+      ],
+      "matched_terms": [
+        "foundation model"
+      ],
+      "score_breakdown": {
+        "预训练": 7.0,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "pretraining": 8.98
+      },
+      "summary": {
+        "takeaway": "提出双头基因组基础模型 MicroDUET，分别面向系统发育与功能，提供紧凑可复用的病原体基因组表示以支持监测。",
+        "methods": "以 2660 万参数 ProkBERT 为骨干，加两个 350 万参数适配头：系统发育头以同种微生物基因组窗口做对比学习，功能头跨分类群识别基因；在检索基准、抗微生物耐药分类基准及谱系/耐药预测任务上评估，并与 17 种基因组编码器比较。",
+        "relevance": "该模型属于基因组预训练表征学习，与给定主题“预训练”相关，并展示基础模型在病原监测中的应用。",
+        "caveat": "摘要中的性能数字来自其自选基准，尚缺乏独立大规模前瞻性验证；摘要未说明对重组、新发病原体等边缘情形的表现。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.12.766280",
+      "title": "Batch Correction via Cross-Modal Anchoring",
+      "abstract": "Batch correction is essential for integrating molecular cohorts, yet unimodal correction cannot reliably separate batch effects from biology without explicit covariates. Here we introduce anchor-guided batch correction, a label-free method that uses a comparatively stable paired omic layer to protect biology while correcting a batch-affected assay, requiring no predefined clinical covariates and returning full feature-level profiles. Across seven standard cohorts from The Cancer Genome Atlas, controlled confounding benchmarks, role-reversed transcriptomic workflows, and simulations, our method removed almost all platform variance in the standard cohorts, outperforming ComBat in biological preservation and CpG recovery under confounding. In the imbalanced breast cancer benchmark, where ComBat collapsed subtype retrieval (AUC 0.37) and attenuated differential methylation recovery (73.2%), anchorguided correction preserved subtype structure (AUC 0.72) and recovered 82.8% of reference CpG signals. Running in three seconds on 1,091 tumours on a single CPU without external training data, cross-modal anchoring offers a fast, practical solution for paired multi-omic harmonization.",
+      "authors": [
+        "Jaoui, W.",
+        "Lehmann, K.-V."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766280",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766280.full.pdf",
+      "doi": "10.64898/2026.11.12.766280",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.98,
+      "matched_topics": [
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "cross-modal"
+      ],
+      "score_breakdown": {
+        "跨模态理解与生成": 7.0,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "multimodal-learning": 8.98
+      },
+      "summary": {
+        "takeaway": "提出锚引导的批次校正方法，利用较稳定的配对组学层在无需预设协变量的情况下保护生物学信号并校正受批次影响的检测层。",
+        "methods": "无标签方法，借助配对组学层作为锚；在 TCGA 七个队列、受控混杂基准、角色反转的转录组流程及模拟数据上评估，与 ComBat 比较生物信号保留和 CpG 恢复。",
+        "relevance": "该方法涉及配对多组学数据的跨模态对齐与整合，与给定主题“跨模态理解与生成”相关。",
+        "caveat": "方法依赖存在相对稳定的配对组学层这一前提；摘要中的基准多为回顾性数据，在真实临床混杂场景中的稳健性尚待验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.03.27.714373",
+      "title": "Lemonite: identification of regulatory metabolites through data-driven, interpretable integration of transcriptomics and metabolomics data",
+      "abstract": "Biological regulation emerges from coordinated interactions between genes, proteins, and metabolites; yet, despite their central regulatory potential, metabolites remain largely absent from genome-wide gene regulatory network inference. Current transcriptomics-metabolomics integration approaches are either limited by poor interpretability or constrained by incomplete prior knowledge, preventing the systematic identification of regulatory metabolites. Here, we present Lemonite, a data-driven and interpretable framework for integrating bulk transcriptomics and metabolomics data to uncover regulatory metabolites acting on gene modules. Lemonite extends module network inference to jointly associate transcription factors and metabolites with coexpressed gene programs, without requiring prior differential analysis or complete metabolite annotation. To contextualize predictions, we construct a comprehensive gene-metabolite knowledge graph integrating over 370,000 metabolite-gene and 2.1 million protein-protein interactions. Applied to glioblastoma and inflammatory bowel disease cohorts, Lemonite identifies over 50 functionally coherent gene modules per disease, revealing established and previously uncharacterized metabolite-gene regulatory relationships. In glioblastoma, myo-inositol and phosphatidylcholines, together with IRF6, regulate mesenchymal-like immune programs, which upon integration with single-cell transcriptomics are primarily expressed in tumor-associated macrophages and monocytes. In inflammatory bowel disease, regulatory metabolites are prioritized that change the expression of their predicted target genes in vitro. Together, Lemonite provides a principled framework to explore the genome-wide regulatory potential of the metabolome and to generate biologically interpretable, experimentally testable hypotheses from multi-omics data.",
+      "authors": [
+        "Vandemoortele, B.",
+        "Devlies, H.",
+        "Michoel, T.",
+        "Vanhaecke, L.",
+        "Vandenbroucke, R. E.",
+        "Laukens, D.",
+        "Vermeirssen, V."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.03.27.714373",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.03.27.714373.full.pdf",
+      "doi": "10.64898/2026.03.27.714373",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.88,
+      "matched_topics": [
+        "GRN / Regulon",
+        "知识图谱"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "knowledge-graphs"
+      ],
+      "matched_terms": [
+        "gene regulatory network",
+        "knowledge graph"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 2.4,
+        "知识图谱": 3.0,
+        "领域上下文": 1.5,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "bio-computing": 5.88,
+        "knowledge-graphs": 6.48
+      },
+      "summary": {
+        "takeaway": "提出可解释的数据驱动框架 Lemonite，将代谢物与转录因子共同关联到共表达基因模块，系统识别调控性代谢物。",
+        "methods": "扩展模块网络推断，联合关联转录因子和代谢物与基因程序，无需事先差异分析或完整代谢物注释；构建整合逾 37 万代谢物-基因和 210 万蛋白-蛋白互作的知识图谱；应用于胶质母细胞瘤和炎症性肠病队列并结合单细胞转录组与体外验证。",
+        "relevance": "该工作面向基因调控网络推断并以知识图谱辅助解释，与给定主题“GRN / Regulon”和“知识图谱”相关。",
+        "caveat": "预测多为关联性假设，仅部分在体外验证；知识图谱覆盖不完整可能影响推断，摘要未报告系统性基准性能。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.11.765931",
+      "title": "A chromosome-level genome assembly of northern dragonhead, Dracocephalum ruyschiana L., 1753",
+      "abstract": "We present a chromosome-level genome assembly for the vascular plant northern dragonhead, Dracocephalum ruyschiana. The assembly comprises two pseudo-haplotypes, hap1 and hap2, of 661 Mb and 681 Mb, with 93.6% and 92.5%, respectively, scaffolded into seven chromosomes each - in line with the known karyotype. Assembly quality was high, with conserved single-copy ortholog completeness scores of 97.9% and 97.8%, combined k-mer completeness of 98.1%, and 38,141 and 38,617 annotated protein-coding genes for hap1 and hap2, respectively. This assembly provides a high-quality genomic resource for future research and conservation of northern dragonhead, as well as the endangered northern dragonhead sap beetle, which depends on the plant for reproduction and whose genome assembly is described in a complementary genome note.",
+      "authors": [
+        "Strand, M. A.",
+        "Evju, M.",
+        "Kyrkjeeide, M. O.",
+        "Toerresen, O. K.",
+        "Danneels, B.",
+        "Arnyasi, M.",
+        "Ferrari, G.",
+        "Skage, M.",
+        "Tooming-Klunderud, A.",
+        "Jakobsen, K. S."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765931",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765931.full.pdf",
+      "doi": "10.64898/2026.11.11.765931",
+      "venue": "genomics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.78,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 6.8,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "large-language-models": 8.78
+      },
+      "summary": {
+        "takeaway": "报道了北方龙头草 Dracocephalum ruyschiana 的染色体水平基因组组装，包含两个假单倍型。",
+        "methods": "组装得到 hap1 661 Mb 与 hap2 681 Mb，各挂载至 7 条染色体；评估单拷贝直系同源完整性与 k-mer 完整性，并注释蛋白编码基因。",
+        "relevance": "该文为基因组资源报道，与给定主题“检索增强与对齐”无直接方法学关联。",
+        "caveat": "作为基因组注释文章，未涉及所匹配主题的方法；摘要未提供组装连续性指标如 N50 等细节。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.11.765819",
+      "title": "Expanding Plasma Proteome Coverage While Preserving Biological Signatures: A Systematic Characterization of Enrichment and Preanalytical Variables",
+      "abstract": "Plasma is a rich and accessible source for biomarkers. The analytical challenge of the steep dynamic range was recently addressed using enrichment technologies. Enrichment technologies have been shown to be sensitive to preanalytical variables, making this an active area of research. We established the P2 enrichment system as high-performing and robust for large scale studies, with reproducible identifications and precision across batches, days, operators and laboratories. We characterized P2-based enrichment for preanalytical variables (eight blood collection types, centrifugation, freeze-thaw and pathogen inactivation). K2EDTA-plasma resulted in the deepest proteome coverage with about 6000 protein groups on the timsTOF HT. We spiked 16 heavy-labelled proteins into platelet-poor and platelet-contaminated plasma. Importantly, linearity, accuracy, and precision were high in both platelet-poor and platelet-contaminated plasma for both P2-enriched and neat preparations. In a cancer cohort, we demonstrated that 97% of differentially abundant proteins retained the same direction of regulation after P2-based enrichment compared with the neat preparation. Differentially abundant proteins identified in a colorectal cancer pilot cohort remained largely conserved after platelet contamination, including previously reported biomarkers. We demonstrated that P2-based enrichment enables deep, large scale proteome profiling and preserves biological information despite preanalytical variation. Candidates emerging from P2-based discovery can be validated in independent cohorts with targeted assays.",
+      "authors": [
+        "Viode, A.",
+        "Malinovska, L.",
+        "Schaer, S.",
+        "Wurzenberger, X.",
+        "Shichkova, P.",
+        "Aretz, I.",
+        "Buehlmann, V.",
+        "Kraft, K.",
+        "Van Bergen, W.",
+        "Barlow, N.",
+        "Runtsch, L.",
+        "Below, C. R.",
+        "Feng, Y.",
+        "Lachaud, A.",
+        "Kulak, N. A.",
+        "Rinner, O.",
+        "Bruderer, R."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765819",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765819.full.pdf",
+      "doi": "10.64898/2026.11.11.765819",
+      "venue": "biochemistry",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.78,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 6.8,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "large-language-models": 8.78
+      },
+      "summary": {
+        "takeaway": "系统表征 P2 富集系统及分析前变量，表明其可扩大血浆蛋白组覆盖并较好保留生物学差异信号。",
+        "methods": "评估 P2 富集在不同批次、天数、操作者和实验室间的重现性；考察八种采血类型、离心、冻融和病原体灭活等变量；在血浆中掺入 16 个重标蛋白评估线性、准确度和精密度；在癌症队列中比较富集与未富集样本的差异蛋白方向一致性。",
+        "relevance": "该文为血浆蛋白质组学方法学表征，与给定主题“检索增强与对齐”无直接关联。",
+        "caveat": "富集仍可能引入偏好，结论主要基于特定平台和队列；摘要未量化低丰度蛋白的丢失程度。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.10.765650",
+      "title": "Evolutionarily Conserved Fragments reveal modular architecture and expand functional coverage in bacteriophage proteins",
+      "abstract": "Bacteriophage proteins evolve through extensive modular exchange, yet the sequence units underlying this process remain poorly defined. Classical domains are plausible evolutionary modules, but they incompletely annotate phage proteins and may not always coincide with the regions conserved across protein families. Here, we constructed 13,035 Evolutionarily Conserved Fragments (ECFs), grouped into 3,167 families, through large-scale HMM-HMM comparisons of proteins from 5,396 RefSeq phage genomes, without imposing predefined domain boundaries. ECFs overlapped substantially with ECOD and Pfam annotations but formed a heterogeneous spectrum comprising subdomains, domain-equivalent units, composite regions and fragments with no counterpart in either resource. Their relationships were frequently nested, indicating that conserved modules occur at multiple organisational scales. ECFs annotated 50% of phage representative proteins (at least doubling the coverage of either database), with the largest gains in structural and infection-related functions, a pattern replicated in independent metagenomic data. ECF families also showed function-dependent patterns of diversity and spatial segregation and provided functional associations for 23,925 protein families lacking detectable Pfam or ECOD domains. In receptor-binding proteins, ECFs subdivided established domains, delineated previously unannotated structural elements and recovered homologous regions where structural similarity was ambiguous. These results show that the evolutionary building blocks of phage proteins do not always coincide with classical domains, highlighting that evolutionary processes act across multiple scales. ECFs provide a complementary, sequence-derived framework for investigating how complex viral proteins are assembled, diversified and functionally organised.",
+      "authors": [
+        "Smug, B.",
+        "Szczepaniak, K.",
+        "Leconte, J.",
+        "Dunin-Horkawicz, S.",
+        "Mostowy, R. J."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.10.765650",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.10.765650.full.pdf",
+      "doi": "10.64898/2026.11.10.765650",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 8.78,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 6.8,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "large-language-models": 8.78
+      },
+      "summary": {
+        "takeaway": "通过大规模 HMM-HMM 比较构建 13,035 个进化保守片段（ECF），发现噬菌体蛋白的进化模块并不总与经典结构域一致，且可显著扩大功能注释覆盖。",
+        "methods": "对 5,396 个 RefSeq 噬菌体基因组蛋白做 HMM-HMM 比较，不预设结构域边界，得到 3,167 个 ECF 家族；与 ECOD、Pfam 比较，并在独立宏基因组数据中复现，分析受体结合蛋白等。",
+        "relevance": "该研究涉及序列层面的保守单元识别与注释扩展，与给定主题“检索增强与对齐”仅弱相关。",
+        "caveat": "ECF 定义依赖所用序列库与比较阈值；摘要未报告假阳性率或与其他片段化方法的系统比较。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:43037128",
+      "title": "Evolutionary rewiring of the Drosophila melanogaster accessory gland by the RNA-binding protein gene, Marf1.",
+      "abstract": "Gene expression evolution can take several forms, including changes in isoform usage, transcript abundance, and patterns of tissue- or cell type-specific expression. Using comparative and population-level transcriptomic analyses in the melanogaster subgroup of Drosophila, we previously documented the gain of Marf1 expression in the main cells of the D. melanogaster accessory gland, which produces most of the seminal fluid proteins in the species. Marf1, an RNA-binding protein, is ovary biased in the female and accessory gland biased in the male. It is required for female fertility, but its potential male functions are unknown. We investigated the possible male function of this gene using genetic, genomic, transcriptomic, and organismal analyses. We found that despite its very young expression phenotype in the male accessory gland, Marf1 has become integrated into the accessory gland gene regulatory network. We also found that its novel accessory gland expression is correlated with a fixed transposon fragment that is also associated with species-specific open chromatin in the accessory gland. Because Marf1 is located in the pericentromeric region of chromosome 2, which is riddled with repetitive DNA and characterized by low recombination rates and strong effects of linked selection, we hypothesize that novel accessory gland expression of this gene was deleterious and an incidental effect of centromeric hitchhiking effects, followed by compensation and integration of this gene into a novel gene regulatory network in the D. melanogaster accessory gland.",
+      "authors": [
+        "Tiezheng Fan",
+        "Madison E An",
+        "Julie M Cridland",
+        "David J Begun"
+      ],
+      "published": "2026-11-16",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43037128/",
+      "pdf_url": "",
+      "doi": "10.1093/genetics/iyag334",
+      "venue": "Genetics",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 8.68,
+      "matched_topics": [
+        "GRN / Regulon",
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "gene regulatory network"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 2.4,
+        "检索增强与对齐": 2.55,
+        "领域上下文": 0.5,
+        "新鲜度": 2.03
+      },
+      "category_scores": {
+        "bio-computing": 6.13,
+        "large-language-models": 6.28
+      },
+      "summary": {
+        "takeaway": "该研究发现，Marf1基因在D. melanogaster雄性附腺中的年轻表达已被整合进附腺基因调控网络，并与一个固定的转座子片段及附腺中物种特异的开放染色质相关联。",
+        "methods": "对Drosophila melanogaster亚组的比较与群体水平转录组分析，结合遗传、基因组、转录组和个体水平分析。",
+        "relevance": "涉及GRN/Regulon，探讨新获得表达的基因如何被整合进组织特异的基因调控网络。",
+        "caveat": "关于该表达由有害的着丝粒搭车效应引起、随后发生补偿并被整合的假说，属于作者基于该基因位于低重组着丝粒周边区域提出的推测，摘要未提供直接因果验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:43026383",
+      "title": "Bayesian network analysis identifies gene regulatory network associated with cytoskeletal disruption in inflammatory bowel disease.",
+      "abstract": "BACKGROUND: Inflammatory bowel disease (IBD) is a complex, multifactorial and polygenic condition with incompletely understood etiology. Transcriptomic and metabolomic studies have identified hundreds of genes and metabolites linked to IBD. At the same time, IBD is accompanied by numerous epithelial lesions, including barrier dysfunction and cytoskeletal damage. We have previously shown that disruption of cortical actin filaments and microvillar degeneration are characteristic features of the Muc2 mouse model of IBD. Here, we aimed to identify putative regulatory genes underlying cytoskeletal dysregulation that are shared between human IBD patients and the Muc2 mouse model. By integrating these datasets, we sought to pinpoint conserved regulators of epithelial structural defects as candidate therapeutic targets for IBD. METHODS: We used transmission electron microscopy to assess ultrastructural defects in the intestinal epithelium of IBD patients. A Bayesian network, a probabilistic graphical model, was applied to preselected key node genes from open-access transcriptomic data from Crohn's disease patients to reconstruct the gene regulatory hierarchy underlying cytoskeletal architecture and other regulatory events in IBD. RESULTS: Electron microscopy of IBD patients revealed disruption of the brush border ultrastructure, mirroring the microvillar defects previously described in Muc2 mice. This analysis identified a set of genes predicted to contribute to actin polymerization and bundling, among which PREX1 was further validated using transcriptomic data from Muc2 mice. CONCLUSION: Our study demonstrates the utility of Bayesian network analysis for dissecting complex cellular phenotypes, enabling the identification of candidate regulatory genes responsible for cortical cytoskeleton and microvilli disruption in chronic intestinal inflammation.",
+      "authors": [
+        "Snezhanna Medvedeva",
+        "Julia Kulygina",
+        "Ksenia Morozova",
+        "Julia Popova",
+        "Anastasiya Zybkina",
+        "Sergey Demakov",
+        "Marina Osipenko",
+        "Maksim Struchalin",
+        "Elena Kozhevnikova"
+      ],
+      "published": "2026-11-13",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43026383/",
+      "pdf_url": "",
+      "doi": "10.1007/s10142-026-02130-5",
+      "venue": "Functional & integrative genomics",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 8.58,
+      "matched_topics": [
+        "GRN / Regulon"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "gene regulatory network"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 6.4,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "bio-computing": 8.58
+      },
+      "summary": {
+        "takeaway": "该研究用贝叶斯网络整合人类IBD与Muc2小鼠模型的转录组数据，重建与细胞骨架和微绒毛结构相关的调控层级，并将PREX1列为候选调控基因。",
+        "methods": "对IBD患者肠上皮进行透射电镜观察超微结构缺陷；基于克罗恩病开放转录组数据中预选的关键节点基因构建贝叶斯网络；并用Muc2小鼠转录组数据验证PREX1。",
+        "relevance": "直接涉及GRN/Regulon，展示从转录组数据推断调控网络以解释IBD中上皮结构缺陷。",
+        "caveat": "贝叶斯网络给出的是预测性调控关系；PREX1仅在Muc2小鼠转录组数据中进一步验证，摘要未说明在人类样本中的功能实验验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.04.20.719538",
+      "title": "Human-supervised Agentic AI for Hypothesis Generation and Experimental Assistance in Drug Repurposing",
+      "abstract": "Computational drug repurposing has focused largely on rapid hypothesis generation, yet real-world applications span a much broader lifecycle: suggesting drug candidates, designing experiments, analyzing assay data, and iteratively refining hypotheses. Here, we demonstrate that agentic AI can operate throughout this lifecycle. We developed RepurAgent, a hierarchical multi-agentic system comprising a supervisor agent and a planning agent that coordinates four specialized sub-agents (research, prediction, data, and report) with human in the loop, supported by episodic memory and retrieval-augmented generation. The system is grounded in repurposing-specific data, tools, and standard operating procedures developed within the REMEDi4ALL consortium. We validated RepurAgent across three scenarios spanning distinct stages within the repurposing lifecycle: in acute myeloid leukemia, a blinded expert evaluation indicated that RepurAgent produced substantially more candidates that were both novel and mechanistically credible than a vanilla LLM baseline; in a retrospective COVID-19 antiviral screen, RepurAgent acted as an adaptive experimental collaborator, prioritizing compounds with AUC-ROC up to 0.99 and average precision up to 0.91 without predefined thresholds and flagging confounders missed in manual review; and for multiple sulfatase deficiency, it prioritized 81 high-confidence candidates from 5159 compounds, which were further corroborated by domain experts. These results show that agentic AI can support work across the drug repurposing lifecycle, from hypothesis generation to experimental analysis. RepurAgent is open source and deployed at https://repuragent.serve.scilifelab.se/.",
+      "authors": [
+        "Huynh, D.-L.",
+        "Asp, E.",
+        "Ballante, F.",
+        "Puigvert, J. C.",
+        "DeGrave, A.",
+        "Karki, R.",
+        "Nader, K.",
+        "Östling, P.",
+        "Pokharel, B.",
+        "Rietdijk, J.",
+        "Schlotawa, L.",
+        "Schmidt, L.",
+        "Seal, S.",
+        "Seashore-Ludlow, B.",
+        "Aittokallio, T.",
+        "Spjuth, O."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.04.20.719538",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.04.20.719538.full.pdf",
+      "doi": "10.64898/2026.04.20.719538",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 7.08,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "retrieval-augmented generation"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 5.1,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "large-language-models": 7.08
+      },
+      "summary": {
+        "takeaway": "该研究提出并验证RepurAgent，一个带人类监督的层级多智能体系统，可贯穿药物重定位生命周期，从候选提出、实验设计到数据分析与假设迭代。",
+        "methods": "系统由supervisor agent与planning agent协调research、prediction、data、report四个子智能体，结合episodic memory与retrieval-augmented generation，并基于REMEDi4ALL联盟的重定位数据、工具与标准操作流程；在急性髓系白血病、回顾性COVID-19抗病毒筛选和multiple sulfatase deficiency三个场景中验证。",
+        "relevance": "匹配检索增强与对齐主题，体现RAG、多智能体编排与人在回路在生物医学假设生成中的应用。",
+        "caveat": "急性髓系白血病场景为盲法专家评估，非湿实验验证；COVID-19为回顾性筛选；multiple sulfatase deficiency候选仅由领域专家佐证，摘要未报告前瞻性实验验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.11.765961",
+      "title": "Phylospatial optimal transport for single-cell and spatial transcriptomics data integration",
+      "abstract": "The spatial organization of evolving cell populations in tumors influences how they progress and respond to treatment. Spatially resolved transcriptomics data may be used to examine the locations of these diverse cell states in tumor sections. However, these technologies often lack single-cell resolution and instead capture groups of cells in spatial spots, making it difficult to resolve cancer clones. In contrast, dissociated single-cell transcriptomics data are better suited for obtaining cell lineages, but do not capture the locations of the cells in the tissue. Here, we introduce SpOTr, an optimal transport approach that leverages the concordance between the evolutionary tree and the spatial distribution of cancer cells to integrate single-cell and spatial transcriptomics data from tumors. SpOTr combines a spot deconvolution model with Fused Gromov-Wasserstein optimal transport, in which cells that are close in the tree are drawn to nearby spots. In simulations and in real spatial lineage tracing data, SpOTr recovered the spatial locations of clones better than methods that ignore the tree. In a human colorectal liver metastasis, SpOTr mapped copy number clones from dissociated cells to spatial spots, showing that it successfully maps the evolutionary history of tumors in space.",
+      "authors": [
+        "Ferreira, P. F.",
+        "Kviman, O.",
+        "Lagergren, J."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765961",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765961.full.pdf",
+      "doi": "10.64898/2026.11.11.765961",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 6.53,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "领域上下文": 2.0,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "large-language-models": 6.53
+      },
+      "summary": {
+        "takeaway": "该研究提出SpOTr，一种利用进化树与空间分布一致性的最优传输方法，用于整合肿瘤单细胞与空间转录组数据，以在空间上定位克隆。",
+        "methods": "结合spot deconvolution模型与Fused Gromov-Wasserstein最优传输，使进化树上相近的细胞被吸引到邻近空间spot；在模拟数据和真实空间谱系追踪数据中评估，并应用于人结直肠肝转移。",
+        "relevance": "匹配检索增强与对齐中的多模态数据整合思路，面向单细胞与空间转录组的数据对齐。",
+        "caveat": "摘要中的验证主要来自模拟、空间谱系追踪数据和一个人结直肠肝转移案例；对更广泛肿瘤类型与数据平台的泛化性未在摘要中说明。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42764231",
+      "title": "S-palmitoylation at the interface between lipophagy and macrophage immunometabolism in sepsis: mechanistic evidence and translational questions.",
+      "abstract": "Sepsis seldom presents as a uniform immune phenotype. Inflammation and immune suppression often overlap, but their balance shifts across patients, organs, and illness stages. Macrophages sit within this variation, coordinating cytokine output, microbial clearance, antigen processing, and presentation. Lipophagy removes lipid droplets through selective autophagy. The released fatty acids can feed mitochondrial β-oxidation, helping macrophages balance lipid storage with energy demand. Reduced flux may instead leave excess droplets, compromise mitochondrial function, and blunt antimicrobial activity. Whether this sequence directly drives sepsis-associated immunoparalysis remains uncertain. Protein S-palmitoylation offers a second potential control point through reversible cysteine S-acylation. Studies have linked this modification to ATG16L1 and ATG4B, and to immune regulators including MYD88, NLRP3, and CD80. Most of that evidence, however, comes from models other than sepsis, so its relevance cannot be assumed. This review therefore examines the proposed links among macrophage lipophagy, immunometabolic failure, and sepsis-associated immunoparalysis while keeping experimentally established observations separate from mechanistic inference. Taken together, current findings support S-palmitoylation as a plausible regulatory layer, but they do not establish an integrated causal axis linking S-palmitoylation, lipophagy, and immunometabolism in sepsis. This framework awaits direct testing in primary macrophages, organ-specific sepsis models, and longitudinal clinical cohorts.",
+      "authors": [
+        "Yisen Wang",
+        "Liang Zhang",
+        "Liyao Zhang",
+        "Hongkun Jiang",
+        "Meiling Cao"
+      ],
+      "published": "2026-11-04",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42764231/",
+      "pdf_url": "",
+      "doi": "10.1016/j.intimp.2026.117441",
+      "venue": "International immunopharmacology",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 6.15,
+      "matched_topics": [
+        "机制推理",
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG",
+        "mechanistic inference"
+      ],
+      "score_breakdown": {
+        "机制推理": 2.4,
+        "检索增强与对齐": 2.55,
+        "新鲜度": 0.0
+      },
+      "category_scores": {
+        "bio-computing": 3.6,
+        "large-language-models": 3.75
+      },
+      "summary": {
+        "takeaway": "该综述梳理巨噬细胞脂自噬、免疫代谢失败与脓毒症相关免疫麻痹之间的可能联系，并讨论S-棕榈酰化作为潜在调控层的证据，但明确指出尚未确立整合的因果轴。",
+        "methods": "综述性分析，将实验已确立的观察与机制推断分开陈述，整合关于脂自噬、线粒体β-氧化以及S-棕榈酰化与ATG16L1、ATG4B、MYD88、NLRP3、CD80等关联的文献。",
+        "relevance": "涉及机制推理，强调在脓毒症背景下区分证据与推断，并讨论S-棕榈酰化对免疫调控通路的潜在作用。",
+        "caveat": "作者自述多数S-棕榈酰化证据来自非脓毒症模型，且S-棕榈酰化、脂自噬与免疫代谢在脓毒症中的整合因果轴仍待原代巨噬细胞、器官特异脓毒症模型和纵向临床队列直接检验。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.10.763771",
+      "title": "Reusing pipettes in Patch-seq: a foundation for automated multimodal profiling",
+      "abstract": "Patch-seq is a technique for single-cell multimodal characterization. It combines whole-cell electrophysiology, single-cell transcriptomics, and morphological reconstruction in single neurons. Patch-seq morphologies are a critical bridge among cell types, genes, physiology, and large-scale connectivity platforms such as EM connectomes and single-cell-resolution projectomes. However, patch-seq experimental complexity and operator dependence limit throughput. Automation could enable scalable Patch-seq but requires procedural adaptations, including detergent-based pipette cleaning, robotic nucleus extraction and collection. The impact of these automations on Patch-seq quality has not been systematically evaluated. Here, we show that each of these modifications preserves or improves key Patch-seq outcomes. Automated nucleus extraction performs comparably to, or better than, expert manual operation, preserving key RNA and morphological metrics. Detergent-cleaned, reused pipettes supported a viable sealing success rate across multiple cleaning cycles and preserved electrophysiological quality and transcriptomic yield without introducing excess contamination. Sonication effectively allows collection of nuclear material without damaging RNA and supports subsequent pipette cleaning and reuse. Enhanced automated sealing and break-in procedures increased throughput regardless of brain region, cell type or species. Together, these results validate the core procedural adaptations required for automated Patch-seq and establish a foundation for high-throughput, standardized multimodal single-cell characterization.",
+      "authors": [
+        "Campagnola, L.",
+        "Chase, M.",
+        "Trinh, J.",
+        "Koch, M.",
+        "McCutcheon, A.",
+        "Lee, M.",
+        "Lee, B.",
+        "Dalley, R.",
+        "Mann, R.",
+        "Cahoon, A.",
+        "Braun, T.",
+        "Gudsnuk, K.",
+        "Best, F.",
+        "Sorensen, S.",
+        "Jarsky, T."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.10.763771",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.10.763771.full.pdf",
+      "doi": "10.64898/2026.11.10.763771",
+      "venue": "neuroscience",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 6.03,
+      "matched_topics": [
+        "多组学扰动"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "multimodal single-cell"
+      ],
+      "score_breakdown": {
+        "多组学扰动": 2.55,
+        "领域上下文": 1.5,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "bio-computing": 6.03
+      },
+      "summary": {
+        "takeaway": "该研究系统评估Patch-seq自动化所需的关键流程改造，发现自动化核提取、去垢剂清洗并复用玻璃电极以及超声处理可保持或改善关键结果，为高通量标准化多模态单细胞表征打基础。",
+        "methods": "对Patch-seq流程中的自动化核提取与收集、基于去垢剂的电极清洗与复用、超声辅助核物质收集以及自动化封接与破膜程序进行评估，比较RNA与形态学指标、封接成功率、电生理质量和转录组产量及污染情况。",
+        "relevance": "匹配多组学扰动主题，涉及电生理、转录组与形态学多模态单细胞 profiling 的流程标准化与通量化。",
+        "caveat": "摘要报告的是流程改造对Patch-seq质量指标的验证，未给出大规模生物学发现或跨实验室可重复性的系统证据；复用电极的长期污染风险仅以“未引入过量污染”表述。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.12.766149",
+      "title": "Spatial multi-omic profiling of non-autonomous transcriptomic and epigenomic responses to genetic perturbation",
+      "abstract": "Multicellular organisms develop and maintain differentiated cell states through a combination of cell-autonomous and non-autonomous regulatory mechanisms, including signal transduction pathways mediated by ligands, receptors, and kinases. Genetic perturbation through CRISPR pooled screening is widely used to study cell-autonomous regulatory mechanisms, but the challenges of cellular-resolution in situ measurement have limited the study of non-autonomous regulatory mechanisms. We developed Perturb-Tags, a spatial multi-omic technique for pooled CRISPR screening that tags nuclei with spatial barcodes, allowing joint measurement of single-nucleus gene expression, CRISPR guide RNAs, chromatin accessibility, and spatial positions within intact tissue. Perturb-Tags achieves cellular-resolution, unbiased gene expression and multi-omic profiling, and higher sensitivity than previous spatial perturbation approaches. We used Perturb-Tags to systematically perturb ligands, receptors, and all expressed kinases in human embryoid bodies. These experiments revealed extensive non-autonomous gene expression changes after perturbation, including distance-dependent loss of signaling pathway activity upon ligand knockdown, compensatory upregulation of alternative signaling pathways, and responses to receptor and kinase knockdown that vary with cell microenvironment. We also identified changes in the spatial organization of cells with ligand and kinase knockdowns. Finally, we trained a graph neural network to model the combined effects of genetic perturbations on gene expression and chromatin accessibility across an entire tissue. Our work provides a powerful experimental and computational platform for mechanistic studies of non-autonomous regulatory mechanisms across healthy and diseased tissues.",
+      "authors": [
+        "Ghaemmaghami, J.",
+        "Lee, K. H.",
+        "Jiang, S.",
+        "Zhao, Y.",
+        "Gadhvi, G.",
+        "Lu, L.",
+        "Wen, M.-C.",
+        "Wang, Y.",
+        "Liu, L.",
+        "Cable, D.",
+        "Welch, J. D."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766149",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766149.full.pdf",
+      "doi": "10.64898/2026.11.12.766149",
+      "venue": "bioinformatics",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 5.98,
+      "matched_topics": [
+        "单细胞扰动"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "crispr screen"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 3.0,
+        "领域上下文": 1.0,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "bio-computing": 5.98
+      },
+      "summary": {
+        "takeaway": "该研究开发Perturb-Tags，一种空间多组学pooled CRISPR筛选技术，可在完整组织中联合测量单核基因表达、guide RNA、染色质可及性和空间位置，并系统揭示遗传扰动的非自主转录组与表观组响应。",
+        "methods": "用空间条形码标记细胞核，实现单核RNA、CRISPR guide、染色质可及性与空间位置联合测量；在人embryoid bodies中扰动配体、受体及所有表达的激酶；并训练图神经网络建模扰动对基因表达和染色质可及性的联合效应。",
+        "relevance": "匹配单细胞扰动主题，将pooled CRISPR筛选扩展到组织空间背景下的非自主调控机制研究。",
+        "caveat": "摘要中的发现基于人embryoid bodies体系，向其他组织、体内环境及疾病模型的推广仍需验证；图神经网络模型为计算建模，摘要未报告其独立实验验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:43035199",
+      "title": "Graph learning guided by regulatory and spatial contexts prioritizes natural compound-target pairs in digestive system cancers.",
+      "abstract": "Heterogeneity in tumor regulatory programs, cellular composition and spatial organization complicates target prioritization for natural compounds. We developed a spatial-context heterogeneous graph neural network ranker (SC-HGNN-Rank) that combines relation-aware graph representations with ranking optimization to integrate compound-target associations, transcriptional regulation, interaction networks, and single-cell and spatial information. The model ranked 600 candidate axes in colon adenocarcinoma (COAD), hepatocellular carcinoma (LIHC) and gastric adenocarcinoma (STAD). Under matched training conditions, mean Spearman correlations with the reference ranking were 0.965, 0.967 and 0.976 for leave-one-cancer-out, compound-group holdout and target-group holdout evaluations, respectively. The composite ranking objective improved mean Spearman correlation by 0.049 over a simple objective using the same encoder, whereas removing the spatial module reduced it by 0.147. Model ranking and multilayer evidence prioritized Quercetin-CDK1/MYB-Myeloid in COAD, 4',5-dihydroxyflavone (4',5-DHF)-AR/HDAC1-T/NK in LIHC, and Eriodyctiol-HSP90AB1/HOPX-Fibroblast in STAD. Expanded spatial analyses with expression-matched gene controls assessed associations between target expression and mapped cell abundance. Cellular thermal shift and drug affinity responsive target stability assays showed increased retention of target proteins after compound treatment. In HCT116, JHH-6 and MKN45 cells, the compounds reduced viability, colony formation, migration and invasion cell counts, and increased apoptosis. Target knockdown produced similar growth-inhibitory phenotypes, whereas overexpression attenuated compound-induced effects, supporting the involvement of CDK1, AR and HSP90AB1 in the respective responses. The accompanying Explorer supports candidate searches, evidence inspection and data export. By incorporating regulatory and spatial contexts into natural-compound prioritization, this study provides a reusable approach and experimentally supported candidates for target-directed pharmacological research in digestive system cancers.",
+      "authors": [
+        "Huizhong Jiang",
+        "Shihao Zheng",
+        "Chuanqi Yang",
+        "Xiaobei Zhang",
+        "Haixiao Liu",
+        "Yanju Bao"
+      ],
+      "published": "2026-11-15",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43035199/",
+      "pdf_url": "",
+      "doi": "10.1016/j.phrs.2026.109767",
+      "venue": "Pharmacological research",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 5.78,
+      "matched_topics": [
+        "GRN / Regulon"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "transcriptional regulation"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 2.4,
+        "领域上下文": 0.5,
+        "新鲜度": 1.68
+      },
+      "category_scores": {
+        "bio-computing": 5.78
+      },
+      "summary": {
+        "takeaway": "该研究提出SC-HGNN-Rank，将调控与空间背景纳入异构图神经网络排序，在COAD、LIHC和STAD中优先排序天然化合物-靶点轴，并对候选进行实验支持。",
+        "methods": "构建关系感知图表示与排序优化，整合化合物-靶点关联、转录调控、相互作用网络及单细胞和空间信息；在三种消化道肿瘤中排序600个候选轴，采用leave-one-cancer-out、compound-group holdout和target-group holdout评估；用CETSA和DARTS实验以及细胞表型与靶点敲低/过表达实验验证候选。",
+        "relevance": "涉及GRN/Regulon，将转录调控网络与空间细胞背景结合用于天然化合物靶点优先级排序。",
+        "caveat": "评估指标为与参考排序的Spearman相关，参考排序本身的构建方式在摘要中未详述；实验验证集中在三个优先候选轴及部分细胞系，其他候选未经实验确认。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:43038198",
+      "title": "Parameter identifiability and uncertainty quantification in a delayed within-host HIV dynamical model.",
+      "abstract": "Accurate parameter inference in within-host viral infection models is frequently hindered by parameter coupling and limited observability, particularly when only viral-load data are available. In this study, we investigate structural and practical identifiability, posterior uncertainty, model adequacy, and predictive robustness in a delayed within-host HIV dynamics framework that incorporates intracellular infection latency. Using simulated longitudinal viral-load data, we combine differential-elimination analysis, profile likelihood, Bayesian posterior inference, information-theoretic model comparison, variance-based global sensitivity analysis, and forward uncertainty propagation. Under the known nonzero history functions used in the synthetic design, differential elimination establishes generic local structural identifiability of the seven model parameters and makes explicit the parameter combinations entering the viral-load observation map. Re-optimized profile likelihoods for the infection-rate parameter and the infected-cell death-rate parameter both cross the 95% likelihood-ratio threshold on either side of their minima, giving bounded intervals. The infection-rate profile is nevertheless broader and more asymmetric, indicating weaker practical constraint rather than practical non-identifiability. A conditional three-parameter, four-chain Bayesian analysis yields concentrated marginal posterior distributions for the infection-rate, virion-production, and intracellular-delay parameters, with split R-hat values no larger than 1.005 and pooled effective sample sizes between 935 and 1398. However, the infection-rate and virion-production parameters show a very strong negative posterior correlation of approximately -0.994, revealing substantial compensatory dependence that is not apparent from marginal credible intervals alone. Within the matched synthetic benchmark, the delayed formulation is favored over a reduced non-delayed alternative by both the Akaike Information Criterion and Bayesian Information Criterion, although this comparison is interpreted as a model-recovery experiment rather than external validation because the data were generated from the delayed model. Global sensitivity analysis identifies the infected-cell death rate and viral clearance rate as the strongest contributors to equilibrium viral-load variability, with the virion-production rate and target-cell production rate showing intermediate effects, whereas predictive uncertainty is greatest during the transient growth and peak phase. These findings show that trajectory fit alone is insufficient for reliable mechanistic inference and that structural identifiability, practical likelihood geometry, joint posterior dependence, and predictive robustness should be evaluated together.",
+      "authors": [
+        "Sayaphat Suksai",
+        "Suthep Suantai",
+        "Areeyuth Sama-Ae",
+        "Chunchom Salikupata"
+      ],
+      "published": "2026-11-16",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43038198/",
+      "pdf_url": "",
+      "doi": "10.1371/journal.pone.0362668",
+      "venue": "PloS one",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 5.63,
+      "matched_topics": [
+        "机制推理"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "mechanistic inference"
+      ],
+      "score_breakdown": {
+        "机制推理": 2.4,
+        "新鲜度": 2.03
+      },
+      "category_scores": {
+        "bio-computing": 5.63
+      },
+      "summary": {
+        "takeaway": "针对含胞内潜伏延迟的HIV宿主内动力学模型，联合结构可辨识性、剖面似然、贝叶斯后验与全局敏感性分析，表明仅拟合病毒载量轨迹不足以支撑可靠的机制推断。",
+        "methods": "使用模拟纵向病毒载量数据，结合微分消去法、剖面似然、条件三参数四链贝叶斯推断、信息准则模型比较、基于方差的全局敏感性分析和前向不确定性传播。",
+        "relevance": "该工作直接讨论机制推理中的参数可辨识性与不确定性量化，强调轨迹拟合之外的联合评估，与给定研究主题高度相关。",
+        "caveat": "所有分析基于从延迟模型生成的合成数据，模型比较被作者明确视为模型恢复实验而非外部验证；实际观测数据下的表现未在摘要中体现。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.11.765957",
+      "title": "Identification and isolation of migratory subpopulations of cancer cells using microfluidics with fluid walls",
+      "abstract": "Microfluidic assays have great potential for investigating cancer cell migration, a key process underlying metastasis which remains a major clinical challenge. However, adoption by biologists is limited due to complex fabrication and operation methods combined with difficulty in retrieving cells of interest. We jet-print dumbbell-shaped microfluidic environments with fluid walls in standard Petri dishes in seconds using standard growth media and immiscible oil. Prostate cancer cells and chemoattractant (bovine serum) are introduced into each end using local transient differences in Laplace pressure to enable spatial confinement. Automated live-cell imaging monitors chemotaxis towards serum using standard microscopes, as the confining fluid walls are optically transparent. Distinct subpopulations of migratory cells exhibit different morphologies and motilities, assessed using a custom machine-learning segmentation model. Then, we leverage the reconfigurability of fluid walls to isolate and retrieve rapidly-migrating single cells. This demonstrates that fluid-walled microfluidics is a versatile and accessible approach for investigating cancer cell migration at single-cell resolution, offering new opportunities to examine cellular heterogeneity in metastasis.",
+      "authors": [
+        "Morgan, J. A. E.",
+        "Cotton, D. T.",
+        "Rao, S. R.",
+        "Cook, P. R.",
+        "Edwards, J.",
+        "Castrejon-Pita, A. A.",
+        "Edwards, C.",
+        "Walsh, E. J."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765957",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.11.765957.full.pdf",
+      "doi": "10.64898/2026.11.11.765957",
+      "venue": "bioengineering",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 5.53,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "领域上下文": 1.0,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "large-language-models": 5.53
+      },
+      "summary": {
+        "takeaway": "利用喷印的液壁哑铃形微流控环境，在单细胞分辨率下监测并回收快速迁移的前列腺癌细胞亚群。",
+        "methods": "在标准培养皿中用标准培养基与不相溶油喷印液壁微环境，以Laplace压力瞬时差异实现空间限域；自动活细胞成像监测趋化，并用自定义机器学习分割模型评估形态与运动性，再重构液壁分离回收单细胞。",
+        "relevance": "摘要涉及自定义机器学习分割模型用于细胞表型识别与分选，可与检索增强与对齐主题中的模型识别与对齐问题产生关联，但关联较为间接。",
+        "caveat": "摘要未报告迁移亚群比例、回收效率或与其它方法的定量比较；机器学习分割模型的性能与泛化性未给出。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.03.16.712178",
+      "title": "Single-cell chromatin profiling reveals dynamic regulatory logic and enhancer elements in brain and retina development",
+      "abstract": "Cell type identity in the nervous system is encoded within cis-regulatory landscapes that integrate transcription factor activity with chromatin accessibility. However, how these regulatory programs are organized and remodeled during post-embryonic neural development remains poorly understood. We generate a temporally resolved single-cell chromatin accessibility resource of ~95,000 zebrafish brain and retina nuclei spanning larval, juvenile, and adult stages. We define a total of 213 chromatin states and uncover extensive cell type- and region-specific reorganization of chromatin landscapes across the profiled stages. By integrating scATAC-seq with transcriptomic data, we link motif accessibility to transcription factor expression and reveal distinct patterns of regulatory stability and remodeling across neural cell types and brain regions. Leveraging this resource, we systematically identify and functionally validate candidate enhancers in vivo. Focusing on the slc1a3b locus in radial glia, we define compact enhancer modules that act combinatorially to drive gene expression and identify candidate regulatory inputs shared with human SLC1A3. Together, these findings provide a framework for decoding neural cis-regulatory logic and functionally interrogating regulatory elements across the vertebrate nervous system.",
+      "authors": [
+        "Greenslade, J. E.",
+        "Veeravenkatasubramanian, H.",
+        "Reed, M. L.",
+        "Raj, B."
+      ],
+      "published": "2026-11-13",
+      "updated": "2026-11-13",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.03.16.712178",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.03.16.712178.full.pdf",
+      "doi": "10.64898/2026.03.16.712178",
+      "venue": "developmental biology",
+      "source": "bioRxiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "bioRxiv"
+      ],
+      "score": 5.53,
+      "matched_topics": [
+        "检索增强与对齐"
+      ],
+      "matched_categories": [
+        "large-language-models"
+      ],
+      "matched_terms": [
+        "RAG"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "领域上下文": 1.0,
+        "新鲜度": 0.98
+      },
+      "category_scores": {
+        "large-language-models": 5.53
+      },
+      "summary": {
+        "takeaway": "构建斑马鱼脑与视网膜跨幼虫、幼鱼和成体阶段的单细胞染色质可及性图谱，揭示神经发育中染色质状态的动态重组并功能验证候选增强子。",
+        "methods": "对约95,000个斑马鱼脑和视网膜细胞核进行时序单细胞scATAC-seq，定义213种染色质状态，整合转录组数据连接motif可及性与转录因子表达，并在体内功能验证增强子，聚焦放射状胶质细胞的slc1a3b位点。",
+        "relevance": "该研究提供大规模单细胞染色质与转录组整合资源及调控元件功能验证框架，与检索增强与对齐主题中多模态数据整合与调控逻辑对齐相关，但关联偏生物学应用侧。",
+        "caveat": "摘要仅描述斑马鱼数据与一个位点的体内验证，增强子结论的跨物种推广（如与人SLC1A3共享调控输入）仅为候选层面，未给出定量验证范围。"
+      },
+      "summary_mode": "openai"
+    }
+  ],
+  "fetch_report": {
+    "window_start": "2026-11-13",
+    "window_end": "2026-11-17",
+    "sources": {
+      "arxiv": {
+        "status": "error",
+        "count": 0,
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)"
+      },
+      "biorxiv": {
+        "status": "ok",
+        "count": 300
+      },
+      "pubmed": {
+        "status": "ok",
+        "count": 8
+      },
+      "semantic_scholar": {
+        "status": "error",
+        "count": 0,
+        "error": "HTTPError: 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=single+cell+perturbation+prediction&limit=40&fields=paperId%2Ctitle%2Cabstract%2Cauthors%2CpublicationDate%2Curl%2CopenAccessPdf%2CexternalIds%2Cvenue%2"
+      }
+    },
+    "total": 308
+  },
+  "summary_report": {
+    "requested": 27,
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai": 27,
+    "fallback": 0,
+    "errors": []
+  }
+}
