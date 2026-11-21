@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T07:30:45+00:00",
+  "generated_at": "2026-11-21T07:24:27+00:00",
   "timezone": "Asia/Singapore",
   "papers": [
     {
@@ -25,7 +25,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 28.94,
+      "score": 28.59,
       "matched_topics": [
         "大语言模型",
         "检索增强与对齐",
@@ -51,18 +51,18 @@
         "强化学习": 7.0,
         "多模态学习": 7.0,
         "跨模态理解与生成": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 7.94,
-        "reinforcement-learning": 9.54,
-        "multimodal-learning": 16.54
+        "large-language-models": 7.59,
+        "reinforcement-learning": 9.19,
+        "multimodal-learning": 16.19
       },
       "summary": {
-        "takeaway": "提出CCGP-2M多模态目标偏好数据集及VLM引导的强化学习框架，通过离线偏好对齐让语言模型为Craftax环境生成更合适的高层目标以改善探索。",
-        "methods": "从Craftax-Classic交互轨迹构建目标偏好数据集；离线阶段用KLTDPO（token级KL正则与分布鲁棒重加权）微调VLM；在线阶段进行目标引导的RL，并与SOTA基线在Craftax-Classic上比较。",
-        "relevance": "属于大语言模型与强化学习结合的工作，涉及多模态理解与偏好对齐，直接对应给定主题中的大语言模型、强化学习和多模态学习。",
-        "caveat": "摘要只在单一Craftax-Classic环境评测，摘要未说明数据集规模、基线细节及泛化到其他环境的证据。"
+        "takeaway": "提出由视觉语言模型（VLM）引导的强化学习框架，在Craftax-Classic中通过环境特定的目标生成改善稀疏奖励下的探索。",
+        "methods": "构建多模态目标偏好数据集CCGP-2M，采用两阶段流程：离线用KLTDPO（结合token级KL正则与分布鲁棒重加权）微调VLM，再进行在线目标引导的强化学习；在Craftax-Classic上实验。",
+        "relevance": "与大语言模型、强化学习及多模态学习相关：探索LLM/VLM如何生成高层目标来引导RL探索，并涉及偏好对齐方法。",
+        "caveat": "摘要仅报告在单一Craftax-Classic环境中的结果，未说明在其他环境的泛化性、数据集规模及计算成本。"
       },
       "summary_mode": "openai"
     },
@@ -88,7 +88,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 23.44,
+      "score": 23.09,
       "matched_topics": [
         "大语言模型",
         "检索增强与对齐",
@@ -115,135 +115,18 @@
         "知识图谱": 6.0,
         "图谱构建与表示": 6.8,
         "多智能体与奖励学习": 2.7,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 7.94,
-        "knowledge-graphs": 15.34,
-        "reinforcement-learning": 5.24
+        "large-language-models": 7.59,
+        "knowledge-graphs": 14.99,
+        "reinforcement-learning": 4.89
       },
       "summary": {
-        "takeaway": "综述临床LLM中“答案对但推理错”的问题，梳理幻觉、智能体幻觉级联、过程奖励建模与神经符号约束四种范式，并提出将智能体失效模式映射到符号干预点的概念框架。",
-        "methods": "批判性综述，分别讨论临床幻觉成因与静态指标盲区、多智能体与工具增强系统的错误传播、步骤级过程奖励建模、逻辑引擎/本体推理器/知识图谱的符号约束；并讨论监管与认证建议。",
-        "relevance": "涉及大语言模型、知识图谱与多智能体奖励学习，与检索增强对齐、图谱构建及多智能体主题直接相关。",
-        "caveat": "综述指出所引符号方法多为单项研究、模拟或小样本设置，与神经基线不可直接比较，过程奖励模型受训练数据统计限制。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "arxiv:2611.23480v1",
-      "title": "Diagnostic Accuracy and Navigation Behavior of Vision-Language Model Agents Reading Emergency CT and MRI Examinations",
-      "abstract": "Purpose. To evaluate the diagnostic accuracy and image navigation behavior of vision-language model (VLM) agents under varying exploration strategies. Materials and Methods. In this retrospective study, six VLMs read 100 emergency CT and MRI examinations published in a public archive (March 2025-August 2026) under four conditions (free navigation, navigation from a key slice, and all slices or key slices in a single request), twice each (4800 runs). Nine radiologists read 30 of those cases. A large language model judge validated against two radiologists graded the answers. Conditions were compared with generalized estimating equations clustered by case. Results. Pooled accuracy was lowest under free navigation (32.6%; 391/1200), followed by navigation from a key slice (37.9%; 455/1200; P = .003), and highest with all slices (42.2%; 506/1200) or key slices (42.5%; 510/1200) in one request (both P < .001). On the 30 cases read by radiologists, freely navigating models were correct in 30.0% of runs (108/360) versus 77.0% for radiologists (208/270; P < .001). Models formed a first hypothesis after a median of 10.8% of the slices and kept it in 63.1% of runs (755/1196); final answers were correct in 12.4% of runs after a wrong first hypothesis (110/885) versus 90.4% after a right one (281/311; P < .001). Median stated confidence in the final answers was 90%, whereas 38.9% of them were correct (1861/4778). Conclusion. Across all exploration strategies, VLM agents remained far less accurate than radiologists. They adopted an early hypothesis and usually kept it, seldom correcting a wrong one.",
-      "authors": [
-        "Jonathan Lichtle",
-        "Aymen Meddeb",
-        "Antonin Birot",
-        "Ibrahima Niang",
-        "Lisa Gastaud",
-        "Riyad Hanafi",
-        "Sofiane Dujardin",
-        "Corentin Selomme",
-        "Guillaume Cachard",
-        "Aghiles Hamroun",
-        "Grégory Kuchcinski",
-        "Su Hwan Kim",
-        "Bastien Le Guellec"
-      ],
-      "published": "2026-11-17",
-      "updated": "2026-11-17",
-      "url": "http://arxiv.org/abs/2611.23480v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23480v1",
-      "doi": "",
-      "venue": "arXiv",
-      "source": "arXiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "arXiv"
-      ],
-      "score": 22.84,
-      "matched_topics": [
-        "大语言模型",
-        "多模态学习",
-        "跨模态理解与生成"
-      ],
-      "matched_categories": [
-        "large-language-models",
-        "multimodal-learning"
-      ],
-      "matched_terms": [
-        "language model agent",
-        "large language model",
-        "vision-language",
-        "vision-language model"
-      ],
-      "score_breakdown": {
-        "大语言模型": 7.0,
-        "多模态学习": 7.0,
-        "跨模态理解与生成": 7.0,
-        "新鲜度": 1.34
-      },
-      "category_scores": {
-        "large-language-models": 8.84,
-        "multimodal-learning": 15.84
-      },
-      "summary": {
-        "takeaway": "系统评估六种VLM智能体阅读急诊CT/MRI的诊断准确率与阅片导航行为，发现其准确率远低于放射科医生，且常形成早期假设后很少修正。",
-        "methods": "回顾性研究，100例急诊CT/MRI，六种VLM在四种探索策略下各读两次共4800次运行；九名放射科医生读其中30例；由经两名放射科医生验证的LLM评判答案；用按病例聚类的广义估计方程比较条件。",
-        "relevance": "直接对应大语言模型与多模态/跨模态理解主题，考察VLM智能体在多图像阅片中的诊断与导航行为。",
-        "caveat": "为回顾性、单中心公开档案数据，模型与医生对比仅限30例；评判部分依赖LLM裁判；结论不宜外推到其他影像任务或临床部署。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "arxiv:2611.23179v1",
-      "title": "Say Less, Hallucinate Less? Diagnosing and Restoring Object Coverage in Preference-Optimized Vision-Language Models",
-      "abstract": "Preference optimization (PO) is the standard way to reduce object hallucination in large vision-language models. We find that four public PO checkpoints of LLaVA-1.5-7B also lower object coverage. They name fewer object categories, and their lower hallucination rates bring no significant gain in set-level object F1 on CHAIR. We therefore ask how much of the PO gain the base model can reproduce by stopping earlier. A positive end-of-sequence (EOS) logit bias lets the base model reach the recall of each PO model, and this early stopping alone reproduces 58 to 86 percent of the CHAIRi gain of three checkpoints on two disjoint COCO sets. Writing longer does not bring the lost categories back. Under greedy decoding, a negative EOS bias recovers only 2 to 9 percent of the lost CHAIR recall of these checkpoints, and 94 to 96 percent of the added object mentions repeat categories already named. On CHAIR, the base caption of the same image still names about half of the missed object categories. We therefore propose base-guided object-category restoration, which appends high-confidence base-only categories to the PO caption without training. With thresholds fixed on a development set, it brings three checkpoints within one point of the base recall on a held-out COCO set with a lower distinct-object hallucination rate than the base model. Against the recall-matched base stopping curve, its gain holds for RLAIF-V near the base recall and for RLAIF-V and CHAIR-DPO at an intermediate recall. We will release the code of the recall-controlled evaluation.",
-      "authors": [
-        "Hansang Lee"
-      ],
-      "published": "2026-11-17",
-      "updated": "2026-11-17",
-      "url": "http://arxiv.org/abs/2611.23179v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23179v1",
-      "doi": "",
-      "venue": "arXiv",
-      "source": "arXiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "arXiv"
-      ],
-      "score": 22.64,
-      "matched_topics": [
-        "检索增强与对齐",
-        "多模态学习",
-        "跨模态理解与生成"
-      ],
-      "matched_categories": [
-        "large-language-models",
-        "multimodal-learning"
-      ],
-      "matched_terms": [
-        "RAG",
-        "vision-language",
-        "vision-language model"
-      ],
-      "score_breakdown": {
-        "检索增强与对齐": 6.8,
-        "多模态学习": 7.0,
-        "跨模态理解与生成": 7.0,
-        "新鲜度": 1.34
-      },
-      "category_scores": {
-        "large-language-models": 8.64,
-        "multimodal-learning": 15.84
-      },
-      "summary": {
-        "takeaway": "发现LLaVA-1.5-7B的偏好优化检查点在降低物体幻觉的同时也降低物体类别覆盖，并提出无需训练的base-guided object-category restoration来恢复丢失类别。",
-        "methods": "分析四个公开PO检查点在CHAIR与COCO上的召回与幻觉；用EOS logit偏置做提前停止以匹配召回；提出将高置信度base-only类别追加到PO字幕；阈值在开发集固定并在留出COCO集评估。",
-        "relevance": "属于多模态大模型偏好对齐与幻觉评估，与检索增强对齐、多模态学习及跨模态生成主题相关。",
-        "caveat": "实验主要围绕LLaVA-1.5-7B及其PO检查点与CHAIR/COCO基准，摘要未给出跨模型或真实开放场景的验证。"
+        "takeaway": "这是一篇批判性综述，主张临床LLM评估应审计推理过程而非只看最终答案，并提出将各类智能体失败模式映射到神经符号干预点的概念框架。",
+        "methods": "综述四类范式：临床幻觉的成因与静态指标的缺陷、多智能体与工具增强系统中的幻觉级联、过程奖励建模的步级监督、以及神经符号接地（逻辑引擎、本体推理器、知识图谱）；并讨论监管与认证含义。",
+        "relevance": "聚焦大语言模型在医疗场景的可验证推理、过程奖励学习、知识图谱约束及多智能体系统中的错误传播，与检索增强与对齐、多智能体与奖励学习主题相关。",
+        "caveat": "作者自述所引符号系统增益多来自单项研究，且多在模拟或小样本设定下，与神经基线不可直接比较；本文为概念性综述，未提供新实验证据。"
       },
       "summary_mode": "openai"
     },
@@ -269,7 +152,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 21.79,
+      "score": 21.44,
       "matched_topics": [
         "检索增强与对齐",
         "预训练",
@@ -292,18 +175,18 @@
         "预训练": 2.7,
         "多模态学习": 7.0,
         "跨模态理解与生成": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 5.09,
-        "pretraining": 5.24,
-        "multimodal-learning": 16.54
+        "large-language-models": 4.74,
+        "pretraining": 4.89,
+        "multimodal-learning": 16.19
       },
       "summary": {
-        "takeaway": "评估17个VLM在年龄提示下对图像情绪效价的判断是否与不同年龄人群的评分一致，发现模型虽追踪平均人类效价，但对年龄差异的预测与人类相关性很低。",
-        "methods": "使用900张OASIS图像，以青年、中年、老年提示评估17个VLM，并用822名参与者的评分估计图像特定年龄差异；在600张留出图像上检验提供其他图像人类评分能否改善方向一致性。",
-        "relevance": "涉及多模态VLM的评估与人口统计个性化，与多模态学习、跨模态理解及对齐评估主题相关。",
-        "caveat": "为受控图像情绪评分任务，非真实临床应用；人类年龄效应上限估计为0.595，模型与人类图像级一致性仍有限，结论不宜外推为一般人口统计推理能力。"
+        "takeaway": "发现年龄提示会系统性改变VLM对图像情感的评分，但这种变化与不同年龄人群的实际评分差异几乎不相关，说明人口属性个性化需在单刺激层面做人类对照评估。",
+        "methods": "评估17个VLM在900张OASIS图像上使用青年、中年、老年提示的效价评分，并与822名参与者的评分估计的图像级年龄差异进行比较。",
+        "relevance": "涉及多模态模型中的跨模态理解与对齐评估，强调基础模型人口属性个性化需要个体刺激级别的人类基准。",
+        "caveat": "结果限于情感效价这一维度与OASIS图像集，摘要未说明提示设计的其他变体或更广泛任务上的表现。"
       },
       "summary_mode": "openai"
     },
@@ -331,7 +214,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 21.74,
+      "score": 21.39,
       "matched_topics": [
         "大语言模型",
         "检索增强与对齐",
@@ -355,18 +238,18 @@
         "检索增强与对齐": 2.55,
         "持续适应与预训练": 7.0,
         "多模态学习": 3.0,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "large-language-models": 11.74,
-        "continual-learning": 9.19,
-        "multimodal-learning": 5.19
+        "large-language-models": 11.39,
+        "continual-learning": 8.84,
+        "multimodal-learning": 4.84
       },
       "summary": {
-        "takeaway": "提出CIRA-MoE框架，按任务异质性自适应注入专家并仲裁专家残差贡献，以缓解多模态持续指令微调中的遗忘。",
-        "methods": "探测新任务中层间梯度压力与token级预测难度的异质性；用可学习阈值路由得到专家接受边际作为覆盖信号，选择性注入新专家，并按历史与当前专家相对证据调制token级残差，配合仲裁一致正则；在UCIT与CoIN上实验。",
-        "relevance": "属于多模态大模型持续适应与专家路由，对应持续适应与预训练、多模态学习及大语言模型主题。",
-        "caveat": "摘要仅报告在UCIT与CoIN上优于SOTA，未给出具体数值、计算开销或更长任务序列的遗忘分析。"
+        "takeaway": "提出CIRA-MoE框架，按任务需求自适应地注入新专家并调节token级专家贡献，以缓解多模态持续指令微调中的遗忘。",
+        "methods": "基于层梯度压力与token预测难度的异质性观察，用可学习阈值路由导出专家接受裕度作为覆盖信号，指导选择性专家注入；用历史与当前专家的相对证据调制token级残差贡献，并辅以仲裁一致性正则；在UCIT和CoIN上实验。",
+        "relevance": "针对多模态大模型的持续适应与专家混合架构，契合持续适应与预训练、多模态学习主题。",
+        "caveat": "摘要未给出与基线差距的具体数值或消融细节，也未讨论专家数量增长带来的存储与推理开销。"
       },
       "summary_mode": "openai"
     },
@@ -391,7 +274,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 21.44,
+      "score": 21.09,
       "matched_topics": [
         "检索增强与对齐",
         "强化学习",
@@ -414,80 +297,18 @@
         "强化学习": 7.0,
         "多智能体与奖励学习": 7.0,
         "预训练": 2.7,
-        "新鲜度": 1.69
-      },
-      "category_scores": {
-        "large-language-models": 4.74,
-        "reinforcement-learning": 16.19,
-        "pretraining": 4.89
-      },
-      "summary": {
-        "takeaway": "提出CoSlice协同多智能体强化学习框架，用于O-RAN中切片间物理资源块分配，结合偏好条件切片智能体与LLM协调器在慢时间尺度调整目标。",
-        "methods": "将问题建模为多目标部分可观测随机博弈，证明偏好相关均衡存在并给出次线性遗憾界；采用多目标预训练与联合优化两阶段训练；基于ORANSlice与RFsim构建评估环境并与集中式及多智能体基线比较。",
-        "relevance": "涉及强化学习、多智能体与LLM协调，对应强化学习、多智能体与奖励学习及大语言模型主题。",
-        "caveat": "摘要只说明降低平均与尾部SLA违规，未给出具体幅度；评估限于所构建的ORANSlice/RFsim环境，真实网络部署证据不足。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "arxiv:2611.23484v1",
-      "title": "Reference-Guided Data Curation for 3D Medical Vision-Language Pretraining",
-      "abstract": "Training 3D vision-language models (VLMs) on large medical imaging datasets collected across institutions is constrained by data quality. Vast, uncurated pools of image-report pairs are characterized by redundancy, class imbalance, and cross-institutional heterogeneity. We address this challenge of data curation for improving 3D VLM pretraining by proposing an offline, training-free, reference-guided data curation recipe. Our approach leverages a small, high-quality reference set to independently extract quality signals for each modality of a large, uncurated pool and merges them through a rank-aggregation step into a single ranking that guides sample selection. We validate this method on datasets comprising 35k 3D abdominal CT volume-report pairs from two institutions and 58k 2D chest X-ray image-report pairs. On 3D CT, using our reference-guided data curation strategy, our curated model matches the zero-shot disease classification performance of a state-of-the-art baseline (Merlin) while using $3.3\\times$ less training data and a reference set of 5k samples. On 2D chest X-rays, our method yields a curated model that matches or exceeds the zero-shot disease classification performance of a model trained on the full pool while using up to $10\\times$ less training data and a reference set of only 74 samples. Ablations show that the selection is stable under resampling of the reference, that smaller reference sets still outperform random sampling, and that label rebalancing does not improve performance. To support reproducibility, we release our code.",
-      "authors": [
-        "Faidra Patsatzi",
-        "Ashwin Kumar",
-        "Chong Wang",
-        "Curtis P. Langlotz",
-        "Reinhard Heckel",
-        "Akshay S. Chaudhari"
-      ],
-      "published": "2026-11-17",
-      "updated": "2026-11-17",
-      "url": "http://arxiv.org/abs/2611.23484v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.23484v1",
-      "doi": "",
-      "venue": "arXiv",
-      "source": "arXiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "arXiv"
-      ],
-      "score": 21.39,
-      "matched_topics": [
-        "检索增强与对齐",
-        "预训练",
-        "多模态学习",
-        "跨模态理解与生成"
-      ],
-      "matched_categories": [
-        "large-language-models",
-        "pretraining",
-        "multimodal-learning"
-      ],
-      "matched_terms": [
-        "RAG",
-        "pretraining",
-        "vision-language",
-        "vision-language model"
-      ],
-      "score_breakdown": {
-        "检索增强与对齐": 2.55,
-        "预训练": 7.0,
-        "多模态学习": 3.0,
-        "跨模态理解与生成": 7.0,
         "新鲜度": 1.34
       },
       "category_scores": {
         "large-language-models": 4.39,
-        "pretraining": 8.84,
-        "multimodal-learning": 11.84
+        "reinforcement-learning": 15.84,
+        "pretraining": 4.54
       },
       "summary": {
-        "takeaway": "提出一种离线、免训练的参考引导数据筛选方法，用小型高质量参考集为各模态提取质量信号并聚合排序，从而提升3D医学视觉语言预训练的数据效率。",
-        "methods": "用参考集分别为大型未筛选图像-报告池的两模态提取质量信号，经秩聚合得到单一排序以选择样本；在35k 3D腹部CT与58k 2D胸片图像-报告对上验证，并与Merlin等基线及全量训练比较，含参考重采样与标签重平衡消融。",
-        "relevance": "直接对应预训练、多模态学习与跨模态理解主题，聚焦医学VLM预训练的数据策展环节。",
-        "caveat": "评测以零样本疾病分类为主，数据来自两所机构；摘要未报告其他下游任务或跨机构外部验证，参考集选择策略的敏感性仅做部分消融。"
+        "takeaway": "提出CoSlice，用偏好条件化的切片智能体加LLM协调器实现O-RAN中切片间资源块的协调分配，并在多切片负载下降低SLA违约。",
+        "methods": "将问题建模为多目标部分可观测随机博弈（mo-POSG），证明偏好相关均衡存在并给出次线性遗憾界；采用多目标预训练与联合优化的两阶段训练；基于ORANSlice与RFsim构建评估环境。",
+        "relevance": "结合多智能体强化学习、多目标优化与LLM协调，属于强化学习与多智能体奖励学习方向。",
+        "caveat": "实验基于ORANSlice/RFsim仿真环境，摘要未报告在真实网络部署中的验证；理论保证依赖其博弈建模假设。"
       },
       "summary_mode": "openai"
     },
@@ -514,7 +335,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 19.09,
+      "score": 18.74,
       "matched_topics": [
         "检索增强与对齐",
         "多模态学习",
@@ -533,17 +354,17 @@
         "检索增强与对齐": 2.55,
         "多模态学习": 7.0,
         "跨模态理解与生成": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 5.09,
-        "multimodal-learning": 16.54
+        "large-language-models": 4.74,
+        "multimodal-learning": 16.19
       },
       "summary": {
-        "takeaway": "提出 QL-VLM，一种面向视觉语言模型潜在推理的动态感知量化框架，在 4-bit 下显著提升推理准确率并降低计算成本。",
-        "methods": "基于连续思维链（latent CoT）的视觉语言模型，采用动力学引导量化（DGQ）保留旋转键结构，以及动力学保持蒸馏（DPD）对齐全精度教师模型；在 ScienceQA-IMG 上使用 Qwen2-VL-2B-Instruct 进行评估。",
-        "relevance": "该工作涉及多模态学习与跨模态理解，通过量化与蒸馏提升视觉语言模型推理效率，与检索增强和对齐主题中的高效推理相关。",
-        "caveat": "摘要仅报告了 ScienceQA-IMG 单一数据集上的结果，未说明在其他视觉语言任务或模型上的泛化性；量化对推理链的长期影响也未讨论。"
+        "takeaway": "提出QL-VLM，通过动力学感知的量化与蒸馏实现VLM的4-bit潜空间推理，在保持推理精度的同时大幅降低计算与延迟。",
+        "methods": "先用动力学引导量化（DGQ）以非均匀码本保留旋转键结构，减少视觉语言信息检索的失真；再用动力学保持蒸馏（DPD）对齐连续思维、潜查询读出与预测；在ScienceQA-IMG上以Qwen2-VL-2B-Instruct评估。",
+        "relevance": "涉及多模态模型的跨模态理解与高效推理，以及潜空间链式思维的压缩与对齐。",
+        "caveat": "主要结果集中于ScienceQA-IMG单一基准与特定模型，摘要未说明在其他推理任务或更大模型上的泛化表现。"
       },
       "summary_mode": "openai"
     },
@@ -571,7 +392,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 19.04,
+      "score": 18.69,
       "matched_topics": [
         "大语言模型",
         "检索增强与对齐",
@@ -592,17 +413,132 @@
         "大语言模型": 2.85,
         "检索增强与对齐": 7.0,
         "知识图谱": 7.0,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "large-language-models": 12.04,
-        "knowledge-graphs": 9.19
+        "large-language-models": 11.69,
+        "knowledge-graphs": 8.84
       },
       "summary": {
-        "takeaway": "提出 LSP-RAG，通过多视角潜在评分软提示增强知识图谱检索增强生成，使轻量级语言模型在多跳问答中表现优于依赖大模型的方法。",
-        "methods": "使用两类软提示（视角特定软提示和上下文软提示）引导逐跳知识图谱三元组检索，自适应聚合多视角评分；在多个知识图谱问答基准上评估。",
-        "relevance": "直接关联检索增强与对齐、知识图谱和大语言模型主题，聚焦于提升 KG-RAG 的检索质量与多跳推理能力。",
-        "caveat": "摘要未提供具体基准名称和数值结果，也未说明轻量级模型的具体规模及与更大模型对比的详细设置。"
+        "takeaway": "这项研究聚焦于大语言模型、检索增强与对齐、知识图谱。原文摘要要点：Large Language Models (LLMs) have demonstrated strong capabilities in open-domain question answering, but often struggle with factual accuracy and multi-hop reasoning due to the incompleteness of the training corpora. A promising solution is Knowledge Graph Retrieval-Augmented Generation (KG-RAG), which supplements LLMs with structured knowledge retrieved f…",
+        "methods": "基准评测、大语言模型、检索增强生成、知识图谱",
+        "relevance": "命中当前论文雷达的主题：大语言模型、检索增强与对齐、知识图谱。",
+        "caveat": "当前为无 API Key 的自动提取结果；关键结论、实验规模和局限请以原文为准。"
+      },
+      "summary_mode": "fallback"
+    },
+    {
+      "id": "arxiv:2611.25257v1",
+      "title": "Keel: A Frontier Model Teaches a Vision-Language Model by Rewriting Its Weights",
+      "abstract": "Can a frontier model repair a vision-language model (VLM) by rewriting its weights? Small reasoning VLMs such as Qwen3.5 need such a repair: in thinking mode they fall into loops on many image questions, repeating themselves until the token limit, spending the whole budget and losing the answer. The usual remedies act on the decoding, leaving the looping model as it was, or must be told what to change. Yet the cause is written in the weights. Keel, the first agentic weight-editing method for VLMs on image tasks, finds and removes it there. Told only the symptom, an editor, a frontier multimodal LLM acting as an agent, locates the cause, edits the weights and tests them, with a failure census and instruments showing it the failing images and where the VLM attends; among several editors, the harness keeps only edits that clearly reduce the failure without lowering accuracy on questions no editor saw. The repair needs no training, keeps the model's size and per-token cost, and applies to already-edited weights. The editors expose where the loops live: from the original weights, independent editors on both models trace them to the attention outputs of the middle layers, and the smaller VLM stops consulting the image inside a loop. On Qwen3.5-0.8B and Qwen3.5-2B, across six image benchmarks from visual mathematics to GUI grounding, the edit removes most loops on every benchmark and shortens answers, and the edited models are significantly more accurate than the thinking models on average; the larger one gains most on GUI grounding, a task absent from the practice questions. Because the repair lives in the weights, it combines with budget forcing where held-out questions favor it: on the best available weights, Keel has the best average accuracy on both models, significantly above every training-free baseline we compare on the larger one.",
+      "authors": [
+        "Jiajun Fan",
+        "Neil He",
+        "Bangji Yang",
+        "Qinglong Zheng",
+        "Ziwen Wang",
+        "Chaoran Cheng",
+        "Changyi Yang",
+        "Hanqi Mao",
+        "Ge Liu"
+      ],
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "url": "http://arxiv.org/abs/2611.25257v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.25257v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 18.39,
+      "matched_topics": [
+        "检索增强与对齐",
+        "多模态学习",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "vision-language",
+        "vision-language model"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "多模态学习": 7.0,
+        "跨模态理解与生成": 7.0,
+        "新鲜度": 1.34
+      },
+      "category_scores": {
+        "large-language-models": 4.39,
+        "multimodal-learning": 15.84
+      },
+      "summary": {
+        "takeaway": "提出Keel，由前沿多模态模型作为智能体直接编辑VLM权重，消除思考模式中的循环重复问题，无需训练且不改变模型规模与每token成本。",
+        "methods": "以症状为输入，由编辑器智能体定位原因、编辑权重并测试，借助失败普查与注意力工具筛选出既减少失败又不降低未见问题准确率的编辑；在Qwen3.5-0.8B与Qwen3.5-2B上于六个图像基准评估。",
+        "relevance": "涉及视觉语言模型的对齐与修复、跨模态理解与生成，并探索以智能体方式编辑模型权重的新范式。",
+        "caveat": "摘要描述的方法依赖前沿多模态LLM作为编辑智能体，未说明编辑过程的成本、可复现性及对其他模型架构的适用性。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2611.24327v1",
+      "title": "Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models",
+      "abstract": "Embodied AI systems, such as drones and autonomous vehicles, improve navigation by enhancing perception in environments containing unseen objects. While Visual Language Models (VLMs) offer strong image understanding, their real-world application is underexplored. For effective deployment, open-vocabulary semantic segmentation (OVSS) models, leveraging models like CLIP to assign pixel-level labels from text, must be robust to outdoor conditions, adverse weather, and varying viewpoints. Despite their potential, these models encounter significant challenges in cross-domain generalization, hindering their practical use in embodied AI applications. In this work, we present Pixel2Perspective, a benchmark for multi-angle object localization and open-vocabulary segmentation across both aerial and ground perspectives. This benchmark supports thorough evaluation across different viewpoints and sensor modalities. We assess foundational models like CLIP and advanced OVSS models using a curated dataset that spans varied outdoor conditions, sim-to-real scenarios, and multiple sensors, including infrared, to support the development of robust and generalizable perception systems. We also present a novel framework, Multi-Source RGB-IR Uncertainty Quantification (MSRIQ), which jointly models aleatoric and epistemic uncertainties across RGB and infrared imagery. This approach supports robust evaluation of open-vocabulary segmentation models across diverse environmental conditions. Our work sets a robustness-driven benchmark, providing key insights and laying the foundation for future research in open-world embodied AI perception. The benchmark and project page are available at https://aniruddhsikdar1.github.io/publications/pixel2perspective/",
+      "authors": [
+        "Aditya Gandhamal",
+        "Aniruddh Sikdar",
+        "Arya Kishor",
+        "Suresh Sundaram"
+      ],
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "url": "http://arxiv.org/abs/2611.24327v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.24327v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 18.39,
+      "matched_topics": [
+        "检索增强与对齐",
+        "多模态学习",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "RAG",
+        "vision-language",
+        "vision-language model"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "多模态学习": 7.0,
+        "跨模态理解与生成": 7.0,
+        "新鲜度": 1.34
+      },
+      "category_scores": {
+        "large-language-models": 4.39,
+        "multimodal-learning": 15.84
+      },
+      "summary": {
+        "takeaway": "提出Pixel2Perspective基准，用于评估视觉语言模型在航拍与地面多视角、多传感器条件下开放词汇目标定位与分割的泛化能力，并提出MSRIQ不确定性量化框架。",
+        "methods": "构建覆盖不同视角、传感器（含红外）、室外条件与sim-to-real场景的数据集，评估CLIP等基础模型及先进OVSS模型；提出多源RGB-IR不确定性量化框架MSRIQ，联合建模偶然与认知不确定性。",
+        "relevance": "直接对应多模态学习与跨模态理解主题，为检索增强与对齐研究提供鲁棒感知评测基准。",
+        "caveat": "摘要未给出具体性能数值与各模型对比结果，基准的规模与标注细节需查阅全文。"
       },
       "summary_mode": "openai"
     },
@@ -629,7 +565,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 18.24,
+      "score": 17.89,
       "matched_topics": [
         "强化学习",
         "持续学习",
@@ -652,18 +588,18 @@
         "持续学习": 3.0,
         "多模态学习": 3.0,
         "跨模态理解与生成": 2.7,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "reinforcement-learning": 9.54,
-        "continual-learning": 5.54,
-        "multimodal-learning": 8.24
+        "reinforcement-learning": 9.19,
+        "continual-learning": 5.19,
+        "multimodal-learning": 7.89
       },
       "summary": {
-        "takeaway": "从策略改进视角提出对比似然回放（CoLiR），用于视觉语言模型的持续强化学习，在有限回放内存下提升历史任务保持能力。",
-        "methods": "利用性能差异引理分析历史性能变化，通过对比正确响应似然增益与错误响应似然降低来选择回放提示；在 MRCL 基准上对三种 Qwen3-VL 模型规模进行实验。",
-        "relevance": "涉及强化学习、持续学习和多模态学习，与跨模态理解与生成中的模型持续适应问题相关。",
-        "caveat": "摘要仅报告在 MRCL 基准上的结果，未说明在其他持续学习场景或任务序列上的表现；理论分析基于理想化 KL 正则化更新假设。"
+        "takeaway": "从策略改进视角重新审视视觉语言模型的持续强化学习，提出Contrastive Likelihood Replay（CoLiR），通过对比正确回答似然增益与错误回答似然下降选择回放提示。",
+        "methods": "利用性能差异引理刻画历史任务性能变化，以当前策略在历史任务分布上的期望优势为依据；用有限训练rollout与缓存对数似然估计分数，在任务边界选提示并均匀回放，KL正则仅作用于回放提示；在MRCL上评估三种规模的Qwen3-VL。",
+        "relevance": "契合持续学习与强化学习主题，并为多模态模型的持续训练与对齐提供回放策略。",
+        "caveat": "结论主要基于MRCL与Qwen3-VL系列，跨其他模型与任务的泛化性未在摘要中体现；理论分析依赖理想化KL正则最优更新假设。"
       },
       "summary_mode": "openai"
     },
@@ -689,7 +625,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 17.44,
+      "score": 17.09,
       "matched_topics": [
         "检索增强与对齐",
         "持续学习",
@@ -713,18 +649,18 @@
         "持续学习": 7.0,
         "多模态学习": 3.0,
         "跨模态理解与生成": 2.7,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "large-language-models": 4.74,
-        "continual-learning": 9.19,
-        "multimodal-learning": 7.89
+        "large-language-models": 4.39,
+        "continual-learning": 8.84,
+        "multimodal-learning": 7.54
       },
       "summary": {
-        "takeaway": "提出 RetroCBM，一种无样本类增量学习框架，通过保留少量视觉特征统计量并回溯回归，使新概念能贡献于旧类预测，同时保持可解释性。",
-        "methods": "存储冻结视觉特征与预训练视觉语言模型嵌入空间之间的词汇无关统计量，采用回溯回归规则和全历史平方分类损失重投影，并引入图加权惩罚；在六个数据集上评估。",
-        "relevance": "关联持续学习、多模态学习和跨模态理解与生成，关注可解释概念瓶颈模型在增量学习中的知识保留与利用。",
-        "caveat": "摘要未列出六个数据集的具体名称，也未详细说明与生成特征方法的计算开销对比；回溯回归规则在更复杂场景下的适用性未讨论。"
+        "takeaway": "提出RetroCBM，在无样本类增量学习中保留少量与词表无关的统计量，使新概念能回溯性地参与旧类预测，并提升可解释模型的增量学习性能。",
+        "methods": "存储冻结视觉特征与预训练视觉语言模型嵌入空间关系的统计量；设计回溯回归规则等价于全历史类平衡岭回归，重投影恢复全历史平方分类损失；引入图加权惩罚抑制系统性概念错误导致的间隔偏移；在六个数据集上评测。",
+        "relevance": "对应持续学习与多模态学习主题，利用视觉语言模型嵌入支持可解释的增量对齐。",
+        "caveat": "摘要报告了18.1%相对平均增量精度提升，但未说明统计量存储开销与类别数增长下的可扩展性。"
       },
       "summary_mode": "openai"
     },
@@ -751,7 +687,7 @@
       "also_seen_in": [
         "PubMed"
       ],
-      "score": 17.39,
+      "score": 17.04,
       "matched_topics": [
         "Cell Foundation Model",
         "预训练"
@@ -769,17 +705,73 @@
         "Cell Foundation Model": 7.0,
         "预训练": 7.0,
         "领域上下文": 0.5,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "bio-computing": 10.39,
-        "pretraining": 10.39
+        "bio-computing": 10.04,
+        "pretraining": 10.04
       },
       "summary": {
-        "takeaway": "开发 LeakageHunter-SCFM 框架，用于单细胞基础模型基准测试中的数据集谱系证据审计，区分标识符重叠、可操作审查优先级和确认暴露。",
-        "methods": "从手稿和相关工件中提取登录号、DOI、URL 和仓库标识符，规范化资源、分配数据集角色、构建候选重叠对并应用声明上限；在开发语料、锁定回顾性外部评估集和小型预测盲前瞻性概念验证中评估。",
-        "relevance": "直接针对 Cell Foundation Model 和预训练主题，关注基准测试独立性审计，对基础模型评估中的数据泄漏问题有方法学意义。",
-        "caveat": "前瞻性概念验证样本量小（七条记录），且所有可操作阳性单元来自同一记录；审计性能指标（如 F1 0.696）表明仍有改进空间，结论需更大规模验证。"
+        "takeaway": "提出LeakageHunter-SCFM，用于单细胞基础模型评测中数据集谱系证据的有界审计，区分标识符重叠、可操作审查优先级与已确认暴露。",
+        "methods": "从稿件及工件中提取accession、DOI、URL与仓库标识，规范化资源、分配数据集角色、构建候选重叠对并施加声明上限；在开发语料、锁定回顾性外部评测集与预测盲法前瞻性概念验证中评估。",
+        "relevance": "直接对应Cell Foundation Model与预训练主题，关注基准数据泄漏与评测独立性校准。",
+        "caveat": "预测盲法重标注下F1为0.696、精确率0.727，概念验证仅7条记录且可操作阳性全部来自一条记录，证据有限；摘要强调其定位为分诊层而非确认语料归属。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:43061985",
+      "title": "Virtual Knockout in the Era of Generative AI: From Intracellular Networks to Spatial and Cross-Modal Functional Simulations.",
+      "abstract": "Single-cell perturbation data have enabled computational models that predict intervention-associated cellular responses. This narrative review organizes explicit gene-regulatory-network simulations, latent and compositional response models, graph, optimal-transport, and dynamical approaches, foundation-model representations, and emerging spatial or cross-modal settings through a virtual-knockout lens. We distinguish representation-level ablation from causal genetic intervention and separate held-out regimes for genes, cell types or contexts, perturbation combinations, chemical structures, and doses. We compare representative methods, experimental resources, metrics, and benchmark frameworks and operationally define a prospective holographic virtual cell by its modalities, regulatory and physical constraints, intervention-conditioned outputs with calibrated uncertainty, and prospective validation requirements. The holographic virtual cell and Design-Build-Test-Learn roadmap are presented as future-facing criteria rather than as an achieved clinical capability.",
+      "authors": [
+        "Zhuo Zuo",
+        "Xiaofeng Ma",
+        "Wei Shi",
+        "Yulong Sun"
+      ],
+      "published": "2026-11-20",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43061985/",
+      "pdf_url": "",
+      "doi": "10.1021/acssynbio.6c00191",
+      "venue": "ACS synthetic biology",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 16.74,
+      "matched_topics": [
+        "单细胞扰动",
+        "虚拟细胞",
+        "跨模态理解与生成"
+      ],
+      "matched_categories": [
+        "bio-computing",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "cross-modal",
+        "single-cell perturbation",
+        "virtual cell"
+      ],
+      "score_breakdown": {
+        "单细胞扰动": 3.0,
+        "虚拟细胞": 3.0,
+        "跨模态理解与生成": 7.0,
+        "领域上下文": 0.5,
+        "新鲜度": 2.04
+      },
+      "category_scores": {
+        "bio-computing": 9.74,
+        "multimodal-learning": 10.74
+      },
+      "summary": {
+        "takeaway": "以虚拟敲除为视角综述单细胞扰动预测的计算方法，区分表示层消融与因果遗传干预，并提出全息虚拟细胞的操作性定义与Design-Build-Test-Learn路线图。",
+        "methods": "叙述性综述，梳理基因调控网络模拟、潜在与组合响应模型、图方法、最优传输、动力学方法、基础模型表示及空间与跨模态场景，比较方法、实验资源、指标与基准框架。",
+        "relevance": "对应单细胞扰动、虚拟细胞与跨模态理解主题，为扰动建模与评测提供概念框架。",
+        "caveat": "为叙事综述且全息虚拟细胞属未来展望，非已实现的临床能力；摘要未提供定量比较结果。"
       },
       "summary_mode": "openai"
     },
@@ -805,7 +797,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 17.09,
+      "score": 16.74,
       "matched_topics": [
         "大语言模型",
         "检索增强与对齐",
@@ -828,18 +820,18 @@
         "检索增强与对齐": 2.55,
         "图谱构建与表示": 6.8,
         "跨模态理解与生成": 2.7,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "large-language-models": 7.59,
-        "knowledge-graphs": 8.99,
-        "multimodal-learning": 4.89
+        "large-language-models": 7.24,
+        "knowledge-graphs": 8.64,
+        "multimodal-learning": 4.54
       },
       "summary": {
-        "takeaway": "提出 MECI 框架，通过多元素协作交互缓解多模态实体链接中的元素主导问题，在三个基准上提升 Hits@1。",
-        "methods": "采用多视图专家网络进行解耦特征学习，KL 引导路由机制控制专家专门化与协作；分层多模态交互模块动态加权跨模态语义；并利用大语言模型进行零样本重排序。",
-        "relevance": "关联大语言模型、检索增强与对齐、图谱构建与表示及跨模态理解与生成，聚焦多模态实体链接中的多级对应关系建模。",
-        "caveat": "摘要仅报告 Hits@1 提升幅度，未提供其他指标或消融实验细节；生成语义精炼阶段依赖大语言模型，可能带来额外计算成本。"
+        "takeaway": "提出MECI框架，通过多元素协同交互缓解多模态实体链接中的元素主导问题，提升提及-实体匹配与跨模态互补建模。",
+        "methods": "多视图专家网络以分治策略解耦特征学习，KL引导路由控制专家专业化与协作；分层多模态交互模块用动态模态感知加权整合多粒度证据；引入基于大语言模型的生成式语义精炼进行零样本重排序；在WikiDiverse、RichpediaMEL与WikiMEL上实验。",
+        "relevance": "对应检索增强与对齐、图谱构建及跨模态理解主题，涉及知识库实体对齐。",
+        "caveat": "摘要仅给出Hits@1相对提升，未报告绝对性能与计算开销；LLM重排序的依赖与成本未讨论。"
       },
       "summary_mode": "openai"
     },
@@ -876,7 +868,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 16.54,
+      "score": 16.19,
       "matched_topics": [
         "大语言模型",
         "检索增强与对齐"
@@ -893,16 +885,16 @@
       "score_breakdown": {
         "大语言模型": 7.0,
         "检索增强与对齐": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 16.54
+        "large-language-models": 16.19
       },
       "summary": {
-        "takeaway": "提出 AutoRAGBench，首个评估 LLM 智能体在开放代码空间中从零构建 RAG 系统的基准，显示智能体可自动化有效 RAG 开发并迭代改进。",
-        "methods": "包含九个 RAG 系统开发任务，智能体在单块 H800 GPU 六小时预算内分析数据、实现 RAG 流水线并基于实验反馈迭代优化；评估九种智能体配置。",
-        "relevance": "直接关联大语言模型和检索增强与对齐主题，关注 LLM 智能体自动化 RAG 系统开发的能力与轨迹分析。",
-        "caveat": "摘要仅给出平均分数（GPT-6.1 Sol 56.1，人类 SOTA 44.4），未详细说明任务多样性、评估指标及智能体失败模式；六小时预算可能限制复杂系统开发。"
+        "takeaway": "提出AutoRAGBench，首个评估LLM智能体在开放代码空间中从零构建并迭代改进RAG系统的基准。",
+        "methods": "包含九个RAG系统开发任务，智能体在单张H800 GPU、六小时预算下无初始代码与预设策略地分析数据、实现流程并依据实验反馈迭代；评估九种智能体配置，分析系统效果与开发轨迹。",
+        "relevance": "直接对应大语言模型与检索增强与对齐主题，考察智能体自动化RAG工程能力。",
+        "caveat": "最佳配置GPT-6.1 Sol with Codex CLI平均得分56.1，人类SOTA组合基线44.4，绝对分数仍有限；结果受单GPU与六小时预算约束，任务覆盖九个领域。"
       },
       "summary_mode": "openai"
     },
@@ -926,7 +918,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 16.54,
+      "score": 16.19,
       "matched_topics": [
         "多模态学习",
         "跨模态理解与生成"
@@ -942,16 +934,16 @@
       "score_breakdown": {
         "多模态学习": 7.0,
         "跨模态理解与生成": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "multimodal-learning": 16.54
+        "multimodal-learning": 16.19
       },
       "summary": {
-        "takeaway": "引入多模态概念透镜（MC-Lens）研究视觉语言模型中的全局工作空间理论功能，发现概念可访问性、选择性访问及跨模态对齐在模型中的发展模式。",
-        "methods": "构建多模态雅可比透镜，将视觉编码器和语言解码器中间状态映射到共享语义空间，支持内部概念干预和反事实实验；提出两个 J-space 指标追踪跨模态概念对齐发展。",
-        "relevance": "关联多模态学习和跨模态理解与生成，为理解视觉语言模型内部概念处理及跨模态对齐提供实验基础。",
-        "caveat": "摘要未说明具体模型家族和规模数量，也未提供定量指标结果；将全局工作空间理论类比到人工系统需谨慎解读。"
+        "takeaway": "引入多模态Jacobian透镜MC-Lens，研究视觉语言模型中概念的可访问性、选择性访问与全局工作空间式整合，并进行内部概念干预实验。",
+        "methods": "将视觉编码器与语言解码器的中间状态映射到解码器输出词表定义的共享语义空间；扩展readout载体为token集合以支持反事实干预；提出两个J-space指标追踪跨模态概念对齐发展；跨多个VLM家族与规模比较。",
+        "relevance": "对应多模态学习与跨模态理解主题，为跨模态对齐的可解释分析提供工具。",
+        "caveat": "摘要称发现跨模型共享模式，但未给出具体量化指标与效应大小；全局工作空间类比的解释力仍需进一步验证。"
       },
       "summary_mode": "openai"
     },
@@ -979,7 +971,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 16.54,
+      "score": 16.19,
       "matched_topics": [
         "多模态学习",
         "跨模态理解与生成"
@@ -994,16 +986,16 @@
       "score_breakdown": {
         "多模态学习": 7.0,
         "跨模态理解与生成": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "multimodal-learning": 16.54
+        "multimodal-learning": 16.19
       },
       "summary": {
-        "takeaway": "提出仅依赖最终回复的黑盒能量-延迟攻击 ChronoPatch，可通过扰动视觉输入显著延长视觉语言模型的生成，从而抬高推理延迟与 GPU 能耗。",
-        "methods": "通过以回复长度为引导的进化搜索寻找视觉延迟锚点，再用子空间校准的决策式优化最小化扰动幅度；在四个开源 VLM 和三个商业 VLM API 上评测，并统计 n-gram 重复率。",
-        "relevance": "该工作揭示多模态生成服务中的可用性风险，直接关联多模态学习和跨模态理解与生成中的安全与部署问题。",
-        "caveat": "摘要未说明攻击在防御机制下的有效性、攻击所需查询成本相对商用 API 限额的具体影响，也未给出延迟提升与输出质量下降之间的权衡分析。"
+        "takeaway": "提出仅依赖最终回复的黑盒能量-延迟攻击 ChronoPatch，通过延长视觉语言模型的生成长度来增加推理延迟和 GPU 能耗。",
+        "methods": "用回复长度引导的进化搜索寻找视觉延迟锚点，再以子空间校准的决策优化压缩扰动；在四个开源 VLM 与三个商用 VLM API 上评估。",
+        "relevance": "揭示多模态生成服务的可用性风险，与跨模态理解与生成及多模态模型部署安全直接相关。",
+        "caveat": "摘要未说明攻击对答案正确性的影响及防御有效性；商用 API 结果依赖每 API 500 次查询预算，跨模型泛化性需进一步验证。"
       },
       "summary_mode": "openai"
     },
@@ -1031,7 +1023,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 16.54,
+      "score": 16.19,
       "matched_topics": [
         "多模态学习",
         "跨模态理解与生成"
@@ -1046,16 +1038,16 @@
       "score_breakdown": {
         "多模态学习": 7.0,
         "跨模态理解与生成": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "multimodal-learning": 16.54
+        "multimodal-learning": 16.19
       },
       "summary": {
-        "takeaway": "定义并研究流式视频中的主动空间推理，提出 ProSpace-Bench 与 ProSpace-Train，以及将因果几何编码注入中间层并用 KV cache 作空间记忆的 ProSpace-VLM。",
-        "methods": "构建覆盖物体、相机和场景推理的九项任务基准与监督训练集；从输入帧因果估计几何编码并注入 VLM 中间层，用空间 token 选择实现高效流式处理。",
-        "relevance": "面向跨模态理解与生成中的流式视频空间推理，涉及多模态模型对动态视角的空间知识维护与响应时机判断。",
-        "caveat": "摘要仅报告 VLM 与人类存在明显差距及相对微调基线的改进方向，未给出具体数值、基准覆盖的模态范围或实时部署开销。"
+        "takeaway": "定义并基准测试流式视频中的主动空间推理，提出 ProSpace-VLM 以几何编码和 KV 缓存作为空间记忆，改善适时响应与正确弃答。",
+        "methods": "构建含九项任务的 ProSpace-Bench 与 ProSpace-Train，将因果估计的显式几何编码注入 VLM 中间层，并用空间 token 选择实现高效流式处理。",
+        "relevance": "面向跨模态理解与生成中的流式视频空间推理，强调模型主动判断何时响应。",
+        "caveat": "摘要指出 VLM 与人类仍有显著差距；未给出具体性能数值，几何编码估计误差的影响未说明。"
       },
       "summary_mode": "openai"
     },
@@ -1082,7 +1074,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 16.54,
+      "score": 16.19,
       "matched_topics": [
         "多模态学习",
         "跨模态理解与生成"
@@ -1097,16 +1089,71 @@
       "score_breakdown": {
         "多模态学习": 7.0,
         "跨模态理解与生成": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "multimodal-learning": 16.54
+        "multimodal-learning": 16.19
       },
       "summary": {
-        "takeaway": "通过颜色冲突实验区分 DeepStack 式 VLM 的主入口与深层视觉 token 对答案的驱动作用，并发现削弱主入口会增强深层特征影响，深层特征在部分模型上可纠正错误。",
-        "methods": "构造仅对象颜色不同的两版视觉输入并观察答案跟随哪一入口；在合成图像上仅降低主入口饱和度；同时退化两个入口后仅恢复深层入口，并在 GQA 属性问题上检验预测。",
-        "relevance": "直接分析多模态模型中视觉 token 的组织与跨层融合机制，服务于跨模态理解与生成的可解释性和推理效率。",
-        "caveat": "结论基于特定 DeepStack 式架构和有限模型（含 Qwen3-VL-8B/32B、Granite Vision），摘要中的恢复比例和字节节省来自特定合成与属性问题设置，泛化性需进一步验证。"
+        "takeaway": "通过颜色冲突实验区分 DeepStack 式 VLM 中主入口与深层视觉 token 对答案的驱动作用，并展示利用入口贡献差异进行拆分推理可节省传输字节。",
+        "methods": "构造仅一个物体颜色不同的两个入口版本，在照片与合成图像上测试主入口饱和度削弱及双入口退化后恢复深层特征，并在 GQA 属性问题上验证预测。",
+        "relevance": "为多模态模型中视觉 token 注入位置的作用提供可解释性证据，并与跨模态理解相关。",
+        "caveat": "仅覆盖四类模型与特定属性/条纹方向任务，结论是否推广到其他任务和架构未在摘要中确认；拆分推理收益限于所测问题。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2611.25574v1",
+      "title": "VidToC: Rethinking Video Token Compression for Multimodal Large Language Models",
+      "abstract": "Extending multimodal large language models (MLLMs) from images to videos faces substantial memory and latency challenges due to the massive number of visual tokens. These challenges have driven the development of numerous visual token compression methods and more efficient LLM architectures. However, existing compression methods are often evaluated with different training setups, tasks, and models, making fair comparison difficult. Meanwhile, the growing use of hybrid Mamba-Transformer architectures raises questions about whether compression strategies transfer across backbones. We present VidToC, a controlled evaluation framework for representative compression algorithms, LLM backbones, and time encoding strategies, covering training-free and fine-tuned settings on three complementary video understanding tasks. Our results reveal task-dependent compression behavior and characterize the effects of compression placement, time encoding, and backbone choice. These findings provide empirical guidance for designing and selecting video token compression strategies across tasks and training settings.",
+      "authors": [
+        "Zihan Xiao",
+        "Boshen Xu",
+        "Pei Fu",
+        "Jianzhong Ju",
+        "Zhenbo Luo",
+        "Jian Luan",
+        "Qin Jin"
+      ],
+      "published": "2026-11-19",
+      "updated": "2026-11-19",
+      "url": "http://arxiv.org/abs/2611.25574v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.25574v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 16.19,
+      "matched_topics": [
+        "大语言模型",
+        "多模态学习"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "multimodal-learning"
+      ],
+      "matched_terms": [
+        "large language model",
+        "multimodal large language model"
+      ],
+      "score_breakdown": {
+        "大语言模型": 7.0,
+        "多模态学习": 7.0,
+        "新鲜度": 1.69
+      },
+      "category_scores": {
+        "large-language-models": 9.19,
+        "multimodal-learning": 9.19
+      },
+      "summary": {
+        "takeaway": "VidToC 提供受控评估框架，系统比较视频 token 压缩算法、LLM 骨干与时间编码策略，揭示压缩行为依赖任务与设置。",
+        "methods": "在三种互补视频理解任务上，以统一训练设置覆盖免训练与微调场景，评估代表性压缩算法、Transformer 与混合 Mamba-Transformer 骨干及时间编码。",
+        "relevance": "直接关系多模态大语言模型的视频 token 压缩与大语言模型效率，为跨骨干压缩策略选择提供实证指导。",
+        "caveat": "摘要未给出具体性能数值或推荐单一最优方法，结论限于所选任务、模型与训练设置。"
       },
       "summary_mode": "openai"
     },
@@ -1133,7 +1180,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 15.39,
+      "score": 15.04,
       "matched_topics": [
         "大语言模型",
         "持续学习",
@@ -1153,18 +1200,18 @@
         "大语言模型": 2.85,
         "持续学习": 7.0,
         "多模态学习": 3.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 5.39,
-        "continual-learning": 9.54,
-        "multimodal-learning": 5.54
+        "large-language-models": 5.04,
+        "continual-learning": 9.19,
+        "multimodal-learning": 5.19
       },
       "summary": {
-        "takeaway": "提出 HOPD，将历史源采集阶段的 LoRA 状态保存为持续教师，通过历史策略蒸馏缓解 SAR 多模态大模型持续学习中的遗忘。",
-        "methods": "在整合前归档各源 LoRA 状态作为教师，监督学生生成的 prefix；用原始视图教师指导增强后的历史学生视图并保留空间坐标；在 SARVQA-CL 源增量协议上评估。",
-        "relevance": "面向多模态大语言模型的持续学习与跨模态理解，强调在采集和地理偏移下保留历史任务能力。",
-        "caveat": "摘要仅给出单一基准 SARVQA-CL 上的最终均分和相对基线提升，未报告遗忘率、存储开销或跨更多 SAR 数据源的泛化结果。"
+        "takeaway": "HOPD 将历史源采集阶段的 LoRA 状态存档为持续教师，对演化学生做在线策略蒸馏，以在 SAR 多模态持续学习中保留旧任务能力。",
+        "methods": "在合并前归档各源 LoRA 状态作为教师，监督学生生成的 prefix；用原视角教师指导增强的历史学生视图并保留空间坐标；在 SARVQA-CL 源增量协议上评测。",
+        "relevance": "结合大语言模型、持续学习与多模态遥感理解，针对历史数据稀缺下的灾难性遗忘。",
+        "caveat": "结果来自单一 SARVQA-CL 协议与所比较基线，摘要未提供跨更多模态或更大规模模型的验证；教师状态存档的存储开销未讨论。"
       },
       "summary_mode": "openai"
     },
@@ -1188,7 +1235,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 14.79,
+      "score": 14.44,
       "matched_topics": [
         "检索增强与对齐",
         "预训练",
@@ -1208,18 +1255,18 @@
         "检索增强与对齐": 2.55,
         "预训练": 7.0,
         "跨模态理解与生成": 2.7,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 5.09,
-        "pretraining": 9.54,
-        "multimodal-learning": 5.24
+        "large-language-models": 4.74,
+        "pretraining": 9.19,
+        "multimodal-learning": 4.89
       },
       "summary": {
-        "takeaway": "提出统一 3D 医学基础模型 VoxForge，用单一编码器在 MRI、CT 上学习可冻结复用的稠密特征，并在未见过的 PET 上评测。",
-        "methods": "整合 3D 架构、自蒸馏和跨模态课程，从许可的 MRI 与 CT 体数据预训练；严格冻结评估分割、分类和配准，并与通用及专用模型比较。",
-        "relevance": "关联预训练与跨模态理解，探索可复用医学影像表征及标签高效迁移。",
-        "caveat": "摘要称在各项任务组平均排名最佳或并列最佳，但未给出具体指标、PET 零样本性能数值，也未说明冻结特征在下游微调场景中的表现。"
+        "takeaway": "提出单一 3D 医学基础模型 VoxForge，在严格冻结评估下于 MRI、CT 的分割、分类、配准及未见 PET 上达到或接近专家模型水平，并具标签高效性。",
+        "methods": "整合 3D 架构、自蒸馏与跨模态课程，从许可的 MRI/CT 体数据学习可迁移特征；以冻结编码器与通用及专科模型比较，并测试标签效率。",
+        "relevance": "属于预训练与跨模态医学表征学习，服务多任务可复用特征。",
+        "caveat": "摘要仅给出平均排名与标签效率的定性/相对描述，未列出各任务具体指标；PET 仅做零样本评估，临床外部验证未涉及。"
       },
       "summary_mode": "openai"
     },
@@ -1244,7 +1291,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 14.29,
+      "score": 13.94,
       "matched_topics": [
         "大语言模型",
         "检索增强与对齐"
@@ -1260,16 +1307,16 @@
       "score_breakdown": {
         "大语言模型": 7.0,
         "检索增强与对齐": 5.1,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "large-language-models": 14.29
+        "large-language-models": 13.94
       },
       "summary": {
-        "takeaway": "实验研究用 LLM 与 RAG 从工业产品文档自动生成基于资产管理壳的数字产品护照，并系统评估生成质量与提示引导的影响。",
-        "methods": "将产品文档切块并嵌入存入 ChromaDB，结合语义与词法检索按 AAS 子模型模板取回信息，再交由五个 LLM 生成结构化 AAS 实例；覆盖 76 个产品-子模型组合、4,560 次执行和四级提示引导，并以真值和 LLM-as-a-judge 评估。",
-        "relevance": "属于大语言模型与检索增强生成在工业文档结构化抽取中的应用，涉及 RAG 对齐与输出验证。",
-        "caveat": "仅 44.9% 输出通过完整 AAS 验证，字段正确性较低；摘要未说明各 LLM 与提示级别的细分差异，也未评估真实部署中的合规风险。"
+        "takeaway": "实验研究用 RAG 加 LLM 从工业产品文档自动生成基于 AAS 的数字产品护照，并量化不同提示引导下的生成质量。",
+        "methods": "将文档分块存入 ChromaDB，结合语义与词汇检索按 AAS 子模型模板取信息，交由五个 LLM 生成结构化 AAS 实例；共 4,560 次执行、76 个产品-子模型组合，比较四级提示引导并用真实值及 LLM-as-a-judge 评估。",
+        "relevance": "展示大语言模型与检索增强生成在工业合规文档结构化生成中的应用。",
+        "caveat": "仅 44.9% 输出通过完整 AAS 验证，字段总体正确率 30.8%，实际部署可行性受限；评估依赖特定产品与子模型组合及判定方式。"
       },
       "summary_mode": "openai"
     },
@@ -1298,7 +1345,7 @@
       "also_seen_in": [
         "PubMed"
       ],
-      "score": 13.59,
+      "score": 13.24,
       "matched_topics": [
         "虚拟细胞",
         "预训练"
@@ -1315,17 +1362,17 @@
         "虚拟细胞": 7.0,
         "预训练": 2.7,
         "领域上下文": 1.0,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "bio-computing": 10.89,
-        "pretraining": 6.59
+        "bio-computing": 10.54,
+        "pretraining": 6.24
       },
       "summary": {
-        "takeaway": "综述 AI 驱动的虚拟细胞、数字孪生与智能体孪生如何融合单细胞和空间组学，并提出六种能力的嵌套框架以重塑药物发现。",
-        "methods": "基于截至 2026 年 10 月的 PubMed、Web of Science、bioRxiv 和 arXiv 文献进行叙述性综述，按群体模型、数字孪生和智能体孪生组织能力层次。",
-        "relevance": "直接关联虚拟细胞与预训练基础模型主题，讨论跨任务迁移和有限数据场景下的生物知识复用。",
-        "caveat": "为叙述性综述而非原始实验，摘要未提供系统性检索筛选标准或定量比较；其价值判断依赖对外推能力和前瞻性验证的强调，尚无统一基准结论。"
+        "takeaway": "综述提出 AI 驱动虚拟细胞、数字孪生与智能体孪生的六能力嵌套框架，讨论其如何重塑多组学、空间生物学与药物发现。",
+        "methods": "基于截至 2026 年 10 月的 PubMed、Web of Science、bioRxiv 与 arXiv 文献进行叙述性综述，按种群模型、数字孪生、智能体孪生分层组织。",
+        "relevance": "直接关联虚拟细胞与预训练基础模型在生物医学中的知识迁移与预测应用。",
+        "caveat": "为叙述性综述与观点性框架，未提供原始实验数据或定量比较；作者强调价值取决于对训练数据外推的忠实性与前瞻性生物学验证。"
       },
       "summary_mode": "openai"
     },
@@ -1352,7 +1399,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 13.44,
+      "score": 13.09,
       "matched_topics": [
         "检索增强与对齐",
         "强化学习",
@@ -1372,17 +1419,17 @@
         "检索增强与对齐": 2.55,
         "强化学习": 6.0,
         "多智能体与奖励学习": 2.7,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "large-language-models": 4.74,
-        "reinforcement-learning": 10.89
+        "large-language-models": 4.39,
+        "reinforcement-learning": 10.54
       },
       "summary": {
-        "takeaway": "提出无人机与地面站协作的鲁棒 MEC 框架，并用生成式 AI 增强的异构智能体 PPO 算法联合优化任务卸载与无人机轨迹以最小化总执行时间。",
-        "methods": "将联合卸载与轨迹优化建模为混合整数非线性规划，提出 GAI-HAPPO，用生成式模型增强 actor 的复杂环境建模与特征提取，并稳定 critic；通过仿真与基准方法比较。",
-        "relevance": "涉及强化学习、多智能体与奖励学习在水生物联网边缘计算中的应用，也体现生成式 AI 辅助决策。",
-        "caveat": "摘要仅称仿真中优于现有基准，未给出具体性能数值、不确定性建模方式或真实水生环境验证，生成式 AI 的具体作用机制描述有限。"
+        "takeaway": "提出一种协作无人机与地面站的多接入边缘计算框架，并利用生成式AI增强的异构智能体近端策略优化算法（GAI-HAPPO）来最小化任务总执行时间。",
+        "methods": "将联合任务卸载与无人机轨迹优化建模为混合整数非线性规划问题，采用GAI-HAPPO算法求解，该算法结合生成式AI模型增强actor网络的环境建模与特征提取能力，并稳定critic网络。通过仿真实验验证。",
+        "relevance": "该工作涉及多智能体强化学习与生成式AI的结合，与检索增强与对齐、强化学习、多智能体与奖励学习等主题相关，特别是在动态不确定环境下利用生成式模型提升策略学习。",
+        "caveat": "摘要仅报告仿真结果优于基准方法，未提供具体数值或真实场景验证；生成式AI在算法中的具体集成方式与计算开销未详细说明。"
       },
       "summary_mode": "openai"
     },
@@ -1409,7 +1456,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.39,
+      "score": 12.04,
       "matched_topics": [
         "大语言模型",
         "知识图谱"
@@ -1426,17 +1473,17 @@
       "score_breakdown": {
         "大语言模型": 2.85,
         "知识图谱": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 5.39,
-        "knowledge-graphs": 9.54
+        "large-language-models": 5.04,
+        "knowledge-graphs": 9.19
       },
       "summary": {
-        "takeaway": "GenSPARQL 为 SPARQL 1.1 增加算子 GENOP，在查询求值时把大语言模型生成的缺失事实绑定到查询变量上，以缓解知识图谱不完整问题。",
-        "methods": "论文设计了 GENOP 算子、基于相似度的实体映射（把 LLM 生成的名称映射到图中实体）以及查询规划器（只对经其他图模式与过滤器筛选出的绑定调用 LLM）；用 Wikidata 构建的两个图做演示，并用三个开放权重 LLM 评估。",
-        "relevance": "直接针对大语言模型与知识图谱交叉主题，把 LLM 的事实预测能力集成进知识图谱查询语言与执行流程。",
-        "caveat": "评估规模有限（三个开放权重 LLM、两个基于 Wikidata 的图），摘要仅报告实体映射为 83% 及一个错误匹配，未说明查询整体准确率或效率。"
+        "takeaway": "提出GenSPARQL，扩展SPARQL 1.1支持生成式算子GENOP，在查询评估中利用LLM为变量绑定生成缺失值，并通过相似性连接将生成名称映射到图中实体。",
+        "methods": "设计GENOP算子在查询执行时调用LLM生成值，查询规划器仅对由其他图模式和过滤器选中的绑定调用LLM；使用相似性连接映射生成名称到IRIs。在基于Wikidata构建的两个图上进行演示，并用三个开源权重LLM评估，嵌入相似性映射83%的实体且仅一个错误匹配。",
+        "relevance": "该工作将大语言模型与知识图谱查询结合，解决知识图谱不完整性问题，与“大语言模型”和“知识图谱”主题直接相关，尤其涉及LLM增强的结构化查询与实体对齐。",
+        "caveat": "评估仅涉及三个开源权重LLM和两个基于Wikidata的图，未讨论LLM调用延迟与查询整体性能的权衡，且相似性映射的召回率未报告。"
       },
       "summary_mode": "openai"
     },
@@ -1466,7 +1513,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.39,
+      "score": 12.04,
       "matched_topics": [
         "大语言模型",
         "强化学习"
@@ -1482,17 +1529,17 @@
       "score_breakdown": {
         "大语言模型": 2.85,
         "强化学习": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 5.39,
-        "reinforcement-learning": 9.54
+        "large-language-models": 5.04,
+        "reinforcement-learning": 9.19
       },
       "summary": {
-        "takeaway": "SiliconGym 是面向硬件设计与验证智能体的跨任务、跨工具链强化学习环境，支持跨工具调用保持状态并扩展到大型层次化设计。",
-        "methods": "通过解耦版本化工作区、有预算的执行和以接受阈值为门控的评分来构建环境；采用流式调度重叠工具检查与生成；使用可互换的开源与商业后端进行训练与评估。",
-        "relevance": "对应大语言模型与强化学习主题，提供用 EDA 反馈训练硬件工程智能体的 RL 环境。",
-        "caveat": "摘要报告 256 答案 RL 批次的完成速度比原生 ChipSeek 快 21.9%，但未给出任务覆盖范围、各任务的绝对性能或商业后端可迁移性的量化细节。"
+        "takeaway": "提出SiliconGym，首个跨任务、跨工具链的强化学习环境，用于硬件设计与验证的智能体训练，支持模块级RTL、测试平台、PPA任务到多轮仓库修复和全层次SoC流程。",
+        "methods": "通过解耦版本化工作区、预算执行和验收门控评分构建环境，支持流式调度重叠工具检查与生成。使用可互换的开源和商业后端，展示开源训练的功能正确性可迁移到商业仿真，并配对网表评估开源PPA增益在商业综合下的存活性。",
+        "relevance": "该工作将强化学习与大语言模型应用于电子设计自动化（EDA），与“大语言模型”和“强化学习”主题相关，提供面向硬件工程智能体的RL环境。",
+        "caveat": "摘要仅报告256答案RL批次比原生ChipSeek快21.9%，未提供任务成功率的全面比较；跨工具链迁移的泛化性仅在有限场景中展示。"
       },
       "summary_mode": "openai"
     },
@@ -1516,7 +1563,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.39,
+      "score": 12.04,
       "matched_topics": [
         "大语言模型",
         "强化学习"
@@ -1532,17 +1579,17 @@
       "score_breakdown": {
         "大语言模型": 2.85,
         "强化学习": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 5.39,
-        "reinforcement-learning": 9.54
+        "large-language-models": 5.04,
+        "reinforcement-learning": 9.19
       },
       "summary": {
-        "takeaway": "提出 decision-focused reinforcement learning（DFRL），以负的下游决策后悔作为奖励对 LLM 做后训练，使预测直接优化决策成本而不仅是预测精度。",
-        "methods": "DFRL 不要求下游问题凸或可微，可接入现有 RL 后训练框架；为降低昂贵奖励评估，采用启发式热启动（先用近似奖励再切换到精确奖励）与奖励校正（廉价估计结合随机精确评估，保持期望策略梯度）。在三个合成优化问题、背包问题及 H&M 库存规划上实验。",
-        "relevance": "属于大语言模型与强化学习交叉，研究以决策目标为奖励的 LLM 后训练。",
-        "caveat": "主要结果来自合成问题和单一库存规划数据集；摘要报告的 31.4%/12.4% 后悔降低仅对应其最佳配置，未说明跨任务的泛化性。"
+        "takeaway": "提出决策聚焦强化学习（DFRL），以后续决策的负后悔值为奖励对LLM进行后训练，使其预测的优化参数直接最小化决策成本，而非仅提高预测精度。",
+        "methods": "将DFRL集成到现有RL后训练框架，采用启发式热启动（先用近似奖励后切换精确奖励）和奖励校正（结合廉价估计与随机精确评估以保持策略梯度期望）来降低精确奖励评估成本。在三个合成优化问题和H&M库存规划任务上评估。",
+        "relevance": "该工作将强化学习用于LLM后训练，并与决策优化结合，与“大语言模型”和“强化学习”主题高度相关，尤其涉及奖励设计与对齐。",
+        "caveat": "实验主要在合成问题和单一真实库存规划任务上进行，未验证更广泛下游决策任务的泛化性；奖励校正的理论性质仅在摘要中简要提及。"
       },
       "summary_mode": "openai"
     },
@@ -1566,7 +1613,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.39,
+      "score": 12.04,
       "matched_topics": [
         "大语言模型",
         "预训练"
@@ -1582,17 +1629,17 @@
       "score_breakdown": {
         "大语言模型": 2.85,
         "预训练": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 5.39,
-        "pretraining": 9.54
+        "large-language-models": 5.04,
+        "pretraining": 9.19
       },
       "summary": {
-        "takeaway": "MoGloss 提出两阶段运动编码器预训练：先重建被遮蔽的运动，再联合预测伪 gloss 单元与运动，用于美国手语理解。",
-        "methods": "伪 gloss 由大语言模型从文本描述中得到；整理约 1100 小时、来自五个公开数据集的美国手语语料并估计 2D 姿态；复现 SOTA 翻译方法并在相同划分上比较，另训练基于同编码器的孤立手语分类器。",
-        "relevance": "涉及大语言模型与预训练主题，展示用 LLM 生成中间结构化表示来指导多模态预训练。",
-        "caveat": "摘要称联合预训练收益随翻译数据减少而增大，但未给出具体数值；结果限于美国手语及相关数据集。"
+        "takeaway": "提出一种两阶段预训练方法用于手语理解的运动编码器：先重建掩码运动，再联合预测伪注释单元和运动，伪注释由大语言模型从描述文本生成。",
+        "methods": "从五个公开数据集整理约1100小时美国手语语料，估计2D姿态并定义评估协议。复现最先进翻译方法并在相同划分下比较，提出基于该预训练策略的翻译模型，在How2Sign、ASL STEM Wiki和OpenASL数据集上评估。",
+        "relevance": "该工作利用大语言模型生成伪注释用于预训练，与“大语言模型”和“预训练”主题相关，展示了LLM在跨模态预训练中的结构化表示作用。",
+        "caveat": "摘要未提供翻译性能的具体提升数值；伪注释质量依赖LLM生成，其噪声影响未量化；评估限于美国手语。"
       },
       "summary_mode": "openai"
     },
@@ -1616,7 +1663,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.24,
+      "score": 11.89,
       "matched_topics": [
         "知识图谱",
         "预训练"
@@ -1633,17 +1680,17 @@
       "score_breakdown": {
         "知识图谱": 7.0,
         "预训练": 2.7,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "knowledge-graphs": 9.54,
-        "pretraining": 5.24
+        "knowledge-graphs": 9.19,
+        "pretraining": 4.89
       },
       "summary": {
-        "takeaway": "提出不确定性条件化的路径能量框架，把基因组基础模型的序列预测与校准不确定度转化为生物医学知识图谱上可追溯的表型假设分布，无需患者级表型监督。",
-        "methods": "学习可解释能量为基因–疾病–表型路径打分，查询不确定度控制温度，路径概率聚合为表型假设；在可枚举候选集上做精确归一化作为参考，评估 Hastings 校正的学习修订算子；在 AlzKB 与 Hetionet 上做掩码边恢复等实验。",
-        "relevance": "直接关联知识图谱主题，并利用预训练基因组基础模型的输出，构建从序列证据到图推理的接口。",
-        "caveat": "基因留出实验中 recall@10 的优势（0.183 vs 0.123）主要来自三个变异多的基因，作者明确表示并非对所有基因成立；其他结果部分依赖基准措辞。"
+        "takeaway": "提出一种不确定性条件化的路径能量框架，将基因组基础模型的序列预测和校准不确定性转化为图支持的表型假设分布，无需患者级表型监督。",
+        "methods": "学习可解释能量函数对基因-疾病-表型路径评分，查询不确定性控制目标温度，路径概率聚合为表型假设。在AlzKB和Hetionet上评估，进行掩码边恢复和基因留出实验，并与DistMult嵌入比较。",
+        "relevance": "该工作连接基因组预训练模型与生物医学知识图谱推理，与“知识图谱”和“预训练”主题相关，强调不确定性在结构化推理中的作用。",
+        "caveat": "基因留出实验中recall@10的提升主要归因于三个多变异基因，未在所有基因上确立；框架依赖可枚举候选集进行精确归一化，扩展性受限。"
       },
       "summary_mode": "openai"
     },
@@ -1668,7 +1715,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.19,
+      "score": 11.84,
       "matched_topics": [
         "大语言模型",
         "检索增强与对齐"
@@ -1683,16 +1730,16 @@
       "score_breakdown": {
         "大语言模型": 2.85,
         "检索增强与对齐": 6.8,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 12.19
+        "large-language-models": 11.84
       },
       "summary": {
-        "takeaway": "提出中英双语语用推理基准 PILAPS，覆盖八类语用现象，并发现 LLM 的语用表现在语言与对话情境间不一定泛化。",
-        "methods": "构建包含专门撰写与对话衍生条目、文化适配与独立来源数据的英/中文基准；评估来自四个模型家族的八个 LLM，覆盖不同规模与提示策略，并进行错误分析。",
-        "relevance": "与大语言模型及对齐评估相关，检验语用能力跨语言、跨设定的一致性。",
-        "caveat": "摘要仅给出定性发现（如开源模型在幽默上仍困难、CoT 提示略增字面解读错误），未提供具体分数；评估限于八个模型和两种语言。"
+        "takeaway": "提出PILAPS，一个英汉双语语用推理基准，覆盖八种语用现象和不同来源与设置的数据，评估八个LLM后发现性能随模型、现象和语言变化显著。",
+        "methods": "构建包含专门编写和对话衍生条目的双语基准，涵盖文化适配和独立来源数据。评估来自四个家族的八个LLM，不同模型规模和提示策略，并进行错误分析比较人类参与者。",
+        "relevance": "该工作评估LLM的语用推理能力跨语言和设置的泛化性，与“大语言模型”和“检索增强与对齐”主题相关，涉及模型对齐与评估。",
+        "caveat": "基准仅涵盖英语和普通话，未覆盖更多语言；提示策略的影响结论基于特定模型集，泛化性需进一步验证。"
       },
       "summary_mode": "openai"
     },
@@ -1723,7 +1770,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.19,
+      "score": 11.84,
       "matched_topics": [
         "知识图谱",
         "持续学习"
@@ -1739,17 +1786,17 @@
       "score_breakdown": {
         "知识图谱": 3.0,
         "持续学习": 7.0,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "knowledge-graphs": 5.19,
-        "continual-learning": 9.19
+        "knowledge-graphs": 4.84,
+        "continual-learning": 8.84
       },
       "summary": {
-        "takeaway": "OpenKAGE 提出智能体群体演化框架，在开放世界 Minecraft 中实现开放式终身学习，并通过知识共享让新初始化的智能体群体受益。",
-        "methods": "采用两层知识表示（情景记忆层与保留适用条件的可迁移经验/技能层）；知识共享机制把文本经验语义整合为持续演化的共享知识图谱，可执行技能按原文共享；在 Minecraft 中验证并做跨骨干模型迁移实验。",
-        "relevance": "连接知识图谱与持续学习主题，研究智能体群体在开放环境中的经验积累与复用。",
-        "caveat": "评估集中于 Minecraft 单一开放世界环境；摘要未给出达到的技术里程碑细节或迁移提升的量化幅度。"
+        "takeaway": "提出OpenKAGE，一种智能体群演化框架，用于开放世界中的开放式终身学习，通过知识共享机制使智能体群持续探索并获取新能力。",
+        "methods": "采用两层知识表示：记忆层存储情境记忆，经验层存储可迁移经验与技能（保留适用条件）。知识共享机制将文本经验语义整合到持续演化的共享知识图谱，可执行技能按原样共享。在Minecraft中评估，并测试知识迁移到不同骨干模型的新智能体群。",
+        "relevance": "该工作结合知识图谱与持续学习，实现多智能体在开放世界中的终身学习与知识共享，与“知识图谱”和“持续学习”主题直接相关。",
+        "caveat": "评估限于Minecraft环境，未讨论知识图谱规模增长带来的检索效率问题；技能共享的适用条件如何自动验证未详细说明。"
       },
       "summary_mode": "openai"
     },
@@ -1777,7 +1824,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.09,
+      "score": 11.74,
       "matched_topics": [
         "大语言模型",
         "检索增强与对齐"
@@ -1792,16 +1839,16 @@
       "score_breakdown": {
         "大语言模型": 7.0,
         "检索增强与对齐": 2.55,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 12.09
+        "large-language-models": 11.74
       },
       "summary": {
-        "takeaway": "研究用线性探针检测 LLM 说谎，比较 persona 方向与知识方向在不同类型谎言上的可迁移性。",
-        "methods": "扩充已发表的 persona bank，加入否认自身知识的角色及诚实对应角色；在模型中间层提取 persona 方向，在 Liars' Bench 上跨模型评估；另构造对比可回答问题与不可回答问题的知识方向，并在 Gender-Secret 微调上测试。",
-        "relevance": "属于大语言模型与对齐/可信评估方向，探讨欺骗检测的内部表示方法。",
-        "caveat": "结果高度依赖模型与基准措辞：persona 方向在 Qwen 上失败，知识方向仅在两个模型及第三个模型上勉强区分，多个对比落在随机方向区间内；结论的可迁移性有限。"
+        "takeaway": "研究使用无标签的角色扮演方向作为线性探针检测大语言模型谎言，发现其在跨谎言类型迁移上有限，尤其对知识相关谎言效果不稳定。",
+        "methods": "扩展已发表的角色库，加入否认自身知识的角色及诚实对应角色，在模型中间层提取角色方向；并在 Liars' Bench 上评估四个模型，同时构建知识方向对比模型能回答与不能回答的问题后跟相同否认脚本。",
+        "relevance": "直接关联大语言模型的可信度与对齐，探索无需标签的谎言检测方法，属于检索增强与对齐主题下的模型行为分析。",
+        "caveat": "摘要显示角色方向在 Qwen 上失败，对知识谎言的区分在 Llama 和 Qwen 上未超出随机方向范围，仅 Mistral 有一个对比显著；部分结果依赖基准措辞。"
       },
       "summary_mode": "openai"
     },
@@ -1828,7 +1875,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.09,
+      "score": 11.74,
       "matched_topics": [
         "大语言模型",
         "检索增强与对齐"
@@ -1843,16 +1890,16 @@
       "score_breakdown": {
         "大语言模型": 7.0,
         "检索增强与对齐": 2.55,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 12.09
+        "large-language-models": 11.74
       },
       "summary": {
-        "takeaway": "论文区分地理空间记忆与空间泛化，提出将连续位置编码作为空间 token 注入 LLM 嵌入空间，以促进地理知识在空间上组织并提升未观测区域描述生成。",
-        "methods": "基于连续空间编码器把位置表示投影到 LLM 嵌入空间；在洛杉矶和伦敦两个新构建的地理文本基准上评估，包括地理空间描述测试与独立的地理空间 grounding 模型测试，并进行逐层探测和表示聚类。",
-        "relevance": "与大语言模型主题直接相关，探讨 LLM 如何表示和泛化连续空间信息，并评估表示组织方式。",
-        "caveat": "摘要仅给出定性比较，未报告具体数值；空间泛化提升幅度及 grounding 改进的“适度但一致”缺乏量化细节，需查看全文。"
+        "takeaway": "区分地理空间记忆与空间泛化，提出连续位置表示作为空间 token 注入 LLM，以促进未观测区域的地理描述生成。",
+        "methods": "使用连续空间编码器将位置表示投影到模型嵌入空间，构建洛杉矶和伦敦两个新地理文本基准，进行地理描述生成与地理 grounding 评估，并辅以逐层探测和表示聚类。",
+        "relevance": "涉及大语言模型的空间知识组织与泛化能力，与检索增强和对齐中知识表示与泛化主题相关。",
+        "caveat": "摘要未报告具体性能数值，仅称连续位置表示优于文本坐标；空间泛化提升幅度和下游 grounding 改进程度未量化。"
       },
       "summary_mode": "openai"
     },
@@ -1878,7 +1925,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.09,
+      "score": 11.74,
       "matched_topics": [
         "检索增强与对齐",
         "强化学习"
@@ -1894,17 +1941,17 @@
       "score_breakdown": {
         "检索增强与对齐": 2.55,
         "强化学习": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 5.09,
-        "reinforcement-learning": 9.54
+        "large-language-models": 4.74,
+        "reinforcement-learning": 9.19
       },
       "summary": {
-        "takeaway": "提出 FedDIA，按客户端本地训练对全局模型的改进量并结合环境难度进行联邦聚合，以缓解简单客户端高回报造成的“平台问题”。",
-        "methods": "联邦强化学习用于无地图机器人导航；难度由模型自身表现推断；以客户端更新对全局模型的改进为评分信号；在八个异构客户端上训练，并迁移到手写仓库和居住空间布局。",
-        "relevance": "属于强化学习与联邦学习对齐/聚合方向，关注异构客户端下的聚合权重设计。",
-        "caveat": "实验规模有限（八个客户端），摘要未说明难度推断的具体定义与理论保证；结果仅基于所测导航任务。"
+        "takeaway": "提出 FedDIA，在联邦强化学习中根据客户端对全局模型的改进程度和环境难度加权聚合，以缓解简单环境客户端主导的问题。",
+        "methods": "在八异构客户端的无地图导航任务上，以本地训练对全局模型的提升幅度乘以推断的环境难度作为客户端评分，并与均匀平均和基于回报的加权等基线比较。",
+        "relevance": "关联强化学习与联邦学习，属于检索增强与对齐主题下多智能体协同学习与策略聚合。",
+        "caveat": "仅在无地图导航任务和八个客户端上评估；摘要未说明难度推断的具体机制及其在更广泛任务上的泛化性。"
       },
       "summary_mode": "openai"
     },
@@ -1930,7 +1977,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.09,
+      "score": 11.74,
       "matched_topics": [
         "预训练",
         "自监督与表示学习"
@@ -1946,16 +1993,16 @@
       "score_breakdown": {
         "预训练": 7.0,
         "自监督与表示学习": 2.55,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "pretraining": 12.09
+        "pretraining": 11.74
       },
       "summary": {
-        "takeaway": "提出轻量细胞基础模型 C-LiTE（2200 万参数），针对细胞级 H&E 图像采用原生分辨率 tokenization，并以伪逆变换适配预训练 ViT 的 patch embedding 权重。",
-        "methods": "64×64 px 细胞中心裁剪，4×4 patch embedding 生成 16×16 token 网格，不做上采样；用伪逆变换将预训练 ViT-5-S 的 patch embedding 权重适配到更细 patch 分辨率；在 TCGA 的 6000 万细胞中心裁剪上自监督预训练，覆盖 19 种癌症和 16 种组织；在七个公开数据集上做冻结特征评估。",
-        "relevance": "与预训练、自监督与表示学习主题相关，涉及病理基础模型的轻量化与细胞级表示学习。",
-        "caveat": "摘要报告平均 macro-F1 为 0.670，仍略低于 CytoFormer 的 0.682；优势主要在参数效率，绝对性能未超越对比模型。"
+        "takeaway": "提出轻量级细胞级病理基础模型 C-LiTE（22M 参数），采用原生分辨率 token 化避免上采样，在多个细胞任务上接近更大模型性能。",
+        "methods": "使用 64x64 像素细胞中心裁剪和 4x4 patch embedding 生成 16x16 token 网格；通过伪逆变换适配预训练 ViT-5-S 的 patch embedding 权重；在来自 TCGA 的 6000 万细胞裁剪上自监督预训练，并在七个公共数据集上冻结特征评估。",
+        "relevance": "属于预训练与自监督表示学习，面向计算病理学中的细胞特征学习，与基础模型高效化相关。",
+        "caveat": "摘要仅报告冻结特征下平均 macro-F1 为 0.670，接近 CytoFormer 的 0.682；未展示微调结果或跨中心泛化证据。"
       },
       "summary_mode": "openai"
     },
@@ -1991,7 +2038,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.09,
+      "score": 11.74,
       "matched_topics": [
         "检索增强与对齐",
         "预训练"
@@ -2007,17 +2054,72 @@
       "score_breakdown": {
         "检索增强与对齐": 2.55,
         "预训练": 7.0,
-        "新鲜度": 2.04
+        "新鲜度": 1.69
       },
       "category_scores": {
-        "large-language-models": 5.09,
-        "pretraining": 9.54
+        "large-language-models": 4.74,
+        "pretraining": 9.19
       },
       "summary": {
-        "takeaway": "构建基于病理基础模型与多实例学习的 Barrett 食管异型增生分级系统，在四机构数据上无需染色归一化即保持跨机构一致性能。",
-        "methods": "回顾性多机构诊断准确性研究，使用四个机构的 969 张 H&E 全切片图像；patch 级分类器基于专家标注定位诊断区域，再用属性感知多实例学习做切片级三分类；在 130 例留出测试集上评估。",
-        "relevance": "与预训练主题相关，展示病理基础模型表示在跨机构部署中的鲁棒性。",
-        "caveat": "为回顾性研究，测试集规模有限（n=130）；摘要未报告外部前瞻性验证或与其他基础模型的系统比较。"
+        "takeaway": "基于病理基础模型和多实例学习的系统可在多机构 H&E 全切片上对 Barrett 食管异型增生分级，且无需染色归一化。",
+        "methods": "回顾性多机构诊断准确性研究，使用四机构 969 张全切片图像；专家标注训练 patch 级分类器定位诊断区域，再用属性感知多实例学习进行切片级三分类；在 130 例留出测试集上评估。",
+        "relevance": "属于预训练基础模型在计算病理学中的应用，与医学图像分类和对齐主题相关。",
+        "caveat": "为回顾性研究，测试集仅 130 例；摘要未报告外部前瞻性验证或与病理学家前瞻性比较的结果。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "arxiv:2611.26159v1",
+      "title": "When Foundation Models Disagree: Representational Heterogeneity for Calibrated Uncertainty in Whole-Slide Image Classification",
+      "abstract": "Pathology foundation models supply strong representations for whole-slide image classification, yet the confidence attached to their predictions remains hard to trust. Prevailing uncertainty estimators act within a single feature space and thereby overlook the uncertainty that the choice of foundation-model representation itself induces. This work introduces CALIFUSE, a calibration-oriented framework that fuses several pathology foundation models for the specific purpose of uncertainty estimation. Departing from accuracy-driven fusion, CALIFUSE reads representational heterogeneity across encoders as an explicit confidence cue. Slide-level decision consensus is coupled with chunk-level evidence agreement quantified through Jensen-Shannon divergence, so that both prediction stability and fine-grained evidence consistency inform the estimate. Foundation-model encoders stay frozen. A task-specific nnMIL classifier is still trained for each FM; CALIFUSE then estimates confidence at inference without training an extra fusion module. Evaluated on seven WSI classification tasks under several foundation-model combinations, the framework sharpens calibration, misclassification detection, and selective prediction relative to both the strongest single-encoder baseline and naive ensemble averaging, all while preserving competitive balanced accuracy.",
+      "authors": [
+        "Yekai Shen",
+        "Yuqian Wang",
+        "Zishun Liao",
+        "Rongsheng Wang",
+        "Wenting Chen",
+        "S. Kevin Zhou",
+        "Qingsong Yao"
+      ],
+      "published": "2026-11-19",
+      "updated": "2026-11-19",
+      "url": "http://arxiv.org/abs/2611.26159v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26159v1",
+      "doi": "",
+      "venue": "arXiv",
+      "source": "arXiv",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "arXiv"
+      ],
+      "score": 11.74,
+      "matched_topics": [
+        "检索增强与对齐",
+        "预训练"
+      ],
+      "matched_categories": [
+        "large-language-models",
+        "pretraining"
+      ],
+      "matched_terms": [
+        "RAG",
+        "foundation model"
+      ],
+      "score_breakdown": {
+        "检索增强与对齐": 2.55,
+        "预训练": 7.0,
+        "新鲜度": 1.69
+      },
+      "category_scores": {
+        "large-language-models": 4.74,
+        "pretraining": 9.19
+      },
+      "summary": {
+        "takeaway": "提出 CALIFUSE，利用多个病理基础模型之间的表示异质性作为不确定性线索，融合切片级决策共识和块级证据一致性来校准置信度。",
+        "methods": "冻结多个病理基础模型编码器，为每个模型训练任务特定 nnMIL 分类器；推理时结合切片级预测共识与块级 Jensen-Shannon 散度衡量的证据一致性估计置信度，无需额外融合模块训练；在七个 WSI 分类任务上评估。",
+        "relevance": "涉及基础模型集成与不确定性估计，与预训练模型在医学图像中的可靠部署和对齐相关。",
+        "caveat": "摘要未提供具体校准指标数值；方法依赖多个基础模型编码器，计算与存储开销未讨论。"
       },
       "summary_mode": "openai"
     },
@@ -2042,7 +2144,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.04,
+      "score": 11.69,
       "matched_topics": [
         "大语言模型",
         "检索增强与对齐"
@@ -2058,16 +2160,16 @@
       "score_breakdown": {
         "大语言模型": 2.85,
         "检索增强与对齐": 7.0,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "large-language-models": 12.04
+        "large-language-models": 11.69
       },
       "summary": {
-        "takeaway": "提出结合 RoBERTa-LoRA 分类、FAISS 语义检索与 LLM 推理的混合 RAG 框架，用于虚假评论检测并提供有证据支撑的可解释性。",
-        "methods": "RoBERTa 加 LoRA 微调做分类，FAISS 做语义向量检索，LLM 做最终推理；在平衡和严重不平衡的真实场景中评估，报告跨域 F1 为 0.90。",
-        "relevance": "与大语言模型和检索增强与对齐主题直接相关，属于 RAG 在文本分类检测中的应用。",
-        "caveat": "跨域 F1 0.90 低于域内 SOTA fakeRoBERTa 的 0.97；摘要未说明数据集规模、LLM 具体型号及计算成本。"
+        "takeaway": "提出混合 RAG 框架用于虚假评论检测，结合 RoBERTa-LoRA 分类、FAISS 检索和 LLM 推理，在跨域评估中优于 OpenAI Detector 基线。",
+        "methods": "使用 RoBERTa 加 LoRA 进行五轮微调分类，FAISS 做语义向量检索，LLM 进行最终推理；在平衡和严重不平衡的真实场景中评估。",
+        "relevance": "直接关联大语言模型与检索增强生成，应用于虚假信息检测，属于检索增强与对齐主题。",
+        "caveat": "摘要报告跨域 F1 为 0.90，但域内 SOTA fakeRoBERTa 达 0.97，说明跨域仍有差距；未说明 LLM 推理的延迟和成本。"
       },
       "summary_mode": "openai"
     },
@@ -2094,7 +2196,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 12.04,
+      "score": 11.69,
       "matched_topics": [
         "大语言模型",
         "知识图谱"
@@ -2111,194 +2213,155 @@
       "score_breakdown": {
         "大语言模型": 2.85,
         "知识图谱": 7.0,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "large-language-models": 5.04,
-        "knowledge-graphs": 9.19
+        "large-language-models": 4.69,
+        "knowledge-graphs": 8.84
       },
       "summary": {
-        "takeaway": "提出噪声感知的生成式多模态知识图谱推理框架 NaviGATE，通过双视图指令微调和结构约束解码提升对检索噪声的鲁棒性并保证生成实体有效。",
-        "methods": "先对齐图结构表示与文本语义，再用多模态实体摘要和结构 token 微调多模态语言模型；检索无关与检索感知双视图联合优化，对比 logit 锐化强化可靠候选，参数一致性蒸馏抑制误导候选；推理时用结构约束解码限制到目标图谱有效实体。",
-        "relevance": "与大语言模型和知识图谱主题相关，涉及多模态知识图谱推理与检索噪声对齐。",
-        "caveat": "摘要未给出具体基准名称和数值增益；对噪声检索的鲁棒性提升缺乏量化说明，需查看全文。"
+        "takeaway": "提出 NaviGATE，一种噪声感知的双视图生成框架用于多模态知识图谱推理，通过结构约束解码和对比蒸馏提升对噪声检索的鲁棒性。",
+        "methods": "先对齐图结构表示与文本语义，再用多模态实体摘要和结构 token 微调多模态语言模型；在噪声感知双视图指令微调中联合优化无检索与有检索视图，用对比 logit 锐化强化可靠候选、参数一致性蒸馏抑制误导候选；推理时结构约束解码限制生成到有效实体。",
+        "relevance": "涉及大语言模型与知识图谱结合的多模态推理，属于知识图谱主题下的生成式推理与检索增强。",
+        "caveat": "摘要未给出具体基准名称和性能数值；双视图训练和结构约束解码的额外计算开销未说明。"
       },
       "summary_mode": "openai"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.12.766109",
-      "title": "B-RANKO: An ncRNA Foundation Model with Bidirectional Decoder-Only Architecture",
-      "abstract": "Ribonucleic acid (RNA) plays central roles in gene expression, regulation and catalysis, and has emerged as an important target for therapeutic design. While recent RNA foundation models have achieved strong performance on representation learning tasks, relatively few approaches support both native sequence generation and transferable representation learning within a single framework. We present B-RANKO, a 150M-parameter bidirectional decoder-only ncRNA foundation model that introduces a novel bidirectional autoregressive attention mechanism, enabling a single architecture to support both de novo sequence generation and representation learning. Pretrained on a large corpus derived from RNAcentral, Rfam and GARNET, B-RANKO generates biologically plausible and thermodynamically realistic RNA sequences that exhibit strong novelty relative to their closest matches in the pretraining corpus. We further show that B-RANKO can be efficiently fine-tuned for aptamer generation and achieves competitive performance on BEACON, with particularly strong results on RNA engineering tasks. B-RANKO is publicly available on GitHub at filipvucenik/B-RANKO, together with usage examples and instructions for downloading model weights and datasets.",
+      "id": "biorxiv:10.64898/2026.11.12.766252",
+      "title": "Infectious Disease Knowledge Graph (IDKG) for Antiviral and Antibacterial Drug Discovery.",
+      "abstract": "Infectious diseases remain a leading cause of global morbidity and mortality, while therapeutic discovery is hindered by fragmented biomedical data and antimicrobial resistance. To address this challenge, we developed the Infectious Disease Knowledge Graph (IDKG), a queryable platform that integrates curated chemical, biological, pharmacological, and clinical information relevant to infectious-disease drug discovery. Using a customized ORION pipeline, we integrated 20 data sources, including DrugCentral, SMACC, Heli-SMACC, NPASS, ClinicalTrials.gov, and host-virus interaction databases, into a Neo4j graph containing more than 4.6 million nodes and 26 million edges. IDKG supports graph-based reasoning through Clinical Outcome Pathways (COPs) and incorporates curation workflows for small molecules, biologics, and complex mixtures. Illustrative applications include reconstruction of a literature-supported remdesivir pathway for COVID-19 and graph-based mechanistic interpretation of experimentally observed quorum-sensing inhibitor-antibiotic synergies in multidrug-resistant bacteria. The platform provides an interoperable framework for drug repurposing, target prioritization, and mechanism-based hypothesis generation. IDKG is freely available at https://idkg.mml.unc.edu.",
       "authors": [
-        "Vucenik, F.",
-        "Penic, R. J.",
-        "Sikic, M."
+        "Martin, H.-J.",
+        "Beasley, J.-M.",
+        "Kaneva, V.",
+        "Tieghi, R.",
+        "Causey, K.",
+        "Tropsha, A.",
+        "Muratov, E."
       ],
-      "published": "2026-11-16",
-      "updated": "2026-11-16",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766109",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766109.full.pdf",
-      "doi": "10.64898/2026.11.12.766109",
-      "venue": "molecular biology",
+      "published": "2026-11-17",
+      "updated": "2026-11-17",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766252",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.12.766252.full.pdf",
+      "doi": "10.64898/2026.11.12.766252",
+      "venue": "bioinformatics",
       "source": "bioRxiv",
       "citation_count": 0,
       "influential_citation_count": 0,
       "also_seen_in": [
         "bioRxiv"
       ],
-      "score": 12.04,
+      "score": 11.54,
       "matched_topics": [
-        "预训练",
-        "自监督与表示学习"
-      ],
-      "matched_categories": [
-        "pretraining"
-      ],
-      "matched_terms": [
-        "foundation model",
-        "pretraining",
-        "representation learning"
-      ],
-      "score_breakdown": {
-        "预训练": 7.0,
-        "自监督与表示学习": 2.55,
-        "领域上下文": 0.5,
-        "新鲜度": 0.99
-      },
-      "category_scores": {
-        "pretraining": 12.04
-      },
-      "summary": {
-        "takeaway": "提出 150M 参数的双向 decoder-only ncRNA 基础模型 B-RANKO，用双向自回归注意力在同一架构中支持序列生成与表示学习。",
-        "methods": "在来自 RNAcentral、Rfam 和 GARNET 的语料上预训练；评估生成序列的新颖性与热力学合理性；微调用于 aptamer 生成，并在 BEACON 上评估，重点报告 RNA 工程任务。",
-        "relevance": "与预训练、自监督与表示学习主题相关，属于生物序列基础模型。",
-        "caveat": "摘要未给出 BEACON 等基准的具体数值；生成序列的“热力学合理”评估标准与规模未详述。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "arxiv:2611.25111v1",
-      "title": "DSFlow: A Neuro-Symbolic Data Workflow Agent with Statistical Diagnostic Guardrails",
-      "abstract": "Data science workflows often require tools that presume non-trivial technical knowledge. Large language models (LLMs) reduce this barrier, but a gap remains between flexible general-purpose agents and statistically controlled pipelines. We introduce DSFlow, a LangGraph-based neuro-symbolic data-agent platform that combines reusable, LLM-selected skills with deterministic diagnostic guardrails. Skills provide extensible task knowledge. Symbolic validation can accept a proposed method, request clarification or replanning, override an unsuitable method, or supply a safe fallback. Regression and clustering case studies illustrate how DSFlow uses diagnostic evidence to correct method choices and documents those decisions in auditable reports.",
-      "authors": [
-        "Junfeng Nie",
-        "Xiaohui Chen"
-      ],
-      "published": "2026-11-18",
-      "updated": "2026-11-18",
-      "url": "http://arxiv.org/abs/2611.25111v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.25111v1",
-      "doi": "",
-      "venue": "arXiv",
-      "source": "arXiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "arXiv"
-      ],
-      "score": 11.84,
-      "matched_topics": [
-        "大语言模型",
-        "图谱构建与表示"
+        "检索增强与对齐",
+        "知识图谱"
       ],
       "matched_categories": [
         "large-language-models",
         "knowledge-graphs"
       ],
       "matched_terms": [
-        "large language model",
-        "neuro-symbolic"
-      ],
-      "score_breakdown": {
-        "大语言模型": 2.85,
-        "图谱构建与表示": 6.8,
-        "新鲜度": 1.69
-      },
-      "category_scores": {
-        "large-language-models": 5.04,
-        "knowledge-graphs": 8.99
-      },
-      "summary": {
-        "takeaway": "提出基于 LangGraph 的神经符号数据工作流代理 DSFlow，将 LLM 选择的可复用技能与确定性统计诊断防护栏结合，以纠正常规方法选择并生成可审计报告。",
-        "methods": "LLM 选择可复用技能；符号验证可接受方法、要求澄清或重规划、否决不合适方法或提供安全回退；用回归和聚类案例研究展示诊断证据如何纠正方法选择。",
-        "relevance": "与大语言模型及图谱构建与表示主题相关，涉及 LLM 代理工作流与符号约束结合。",
-        "caveat": "摘要仅描述案例研究，未报告定量基准或用户研究结果；防护栏的覆盖范围和误判率未说明。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "biorxiv:10.64898/2026.11.13.766144",
-      "title": "MeXalign - A Segmentation Mask-Based Registration Pipeline for Multimodal Single-Cell Analysis",
-      "abstract": "Leveraging the power of multimodal imaging relies on accurate coregistration of yet fundamentally different modalities. Reliable cell-to-cell correspondence is especially challenging as consecutive tissue sections do not necessarily contain identical cells or cellular structures. Here we present MeXalign, a segmentation-mask-based coregistration pipeline designed to integrate multimodal images acquired sequentially from the same specimen at single-cell resolution. Single-cell segmentation masks provide a modality-independent representation of cellular morphology and spatial organization. MeXalign was tested based on the two platforms, laser ablation inductively coupled plasma time-of-flight mass spectrometry (LA-ICP-TOFMS) and immunofluorescence (IF) microscopy. As a prerequisite, each modality integrates membrane and/or nucleus labels for accurate segmentation. The added value of MeXalign was highlighted for imaging of cell models deposited on glass slides and tissue sections. The performance of coregistration was validated on cytospins, murine tumor and human skin samples. A dedicated scoring system was introduced allowing to assess the quality of image coregistration. The robustness towards under-segmentation and downstream image analysis was evaluated on LA-ICP-TOFMS with and without coregistration, investigating metal drug uptake, barcoding and cellular phenotyping. A showcase study on cancer cells exposed to nanoparticles proved the accuracy, as the nanoparticle distribution was preserved at a subcellular level when using MeXalign. While all examples show the overall improved quality of segmentation, other benefits of complementary labelings can be anticipated, especially for cellular features unique to one modality.",
-      "authors": [
-        "Molitor, C.",
-        "Hendriks, L.",
-        "Sinner, M.",
-        "Loibnegger, D.",
-        "Schaier, M.",
-        "Hafner, A.",
-        "Berger, W.",
-        "Koellensperger, G."
-      ],
-      "published": "2026-11-16",
-      "updated": "2026-11-16",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.11.13.766144",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.13.766144.full.pdf",
-      "doi": "10.64898/2026.11.13.766144",
-      "venue": "bioinformatics",
-      "source": "bioRxiv",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "bioRxiv"
-      ],
-      "score": 11.84,
-      "matched_topics": [
-        "多组学扰动",
-        "检索增强与对齐"
-      ],
-      "matched_categories": [
-        "bio-computing",
-        "large-language-models"
-      ],
-      "matched_terms": [
         "RAG",
-        "multimodal single-cell"
+        "knowledge graph"
       ],
       "score_breakdown": {
-        "多组学扰动": 6.8,
         "检索增强与对齐": 2.55,
-        "领域上下文": 0.5,
+        "知识图谱": 7.0,
         "新鲜度": 0.99
       },
       "category_scores": {
-        "bio-computing": 9.29,
-        "large-language-models": 5.04
+        "large-language-models": 4.54,
+        "knowledge-graphs": 8.99
       },
       "summary": {
-        "takeaway": "提出 MeXalign，一种基于分割掩码的配准流程，用于整合同一样本依次采集的多模态图像并实现单细胞级对应。",
-        "methods": "利用单细胞分割掩码作为跨模态一致的表征，在 LA-ICP-TOFMS 与免疫荧光（IF）显微镜两个平台上进行配准；在 cytospins、小鼠肿瘤和人皮肤样本上验证，并引入评分系统评估配准质量。",
-        "relevance": "该工作面向多模态单细胞数据的空间对齐，与多组学扰动研究中整合成像与组学信号、以及检索增强与对齐主题中建立跨模态对应关系的需求相关。",
-        "caveat": "摘要未给出配准精度的定量指标或与其他配准方法的系统比较；方法要求每种模态具备膜和/或核标记以满足分割前提，且针对连续切片间细胞不完全一致的情形，其适用边界需原文确认。"
+        "takeaway": "构建了传染病知识图谱IDKG，整合多源数据以支持抗病毒和抗菌药物发现中的药物重定位与机制假设生成。",
+        "methods": "使用定制ORION流程整合20个数据源（如DrugCentral、SMACC、ClinicalTrials.gov等），构建包含超460万节点和2600万边的Neo4j图，支持基于临床结果路径（COPs）的图推理，并包含小分子、生物制剂和复杂混合物的策展工作流。",
+        "relevance": "该工作与检索增强与对齐及知识图谱主题直接相关，提供了可查询的图结构知识库，可用于增强药物发现中的信息检索与推理。",
+        "caveat": "摘要仅展示两个示例应用，未系统评估图谱的覆盖度、准确性或与其他方法的比较性能。"
       },
       "summary_mode": "openai"
     },
     {
-      "id": "biorxiv:10.64898/2026.08.01.742217",
-      "title": "Evaluating the ability of spatial transcriptomics foundation models to learn multi-scale spatial variation",
-      "abstract": "Spatial gene expression results from the superposition of multiple sources of variation in gene expression across different spatial scales, including local microenvironment-associated variation and global spatial gradients. Spatial foundation models (SFMs) are large-scale machine learning models trained on cohorts of spatial transcriptomics (ST) data that, in principle, learn the different sources of spatial variation in gene expression. However, the embeddings learned by SFMs are difficult to interpret, and it remains unclear whether they fully capture such spatial variation. Here, we develop SAFFRON, a sparse autoencoder (SAE)-based framework for interpreting and evaluating SFMs. SAFFRON uses a Matryoshka SAE to decompose dense SFM embeddings into sparse, human-interpretable features and evaluates whether these features correlate with known sources of spatial variation. Using SAFFRON, we systematically benchmark the ability of several recent SFMs to identify local and global spatial variation in gene expression. We find that only two SFMs learn global spatial gradients more accurately than naive, non-foundation model baselines; further investigating one such SFM, SAFFRON reveals that these gradients are concentrated in a small subset of sparse, human-interpretable SAE features. On the other hand, <em>no</em> SFM learns local patterns (A{beta} plaque microenvironment-associated patterns) more accurately than such baselines. Our findings suggest that current SFMs do not systematically learn multi-scale spatial variation in gene expression. Code: SAFFRON is available at <a href=\"https://github.com/chitra-lab/SAFFRON\">https://github.com/chitra-lab/SAFFRON.</a>",
+      "id": "pubmed:43062791",
+      "title": "A Hierarchical KAN-Augmented Graph Convolutional Model for Inferring Cell-Type-Specific Gene Regulations in Single-Cell Omics.",
+      "abstract": "Accurate inference of gene regulatory networks (GRNs) from single-cell RNA-seq data remains challenging due to the complexity of transcription factor (TF)-target interactions and the difficulty in capturing both local and global regulatory dependencies. Here, we present GeneKAN, a novel deep learning framework that integrates multiscale graph convolution with Kolmogorov-Arnold Networks (KANs) for robust GRN inference. GeneKAN employs a kernel-based graph convolution module to hierarchically encode gene representations, while KANs model high-order, interpretable TF-target relationships through learnable spline activations. Benchmarking against eleven existing models, and seven scRNA-seq datasets from BEELINE, including diverse cell types, species, and ground-truth networks (ChIP-seq, STRING, LOF/GOF), demonstrates that our proposed GeneKAN achieves state-of-the-art performance in both AUROC and AUPRC. Ablation studies of the proposed model confirm the necessity of each component. Biological validation on human hepatocyte and lung cancer datasets reveals that GeneKAN not only recovers known regulatory interactions with high precision but also identifies functionally relevant hub genes and oncogenic pathways. GeneKAN thus offers a powerful, interpretable, and scalable solution for GRN reconstruction under real-world conditions of data sparsity and noise, with significant potential for advancing systems biology and precision medicine.",
       "authors": [
-        "Handa, D.",
-        "Martin-Linares, C.",
-        "Stein-O'Brien, G.",
-        "Ling, J.",
-        "Chitra, U."
+        "Binhua Tang",
+        "Mengyao Mao",
+        "Jingyu Wang",
+        "Fengfeng Zhou"
       ],
-      "published": "2026-11-16",
-      "updated": "2026-11-16",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.01.742217",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.08.01.742217.full.pdf",
-      "doi": "10.64898/2026.08.01.742217",
+      "published": "2026-11-20",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43062791/",
+      "pdf_url": "",
+      "doi": "10.1007/s12539-026-00890-z",
+      "venue": "Interdisciplinary sciences, computational life sciences",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 9.54,
+      "matched_topics": [
+        "GRN / Regulon"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "gene regulatory network",
+        "grn inference"
+      ],
+      "score_breakdown": {
+        "GRN / Regulon": 4.8,
+        "领域上下文": 1.5,
+        "新鲜度": 2.04
+      },
+      "category_scores": {
+        "bio-computing": 9.54
+      },
+      "summary": {
+        "takeaway": "提出GeneKAN框架，结合多尺度图卷积与Kolmogorov-Arnold网络（KANs）从单细胞RNA-seq数据推断基因调控网络，在多个基准上达到先进性能。",
+        "methods": "采用基于核的图卷积模块分层编码基因表示，利用KANs通过可学习样条激活建模高阶可解释的TF-靶标关系；在BEELINE的七个scRNA-seq数据集上对比十一个现有模型，并进行消融实验和生物学验证。",
+        "relevance": "直接对应GRN/Regulon主题，提供了一种新的GRN推断深度学习方法，并在多种细胞类型和物种上验证。",
+        "caveat": "摘要未提供具体性能数值或计算复杂度分析；生物学验证限于肝细胞和肺癌数据集，泛化性需进一步验证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "biorxiv:10.64898/2026.11.14.766416",
+      "title": "A Biologically Interpretable Single-Cell Pathology Foundation Model for Molecular Decoding of H&E Images",
+      "abstract": "The microscopic structure of human tissues encodes molecular information that is not directly accessible by visual inspection. Current pathology foundation models improve histological interpretation but operate at multicellular resolution. It remains unclear whether routine histology contains structured molecular and cellular information recoverable at single-cell resolution, which biological properties are associated with this recoverability, and where its limits lie. Here, we introduce Loki2, a single-cell pathology foundation model trained on UniSeg, a pan-tissue resource integrating 15 million cells with segmentation, lineage annotations and measured or histology-inferred transcriptomic profiles. We examine the above question across cellular representation, molecular recoverability, and patient-level relevance. Loki2 captures cellular identity and continuous morphological variation, with interpretable latent dimensions linked to physical nuclear phenotypes through DAPI validation. Transcriptomic retrieval and in silico protein staining test molecular recoverability, with gene-level analyses revealing the strongest recovery for genes associated with morphologically distinct cellular identities and functions. Then, patient staging and biomarker discovery connect cellular morphology representations to clinical relevance. Together, these findings establish Loki2 as a biologically interpretable single-cell pathology foundation model and provide the opportunities of recovering cellular and molecular information from routine H&E histology at single-cell resolution.",
+      "authors": [
+        "Chen, W.",
+        "Li, Q.",
+        "Cheng, H.",
+        "Zhang, P.",
+        "Chang, Y.",
+        "Wang, X.",
+        "Tran, T. N.",
+        "Li, C.",
+        "Yang, Y.",
+        "Xiao, Y.",
+        "Zhao, X.",
+        "Wu, W.",
+        "Ma, A.",
+        "Mora, A.",
+        "Rojas, M.",
+        "Aggarwal, S.",
+        "Lin, S. H.",
+        "Li, S.",
+        "Ma, Q.",
+        "Wang, G."
+      ],
+      "published": "2026-11-17",
+      "updated": "2026-11-17",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.14.766416",
+      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.14.766416.full.pdf",
+      "doi": "10.64898/2026.11.14.766416",
       "venue": "bioinformatics",
       "source": "bioRxiv",
       "citation_count": 0,
@@ -2306,7 +2369,7 @@
       "also_seen_in": [
         "bioRxiv"
       ],
-      "score": 10.49,
+      "score": 9.49,
       "matched_topics": [
         "预训练"
       ],
@@ -2318,64 +2381,17 @@
       ],
       "score_breakdown": {
         "预训练": 7.0,
-        "领域上下文": 1.5,
+        "领域上下文": 0.5,
         "新鲜度": 0.99
       },
       "category_scores": {
-        "pretraining": 10.49
+        "pretraining": 9.49
       },
       "summary": {
-        "takeaway": "提出 SAFFRON 框架解释空间转录组基础模型（SFM）的嵌入，并发现当前 SFM 并未系统学习多尺度空间变异。",
-        "methods": "用 Matryoshka 稀疏自编码器（SAE）将稠密 SFM 嵌入分解为稀疏、可解释特征，并评估其与已知空间变异来源的相关性；在多个近期 SFM 上系统基准测试局部与全局空间变异，包括 A{beta} 斑块微环境模式。",
-        "relevance": "该研究评估空间基础模型所学表征是否真正捕获空间结构，直接服务于预训练主题中对基础模型表征能力的检验。",
-        "caveat": "结论基于摘要所述基准与特定空间变异来源（全局梯度、A{beta} 斑块微环境），是否推广到其他组织与任务需原文确认；摘要未给出各模型的具体数值。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "pubmed:42716018",
-      "title": "Causal assessment of Bayesian gene regulatory networks from single-cell transcriptomics.",
-      "abstract": "Gene regulatory network (GRN) inference is an essential tool for revealing dysregulated relationships between genes in different cell types from single-cell transcriptomic (SCT) data. GRNs based on Bayesian networks (BNs) learned from SCT data can elucidate directed regulatory relationships representing complex disease mechanisms and their interplay through graphical modeling. However, software for learning BNs from SCT data is not widely available, nor is software for evaluating the BNs' structural accuracy in representing causal relationships between genes. Here, we describe the scstruc R package. This package provides a suite of BN structure learning algorithms specifically designed to handle SCT data, to evaluate the resulting networks based on the causal relationships they represent regardless of the availability of established molecular interaction networks, and to compare regulatory relationships between conditions. We demonstrated that scstruc can identify biologically relevant differential regulatory relationships between groups on a per-cell basis.",
-      "authors": [
-        "Noriaki Sato",
-        "Marco Scutari",
-        "Seiya Imoto"
-      ],
-      "published": "2026-11-16",
-      "updated": "",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42716018/",
-      "pdf_url": "",
-      "doi": "10.1016/j.crmeth.2026.101580",
-      "venue": "Cell reports methods",
-      "source": "PubMed",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "PubMed"
-      ],
-      "score": 10.09,
-      "matched_topics": [
-        "GRN / Regulon"
-      ],
-      "matched_categories": [
-        "bio-computing"
-      ],
-      "matched_terms": [
-        "gene regulatory network"
-      ],
-      "score_breakdown": {
-        "GRN / Regulon": 6.4,
-        "领域上下文": 1.5,
-        "新鲜度": 0.99
-      },
-      "category_scores": {
-        "bio-computing": 10.09
-      },
-      "summary": {
-        "takeaway": "介绍 scstruc R 包，为单细胞转录组数据提供贝叶斯网络结构学习与因果结构准确性评估工具。",
-        "methods": "提供一套面向 SCT 数据的 BN 结构学习算法，并可在无需已有分子互作网络的情况下评估所得网络所代表的因果关系，还支持比较不同条件下的调控关系；在单细胞层面展示差异调控关系的识别。",
-        "relevance": "该工具直接服务于 GRN/Regulon 主题，即从单细胞转录组推断基因调控网络并评估其因果结构。",
-        "caveat": "摘要未报告与其他 GRN 推断方法的定量比较或基准数据集结果；因果评估的有效性依赖贝叶斯网络假设，具体限制需见原文。"
+        "takeaway": "提出单细胞病理基础模型Loki2，基于UniSeg资源训练，探索从常规H&E图像在单细胞分辨率恢复分子和细胞信息的可能性。",
+        "methods": "在整合1500万细胞、分割、谱系注释及测量或组织学推断转录组谱的泛组织资源UniSeg上训练；通过DAPI验证潜在维度与物理核表型的关联，用转录组检索和计算机模拟蛋白染色测试分子可恢复性。",
+        "relevance": "与预训练主题相关，展示了病理基础模型在单细胞水平上的生物学可解释性和分子解码潜力。",
+        "caveat": "摘要未报告具体恢复性能指标或临床验证结果；分子可恢复性的限制和适用范围需进一步量化。"
       },
       "summary_mode": "openai"
     },
@@ -2399,7 +2415,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 9.69,
+      "score": 9.34,
       "matched_topics": [
         "单细胞扰动"
       ],
@@ -2413,70 +2429,16 @@
       "score_breakdown": {
         "单细胞扰动": 7.0,
         "领域上下文": 0.5,
-        "新鲜度": 1.69
-      },
-      "category_scores": {
-        "bio-computing": 9.69
-      },
-      "summary": {
-        "takeaway": "提出 ReliFlow，通过估计单基因效应的可靠性来校准加性参考，从而改进对未见组合扰动的转录响应预测。",
-        "methods": "采用条件流匹配模型，用仅训练集的交叉拟合估计单基因效应可靠性并据此校准加性源分布，将速度分解为对加性参考的已知校正与学习的残差传输场；在 Norman 遗传扰动和 ComboSciPlex 药物组合上评估并做组件消融。",
-        "relevance": "该工作聚焦单细胞扰动主题中组合扰动的响应预测，强调区分干预间交互与单效应估计误差。",
-        "caveat": "仅在 Norman 和 ComboSciPlex 两个数据集上验证，且摘要提到训练成本有中等程度增加；泛化到其他扰动类型与平台需进一步验证。"
-      },
-      "summary_mode": "openai"
-    },
-    {
-      "id": "pubmed:43040959",
-      "title": "Root gene regulatory network analysis reveals roles for defense hormones and secondary metabolites in establishment of disease-suppressive soil.",
-      "abstract": "Plants recruit beneficial microbiota in their rhizosphere to alleviate stresses. In Arabidopsis thaliana, foliar infection by Hyaloperonospora arabidopsidis (Hpa) has been shown to establish a disease-suppressive microbiome that promotes protection against Hpa infection of the subsequent plant generation grown in conditioned soil - a phenomenon known as soil-borne legacy (SBL). The root responses involved in SBL establishment have remained largely unclear. In this study, time-series RNA-seq of roots from Hpa-infected plants grown in natural soil was conducted over 7 d post inoculation. A gene regulatory network of the responding roots was constructed. The role of predicted key components was verified in follow-up assays. Root transcriptional reprogramming started within 1 d after foliar infection. Genes associated with salicylic acid (SA)-mediated defense were upregulated, while those linked to secondary metabolism and jasmonic acid (JA) responsiveness were downregulated. SA accumulation increased at 1 d post inoculation (dpi), and JA decreased by 3 dpi. Transcriptional regulation occurred in the tips of the roots. Mutant analyses confirmed that SA, JA, indole glucosinolates, camalexin, and flavonoids contribute to SBL establishment. Our findings reveal systemic transcriptional reprogramming in roots upon foliar pathogen attack, uncovering roles of hormone signaling and secondary metabolism in shaping a disease-suppressive soil beyond their known defense functions.",
-      "authors": [
-        "Run Qi",
-        "Ivona Glavincheska",
-        "Jelle Spooren",
-        "Xiaoyan Liu",
-        "Marit Van Laatum",
-        "Francel Verstappen",
-        "Iris F Kappers",
-        "Roeland L Berendsen",
-        "Corné M J Pieterse",
-        "Saskia C M Van Wees"
-      ],
-      "published": "2026-11-17",
-      "updated": "",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/43040959/",
-      "pdf_url": "",
-      "doi": "10.1111/nph.71769",
-      "venue": "The New phytologist",
-      "source": "PubMed",
-      "citation_count": 0,
-      "influential_citation_count": 0,
-      "also_seen_in": [
-        "PubMed"
-      ],
-      "score": 9.54,
-      "matched_topics": [
-        "GRN / Regulon"
-      ],
-      "matched_categories": [
-        "bio-computing"
-      ],
-      "matched_terms": [
-        "gene regulatory network",
-        "transcriptional regulation"
-      ],
-      "score_breakdown": {
-        "GRN / Regulon": 7.0,
         "新鲜度": 1.34
       },
       "category_scores": {
-        "bio-computing": 9.54
+        "bio-computing": 9.34
       },
       "summary": {
-        "takeaway": "通过根基因调控网络分析，揭示防御激素与次生代谢物在建立抑病土壤（soil-borne legacy）中的作用。",
-        "methods": "对 Hpa 侵染植株在自然土壤中的根进行接种后 7 天时间序列 RNA-seq，构建响应根的基因调控网络，并用后续实验验证预测的关键组分；结合突变体分析检验 SA、JA、吲哚硫苷、camalexin 和类黄酮的贡献。",
-        "relevance": "该研究属于 GRN/Regulon 主题，展示从时间序列转录组构建调控网络并实验验证关键节点的流程。",
-        "caveat": "为该特定植物-病原-土壤体系的研究，结论外推到其他物种或微生物组情境需谨慎；摘要未给出网络推断的统计性能指标。"
+        "takeaway": "提出ReliFlow，一种可靠性校准的残差传输条件流匹配模型，用于组合单细胞扰动预测，通过估计单基因效应的可靠性来校准加性源分布，提升对未见组合的泛化。",
+        "methods": "使用仅训练集交叉拟合估计单基因效应可靠性，将速度分解为加性参考的已知校正和学习到的残差传输场；在Norman遗传扰动和ComboSciPlex药物组合数据上评估。",
+        "relevance": "直接对应单细胞扰动主题，提供了一种处理组合扰动预测中不确定性的新方法。",
+        "caveat": "摘要报告了MAE和相关性提升，但训练成本有中等增加；方法在更广泛扰动类型和数据集上的泛化性未充分展示。"
       },
       "summary_mode": "openai"
     },
@@ -2501,7 +2463,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 9.19,
+      "score": 8.84,
       "matched_topics": [
         "持续学习"
       ],
@@ -2514,16 +2476,16 @@
       ],
       "score_breakdown": {
         "持续学习": 7.0,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "continual-learning": 9.19
+        "continual-learning": 8.84
       },
       "summary": {
-        "takeaway": "提出 Hypnos，一个受清醒/睡眠周期启发的双阶段端到端平台，用于在边缘设备上实现可扩展的持续学习。",
-        "methods": "清醒阶段在 RISC-V MCU 的低占用 SoC 上做高效推理与轻量无梯度原型更新；睡眠阶段由智能充电器执行基于回放的梯度更新以巩固知识；在 ZCU104 FPGA 上实现并按 28nm 工艺综合，于 CORe50 NICv2-391 协议上基准测试。",
-        "relevance": "该工作直接对应持续学习主题，探索在资源受限边缘设备上缓解灾难性遗忘的部署方案。",
-        "caveat": "评估限于 CORe50 这一协议，摘要未说明对其他数据流或硬件平台的适用性；睡眠阶段依赖外部充电/计算资源，实际部署约束需见原文。"
+        "takeaway": "提出Hypnos双阶段边缘持续学习平台，模仿大脑觉醒-睡眠周期，在低功耗边缘设备上实现高效持续学习。",
+        "methods": "觉醒阶段使用RISC-V MCU进行高效推理和轻量无梯度原型更新；睡眠阶段利用智能充电器进行基于 rehearsal 的梯度更新巩固；在ZCU104 FPGA上实现并采用28nm工艺合成，在CORe50 NICv2-391协议上基准测试。",
+        "relevance": "与持续学习主题相关，展示了边缘设备上持续学习的系统级实现和能效优化。",
+        "caveat": "摘要报告了准确率、延迟和计算节省，但未讨论在更复杂任务或动态环境下的可扩展性。"
       },
       "summary_mode": "openai"
     },
@@ -2548,7 +2510,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 9.19,
+      "score": 8.84,
       "matched_topics": [
         "持续学习"
       ],
@@ -2560,16 +2522,16 @@
       ],
       "score_breakdown": {
         "持续学习": 7.0,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "continual-learning": 9.19
+        "continual-learning": 8.84
       },
       "summary": {
-        "takeaway": "提出 LwU 统一框架，在单个突触层面为持续学习与机器遗忘划分角色，以缓解两个目标的冲突。",
-        "methods": "对每个权重分别针对保留数据与删除数据打分，将网络划分为四个区域并施加不同更新规则（冻结、清除并回收容量、对保留梯度正交投影的梯度上升等），剩余容量通过特权教师自蒸馏学习新任务；在 CL 与 MU 任务及 PAI 数据集上评估。",
-        "relevance": "该工作同时涉及持续学习与机器遗忘，属于持续学习主题下对知识获取与定向删除统一处理的研究。",
-        "caveat": "摘要主要报告相对最强基线的优劣而未给出具体数值；评估集中在图像分类、图像生成和危险内容移除等任务，其他模态与更复杂任务序列下的表现需原文确认。"
+        "takeaway": "提出Learning with Unlearning（LwU）统一框架，在突触层面划分权重以同时处理持续学习和机器遗忘，避免两者目标冲突。",
+        "methods": "对每个权重基于保留数据和删除数据分别评分，将网络划分为四个区域并应用不同更新规则：仅保留权重冻结，仅删除权重清除并释放容量，争议权重采用正交于保留梯度的梯度上升步，剩余容量通过特权教师自蒸馏学习新任务。",
+        "relevance": "与持续学习主题相关，创新性地将持续学习与机器遗忘结合，解决同一系统中的目标冲突。",
+        "caveat": "摘要未提供具体性能数值或与基线的详细比较；在真实世界数据集（PAI）上的实用性需进一步验证。"
       },
       "summary_mode": "openai"
     },
@@ -2597,7 +2559,7 @@
       "also_seen_in": [
         "arXiv"
       ],
-      "score": 9.19,
+      "score": 8.84,
       "matched_topics": [
         "持续学习"
       ],
@@ -2609,82 +2571,129 @@
       ],
       "score_breakdown": {
         "持续学习": 7.0,
-        "新鲜度": 1.69
+        "新鲜度": 1.34
       },
       "category_scores": {
-        "continual-learning": 9.19
+        "continual-learning": 8.84
       },
       "summary": {
-        "takeaway": "提出 UCLIR，用多个独立学习的互补表征替代单一共享表征进行正则化，从而改善持续学习中的知识保留。",
-        "methods": "受指数距离规则（EDR）启发，用独立自编码器通过无监督正则分别学习输入的不同部分，推理时接线性分类器；在 5-Splits MNIST、5-datasets 序列、5-Splits CIFAR-10 和 10-Splits Tiny ImageNet 上评估。",
-        "relevance": "该工作属于持续学习主题，探索基于正则化的无监督持续学习以减轻任务间干扰。",
-        "caveat": "推理阶段依赖线性分类器评估，且实验限于图像分类基准；摘要称结果与有监督及基于回放的方法具有竞争力，但未给出具体数值，也未讨论更长时间任务序列下的退化。"
+        "takeaway": "提出UCLIR无监督持续学习方法，通过独立自编码器学习互补表示并对多个小表示进行权重正则化，以限制新任务学习时的参数干扰。",
+        "methods": "受指数距离规则启发，将输入分解为独立学习的成分，使用独立自编码器通过无监督正则化学习不同部分，推理时使用线性分类器；在5-Splits MNIST、5-datasets序列、5-Splits CIFAR-10和10-Splits Tiny ImageNet上评估。",
+        "relevance": "与持续学习主题相关，提供了一种基于独立表示的无监督持续学习方法。",
+        "caveat": "摘要仅称取得竞争性结果，未提供具体数值；方法在更复杂或真实世界任务上的有效性未充分展示。"
       },
       "summary_mode": "openai"
     },
     {
-      "id": "biorxiv:10.64898/2026.11.13.765935",
-      "title": "Engineered post-transcriptional regulation of Scn10a by Pumilio ameliorates neuropathic pain in mice",
-      "abstract": "Post-transcriptional control of mRNA permeates biology, yet its contribution to sensory neuron physiology and pain remains unclear. The mammalian Pumilio proteins PUM1 and PUM2 (collectively referred to as PUM) are RNA-binding proteins that bind Pumilio response elements (PREs), typically situated in 3' untranslated regions. PUM recruits the CCR4-NOT complex to promote mRNA deadenylation and decay. Several mRNAs that encode voltage-gated sodium channels that regulate action potential generation in pain sensing neurons harbor PREs. Here, we explored whether PUM plays a role in pain signaling. PUM1 and PUM2 were enriched in TRPV1-positive dorsal root ganglion neurons, where PUM2 physically interacted with Scn9a, Scn10a, and Scn11a transcripts, which encode Nav1.7, Nav1.8, and Nav1.9, respectively. Depletion of PUM in sensory neurons produced mechanical hypersensitivity and enhanced inflammatory pain. These effects were reversed by blocking Nav1.8 but not Nav1.7, raising the possibility that repression of Scn10a by PUM can be harnessed using synthetic biology to diminish neuropathic pain. To this end, we generated a chimera comprising the RNA-binding domain of PUM2 and a repressive domain, which we dubbed \"super-PUM\". Expression of AAV-encoded super-PUM in sensory neurons reduced Nav1.8 abundance, diminished tetrodotoxin-resistant and suzetrigine-sensitive sodium currents, and prevented mechanical and thermal hypersensitivity following spared nerve injury. These results demonstrate that optimization of an endogenous post-transcriptional regulon provides a means to ameliorate neuropathic pain.",
+      "id": "pubmed:43042833",
+      "title": "Beyond Partial Readouts: Toward Integrative Mechanism Inference in Catalytic Oxidation.",
+      "abstract": "Oxidative reactive species (ORSs) provide a shared mechanism language for catalytic oxidation in both natural systems and industrial applications. Mechanism investigation seeks to explain how these processes proceed and how they can be regulated, conventionally focusing on identifying the dominant ORS and quantifying its contribution to substrate transformation. Yet ORSs are short-lived, present at low concentrations, and are rapidly interconverting, making their mechanism roles inseparable from the complex environment in which they form, transform, and decay. Disagreements among established identification methods have consequently become a recurring source of controversy across well-studied oxidation systems. Typically, ORS participations are examined through chemical probing, quenching, or direct spectroscopic detection. The widely used chemical approaches assume that each reagent reacts selectively with a single target species, allowing an experimental response to be read as a mechanism assignment. Such selectivity is scarcely attainable where multiple reactive species coexist and interconvert, so refining reagents or instruments alone cannot reconstruct the underlying chemistry once each response is assigned to one species. Our previous work on spin-trapping electron paramagnetic resonance (EPR) exposed this vulnerability, revealing that even this widely trusted probe can enter the reaction chemistry. Reconstructing these signals into kinetic profiles successfully resolved when each reporting product forms, evolves, and decays, although temporal resolution alone cannot trace the reactions linking these stages. To organize this chemistry, we cast catalytic oxidation as a directed reactive species network, mapping each reactive species onto a node and every route of generation, interconversion, transformation, and dissipation onto an edge. External substrates or reporters couple to these nodes through distinct reactions weighted by their rate constants. Therefore, ORS dominance is not an intrinsic property of any node but a condition-dependent property of the network, set by how reaction conditions distribute reactive flux and by the substrate or reporter through which the network is read. Whether through probing, quenching, or direct detection, each measurement returns a low-dimensional projection of this high-dimensional network, so conflicting assignments may reflect one dynamic mechanism rather than incompatible chemistries. Recovering the hidden organization behind these partial projections thus becomes an inverse problem. In this Account, we revisit current ORS identification strategies, examine how chemical, kinetic, and spectroscopic evidence constrains mechanism interpretation, and present a network basis for reconstructing the hidden chemistry behind the resulting observations. Realizing this route appeals to AI-assisted inference under chemist-centered judgment and to structured databases built under this network view through automated experiments, literature mining, and modeling orchestrated by agentic workflows. Thus, it offers not only a reinterpretation of the mechanism puzzles accumulated over decades but a new point of departure for the work ahead.",
       "authors": [
-        "Garcia, G.",
-        "Shapiro, J. B.",
-        "Mikesell, A. R.",
-        "Falese, J. P.",
-        "Bartol, K. A.",
-        "McKenney, K. M.",
-        "Ruhly, S.",
-        "Goldstrohm, A. C.",
-        "Pearce, R. A.",
-        "Tanaka Hall, T. M.",
-        "Campbell, Z. T."
+        "Jing-Hang Wu",
+        "Han-Qing Yu"
       ],
-      "published": "2026-11-16",
-      "updated": "2026-11-16",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.11.13.765935",
-      "pdf_url": "https://www.biorxiv.org/content/10.64898/2026.11.13.765935.full.pdf",
-      "doi": "10.64898/2026.11.13.765935",
-      "venue": "neuroscience",
-      "source": "bioRxiv",
+      "published": "2026-11-17",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43042833/",
+      "pdf_url": "",
+      "doi": "10.1021/acs.accounts.6c00527",
+      "venue": "Accounts of chemical research",
+      "source": "PubMed",
       "citation_count": 0,
       "influential_citation_count": 0,
       "also_seen_in": [
-        "bioRxiv"
+        "PubMed"
       ],
-      "score": 8.99,
+      "score": 8.59,
       "matched_topics": [
-        "GRN / Regulon"
+        "机制推理"
       ],
       "matched_categories": [
         "bio-computing"
       ],
       "matched_terms": [
-        "regulon",
-        "transcriptional regulation"
+        "mechanism inference"
       ],
       "score_breakdown": {
-        "GRN / Regulon": 7.0,
+        "机制推理": 6.4,
         "新鲜度": 0.99
       },
       "category_scores": {
-        "bio-computing": 8.99
+        "bio-computing": 8.59
       },
       "summary": {
-        "takeaway": "PUM1/PUM2 通过结合 Scn9a/Scn10a/Scn11a 的 PRE 抑制钠通道表达；作者据此构建 PUM2 RNA 结合域与抑制域融合的“super-PUM”，用 AAV 递送至感觉神经元可降低 Nav1.8 并缓解神经损伤后痛敏。",
-        "methods": "在 TRPV1 阳性 DRG 神经元中检测 PUM1/PUM2 富集及 PUM2 与 Scn9a、Scn10a、Scn11a 转录本的物理互作；用感觉神经元 PUM 缺失观察机械痛敏和炎症痛，并以 Nav1.8、Nav1.7 阻断验证通路；构建 AAV 编码的 super-PUM，检测 Nav1.8 丰度、TTX 抗性和 suzetrigine 敏感钠电流及 spared nerve injury 后的机械与热痛敏。",
-        "relevance": "该工作将内源转录后调控子（PUM-PRE 调控模块）工程化为可递送的抑制工具，属于合成生物学改造内源调控网络/regulon 的思路，与 GRN/Regulon 主题相关。",
-        "caveat": "摘要基于小鼠模型，未给出长期表达的安全性、脱靶转录本范围及临床转化可行性；super-PUM 对其他 PRE 靶标的影响未说明。"
+        "takeaway": "将催化氧化中的活性氧物种（ORSs）机制研究重构为有向反应物种网络，指出ORS主导性是网络条件依赖属性，而非节点内在性质，并呼吁AI辅助推理和结构化数据库重建隐藏化学机制。",
+        "methods": "综述化学探针、猝灭和光谱检测等ORS识别策略，基于自旋捕获EPR等工作将催化氧化建模为有向网络，节点为反应物种，边为生成、互变、转化和耗散路径，外部底物或报告物通过速率常数加权反应耦合到节点。",
+        "relevance": "与机制推理主题相关，讨论了从部分观测反推复杂反应网络的反问题，并展望AI辅助推断与自动化实验。",
+        "caveat": "本文为Account综述，未提出具体计算模型或实验验证；AI辅助推断的可行性仍需实证。"
+      },
+      "summary_mode": "openai"
+    },
+    {
+      "id": "pubmed:42980369",
+      "title": "Integrative spatial metallomics: a tutorial review of multimodal elemental imaging workflows, challenges and opportunities.",
+      "abstract": "Spatially resolved molecular assays are increasingly used to study human health and disease, revealing complex tissue organization beyond what is accessible through bulk analyses. While spatial transcriptomic, metabolomic, and proteomic approaches have rapidly matured, quantitative mapping of metals and trace elements in biological tissues and biominerals through elemental imaging remains comparatively nascent. Elemental distributions alone often provide limited biological interpretation without contextualization within the tissue microenvironment. Here, we summarize themes and computational strategies for integrating spatial elemental data with histopathology and complementary spatial molecular assays. We highlight multimodal approaches for tissue alignment, pixel-wise clustering, and correlative analysis, illustrated through limited use cases involving amyotrophic lateral sclerosis (ALS) and kidney stone formation. In the ALS cohort, pixel-level elemental profiles were clustered and compared with annotated tissue structures. In the kidney stone cohort, spatial gradients and correlations in elemental and biomolecular features from the renal papilla through the medulla to cortex were examined. Finally, we discuss key challenges for cross-sample, cohort-level analyses, including differences in spatial resolution, normalization, tissue architecture, and mechanistic inference. Addressing these challenges will require interdisciplinary collaboration, enhanced biobanking practices, and development of computational and statistical frameworks.",
+      "authors": [
+        "Naina Kumar",
+        "Nishita Paruchuri",
+        "Tracy Punshon",
+        "Brian Jackson",
+        "Kevin Cornell",
+        "Elijah Stommel",
+        "Hrishikesh Deosthali",
+        "Vismay Ravikumar",
+        "Engie Mostafa",
+        "Scott Palisoul",
+        "Louis Vaickus",
+        "Sunita Ho",
+        "Joshua Levy"
+      ],
+      "published": "2026-11-19",
+      "updated": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42980369/",
+      "pdf_url": "",
+      "doi": "10.1039/d6ay01718e",
+      "venue": "Analytical methods : advancing methods and applications",
+      "source": "PubMed",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "also_seen_in": [
+        "PubMed"
+      ],
+      "score": 5.79,
+      "matched_topics": [
+        "机制推理"
+      ],
+      "matched_categories": [
+        "bio-computing"
+      ],
+      "matched_terms": [
+        "mechanistic inference"
+      ],
+      "score_breakdown": {
+        "机制推理": 2.4,
+        "领域上下文": 0.5,
+        "新鲜度": 1.69
+      },
+      "category_scores": {
+        "bio-computing": 5.79
+      },
+      "summary": {
+        "takeaway": "本教程综述总结了将空间元素成像数据与组织病理学及其他空间分子检测进行整合的计算策略，强调多模态配准、像素级聚类和相关分析，并以ALS与肾结石为示例用例。",
+        "methods": "综述性教程，归纳组织对齐、像素级聚类与相关分析等多模态整合策略，并简要展示ALS队列中的像素级元素谱聚类与组织注释比较、肾结石队列中从肾乳头到皮质区域的空间梯度与元素-生物分子相关分析。",
+        "relevance": "直接涉及机制推理主题：讨论如何从空间元素分布结合组织微环境与互补分子数据推断生物学意义，并指出跨样本、队列级分析中空间分辨率、归一化与机制推断等挑战。",
+        "caveat": "作为教程综述，摘要未给出具体定量结果或验证性统计结论；ALS与肾结石仅作为有限用例说明，且摘要明确指出元素分布单独往往难以提供充分生物学解释，机制推断仍需跨学科方法与计算统计框架支持。"
       },
       "summary_mode": "openai"
     }
   ],
   "fetch_report": {
-    "window_start": "2026-11-16",
-    "window_end": "2026-11-20",
+    "window_start": "2026-11-17",
+    "window_end": "2026-11-21",
     "sources": {
       "arxiv": {
         "status": "ok",
-        "count": 400
+        "count": 300
       },
       "biorxiv": {
         "status": "ok",
@@ -2692,7 +2701,7 @@
       },
       "pubmed": {
         "status": "ok",
-        "count": 14
+        "count": 13
       },
       "semantic_scholar": {
         "status": "error",
@@ -2700,14 +2709,14 @@
         "error": "HTTPError: 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=single+cell+perturbation+prediction&limit=40&fields=paperId%2Ctitle%2Cabstract%2Cauthors%2CpublicationDate%2Curl%2CopenAccessPdf%2CexternalIds%2Cvenue%2"
       }
     },
-    "total": 714
+    "total": 613
   },
   "summary_report": {
     "requested": 49,
     "provider": "deepseek",
     "model": "deepseek-v4-flash",
-    "openai": 49,
-    "fallback": 0,
+    "openai": 48,
+    "fallback": 1,
     "errors": []
   }
 }
